@@ -1,0 +1,11 @@
+bin/
+obj/
+.vs/
+*.user
+# per-run working output (raw results go in results/, rendered PDFs/images do not)
+out/
+*.pdf
+# never commit licence keys
+*.lic
+licenses.local.json
+.env

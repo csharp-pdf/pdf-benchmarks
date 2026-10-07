@@ -1,0 +1,32 @@
+name: Library configuration
+description: A library is not configured the way its vendor recommends
+title: "[Configuration] <library>: <short summary>"
+labels: ["configuration"]
+body:
+  - type: input
+    id: library
+    attributes:
+      label: Library
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Documentation that recommends it
+    validations:
+      required: true
+  - type: dropdown
+    id: vendor
+    attributes:
+      label: Are you affiliated with this library's vendor?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true

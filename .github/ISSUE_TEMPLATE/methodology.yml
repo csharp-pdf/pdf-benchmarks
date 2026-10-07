@@ -1,0 +1,31 @@
+name: Methodology feedback
+description: A measurement is unfair, wrong or missing
+title: "[Methodology] <short summary>"
+labels: ["methodology"]
+body:
+  - type: input
+    id: section
+    attributes:
+      label: Section of METHODOLOGY.md
+      placeholder: e.g. 4.1 Speed
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or missing
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose instead
+  - type: dropdown
+    id: vendor
+    attributes:
+      label: Are you affiliated with the vendor of a library measured here?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
