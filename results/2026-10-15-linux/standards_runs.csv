@@ -1,0 +1,171 @@
+library,standard,ok,unsupported,ms,pages,bytes,error
+abcpdf,pdfa-1a,true,false,200.931,2,100706,
+abcpdf,pdfa-1b,true,false,131.485,2,82061,
+abcpdf,pdfa-2a,true,false,155.935,2,85851,
+abcpdf,pdfa-2b,true,false,121.891,2,82061,
+abcpdf,pdfa-2u,true,false,124.111,2,82061,
+abcpdf,pdfa-3a,false,true,,,,"PDF/A-3a (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-3b,false,true,,,,"PDF/A-3b (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-3u,false,true,,,,"PDF/A-3u (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-4,false,true,,,,"PDF/A-4 (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-4e,false,true,,,,"PDF/A-4e (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-4f,false,true,,,,"PDF/A-4f (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfua-1,true,false,140.062,2,61064,
+abcpdf,pdfua-2,false,true,,,,PDF/UA-2 (XTagging.MakePdfUAConformant makes PDF/UA-1 only)
+abcpdf,pdfa-2a+pdfua-1,true,false,152.625,2,85851,
+abcpdf,pdfa-3a+pdfua-1,false,true,,,,"PDF/A-3a (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfa-4+pdfua-2,false,true,,,,"PDF/A-4 (PdfConformityOperation supports PDF/A-1a, 1b, 2a, 2b, 2u)"
+abcpdf,pdfx-1a,false,true,,,,PDF/X (no PDF/X conformance in ABCpdf)
+docotic,pdfa-1a,true,false,167.435,2,80412,
+docotic,pdfa-1b,true,false,82.671,2,63957,
+docotic,pdfa-2a,true,false,100.129,2,77515,
+docotic,pdfa-2b,true,false,76.364,2,61064,
+docotic,pdfa-2u,true,false,83.793,2,61064,
+docotic,pdfa-3a,true,false,92.774,2,77515,
+docotic,pdfa-3b,true,false,90.273,2,61064,
+docotic,pdfa-3u,true,false,79.424,2,61064,
+docotic,pdfa-4,true,false,79.957,2,61041,
+docotic,pdfa-4e,true,false,78.771,2,61090,
+docotic,pdfa-4f,true,false,78.526,2,61120,
+docotic,pdfua-1,false,true,,,,"PDF/UA: PreserveStructureInformation tags the file, but no API produces or declares PDF/UA"
+docotic,pdfua-2,false,true,,,,"PDF/UA: PreserveStructureInformation tags the file, but no API produces or declares PDF/UA"
+docotic,pdfa-2a+pdfua-1,false,true,,,,"PDF/UA: PreserveStructureInformation tags the file, but no API produces or declares PDF/UA"
+docotic,pdfa-3a+pdfua-1,false,true,,,,"PDF/UA: PreserveStructureInformation tags the file, but no API produces or declares PDF/UA"
+docotic,pdfa-4+pdfua-2,false,true,,,,"PDF/UA: PreserveStructureInformation tags the file, but no API produces or declares PDF/UA"
+docotic,pdfx-1a,false,true,,,,PDF/X: the Conformance add-on only reads PDF/X conformance (ReadPdfxConformance); no PDF/X output
+ironpdf,pdfa-1a,true,false,326.889,1,52982,
+ironpdf,pdfa-1b,true,false,215.59,2,61480,
+ironpdf,pdfa-2a,true,false,259.741,1,52985,
+ironpdf,pdfa-2b,true,false,240.016,2,61129,
+ironpdf,pdfa-2u,false,true,,,,PDF/A-2u
+ironpdf,pdfa-3a,true,false,264.721,1,52985,
+ironpdf,pdfa-3b,true,false,251.229,2,61129,
+ironpdf,pdfa-3u,false,true,,,,PDF/A-3u
+ironpdf,pdfa-4,true,false,229.218,2,61668,
+ironpdf,pdfa-4e,true,false,203.77,2,61720,
+ironpdf,pdfa-4f,true,false,171.055,2,61756,
+ironpdf,pdfua-1,true,false,183.485,1,48990,
+ironpdf,pdfua-2,true,false,154.339,1,48439,
+ironpdf,pdfa-2a+pdfua-1,true,false,160.361,1,52985,
+ironpdf,pdfa-3a+pdfua-1,true,false,158.453,1,52985,
+ironpdf,pdfa-4+pdfua-2,true,false,163.971,1,53981,
+ironpdf,pdfx-1a,false,true,,,,PDF/X
+pdfsharp,pdfa-1a,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-1b,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-2a,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-2b,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-2u,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-3a,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-3b,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-3u,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-4,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-4e,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-4f,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfua-1,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfua-2,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-2a+pdfua-1,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-3a+pdfua-1,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfa-4+pdfua-2,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,pdfx-1a,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,pdfa-1a,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-1b,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-2a,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-2b,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-2u,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-3a,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-3b,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-3u,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-4,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-4e,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfa-4f,false,true,,,,PDF/A: no option in page.pdf
+playwright,pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+playwright,pdfua-2,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+playwright,pdfa-2a+pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+playwright,pdfa-3a+pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+playwright,pdfa-4+pdfua-2,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+playwright,pdfx-1a,false,true,,,,PDF/X: no option in page.pdf
+puppeteer,pdfa-1a,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-1b,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-2a,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-2b,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-2u,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-3a,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-3b,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-3u,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-4,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-4e,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfa-4f,false,true,,,,PDF/A: no option in page.pdf
+puppeteer,pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+puppeteer,pdfua-2,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+puppeteer,pdfa-2a+pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+puppeteer,pdfa-3a+pdfua-1,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+puppeteer,pdfa-4+pdfua-2,false,true,,,,PDF/UA: page.pdf can tag (Tagged) but makes no PDF/UA claim
+puppeteer,pdfx-1a,false,true,,,,PDF/X: no option in page.pdf
+questpdf,pdfa-1a,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-1b,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-2a,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-2b,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-2u,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-3a,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-3b,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-3u,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-4,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-4e,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-4f,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfua-1,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfua-2,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-2a+pdfua-1,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-3a+pdfua-1,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfa-4+pdfua-2,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,pdfx-1a,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,pdfa-1a,true,false,813.539,2,197123,
+selectpdf,pdfa-1b,true,false,224.803,2,173099,
+selectpdf,pdfa-2a,true,false,129.029,2,96435,
+selectpdf,pdfa-2b,true,false,81.497,2,72473,
+selectpdf,pdfa-2u,true,false,86.245,2,72473,
+selectpdf,pdfa-3a,true,false,119.895,2,96589,
+selectpdf,pdfa-3b,true,false,79.256,2,72623,
+selectpdf,pdfa-3u,true,false,85.394,2,72619,
+selectpdf,pdfa-4,true,false,77.878,2,72234,
+selectpdf,pdfa-4e,true,false,92.278,2,72283,
+selectpdf,pdfa-4f,true,false,82.207,2,72284,
+selectpdf,pdfua-1,true,false,158.748,2,68931,
+selectpdf,pdfua-2,true,false,154.819,2,77096,
+selectpdf,pdfa-2a+pdfua-1,true,false,132.888,2,97787,
+selectpdf,pdfa-3a+pdfua-1,true,false,122.735,2,97941,
+selectpdf,pdfa-4+pdfua-2,true,false,137.11,2,107497,
+selectpdf,pdfx-1a,true,false,565.061,2,175069,
+wkhtmltopdf,pdfa-1a,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-1b,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-2a,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-2b,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-2u,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-3a,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-3b,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-3u,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-4,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-4e,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-4f,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfua-1,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfua-2,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-2a+pdfua-1,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-3a+pdfua-1,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfa-4+pdfua-2,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+wkhtmltopdf,pdfx-1a,false,true,,,,"no PDF/A, PDF/UA or PDF/X output"
+itext,pdfa-1a,true,false,420.127,2,96938,
+itext,pdfa-1b,true,false,300.678,2,66565,
+itext,pdfa-2a,true,false,608.304,2,97117,
+itext,pdfa-2b,true,false,299.405,2,66565,
+itext,pdfa-2u,true,false,297.874,2,66565,
+itext,pdfa-3a,true,false,297.27,2,97117,
+itext,pdfa-3b,true,false,294.955,2,66565,
+itext,pdfa-3u,true,false,296.827,2,66565,
+itext,pdfa-4,true,false,325.274,2,66206,
+itext,pdfa-4e,true,false,300.874,2,66235,
+itext,pdfa-4f,false,false,,,,PdfAConformanceException: Conforming file shall contain an EmbeddedFiles key in the name dictionary of the document catalog dictionary.
+itext,pdfua-1,false,false,,,,PdfUAConformanceException: Figure tags shall include an alternative representation or replacement text. call com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties#setActualText or com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties#setAlternateDescription to be compliant.
+itext,pdfua-2,false,false,,,,PdfUAConformanceException: Figure tags shall include an alternative representation or replacement text. call com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties#setActualText or com.itextpdf.kernel.pdf.tagutils.AccessibilityProperties#setAlternateDescription to be compliant.
+itext,pdfa-2a+pdfua-1,false,true,,,,PDF/A and PDF/UA together
+itext,pdfa-3a+pdfua-1,false,true,,,,PDF/A and PDF/UA together
+itext,pdfa-4+pdfua-2,false,true,,,,PDF/A and PDF/UA together
+itext,pdfx-1a,false,true,,,,PDF/X

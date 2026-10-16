@@ -1,0 +1,276 @@
+selectpdf
+Products
+▾
+API
+▾
+Pricing
+▾
+Resources
+▾
+Company
+▾
+Sign in
+Download trial →
+HTML TO PDF · .NET LIBRARY & REST API
+23M+ NUGET DOWNLOADS · SINCE 2014
+Convert HTML to PDF.
+Online, in .NET or by API.
+WEB PAGE URL
+HTML CODE
+Convert to PDF →
+
+Free, no signup · watermarked demo, up to 5 pages · more options ↓
+
+Use the free online HTML to PDF converter above, or build it into your app. SelectPdf is a battle-tested HTML to PDF toolkit in two shapes. Embed the .NET library: SelectPdf.Universal, our new flagship, runs on Windows, Linux and macOS on Apple Silicon, and the classic library still covers .NET Framework 2.0 and later. Or call the HTML to PDF API from any language. Every option renders with the latest Chromium engine, giving pixel-perfect PDFs with full HTML5, CSS3 and JavaScript support. One perpetual license covers both libraries, with a free trial and a Community Edition.
+
+01 / EMBED
+●
+.NET Library
+
+Our new flagship, SelectPdf.Universal. Self-hosted, no per-page fees.
+
+SelectPdf.Universal — Windows, Linux & macOS on Apple Silicon, .NET 8 / 10 and .NET Standard 2.0
+Classic library for Windows — .NET Framework 2.0 through .NET 10
+HTML & Word → PDF, PDF→Text, merge, sign, redact
+One perpetual license covers both libraries
+# flagship · cross-platform · .NET 8 / 10 · .NET Standard 2.0
+$ dotnet add package SelectPdf.Universal
+$ dotnet add package SelectPdf.Universal.Native.linux-x64
+
+# classic · Windows · .NET Framework 2.0+
+$ dotnet add package Select.Pdf
+Read the .NET docs →
+v26.4
+02 / CALL
+●
+Online API
+
+One endpoint. Any language. Free trial, no credit card.
+
+REST · cURL, JS, Python, PHP, Go, Ruby
+Headless Chromium under the hood
+Free trial, no credit card · plans $19–$449/mo
+Nothing to deploy — no servers, no engine to ship
+$ curl https://selectpdf.com/api2/convert/ \
+  -d "key=YOUR_KEY" \
+  -d "url=https://example.com" \
+  -o out.pdf
+Try the API live →
+REST
+⌘
+LIVE DEMO · NO KEY REQUIRED
+Free HTML to PDF converter demo.
+Paste a URL or HTML, watch it convert.
+
+Real conversion through our watermarked demo — no signup, no key. We render the page, return a real PDF, and tell you exactly how long it took.
+
+WEB PAGE URL
+HTML CODE
+Convert →
+▸
+Options
+· page size, margins, load time
+▸
+PREVIEW
+HIDDEN UNTIL YOU CONVERT
+§
+QUICKSTART
+HTML to PDF in three lines. One PDF.
+
+Same engine. Same output. Same options. The .NET Library and the Online API are bit-for-bit equivalent — pick whichever matches your runtime.
+
+C# · .NET LIBRARY
+cURL · ONLINE API
+JavaScript · ONLINE API
+Python · ONLINE API
+PHP · ONLINE API
+Ruby · ONLINE API
+Invoice.cs
+COPY
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+using SelectPdf.Universal; // classic Windows library: using SelectPdf;
+
+var converter = new HtmlToPdf();
+converter.Options.PdfPageSize = PdfPageSize.A4;
+converter.Options.MarginLeft = 20;
+
+PdfDocument doc = converter.ConvertUrl(
+    "https://yourapp.com/invoice/4821"
+);
+
+doc.Save("invoice-4821.pdf");
+doc.Close();
+↳
+WHAT IT DOES
+The HTML to PDF converter developers ship with.
+
+SelectPdf converts HTML to PDF from .NET and from any language over REST. Point the HTML to PDF converter at a URL or pass a raw HTML string and it returns a pixel-accurate PDF, rendered by a real Chromium browser engine with full HTML5, CSS3 and JavaScript and control over page size, margins, headers, footers and page numbering. The same Chromium engine powers both the self-hosted .NET library and the online HTML to PDF API, so a layout you convert today renders identically whichever you pick. Start free — the .NET trial and the Community Edition need no card, and a free Online API key includes 200 conversions to convert HTML to PDF online before you choose a plan.
+
+What people ship
+with HTML to PDF.
+
+A short list of the things developers reach for SelectPdf to build. Same engine handles all of them — pick the runtime, write the template, ship.
+
+01
+Invoicing
+
+Generate every invoice your billing system emits — from a templated HTML page to a PDF attached to the customer's receipt.
+
+COMMON IN → BILLING SYSTEMS, ERPS, ACCOUNTING TOOLS
+02
+Reports
+
+Convert dashboards, charts and tables into archive-ready PDFs. Keep page breaks where they belong, headers on every page.
+
+COMMON IN → BI DASHBOARDS, ANALYTICS EXPORTS, INTERNAL TOOLS
+03
+Contracts
+
+Render legal documents from form data, then sign them. The .NET Library handles PDF/A, accessible (tagged) PDF and digital signatures on your own server.
+
+COMMON IN → E-SIGNATURE FLOWS, HR ONBOARDING
+04
+Tickets & passes
+
+Boarding passes, event tickets, gift cards. Embed barcodes and QR codes natively. Render at 300dpi for print, smaller for mobile.
+
+COMMON IN → EVENT TICKETING, TRAVEL & BOARDING PASSES
+.NET PDF Library or HTML to PDF API?
+SIDE-BY-SIDE
+01 / EMBED
+.NET Library
+02 / CALL
+Online API
+Where it runs
+Inside your .NET process
+Our infrastructure
+Languages
+C#, F#, VB.NET
+Any (REST)
+Network required
+No
+Yes
+Pricing model
+Per-developer, perpetual (from $499)
+Per-conversion, metered ($19–$449/mo)
+Free tier
+Free trial (watermarked)
+Free trial, no credit card
+Best for
+Compliance, on-prem, high volume
+Polyglot stacks, quick start, spiky load
+★
+TRUSTED BY
+Trusted for HTML to PDF since 2014 — teams that ship a lot of PDFs.
+23M+
+NUGET DOWNLOADS
+2014
+SHIPPING SINCE
+v26.4
+CURRENT RELEASE
+4
+RENDER ENGINES
+✎
+FROM THE BLOG
+Latest from the SelectPdf blog — HTML to PDF guides.
+ALL POSTS →
+OCT 5, 2026
+SelectPdf.Universal: our new flagship .NET PDF library, on Linux, macOS and Docker
+
+For twelve years the answer to “can I run the SelectPdf library on Linux?” was no — use the Online API instead. That answer changes today. SelectPdf 26.4 introduces Selec…
+
+Read →
+JUL 7, 2026
+HTML to PDF in C#: The Complete Guide
+
+This is a complete, hands-on guide to converting HTML to PDF in C# with the SelectPdf library for .NET. It works up from a three-line conversion to a production-ready wor…
+
+Read →
+JUL 5, 2026
+wkhtmltopdf is archived. A straight .NET migration guide (Windows, Linux, Docker and Azure)
+
+Updated October 2026 for SelectPdf 26.4: the library now runs on Linux, in Docker and on macOS on Apple Silicon as well, through the new SelectPdf.Universal packages. The…
+
+Read →
+?
+FAQ
+HTML to PDF, answered.
+What is SelectPdf?
++
+Is SelectPdf free?
++
+Which .NET versions does the library support?
++
+Does SelectPdf work on Linux or non-.NET stacks?
++
+Should I use the .NET Library or the Online API?
++
+What rendering engine does SelectPdf use?
++
+How do I convert HTML to PDF in C#?
++
+Which rendering engines run on which .NET frameworks?
++
+Can I convert HTML to PDF online for free?
++
+Ship a PDF
+this afternoon.
+Get an API key — free →
+Download the .NET trial
+PRODUCT
+Create PDF Online
+Cross-Platform Library
+Classic .NET Library
+Word to PDF
+HTML→PDF Converter for .NET
+Community Edition (free)
+Download — Commercial Library Trial
+Download — Community (free)
+API
+HTML→PDF API
+HTML→PDF API Parameters
+PDF→Text API
+PDF Merge API
+Save as PDF Link
+API Pricing
+Get an API Key
+.NET LIBRARY PRICING
+Library Pricing
+3-Year Maintenance Plan
+5-Year Maintenance Plan
+Renewal — Valid Maintenance
+Renewal — Expired Maintenance
+3-Year Renewal
+EULA
+RESOURCES
+Universal Docs
+Universal Demo
+Universal Demo — Community
+Classic Library Docs
+Classic Demo — ASP.NET C#
+Classic Demo — ASP.NET VB.NET
+Classic Demo — MVC C#
+Classic Demo — MVC VB.NET
+Classic Community Docs
+Classic Community Demo — C#
+Classic Community Demo — VB.NET
+Blog
+COMPANY
+About
+Contact
+Privacy Policy
+Data Processing Agreement
+Terms & Conditions
+Refunds Policy
+© SELECTPDF 2014–2026

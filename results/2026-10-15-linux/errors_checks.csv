@@ -1,0 +1,59 @@
+library,case,expected,outcome,ms,recovered,pass,detail
+abcpdf,hanging-page,error,error,120633,True,True,Exception: Unable to render HTML. ABCChrome page load timed out.
+abcpdf,not-found,either,pdf,132,True,True,
+abcpdf,unreachable-host,error,error,3375,True,True,Exception: Chrome reported an error for http://127.0.0.1:9/: ERR_UNSAFE_PORT (-312)
+abcpdf,broken-image,pdf,pdf,111,True,True,
+abcpdf,js-error,pdf,pdf,114,True,True,
+abcpdf,slow-resource,pdf,pdf,5063,True,True,
+abcpdf,hanging-resource,either,error,120580,True,True,Exception: Unable to render HTML. ABCChrome page load timed out.
+docotic,hanging-page,error,error,30022,True,True,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded
+docotic,not-found,either,pdf,49,True,True,
+docotic,unreachable-host,error,error,20,True,True,HtmlConverterException: Failed to convert. net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/
+docotic,broken-image,pdf,pdf,52,True,True,
+docotic,js-error,pdf,pdf,59,True,True,
+docotic,slow-resource,pdf,pdf,5055,True,True,
+docotic,hanging-resource,either,error,30028,True,True,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded
+ironpdf,hanging-page,error,error,66010,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/_hang': 'Error while rendering pdf from url for job group 1: 'Timeout after 65s while rendering pdf from url for job group 1''.
+ironpdf,not-found,either,pdf,190,True,True,
+ironpdf,unreachable-host,error,error,12,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:9/': 'Error while rendering pdf from url for job group 5: 'Aborted job 5 for browser 2: Error 'ERR_UNSAFE_PORT' while loading browser 2''.
+ironpdf,broken-image,pdf,pdf,193,True,True,
+ironpdf,js-error,pdf,pdf,93,True,True,
+ironpdf,slow-resource,pdf,pdf,5098,True,True,
+ironpdf,hanging-resource,either,error,66003,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/errors/hanging-resource/index.html': 'Error while rendering pdf from url for job group 13: 'Aborted job 13 for browser 3: Timeout after 65s while rendering pdf from url for job group 13''.
+pdfsharp,all,,unsupported,,,n/a,no HTML conversion
+playwright,hanging-page,error,error,30034,True,True,TimeoutException: Timeout 30000ms exceeded.
+playwright,not-found,either,pdf,36,True,True,
+playwright,unreachable-host,error,error,22,True,True,PlaywrightException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/
+playwright,broken-image,pdf,pdf,47,True,True,
+playwright,js-error,pdf,pdf,45,True,True,
+playwright,slow-resource,pdf,pdf,5045,True,True,
+playwright,hanging-resource,either,error,30025,True,True,TimeoutException: Timeout 30000ms exceeded.
+puppeteer,hanging-page,error,error,30042,True,True,NavigationException: Navigation timeout of 30000 ms exceeded
+puppeteer,not-found,either,pdf,66,True,True,
+puppeteer,unreachable-host,error,error,44,True,True,NavigationException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/
+puppeteer,broken-image,pdf,pdf,76,True,True,
+puppeteer,js-error,pdf,pdf,73,True,True,
+puppeteer,slow-resource,pdf,pdf,5099,True,True,
+puppeteer,hanging-resource,either,error,30042,True,True,NavigationException: Navigation timeout of 30000 ms exceeded
+questpdf,all,,unsupported,,,n/a,no HTML conversion
+selectpdf,hanging-page,error,error,60012,True,True,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.
+selectpdf,not-found,either,error,27,True,True,HtmlToPdfException: Conversion error: HTTP error 404 Not Found for URL: http://127.0.0.1:8777/does-not-exist/.
+selectpdf,unreachable-host,error,error,27,True,True,HtmlToPdfException: Load error -312 (ERR_UNSAFE_PORT) for URL: http://127.0.0.1:9/
+selectpdf,broken-image,pdf,pdf,209,True,True,
+selectpdf,js-error,pdf,pdf,59,True,True,
+selectpdf,slow-resource,pdf,pdf,5060,True,True,
+selectpdf,hanging-resource,either,error,60009,True,True,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.
+wkhtmltopdf,hanging-page,error,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,not-found,either,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,unreachable-host,error,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,broken-image,pdf,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,js-error,pdf,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,slow-resource,pdf,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,hanging-resource,either,error,1,False,False,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,hanging-page,error,error,100010,True,True,TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+itext,not-found,either,error,3,True,True,HttpRequestException: Response status code does not indicate success: 404 (File not found).
+itext,unreachable-host,error,error,1,True,True,HttpRequestException: Connection refused (127.0.0.1:9)
+itext,broken-image,pdf,pdf,159,True,True,
+itext,js-error,pdf,pdf,150,True,True,
+itext,slow-resource,pdf,pdf,5159,True,True,
+itext,hanging-resource,either,hung,315015,True,False,

@@ -9,3 +9,9 @@ out/
 *.lic
 licenses.local.json
 .env
+
+.artifacts/
+.packages/
+# test inputs are committed (fixtures/inputs/SOURCE.md)
+!fixtures/inputs/**/*.pdf
+deployment/build/

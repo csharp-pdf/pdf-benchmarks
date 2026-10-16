@@ -1,0 +1,7 @@
+library,check,pass,detail
+pdfsharp,one signature,True,1 signatures
+pdfsharp,intact (digest matches),True,
+pdfsharp,valid with the test certificate,True,
+pdfsharp,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+pdfsharp,signature type,True,/adbe.pkcs7.detached; digest sha256
+pdfsharp,signing time recorded,True,2026-10-15 19:04:11+03:00

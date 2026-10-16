@@ -1,0 +1,43 @@
+library,input,pages_expected,pages,text_f1
+pymupdf (reference),invoice,3,3,0.9909
+abcpdf,invoice,3,3,0.9902
+docotic,invoice,3,3,0.9909
+ironpdf,invoice,3,3,0.9909
+itext,invoice,3,3,0.9856
+selectpdf,invoice,3,3,0.9850
+pymupdf (reference),rtl,2,2,0.9489
+abcpdf,rtl,2,2,0.1741
+docotic,rtl,2,2,0.3537
+ironpdf,rtl,2,2,0.9783
+itext,rtl,2,2,0.1807
+selectpdf,rtl,2,2,0.9850
+pymupdf (reference),cjk,5,5,1.0000
+abcpdf,cjk,5,5,1.0000
+docotic,cjk,5,5,1.0000
+ironpdf,cjk,5,5,1.0000
+itext,cjk,5,5,1.0000
+selectpdf,cjk,5,5,1.0000
+pymupdf (reference),scripts,1,1,1.0000
+abcpdf,scripts,1,1,0.8686
+docotic,scripts,1,1,0.9264
+ironpdf,scripts,1,1,0.9590
+itext,scripts,1,1,0.9264
+selectpdf,scripts,1,1,1.0000
+pymupdf (reference),accessible,2,2,0.9727
+abcpdf,accessible,2,2,0.9727
+docotic,accessible,2,2,0.9727
+ironpdf,accessible,2,2,0.9727
+itext,accessible,2,2,0.9727
+selectpdf,accessible,2,2,0.9694
+pymupdf (reference),long-document,344,344,1.0000
+abcpdf,long-document,344,344,1.0000
+docotic,long-document,344,344,1.0000
+ironpdf,long-document,344,344,1.0000
+itext,long-document,344,344,1.0000
+selectpdf,long-document,344,344,1.0000
+pymupdf (reference),selectpdf-home,10,10,0.9781
+abcpdf,selectpdf-home,10,10,0.9692
+docotic,selectpdf-home,10,10,0.9720
+ironpdf,selectpdf-home,10,10,0.9781
+itext,selectpdf-home,10,10,0.9701
+selectpdf,selectpdf-home,10,10,0.9703

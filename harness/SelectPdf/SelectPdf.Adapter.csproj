@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-selectpdf</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <!-- -p:SelectPdfVersion=x.y.z measures another version (with a restore source that has it). 26.5.0 is the
+         first with CreateFormFields, which the forms fixture uses. -->
+    <SelectPdfVersion Condition="'$(SelectPdfVersion)' == ''">26.5.0</SelectPdfVersion>
+    <!-- APIs new in 26.5 (CreateFormFields, PdfA1A/PdfA2A/PdfA2U) compile only against 26.5 and later. -->
+    <DefineConstants Condition="$([System.Version]::Parse('$(SelectPdfVersion)').CompareTo($([System.Version]::Parse('26.5.0')))) &gt;= 0">$(DefineConstants);SELECTPDF_26_5</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The main package plus the native package for the operating system, as SelectPdf documents. -->
+    <PackageReference Include="SelectPdf.Universal" Version="$(SelectPdfVersion)" />
+    <PackageReference Include="SelectPdf.Universal.Native.$(NativeRid)" Version="$(SelectPdfVersion)" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

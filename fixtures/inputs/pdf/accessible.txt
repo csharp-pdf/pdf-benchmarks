@@ -1,0 +1,35 @@
+Annual Accessibility Report 2026
+
+Prepared by the Documents Team. This page is the input for the PDF/A and PDF/UA tests: it uses headings in order, lists, a data table with header cells, figures with alternative text, a decorative image, a quotation and links.
+
+Contents
+Summary
+Results
+Figures
+Next steps
+Summary
+
+In 2026 the team converted 48,210 documents. Every document now declares its language and title, and every image carries a text alternative or is marked as decorative.
+
+Goals met
+Tagged output for all customer-facing documents
+Invoices and statements
+Contracts
+Archival output for records kept longer than ten years
+
+Accessible documents are better documents for everyone.
+
+Results
+Documents converted per quarter
+Quarter	Invoices	Reports	Total
+Q1	9,120	1,840	10,960
+Q2	10,480	2,105	12,585
+Q3	10,930	1,995	12,925
+Q4	9,710	2,030	11,740
+Figures
+Figure 1. Cover image.
+Next steps
+Validate every archived file with an independent validator.
+Publish the validation results at example.com/accessibility.
+
+Contact: docs@example.com

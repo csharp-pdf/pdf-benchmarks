@@ -1,0 +1,16 @@
+@font-face { font-family: 'Inter'; font-weight: 400; font-style: normal; font-display: block; src: url('inter-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 700; font-style: normal; font-display: block; src: url('inter-700.woff2') format('woff2'); }
+@font-face { font-family: 'Lora'; font-weight: 400; font-style: normal; font-display: block; src: url('lora-400.woff2') format('woff2'); }
+@font-face { font-family: 'Lora'; font-weight: 700; font-style: normal; font-display: block; src: url('lora-700.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: normal; font-display: block; src: url('jetbrains-mono-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Arabic'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-arabic-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Arabic'; font-weight: 700; font-style: normal; font-display: block; src: url('noto-sans-arabic-700.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-jp-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans JP'; font-weight: 700; font-style: normal; font-display: block; src: url('noto-sans-jp-700.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans SC'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-sc-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans SC'; font-weight: 700; font-style: normal; font-display: block; src: url('noto-sans-sc-700.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans KR'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-kr-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans KR'; font-weight: 700; font-style: normal; font-display: block; src: url('noto-sans-kr-700.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Devanagari'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-devanagari-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Sans Thai'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-sans-thai-400.woff2') format('woff2'); }
+@font-face { font-family: 'Noto Color Emoji'; font-weight: 400; font-style: normal; font-display: block; src: url('noto-color-emoji-400.woff2') format('woff2'); }

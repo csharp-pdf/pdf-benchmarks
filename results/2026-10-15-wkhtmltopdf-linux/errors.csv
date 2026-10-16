@@ -1,0 +1,8 @@
+library,case,outcome,ms,pages,error,recovered
+wkhtmltopdf,hanging-page,hung,315103,,,True
+wkhtmltopdf,not-found,pdf,217,1,,True
+wkhtmltopdf,unreachable-host,error,3,,InvalidOperationException: wkhtmltopdf produced no PDF: Failed loading page http://127.0.0.1:9/ (sometimes it will work just to ignore this error with --load-error-handling ignore),True
+wkhtmltopdf,broken-image,pdf,221,1,,True
+wkhtmltopdf,js-error,pdf,222,1,,True
+wkhtmltopdf,slow-resource,pdf,5234,1,,True
+wkhtmltopdf,hanging-resource,hung,315096,,,True

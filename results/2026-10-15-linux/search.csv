@@ -1,0 +1,101 @@
+library,input,term,expected_pages,found_pages,hits,pass
+abcpdf,invoice,Total due,[3],[3],1,True
+abcpdf,invoice,Northwind Supplies,"[1, 3]","[1, 3]",2,True
+abcpdf,invoice,Contoso Ltd,[1],[1],2,True
+abcpdf,rtl,حقوق,"[1, 2]",[],0,False
+abcpdf,cjk,人人生而自由,[1],[1],1,True
+abcpdf,cjk,すべての人間は,[3],[3],1,True
+abcpdf,cjk,모든 인간은,[5],[5],1,True
+abcpdf,scripts,समानता,[1],[1],1,True
+abcpdf,scripts,มนุษย์,[1],[1],1,True
+abcpdf,long-document,Chapter 40,[335],[335],1,True
+docotic,invoice,Total due,[3],,,not supported
+docotic,invoice,Northwind Supplies,"[1, 3]",,,not supported
+docotic,invoice,Contoso Ltd,[1],,,not supported
+docotic,rtl,حقوق,"[1, 2]",,,not supported
+docotic,cjk,人人生而自由,[1],,,not supported
+docotic,cjk,すべての人間は,[3],,,not supported
+docotic,cjk,모든 인간은,[5],,,not supported
+docotic,scripts,समानता,[1],,,not supported
+docotic,scripts,มนุษย์,[1],,,not supported
+docotic,long-document,Chapter 40,[335],,,not supported
+ironpdf,invoice,Total due,[3],,,not supported
+ironpdf,invoice,Northwind Supplies,"[1, 3]",,,not supported
+ironpdf,invoice,Contoso Ltd,[1],,,not supported
+ironpdf,rtl,حقوق,"[1, 2]",,,not supported
+ironpdf,cjk,人人生而自由,[1],,,not supported
+ironpdf,cjk,すべての人間は,[3],,,not supported
+ironpdf,cjk,모든 인간은,[5],,,not supported
+ironpdf,scripts,समानता,[1],,,not supported
+ironpdf,scripts,มนุษย์,[1],,,not supported
+ironpdf,long-document,Chapter 40,[335],,,not supported
+pdfsharp,invoice,Total due,[3],,,not supported
+pdfsharp,invoice,Northwind Supplies,"[1, 3]",,,not supported
+pdfsharp,invoice,Contoso Ltd,[1],,,not supported
+pdfsharp,rtl,حقوق,"[1, 2]",,,not supported
+pdfsharp,cjk,人人生而自由,[1],,,not supported
+pdfsharp,cjk,すべての人間は,[3],,,not supported
+pdfsharp,cjk,모든 인간은,[5],,,not supported
+pdfsharp,scripts,समानता,[1],,,not supported
+pdfsharp,scripts,มนุษย์,[1],,,not supported
+pdfsharp,long-document,Chapter 40,[335],,,not supported
+playwright,invoice,Total due,[3],,,not supported
+playwright,invoice,Northwind Supplies,"[1, 3]",,,not supported
+playwright,invoice,Contoso Ltd,[1],,,not supported
+playwright,rtl,حقوق,"[1, 2]",,,not supported
+playwright,cjk,人人生而自由,[1],,,not supported
+playwright,cjk,すべての人間は,[3],,,not supported
+playwright,cjk,모든 인간은,[5],,,not supported
+playwright,scripts,समानता,[1],,,not supported
+playwright,scripts,มนุษย์,[1],,,not supported
+playwright,long-document,Chapter 40,[335],,,not supported
+puppeteer,invoice,Total due,[3],,,not supported
+puppeteer,invoice,Northwind Supplies,"[1, 3]",,,not supported
+puppeteer,invoice,Contoso Ltd,[1],,,not supported
+puppeteer,rtl,حقوق,"[1, 2]",,,not supported
+puppeteer,cjk,人人生而自由,[1],,,not supported
+puppeteer,cjk,すべての人間は,[3],,,not supported
+puppeteer,cjk,모든 인간은,[5],,,not supported
+puppeteer,scripts,समानता,[1],,,not supported
+puppeteer,scripts,มนุษย์,[1],,,not supported
+puppeteer,long-document,Chapter 40,[335],,,not supported
+questpdf,invoice,Total due,[3],,,not supported
+questpdf,invoice,Northwind Supplies,"[1, 3]",,,not supported
+questpdf,invoice,Contoso Ltd,[1],,,not supported
+questpdf,rtl,حقوق,"[1, 2]",,,not supported
+questpdf,cjk,人人生而自由,[1],,,not supported
+questpdf,cjk,すべての人間は,[3],,,not supported
+questpdf,cjk,모든 인간은,[5],,,not supported
+questpdf,scripts,समानता,[1],,,not supported
+questpdf,scripts,มนุษย์,[1],,,not supported
+questpdf,long-document,Chapter 40,[335],,,not supported
+selectpdf,invoice,Total due,[3],[3],1,True
+selectpdf,invoice,Northwind Supplies,"[1, 3]","[1, 3]",2,True
+selectpdf,invoice,Contoso Ltd,[1],[1],2,True
+selectpdf,rtl,حقوق,"[1, 2]","[1, 2]",12,True
+selectpdf,cjk,人人生而自由,[1],[1],1,True
+selectpdf,cjk,すべての人間は,[3],[3],1,True
+selectpdf,cjk,모든 인간은,[5],[5],1,True
+selectpdf,scripts,समानता,[1],[1],1,True
+selectpdf,scripts,มนุษย์,[1],[1],1,True
+selectpdf,long-document,Chapter 40,[335],[335],1,True
+wkhtmltopdf,invoice,Total due,[3],,,not supported
+wkhtmltopdf,invoice,Northwind Supplies,"[1, 3]",,,not supported
+wkhtmltopdf,invoice,Contoso Ltd,[1],,,not supported
+wkhtmltopdf,rtl,حقوق,"[1, 2]",,,not supported
+wkhtmltopdf,cjk,人人生而自由,[1],,,not supported
+wkhtmltopdf,cjk,すべての人間は,[3],,,not supported
+wkhtmltopdf,cjk,모든 인간은,[5],,,not supported
+wkhtmltopdf,scripts,समानता,[1],,,not supported
+wkhtmltopdf,scripts,มนุษย์,[1],,,not supported
+wkhtmltopdf,long-document,Chapter 40,[335],,,not supported
+itext,invoice,Total due,[3],[3],1,True
+itext,invoice,Northwind Supplies,"[1, 3]","[1, 3]",2,True
+itext,invoice,Contoso Ltd,[1],[1],2,True
+itext,rtl,حقوق,"[1, 2]",[],0,False
+itext,cjk,人人生而自由,[1],[1],1,True
+itext,cjk,すべての人間は,[3],[3],1,True
+itext,cjk,모든 인간은,[5],[5],1,True
+itext,scripts,समानता,[1],[1],1,True
+itext,scripts,มนุษย์,[1],[],0,False
+itext,long-document,Chapter 40,[335],[335],1,True

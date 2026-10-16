@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>isolation-read</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>body { margin: 40px; font-family: 'Inter', sans-serif; }</style>
+</head>
+<body>
+  <h1>Isolation: read</h1>
+  <p id="ls">localStorage: script did not run</p>
+  <p id="ss">sessionStorage: script did not run</p>
+  <p id="ck">cookie: script did not run</p>
+<script>
+  // Converted right after isolation-write in the same process. Each line prints NONE when the
+  // conversion could not see what the previous one stored.
+  const cookie = (document.cookie.match(/benchmark-secret=([^;]+)/) || [])[1];
+  document.getElementById('ls').textContent = 'localStorage: ' + (localStorage.getItem('benchmark-secret') || 'NONE');
+  document.getElementById('ss').textContent = 'sessionStorage: ' + (sessionStorage.getItem('benchmark-secret') || 'NONE');
+  document.getElementById('ck').textContent = 'cookie: ' + (cookie || 'NONE');
+</script>
+</body>
+</html>

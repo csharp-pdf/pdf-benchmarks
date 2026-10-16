@@ -1,0 +1,51 @@
+library,run,process_start_to_pdf_ms,conversion_ms,ok,error
+abcpdf,1,839,718.554,true,
+docotic,1,635,501.402,true,
+ironpdf,1,1154,991.723,true,
+pdfsharp,1,94,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,1,929,543.328,true,
+puppeteer,1,1188,1012.488,true,
+questpdf,1,94,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,1,913,821.902,true,
+wkhtmltopdf,1,95,,false,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,1,792,673.847,true,
+abcpdf,2,834,705.078,true,
+docotic,2,574,452.516,true,
+ironpdf,2,1090,927.95,true,
+pdfsharp,2,78,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,2,771,454.033,true,
+puppeteer,2,527,413.947,true,
+questpdf,2,79,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,2,786,699.766,true,
+wkhtmltopdf,2,103,,false,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,2,765,653.48,true,
+abcpdf,3,826,702.14,true,
+docotic,3,616,477.327,true,
+ironpdf,3,1159,994.928,true,
+pdfsharp,3,72,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,3,775,441.246,true,
+puppeteer,3,555,422.615,true,
+questpdf,3,93,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,3,731,652.154,true,
+wkhtmltopdf,3,94,,false,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,3,789,677.097,true,
+abcpdf,4,809,698.782,true,
+docotic,4,588,453.838,true,
+ironpdf,4,1076,912.639,true,
+pdfsharp,4,86,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,4,754,443.567,true,
+puppeteer,4,528,397.634,true,
+questpdf,4,79,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,4,690,612.644,true,
+wkhtmltopdf,4,91,,false,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,4,754,644.188,true,
+abcpdf,5,791,691.509,true,
+docotic,5,603,471.541,true,
+ironpdf,5,1078,926.016,true,
+pdfsharp,5,85,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,5,755,426.846,true,
+puppeteer,5,524,398.409,true,
+questpdf,5,87,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,5,745,666.728,true,
+wkhtmltopdf,5,88,,false,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,5,732,629.13,true,

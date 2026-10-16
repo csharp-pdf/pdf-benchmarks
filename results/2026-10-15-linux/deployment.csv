@@ -1,0 +1,14 @@
+library,variant,extra_os_packages,image_mb,root_ok,root_seconds,non_root_ok,non_root_seconds,error
+abcpdf,minimal,0,235,False,0.9,False,0.9,"Unhandled exception. System.DllNotFoundException: Unable to load shared library 'libABCpdf14-64.so' or one of its dependencies. In order to help diagnose loading problems, consider using a tool like strace. If you're using glibc, consider setting the LD_DEBUG environment variable:"
+abcpdf,documented,14,312,True,1.9,True,1.3,
+docotic,minimal,0,86,False,17.1,False,21.0,HtmlConverterException: Failed to create a converter.
+docotic,documented,1,385,True,16.7,True,16.8,
+ironpdf,minimal,0,206,True,49.2,False,187.5,IronSoftwareDeploymentException: Error while deploying IronPdf Chrome renderer: 'Multiple issues occurred while trying to deploy Chrome (libgobject-2.0.so.0: cannot open shared object file: No such file or directory) (libgobject-2.0.so.0: cannot open shared object file: No such file or directory) (I
+ironpdf,documented,24,239,True,1.3,True,1.0,
+itext,minimal,0,84,True,0.9,True,0.9,
+pdfsharp,minimal,0,77,False,0.5,False,0.4,PdfSharpLicenseException: The loaded license is not valid.
+playwright,minimal,0,123,False,32.4,False,31.4,"TargetClosedException: Target page, context or browser has been closed"
+puppeteer,minimal,0,79,False,28.4,False,0.7,ProcessException: Failed to launch browser! 
+questpdf,minimal,0,84,True,0.5,True,0.4,
+selectpdf,minimal,0,270,True,1.6,True,1.2,
+wkhtmltopdf,minimal,0,124,False,0.6,False,0.4,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."

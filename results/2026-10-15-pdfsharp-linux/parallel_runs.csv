@@ -1,0 +1,3 @@
+library,mode,jobs,ms,failed,errors
+pdfsharp,sync,,,,unsupported
+pdfsharp,async,,,,unsupported

@@ -1,0 +1,521 @@
+{
+  "viewportWidth": 1024,
+  "fixtures": [
+    {
+      "name": "trivial",
+      "speed": true,
+      "checks": [
+        {
+          "text": "Hello, PDF"
+        }
+      ]
+    },
+    {
+      "name": "bootstrap",
+      "speed": true,
+      "throughput": true,
+      "checks": [
+        {
+          "text": "Documents your customers can trust"
+        },
+        {
+          "text": "Adventure Works"
+        }
+      ]
+    },
+    {
+      "name": "invoice",
+      "speed": true,
+      "checks": [
+        {
+          "text": "£140,904.83"
+        },
+        {
+          "text": "Total due"
+        }
+      ]
+    },
+    {
+      "name": "html-string",
+      "source": "invoice",
+      "input": "html",
+      "speed": true,
+      "checks": [
+        {
+          "text": "£140,904.83"
+        },
+        {
+          "text": "Northwind Supplies"
+        }
+      ]
+    },
+    {
+      "name": "long-document",
+      "speed": true,
+      "fidelity": false,
+      "checks": [
+        {
+          "text": "Chapter 40"
+        },
+        {
+          "text": "4000."
+        }
+      ]
+    },
+    {
+      "name": "web-fonts",
+      "speed": true,
+      "checks": [
+        {
+          "fontsEmbedded": [
+            "Inter",
+            "Lora",
+            "JetBrainsMono"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "grid-flex",
+      "speed": true,
+      "checks": [
+        {
+          "text": "Grid area spanning 4 columns and 2 rows"
+        }
+      ]
+    },
+    {
+      "name": "effects",
+      "speed": true,
+      "checks": [
+        {
+          "text": "clip-path polygon"
+        }
+      ]
+    },
+    {
+      "name": "vector",
+      "speed": true,
+      "checks": [
+        {
+          "text": "Sharp at 800%"
+        },
+        {
+          "text": "SVG text 2026"
+        },
+        {
+          "noImages": true
+        }
+      ]
+    },
+    {
+      "name": "js-chart",
+      "speed": true,
+      "waitMs": 1000,
+      "checks": [
+        {
+          "text": "Charts drawn by JavaScript: 4 of 4."
+        }
+      ]
+    },
+    {
+      "name": "lazy-images",
+      "speed": true,
+      "checks": [
+        {
+          "images": 12
+        }
+      ]
+    },
+    {
+      "name": "large-images",
+      "speed": true,
+      "checks": [
+        {
+          "images": 8
+        }
+      ]
+    },
+    {
+      "name": "wide-content",
+      "speed": true,
+      "fidelity": false,
+      "checks": [
+        {
+          "text": "R15C24"
+        },
+        {
+          "text": "END-OF-WIDE-LINE"
+        }
+      ]
+    },
+    {
+      "name": "rtl",
+      "speed": true,
+      "checks": [
+        {
+          "text": "حقوق"
+        }
+      ]
+    },
+    {
+      "name": "cjk",
+      "speed": true,
+      "checks": [
+        {
+          "text": "人人生而自由"
+        },
+        {
+          "text": "すべての人間は"
+        },
+        {
+          "text": "모든 인간은"
+        }
+      ]
+    },
+    {
+      "name": "scripts",
+      "speed": true,
+      "checks": [
+        {
+          "text": "समानता"
+        },
+        {
+          "text": "มนุษย์"
+        }
+      ]
+    },
+    {
+      "name": "accessible",
+      "speed": true,
+      "checks": [
+        {
+          "text": "Annual Accessibility Report 2026"
+        }
+      ]
+    },
+    {
+      "name": "selectpdf-home",
+      "speed": true,
+      "checks": [
+        {
+          "links": 20
+        }
+      ]
+    },
+    {
+      "name": "paged-media",
+      "media": "print",
+      "checks": [
+        {
+          "text": "PRINT MEDIA ACTIVE"
+        },
+        {
+          "pages": 4
+        }
+      ]
+    },
+    {
+      "name": "header-footer",
+      "headerFooter": true,
+      "fidelity": false,
+      "checks": [
+        {
+          "pageNumbers": true
+        },
+        {
+          "text": "pdf-benchmarks"
+        }
+      ]
+    },
+    {
+      "name": "bookmarks",
+      "bookmarks": [
+        "h2",
+        "h3"
+      ],
+      "checks": [
+        {
+          "outline": 24
+        },
+        {
+          "internalLinks": 16
+        }
+      ]
+    },
+    {
+      "name": "forms",
+      "forms": true,
+      "checks": [
+        {
+          "formFields": 6
+        }
+      ]
+    },
+    {
+      "name": "html-header-footer",
+      "source": "header-footer",
+      "htmlHeaderFooter": true,
+      "fidelity": false,
+      "checks": [
+        {
+          "pageNumbers": true
+        },
+        {
+          "everyPage": "ACME Corp"
+        },
+        {
+          "imageEveryPage": true
+        }
+      ]
+    },
+    {
+      "name": "encryption",
+      "source": "invoice",
+      "encrypt": {
+        "userPassword": "user-2026",
+        "ownerPassword": "owner-2026"
+      },
+      "fidelity": false,
+      "checks": [
+        {
+          "encrypted": true
+        }
+      ]
+    },
+    {
+      "name": "isolation-write",
+      "sequence": "isolation",
+      "checks": [
+        {
+          "text": "Stored: TOKEN-"
+        }
+      ]
+    },
+    {
+      "name": "isolation-read",
+      "sequence": "isolation",
+      "checks": [
+        {
+          "text": "localStorage: NONE"
+        },
+        {
+          "text": "sessionStorage: NONE"
+        },
+        {
+          "text": "cookie: NONE"
+        }
+      ]
+    }
+  ],
+  "standards": {
+    "fixture": "accessible",
+    "title": "Annual Accessibility Report 2026",
+    "language": "en",
+    "levels": [
+      "pdfa-1a",
+      "pdfa-1b",
+      "pdfa-2a",
+      "pdfa-2b",
+      "pdfa-2u",
+      "pdfa-3a",
+      "pdfa-3b",
+      "pdfa-3u",
+      "pdfa-4",
+      "pdfa-4e",
+      "pdfa-4f",
+      "pdfua-1",
+      "pdfua-2",
+      "pdfa-2a+pdfua-1",
+      "pdfa-3a+pdfua-1",
+      "pdfa-4+pdfua-2",
+      "pdfx-1a"
+    ],
+    "structure": {
+      "H1": 1,
+      "H2": 5,
+      "H3": 1,
+      "L": 4,
+      "LI": 10,
+      "Table": 1,
+      "TH": 8,
+      "TD": 12,
+      "Figure": 1,
+      "Link": 6,
+      "figureAlt": "Landscape photograph used as the cover image of the report"
+    }
+  },
+  "async": {
+    "fixture": "bootstrap",
+    "concurrency": [
+      1,
+      4,
+      8
+    ]
+  },
+  "parallel": {
+    "fixtures": [
+      "bootstrap",
+      "invoice",
+      "cjk",
+      "rtl",
+      "js-chart",
+      "web-fonts",
+      "effects",
+      "accessible"
+    ],
+    "copies": 2,
+    "concurrency": 8
+  },
+  "errors": [
+    {
+      "case": "hanging-page",
+      "url": "/_hang",
+      "expect": "error"
+    },
+    {
+      "case": "not-found",
+      "url": "/does-not-exist/",
+      "expect": "either"
+    },
+    {
+      "case": "unreachable-host",
+      "url": "http://127.0.0.1:9/",
+      "expect": "error"
+    },
+    {
+      "case": "broken-image",
+      "url": "/errors/broken-image/index.html",
+      "expect": "pdf",
+      "text": "Broken image page"
+    },
+    {
+      "case": "js-error",
+      "url": "/errors/js-error/index.html",
+      "expect": "pdf",
+      "text": "JavaScript error page"
+    },
+    {
+      "case": "slow-resource",
+      "url": "/errors/slow-resource/index.html",
+      "expect": "pdf",
+      "text": "Slow resource page",
+      "images": 1
+    },
+    {
+      "case": "hanging-resource",
+      "url": "/errors/hanging-resource/index.html",
+      "expect": "either",
+      "text": "Hanging resource page"
+    }
+  ],
+  "stability": {
+    "conversions": 1000,
+    "fixtures": [
+      "trivial",
+      "bootstrap",
+      "invoice",
+      "web-fonts",
+      "grid-flex",
+      "effects",
+      "vector",
+      "rtl",
+      "cjk",
+      "scripts",
+      "accessible",
+      "selectpdf-home",
+      "large-images",
+      "lazy-images"
+    ],
+    "sampleEvery": 100
+  },
+  "tools": {
+    "extract": [
+      "invoice",
+      "rtl",
+      "cjk",
+      "scripts",
+      "accessible",
+      "long-document",
+      "selectpdf-home"
+    ],
+    "search": {
+      "invoice": [
+        "Total due",
+        "Northwind Supplies",
+        "Contoso Ltd"
+      ],
+      "rtl": [
+        "حقوق"
+      ],
+      "cjk": [
+        "人人生而自由",
+        "すべての人間は",
+        "모든 인간은"
+      ],
+      "scripts": [
+        "समानता",
+        "มนุษย์"
+      ],
+      "long-document": [
+        "Chapter 40"
+      ]
+    },
+    "rasterize": {
+      "inputs": [
+        "invoice",
+        "cjk",
+        "accessible",
+        "selectpdf-home"
+      ],
+      "dpi": 150
+    },
+    "word": [
+      "report",
+      "international"
+    ],
+    "redact": {
+      "input": "invoice",
+      "terms": [
+        "Contoso Ltd",
+        "£140,904.83"
+      ],
+      "keep": [
+        "Northwind Supplies",
+        "Total due"
+      ]
+    },
+    "merge": [
+      "invoice",
+      "accessible",
+      "cjk"
+    ],
+    "split": {
+      "input": "long-document",
+      "from": 10,
+      "to": 12
+    },
+    "watermark": {
+      "input": "invoice",
+      "text": "CONFIDENTIAL"
+    },
+    "sign": {
+      "input": "invoice"
+    },
+    "fill": {
+      "input": "order-form",
+      "values": {
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "plan": "Pro",
+        "news": "true",
+        "contact": "phone"
+      }
+    },
+    "einvoice": {
+      "page": "inputs/einvoice/invoice.html",
+      "xml": "einvoice/factur-x.xml",
+      "profile": "EN 16931"
+    }
+  }
+}

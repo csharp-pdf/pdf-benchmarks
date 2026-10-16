@@ -1,0 +1,84 @@
+Northwind Supplies
+12 Harbour Road, Bristol BS1 4RW
+VAT GB 123 4567 89
+INVOICE
+No. INV-2026-0187
+Issued 7 October 2026
+Due 6 November 2026
+BILL TO
+Contoso Ltd
+Accounts Payable
+48 King Street, Manchester M2 4LQ
+SHIP TO
+Contoso Ltd — Warehouse 3
+Unit 7, Trafford Park
+Manchester M17 1SN
+PAYMENT
+Bank transfer
+Sort code 20-00-00
+Account 12345678
+#	Item	SKU	Qty	Unit price	Amount
+1	Archive box	NW-77085	21	£166.65	£3,499.65
+2	Archive box	NW-65130	15	£184.36	£2,765.40
+3	Monitor stand	NW-41448	38	£146.52	£5,567.76
+4	Copy paper A4 80gsm (box)	NW-24514	40	£28.44	£1,137.60
+5	Envelopes C4 (250)	NW-11505	7	£149.33	£1,045.31
+6	Monitor stand	NW-62064	21	£70.87	£1,488.27
+7	Label printer tape	NW-59328	23	£118.85	£2,733.55
+8	Toner cartridge, colour set	NW-83066	22	£31.37	£690.14
+9	Envelopes C4 (250)	NW-28466	19	£151.88	£2,885.72
+10	Envelopes C4 (250)	NW-57650	2	£122.85	£245.70
+11	USB-C cable 2 m	NW-62268	28	£31.70	£887.60
+12	Monitor stand	NW-76369	8	£141.39	£1,131.12
+13	Monitor stand	NW-43900	26	£173.90	£4,521.40
+14	Shredder bags (50)	NW-77233	37	£159.01	£5,883.37
+15	Copy paper A4 80gsm (box)	NW-26908	37	£75.56	£2,795.72
+16	Toner cartridge, black	NW-91567	34	£35.60	£1,210.40
+17	Shredder bags (50)	NW-73191	31	£48.65	£1,508.15
+18	Sticky notes (12 pads)	NW-98382	8	£151.67	£1,213.36
+19	Monitor stand	NW-83373	35	£84.23	£2,948.05
+20	Laminating pouches (100)	NW-94785	20	£181.60	£3,632.00
+21	Monitor stand	NW-36546	26	£143.89	£3,741.14
+22	Envelopes C4 (250)	NW-14339	18	£5.02	£90.36
+23	Ring binder 2-ring	NW-78536	39	£152.14	£5,933.46
+24	Monitor stand	NW-44093	24	£67.47	£1,619.28
+25	Monitor stand	NW-75163	30	£169.52	£5,085.60
+26	Shredder bags (50)	NW-48019	36	£13.00	£468.00
+27	Whiteboard markers (8)	NW-67468	30	£34.22	£1,026.60
+28	Label printer tape	NW-65807	29	£61.97	£1,797.13
+29	Monitor stand	NW-75329	5	£89.30	£446.50
+30	Stapler, heavy duty	NW-63911	7	£65.75	£460.25
+31	Ring binder 2-ring	NW-22080	29	£6.58	£190.82
+32	Copy paper A4 80gsm (box)	NW-20887	29	£181.09	£5,251.61
+33	Ballpoint pens (50)	NW-91405	16	£41.57	£665.12
+34	Toner cartridge, black	NW-97618	35	£89.98	£3,149.30
+35	Stapler, heavy duty	NW-51083	10	£3.67	£36.70
+36	Monitor stand	NW-39219	9	£180.83	£1,627.47
+37	Monitor stand	NW-88398	38	£44.98	£1,709.24
+38	Envelopes C4 (250)	NW-97628	6	£138.88	£833.28
+39	Desk organiser	NW-76545	9	£102.26	£920.34
+40	Shredder bags (50)	NW-78161	25	£50.66	£1,266.50
+41	Ballpoint pens (50)	NW-23911	25	£6.62	£165.50
+42	Laminating pouches (100)	NW-55484	5	£18.82	£94.10
+43	Stapler, heavy duty	NW-76897	2	£10.37	£20.74
+44	Monitor stand	NW-69000	21	£101.49	£2,131.29
+45	Whiteboard markers (8)	NW-71155	8	£165.03	£1,320.24
+46	Desk organiser	NW-37130	10	£172.25	£1,722.50
+47	Shredder bags (50)	NW-70138	40	£112.22	£4,488.80
+48	Sticky notes (12 pads)	NW-62318	5	£181.34	£906.70
+49	Toner cartridge, black	NW-15929	13	£58.79	£764.27
+50	Toner cartridge, black	NW-73417	29	£63.76	£1,849.04
+51	Copy paper A4 80gsm (box)	NW-38668	9	£175.63	£1,580.67
+52	Ring binder 2-ring	NW-61114	11	£62.94	£692.34
+53	Label printer tape	NW-64275	28	£176.64	£4,945.92
+54	Toner cartridge, colour set	NW-34536	25	£101.90	£2,547.50
+55	Stapler, heavy duty	NW-70806	12	£88.31	£1,059.72
+56	Monitor stand	NW-71302	27	£96.25	£2,598.75
+57	Desk organiser	NW-73183	21	£172.16	£3,615.36
+58	USB-C cable 2 m	NW-78773	8	£174.75	£1,398.00
+59	Label printer tape	NW-40321	7	£72.22	£505.54
+60	Copy paper A4 80gsm (box)	NW-94630	6	£150.79	£904.74
+Subtotal	£117,420.69
+VAT 20%	£23,484.14
+Total due	£140,904.83
+Notes. Payment is due within 30 days. Please quote the invoice number with your payment. Goods remain the property of Northwind Supplies until paid in full.

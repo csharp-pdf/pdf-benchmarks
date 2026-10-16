@@ -1,0 +1,90 @@
+{
+  "abcpdf": {
+    "ok": true,
+    "library": "ABCpdf",
+    "packages": {
+      "ABCpdf": "14.0.6"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "docotic": {
+    "ok": true,
+    "library": "Docotic.Pdf",
+    "packages": {
+      "BitMiracle.Docotic.Pdf": "9.9.19928",
+      "BitMiracle.Docotic.Pdf.HtmlToPdf": "9.9.19928",
+      "BitMiracle.Docotic.Pdf.Conformance": "9.9.19928",
+      "chromium:revision": "147.0.7727.57"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "ironpdf": {
+    "ok": true,
+    "library": "IronPDF",
+    "packages": {
+      "IronPdf": "2026.10.3"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "itext": {
+    "ok": true,
+    "library": "iText",
+    "packages": {
+      "itext": "9.8.0",
+      "itext.pdfhtml": "6.3.4",
+      "itext.bouncy-castle-adapter": "9.8.0",
+      "itext.pdfsweep": "5.0.8"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "pdfsharp": {
+    "ok": true,
+    "library": "PDFsharp",
+    "packages": {
+      "PDFsharp": "6.5.0"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "playwright": {
+    "ok": true,
+    "library": "Playwright",
+    "packages": {
+      "Microsoft.Playwright": "1.63.0"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "puppeteer": {
+    "ok": true,
+    "library": "PuppeteerSharp",
+    "packages": {
+      "PuppeteerSharp": "25.13.1",
+      "browser:Chrome": "154.0.8037.57"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "questpdf": {
+    "ok": true,
+    "library": "QuestPDF",
+    "packages": {
+      "QuestPDF": "2026.9.1"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "selectpdf": {
+    "ok": true,
+    "library": "SelectPdf",
+    "packages": {
+      "SelectPdf.Universal": "26.5.0",
+      "SelectPdf.Universal.Native.win-x64": "26.5.0"
+    },
+    "runtime": ".NET 8.0.32"
+  },
+  "wkhtmltopdf": {
+    "ok": true,
+    "library": "wkhtmltopdf",
+    "packages": {
+      "Haukcode.WkHtmlToPdfDotNet": "1.5.95"
+    },
+    "runtime": ".NET 8.0.32"
+  }
+}

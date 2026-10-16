@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-pdfsharp</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="PDFsharp" Version="6.5.0" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

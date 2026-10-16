@@ -1,0 +1,7 @@
+library,fixture,mode,concurrency,seconds,completed,failed,per_minute
+wkhtmltopdf,bootstrap,sync,1,60,255,0,255.0
+wkhtmltopdf,bootstrap,sync,4,60,249,0,249.0
+wkhtmltopdf,bootstrap,sync,8,60,252,0,252.0
+wkhtmltopdf,bootstrap,async,1,60,252,0,252.0
+wkhtmltopdf,bootstrap,async,4,60,255,0,255.0
+wkhtmltopdf,bootstrap,async,8,60,248,0,248.0

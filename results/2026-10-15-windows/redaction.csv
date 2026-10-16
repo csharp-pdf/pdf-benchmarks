@@ -1,0 +1,28 @@
+library,check,term,pass,detail
+abcpdf,redacted file,,n/a,not supported: no redaction API (TextOperation finds text; removing it would mean editing content streams by hand)
+docotic,redacted file,,n/a,not supported: no redaction API (redaction annotations are not applied; the guide combines two sample programs)
+ironpdf,removed,Contoso Ltd,True,
+ironpdf,covered,Contoso Ltd,True,2/2 occurrences covered
+ironpdf,removed,"£140,904.83",True,
+ironpdf,covered,"£140,904.83",True,1/1 occurrences covered
+ironpdf,kept,Northwind Supplies,True,
+ironpdf,kept,Total due,True,
+ironpdf,pages,3,True,3 pages
+itext,removed,Contoso Ltd,True,
+itext,covered,Contoso Ltd,True,2/2 occurrences covered
+itext,removed,"£140,904.83",True,
+itext,covered,"£140,904.83",True,1/1 occurrences covered
+itext,kept,Northwind Supplies,True,
+itext,kept,Total due,True,
+itext,pages,3,True,3 pages
+playwright,redacted file,,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,redacted file,,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+questpdf,redacted file,,n/a,not supported: no redaction
+selectpdf,removed,Contoso Ltd,True,
+selectpdf,covered,Contoso Ltd,True,2/2 occurrences covered
+selectpdf,removed,"£140,904.83",True,
+selectpdf,covered,"£140,904.83",True,1/1 occurrences covered
+selectpdf,kept,Northwind Supplies,True,
+selectpdf,kept,Total due,True,
+selectpdf,pages,3,True,3 pages
+wkhtmltopdf,redacted file,,n/a,not supported: no PDF tools

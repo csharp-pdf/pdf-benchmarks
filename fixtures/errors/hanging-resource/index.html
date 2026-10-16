@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>hanging-resource</title>
+<link rel="stylesheet" href="../../_shared/fonts/fonts.css">
+<style>body { margin: 40px; font-family: 'Inter', sans-serif; } img { display: block; margin: 16px 0; }</style>
+</head>
+<body>
+  <h1>Hanging resource page</h1>
+  <p>The image below never arrives. A library must give up on it within its timeout and still convert the rest, or fail cleanly.</p>
+  <img src="/_hang" width="300" height="200" alt="never loads">
+  <p>End of page.</p>
+</body>
+</html>

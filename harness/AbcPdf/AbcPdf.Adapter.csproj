@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- ABCpdf needs a licence key (a free 30-day trial key works) in the ABCPDF_LICENSE_KEY environment variable. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-abcpdf</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The base package carries the Windows ABCChrome146 engine; Linux needs the engine package as well
+         (https://www.websupergoo.com/helppdfnet/source/2-getting_started/6-platforms.htm). -->
+    <PackageReference Include="ABCpdf" Version="14.0.6" />
+    <PackageReference Include="ABCpdf.ABCChrome146.Linux" Version="14.0.6" Condition="'$(NativeRid)' == 'linux-x64'" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+library,run,process_start_to_pdf_ms,conversion_ms,ok,error
+pdfsharp,1,56,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,2,57,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,3,56,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,4,57,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,5,56,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)

@@ -1,0 +1,12 @@
+<Project>
+  <!-- Every package an adapter references is stamped into its assembly, so the results record the exact
+       package versions that ran (results/<run>/packages.json). -->
+  <Target Name="StampPackageVersions" BeforeTargets="GetAssemblyAttributes">
+    <ItemGroup>
+      <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute" Condition="'%(PackageReference.Version)' != ''">
+        <_Parameter1>package:%(PackageReference.Identity)</_Parameter1>
+        <_Parameter2>%(PackageReference.Version)</_Parameter2>
+      </AssemblyAttribute>
+    </ItemGroup>
+  </Target>
+</Project>

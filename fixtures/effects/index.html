@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>effects</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  body { margin: 0; font-family: 'Inter', sans-serif; color: #1d1d1f; }
+  .bar { position: sticky; top: 0; background: #111827; color: #fff; padding: 14px 32px; font-weight: 700; }
+  main { padding: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .card { height: 150px; border-radius: 14px; padding: 16px; display: flex; align-items: flex-end; font-weight: 700; }
+  .bg { background: #2563eb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Ccircle cx='10' cy='10' r='3' fill='%2393c5fd'/%3E%3C/svg%3E"); color: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .shadow { background: #fff; box-shadow: 0 12px 28px rgba(0, 0, 0, .35); }
+  .opacity { background: #16a34a; opacity: .45; color: #000; }
+  .rotate { background: #f59e0b; transform: rotate(-8deg); }
+  .skew { background: #ec4899; transform: skewX(-12deg) scale(.9); color: #fff; }
+  .blend { background: linear-gradient(135deg, #7c3aed, #06b6d4); color: #fff; border: 6px dashed #fde047; }
+  .rounded-img { height: 150px; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #fef08a, #ea580c 70%); }
+  .outline { background: #fff; outline: 4px solid #0ea5e9; outline-offset: 6px; }
+  .clip { background: #0f766e; clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%); color: #fff; }
+</style>
+</head>
+<body>
+  <div class="bar">Sticky header</div>
+  <main>
+    <div class="card bg">Background image + print-color-adjust</div>
+    <div class="card shadow">Box shadow</div>
+    <div class="card opacity">Opacity 45%</div>
+    <div class="card rotate">Rotate -8°</div>
+    <div class="card skew">Skew + scale</div>
+    <div class="card blend">Gradient + dashed border</div>
+    <div class="rounded-img"></div>
+    <div class="card outline">Outline with offset</div>
+    <div class="card clip">clip-path polygon</div>
+  </main>
+</body>
+</html>

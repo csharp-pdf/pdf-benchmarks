@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- IronPDF needs a licence key in the IRONPDF_LICENSE_KEY environment variable; a free trial key works. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-ironpdf</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The packages IronPDF documents for each OS. -->
+    <PackageReference Include="IronPdf" Version="2026.10.3" Condition="'$(NativeRid)' == 'win-x64'" />
+    <PackageReference Include="IronPdf.Linux" Version="2026.10.3" Condition="'$(NativeRid)' == 'linux-x64'" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

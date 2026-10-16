@@ -1,0 +1,31 @@
+library,tool,input,ok,unsupported,ms,result,error
+pdfsharp,extract,invoice,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,rtl,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,cjk,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,scripts,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,accessible,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,long-document,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,selectpdf-home,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,search,invoice: Total due,False,true,,,no text search API
+pdfsharp,search,invoice: Northwind Supplies,False,true,,,no text search API
+pdfsharp,search,invoice: Contoso Ltd,False,true,,,no text search API
+pdfsharp,search,rtl: حقوق,False,true,,,no text search API
+pdfsharp,search,cjk: 人人生而自由,False,true,,,no text search API
+pdfsharp,search,cjk: すべての人間は,False,true,,,no text search API
+pdfsharp,search,cjk: 모든 인간은,False,true,,,no text search API
+pdfsharp,search,scripts: समानता,False,true,,,no text search API
+pdfsharp,search,scripts: มนุษย์,False,true,,,no text search API
+pdfsharp,search,long-document: Chapter 40,False,true,,,no text search API
+pdfsharp,rasterize,invoice,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,cjk,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,accessible,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,selectpdf-home,False,true,,,no PDF rendering to images
+pdfsharp,word,report,False,true,,,no Word (.docx) import
+pdfsharp,word,international,False,true,,,no Word (.docx) import
+pdfsharp,redact,invoice,False,true,,,no redaction API
+pdfsharp,merge,invoice+accessible+cjk,True,false,601.541,220915 bytes,
+pdfsharp,split,long-document 10-12,True,false,11.032,22017 bytes,
+pdfsharp,watermark,invoice,True,false,27.263,55150 bytes,
+pdfsharp,sign,invoice,True,false,70.614,29826 bytes,
+pdfsharp,fill,order-form,True,false,6.803,27717 bytes,
+pdfsharp,einvoice,factur-x,False,true,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML): the invoice page cannot be rendered

@@ -1,0 +1,41 @@
+library,operation,check,pass,detail
+abcpdf,merge,pages,True,10 of 10
+abcpdf,merge,every page's text in order,True,lowest page F1 1.000
+abcpdf,merge,fonts embedded,True,24 fonts
+abcpdf,split,pages,True,3 of 3
+abcpdf,split,every page's text in order,True,lowest page F1 1.000
+abcpdf,split,fonts embedded,True,3 fonts
+docotic,merge,pages,True,10 of 10
+docotic,merge,every page's text in order,True,lowest page F1 1.000
+docotic,merge,fonts embedded,True,24 fonts
+docotic,split,pages,True,3 of 3
+docotic,split,every page's text in order,True,lowest page F1 1.000
+docotic,split,fonts embedded,True,3 fonts
+ironpdf,merge,pages,True,10 of 10
+ironpdf,merge,every page's text in order,True,lowest page F1 1.000
+ironpdf,merge,fonts embedded,True,24 fonts
+ironpdf,split,pages,True,3 of 3
+ironpdf,split,every page's text in order,True,lowest page F1 1.000
+ironpdf,split,fonts embedded,True,3 fonts
+itext,merge,pages,True,10 of 10
+itext,merge,every page's text in order,True,lowest page F1 1.000
+itext,merge,fonts embedded,True,24 fonts
+itext,split,pages,True,3 of 3
+itext,split,every page's text in order,True,lowest page F1 1.000
+itext,split,fonts embedded,True,3 fonts
+playwright,merge,output,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,split,output,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,merge,output,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,split,output,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+questpdf,merge,pages,True,10 of 10
+questpdf,merge,every page's text in order,True,lowest page F1 1.000
+questpdf,merge,fonts embedded,True,24 fonts
+questpdf,split,pages,True,3 of 3
+questpdf,split,every page's text in order,True,lowest page F1 1.000
+questpdf,split,fonts embedded,True,3 fonts
+selectpdf,merge,pages,True,10 of 10
+selectpdf,merge,every page's text in order,True,lowest page F1 1.000
+selectpdf,merge,fonts embedded,True,34 fonts
+selectpdf,split,pages,True,3 of 3
+selectpdf,split,every page's text in order,True,lowest page F1 1.000
+selectpdf,split,fonts embedded,True,6 fonts

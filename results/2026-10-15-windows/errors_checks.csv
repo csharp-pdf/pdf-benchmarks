@@ -1,0 +1,59 @@
+library,case,expected,outcome,ms,recovered,pass,detail
+abcpdf,hanging-page,error,error,121849,True,True,Exception: Unable to render HTML. ABCChrome page load timed out.
+abcpdf,not-found,either,pdf,296,True,True,
+abcpdf,unreachable-host,error,error,10590,True,True,Exception: Chrome reported an error for http://127.0.0.1:9/: ERR_UNSAFE_PORT (-312)
+abcpdf,broken-image,pdf,pdf,235,True,True,
+abcpdf,js-error,pdf,pdf,169,True,True,
+abcpdf,slow-resource,pdf,pdf,5224,True,True,
+abcpdf,hanging-resource,either,error,121192,True,True,Exception: Unable to render HTML. ABCChrome page load timed out.
+docotic,hanging-page,error,error,30044,True,True,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded
+docotic,not-found,either,pdf,180,True,True,
+docotic,unreachable-host,error,error,48,True,True,HtmlConverterException: Failed to convert. net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/
+docotic,broken-image,pdf,pdf,191,True,True,
+docotic,js-error,pdf,pdf,194,True,True,
+docotic,slow-resource,pdf,pdf,5179,True,True,
+docotic,hanging-resource,either,error,30039,True,True,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded
+ironpdf,hanging-page,error,error,66032,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/_hang': 'Error while rendering pdf from url for job group 1: 'Timeout after 65s while rendering pdf from url for job group 1''.
+ironpdf,not-found,either,pdf,215,True,True,
+ironpdf,unreachable-host,error,error,15,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:9/': 'Error while rendering pdf from url for job group 5: 'Aborted job 5 for browser 2: Error 'ERR_UNSAFE_PORT' while loading browser 2''.
+ironpdf,broken-image,pdf,pdf,100,True,True,
+ironpdf,js-error,pdf,pdf,100,True,True,
+ironpdf,slow-resource,pdf,pdf,5102,True,True,
+ironpdf,hanging-resource,either,error,66026,True,True,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/errors/hanging-resource/index.html': 'Error while rendering pdf from url for job group 13: 'Aborted job 13 for browser 3: Timeout after 65s while rendering pdf from url for job group 13''.
+itext,hanging-page,error,error,100010,True,True,TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+itext,not-found,either,error,3,True,True,HttpRequestException: Response status code does not indicate success: 404 (File not found).
+itext,unreachable-host,error,error,2036,True,True,HttpRequestException: No connection could be made because the target machine actively refused it. (127.0.0.1:9)
+itext,broken-image,pdf,pdf,204,True,True,
+itext,js-error,pdf,pdf,161,True,True,
+itext,slow-resource,pdf,pdf,5169,True,True,
+itext,hanging-resource,either,hung,315068,True,False,
+pdfsharp,all,,unsupported,,,n/a,no HTML conversion
+playwright,hanging-page,error,error,30060,True,True,TimeoutException: Timeout 30000ms exceeded.
+playwright,not-found,either,pdf,551,True,True,
+playwright,unreachable-host,error,error,78,True,True,PlaywrightException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/
+playwright,broken-image,pdf,pdf,199,True,True,
+playwright,js-error,pdf,pdf,334,True,True,
+playwright,slow-resource,pdf,pdf,5193,True,True,
+playwright,hanging-resource,either,error,30061,True,True,TimeoutException: Timeout 30000ms exceeded.
+puppeteer,hanging-page,error,error,30145,True,True,NavigationException: Navigation timeout of 30000 ms exceeded
+puppeteer,not-found,either,pdf,474,True,True,
+puppeteer,unreachable-host,error,error,131,True,True,NavigationException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/
+puppeteer,broken-image,pdf,pdf,253,True,True,
+puppeteer,js-error,pdf,pdf,252,True,True,
+puppeteer,slow-resource,pdf,pdf,5290,True,True,
+puppeteer,hanging-resource,either,error,30143,True,True,NavigationException: Navigation timeout of 30000 ms exceeded
+questpdf,all,,unsupported,,,n/a,no HTML conversion
+selectpdf,hanging-page,error,error,60025,True,True,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.
+selectpdf,not-found,either,error,86,True,True,HtmlToPdfException: Conversion error: HTTP error 404 Not Found for URL: http://127.0.0.1:8777/does-not-exist/.
+selectpdf,unreachable-host,error,error,90,True,True,HtmlToPdfException: Load error -312 (ERR_UNSAFE_PORT) for URL: http://127.0.0.1:9/
+selectpdf,broken-image,pdf,pdf,207,True,True,
+selectpdf,js-error,pdf,pdf,289,True,True,
+selectpdf,slow-resource,pdf,pdf,5128,True,True,
+selectpdf,hanging-resource,either,error,60014,True,True,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.
+wkhtmltopdf,hanging-page,error,hung,315056,True,False,
+wkhtmltopdf,not-found,either,pdf,257,True,True,
+wkhtmltopdf,unreachable-host,error,error,2,True,True,InvalidOperationException: wkhtmltopdf produced no PDF: Failed loading page http://127.0.0.1:9/ (sometimes it will work just to ignore this error with --load-error-handling ignore)
+wkhtmltopdf,broken-image,pdf,pdf,267,True,True,
+wkhtmltopdf,js-error,pdf,pdf,252,True,True,
+wkhtmltopdf,slow-resource,pdf,pdf,5256,True,True,
+wkhtmltopdf,hanging-resource,either,hung,315054,True,False,

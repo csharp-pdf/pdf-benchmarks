@@ -1,0 +1,7 @@
+library,operation,check,pass,detail
+pdfsharp,merge,pages,True,10 of 10
+pdfsharp,merge,every page's text in order,True,lowest page F1 1.000
+pdfsharp,merge,fonts embedded,True,24 fonts
+pdfsharp,split,pages,True,3 of 3
+pdfsharp,split,every page's text in order,True,lowest page F1 1.000
+pdfsharp,split,fonts embedded,True,3 fonts

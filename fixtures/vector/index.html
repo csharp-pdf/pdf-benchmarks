@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>vector</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  body { margin: 40px; font-family: 'Inter', sans-serif; color: #1d1d1f; }
+  .row { display: flex; gap: 24px; align-items: center; }
+  .box { width: 180px; height: 120px; border: 3px solid #2563eb; border-radius: 18px; background: linear-gradient(90deg, #dbeafe, #bfdbfe); }
+  .big { font-size: 64px; font-weight: 700; }
+</style>
+</head>
+<body>
+  <h1>Vector output</h1>
+  <p>Text, SVG, borders and gradients. None of it is a bitmap: in the PDF it should stay text and vector paths, so it is sharp at any zoom and the text can be selected.</p>
+  <p class="big">Sharp at 800%</p>
+  <div class="row">
+    <svg width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="Vector chart">
+      <rect x="0" y="0" width="240" height="160" fill="#f8fafc" stroke="#94a3b8"/>
+      <polyline points="10,140 50,100 90,115 130,60 170,75 230,20" fill="none" stroke="#16a34a" stroke-width="4"/>
+      <circle cx="130" cy="60" r="8" fill="#dc2626"/>
+      <text x="12" y="24" font-family="Inter" font-size="16" fill="#0f172a">SVG text 2026</text>
+    </svg>
+    <div class="box"></div>
+  </div>
+</body>
+</html>

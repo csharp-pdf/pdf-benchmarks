@@ -1,0 +1,9 @@
+library,check,pass,detail
+selectpdf,GTS_PDFX output intent,True,1 output intents
+selectpdf,output condition identifier,True,CGATS TR 001
+selectpdf,GTS_PDFXVersion,True,PDF/X-1:2001
+selectpdf,GTS_PDFXConformance,True,PDF/X-1a:2001
+selectpdf,Trapped set,True,/False
+selectpdf,all fonts embedded,True,6 fonts
+selectpdf,no transparency,True,
+selectpdf,no RGB colour (CMYK/grey only),True,

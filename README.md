@@ -14,8 +14,13 @@ The library pages that use these numbers live in
 ## What is measured
 
 Speed (warm and cold), throughput under parallel load, memory, output size,
-rendering fidelity against a browser screenshot of the same page, correctness checks, PDF/A
-and PDF/UA validity, isolation between conversions, Linux/Docker deployment
+rendering fidelity against a browser screenshot of the same page, correctness checks
+(page numbers, bookmarks, links, form fields, vector output, complex scripts), PDF/A and
+PDF/UA validity checked with veraPDF plus the content of the tags, isolation between conversions,
+async and parallel conversion (and whether parallel output is identical), errors and timeouts,
+stability over 1,000 conversions, HTML headers/footers and encryption, text extraction and search,
+PDF to image, Word to PDF, redaction, merge and split, watermarks, digital signatures, form
+filling, ZUGFeRD/Factur-X e-invoices, PDF/X-1a, Linux/Docker deployment
 requirements, publish size and cost. The full protocol is in
 [METHODOLOGY.md](METHODOLOGY.md).
 
@@ -26,9 +31,36 @@ date, environment and exact package versions.
 
 ```
 METHODOLOGY.md      the protocol — read this first
-fixtures/           the test pages, served from a local static server
+fixtures/           the test pages and fixtures.json (wait times, media, content checks)
+server/             the static server the fixtures are loaded from during a run
+harness/            one adapter program per library + the runner that drives them
+reference/          captures the browser screenshots the PDFs are compared with
+analysis/           content checks and the image comparison
+deployment/         Dockerfiles and the script that builds and tests them
+pricing/            every published licence, sourced and dated, and common situations priced
 results/            raw results per run (CSV/JSON) + environment description
+run.ps1, run.sh     a complete run on Windows (and Linux via WSL) / on Linux
 ```
+
+## Running it
+
+Needs the .NET 8 SDK, Python 3 with `playwright` (Chromium), `pymupdf`, `pypdf`,
+`opencv-python` and `numpy`, and [veraPDF](https://verapdf.org/) — set `VERAPDF`
+to its launcher, and `VERAPDF_JAVA_HOME` if Java is not on the PATH. Libraries that need a key for their trial read it
+from an environment variable (IronPDF: `IRONPDF_LICENSE_KEY`); a library without
+its key is skipped.
+
+```powershell
+./run.ps1            # Windows
+./run.ps1 -Linux     # Windows, then the same run inside WSL
+```
+
+```bash
+./run.sh             # Linux
+```
+
+A full run takes about half an hour per operating system. Close other
+applications first: timings are only comparable on an otherwise idle machine.
 
 ## Contributing
 

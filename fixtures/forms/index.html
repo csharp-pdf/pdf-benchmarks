@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>forms</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  body { margin: 40px; font-family: 'Inter', sans-serif; font-size: 15px; color: #1d1d1f; }
+  form { display: grid; grid-template-columns: 160px 320px; gap: 12px 16px; align-items: center; }
+  input[type=text], input[type=email], select, textarea { font: inherit; padding: 6px 8px; border: 1px solid #8c8c94; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <h1>HTML form</h1>
+  <p>Six form controls. A library that turns HTML forms into PDF form fields should produce six fillable fields.</p>
+  <form>
+    <label for="name">Full name</label><input type="text" id="name" name="name" value="Jane Doe">
+    <label for="email">Email</label><input type="email" id="email" name="email" value="jane@example.com">
+    <label for="plan">Plan</label>
+    <select id="plan" name="plan"><option>Free</option><option selected>Pro</option><option>Enterprise</option></select>
+    <label for="notes">Notes</label><textarea id="notes" name="notes" rows="3">Please call after 5 pm.</textarea>
+    <span>Newsletter</span><label><input type="checkbox" id="news" name="news" checked> Send me the newsletter</label>
+    <span>Contact by</span>
+    <span><label><input type="radio" name="contact" value="email" checked> Email</label> <label><input type="radio" name="contact" value="phone"> Phone</label></span>
+  </form>
+</body>
+</html>

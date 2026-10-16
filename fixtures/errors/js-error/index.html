@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>js-error</title>
+<link rel="stylesheet" href="../../_shared/fonts/fonts.css">
+<style>body { margin: 40px; font-family: 'Inter', sans-serif; } img { display: block; margin: 16px 0; }</style>
+</head>
+<body>
+  <h1>JavaScript error page</h1>
+  <p>A script on this page throws an error and leaves a promise rejection unhandled. The page must still convert.</p>
+  <p id="after">Script did not reach this point.</p><script>Promise.reject(new Error("unhandled")); document.getElementById("after").textContent = "Script ran before the error."; undefinedFunction();</script>
+  <p>End of page.</p>
+</body>
+</html>

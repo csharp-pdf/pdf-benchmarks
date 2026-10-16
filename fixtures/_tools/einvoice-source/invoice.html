@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Invoice 2026-001</title>
+    <style>
+        body { font: 14px Arial, Helvetica, sans-serif; color: #222; margin: 0; }
+        h1 { font-size: 22px; margin: 0 0 4px 0; }
+        .meta { color: #666; margin-bottom: 24px; }
+        table { border-collapse: collapse; width: 100%; max-width: 460px; }
+        caption { text-align: left; font-weight: bold; padding-bottom: 6px; }
+        th, td { border-bottom: 1px solid #ddd; padding: 6px 8px; text-align: left; }
+        td.amount, th.amount { text-align: right; }
+        tr.total td { font-weight: bold; border-bottom: none; }
+    </style>
+</head>
+<body>
+    <h1>INVOICE 2026-001</h1>
+    <p class="meta">Consulting services, October 2026 &#183; due 30 November 2026</p>
+
+    <table>
+        <caption>Amounts</caption>
+        <thead>
+            <tr><th scope="col">Description</th><th scope="col" class="amount">Amount</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Consulting services</td><td class="amount">100.00 EUR</td></tr>
+            <tr><td>VAT 19%</td><td class="amount">19.00 EUR</td></tr>
+            <tr class="total"><td>Total</td><td class="amount">119.00 EUR</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

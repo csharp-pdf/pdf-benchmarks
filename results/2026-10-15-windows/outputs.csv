@@ -1,0 +1,261 @@
+library,fixture,ok,unsupported,ms,pages,bytes,error
+abcpdf,trivial,true,false,4048.638,1,2450,
+abcpdf,bootstrap,true,false,513.206,2,62900,
+abcpdf,invoice,true,false,371.492,2,26394,
+abcpdf,html-string,true,false,326.649,2,66963,
+abcpdf,long-document,true,false,929.134,176,1287315,
+abcpdf,web-fonts,true,false,422.548,1,47077,
+abcpdf,grid-flex,true,false,335.997,1,84370,
+abcpdf,effects,true,false,267.63,1,104576,
+abcpdf,vector,true,false,211.423,1,14899,
+abcpdf,js-chart,true,false,2292.979,1,57981,
+abcpdf,lazy-images,true,false,239.662,7,16964,
+abcpdf,large-images,true,false,280.174,5,3588147,
+abcpdf,wide-content,true,false,261.052,1,20295,
+abcpdf,rtl,true,false,316.751,2,29905,
+abcpdf,cjk,true,false,1217.224,3,141647,
+abcpdf,scripts,true,false,322.018,1,68416,
+abcpdf,accessible,true,false,329.692,2,56842,
+abcpdf,selectpdf-home,true,false,1730.819,6,818266,
+abcpdf,paged-media,true,false,277.107,4,27150,
+abcpdf,header-footer,true,false,212.911,4,28892,
+abcpdf,bookmarks,true,false,330.208,5,33890,
+abcpdf,forms,true,false,216.674,1,19300,
+abcpdf,html-header-footer,true,false,420.405,7,79868,
+abcpdf,encryption,true,false,406.723,2,27786,
+abcpdf,isolation-write,true,false,210.633,1,10062,
+abcpdf,isolation-read,true,false,178.627,1,10873,
+docotic,trivial,true,false,1198.876,1,6724,
+docotic,bootstrap,true,false,422.392,2,48807,
+docotic,invoice,true,false,362.082,2,22130,
+docotic,html-string,true,false,384.261,2,22130,
+docotic,long-document,true,false,926.942,176,1199620,
+docotic,web-fonts,true,false,445.089,1,39847,
+docotic,grid-flex,true,false,297.685,1,67444,
+docotic,effects,true,false,319.159,1,136701,
+docotic,vector,true,false,295.002,1,11258,
+docotic,js-chart,true,false,1197.911,1,50134,
+docotic,lazy-images,true,false,217.414,7,369347,
+docotic,large-images,true,false,252.49,5,3581444,
+docotic,wide-content,true,false,231.313,1,14995,
+docotic,rtl,true,false,237.697,2,25563,
+docotic,cjk,true,false,1033.227,3,135092,
+docotic,scripts,true,false,265.047,1,57590,
+docotic,accessible,true,false,293.281,2,51891,
+docotic,selectpdf-home,true,false,1716.799,6,665106,
+docotic,paged-media,true,false,253.427,4,21536,
+docotic,header-footer,true,false,275.687,4,41640,
+docotic,bookmarks,false,true,,,,"bookmarks: HtmlConversionOptions has no outline option, and the core library has no bookmarks-from-headings API"
+docotic,forms,false,true,,,,HTML forms to PDF fields: no option in HtmlConversionOptions
+docotic,html-header-footer,true,false,396.132,4,67089,
+docotic,encryption,true,false,393.244,2,22617,
+docotic,isolation-write,true,false,185.468,1,7090,
+docotic,isolation-read,true,false,205.546,1,7849,
+ironpdf,trivial,true,false,579.149,1,10874,
+ironpdf,bootstrap,true,false,313.227,3,63564,
+ironpdf,invoice,true,false,240.33,2,28061,
+ironpdf,html-string,true,false,329.999,2,28061,
+ironpdf,long-document,true,false,1741.098,177,1050202,
+ironpdf,web-fonts,true,false,283.695,1,46869,
+ironpdf,grid-flex,true,false,129.987,1,78163,
+ironpdf,effects,true,false,131.382,1,72243,
+ironpdf,vector,true,false,114.399,1,16034,
+ironpdf,js-chart,true,false,1103.086,1,57964,
+ironpdf,lazy-images,true,false,94.121,7,848393,
+ironpdf,large-images,true,false,131.716,5,3586452,
+ironpdf,wide-content,true,false,125.876,1,19842,
+ironpdf,rtl,true,false,140.479,2,32051,
+ironpdf,cjk,true,false,349.864,3,141360,
+ironpdf,scripts,true,false,111.937,1,49299,
+ironpdf,accessible,true,false,116.639,2,57473,
+ironpdf,selectpdf-home,true,false,641.17,7,811421,
+ironpdf,paged-media,true,false,116.109,4,26406,
+ironpdf,header-footer,true,false,128.736,4,31792,
+ironpdf,bookmarks,true,false,3085.425,3,31235,
+ironpdf,forms,true,false,87.367,1,24032,
+ironpdf,html-header-footer,true,false,631.385,4,147046,
+ironpdf,encryption,true,false,185.1,2,28137,
+ironpdf,isolation-write,true,false,79.135,1,11276,
+ironpdf,isolation-read,true,false,87.287,1,12058,
+itext,trivial,true,false,757.459,1,6371,
+itext,bootstrap,true,false,1140.53,3,42438,
+itext,invoice,true,false,509.449,3,19885,
+itext,html-string,true,false,537.075,3,19885,
+itext,long-document,true,false,2136.319,304,548829,
+itext,web-fonts,true,false,392.582,1,45361,
+itext,grid-flex,true,false,281.375,2,15540,
+itext,effects,true,false,147.775,2,10237,
+itext,vector,true,false,267.589,1,9538,
+itext,js-chart,true,false,255.853,1,5741,
+itext,lazy-images,true,false,167.304,9,1429555,
+itext,large-images,true,false,185.375,6,3580177,
+itext,wide-content,true,false,299.176,1,27590,
+itext,rtl,true,false,163.333,2,11167,
+itext,cjk,true,false,176.821,5,136840,
+itext,scripts,true,false,147.664,1,18632,
+itext,accessible,true,false,138.285,2,62820,
+itext,selectpdf-home,true,false,762.967,9,138819,
+itext,paged-media,true,false,98.716,2,24372,
+itext,header-footer,true,false,159.917,7,17809,
+itext,bookmarks,true,false,128.874,5,23503,
+itext,forms,true,false,143.769,1,50762,
+itext,html-header-footer,true,false,217.759,7,20391,
+itext,encryption,true,false,308.844,3,20767,
+itext,isolation-write,true,false,99.262,1,5679,
+itext,isolation-read,true,false,104.477,1,5795,
+pdfsharp,trivial,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,bootstrap,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,invoice,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,html-string,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,long-document,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,web-fonts,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,grid-flex,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,effects,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,vector,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,js-chart,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,lazy-images,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,large-images,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,wide-content,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,rtl,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,cjk,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,scripts,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,accessible,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,selectpdf-home,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,paged-media,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,header-footer,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,bookmarks,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,forms,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,html-header-footer,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,encryption,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,isolation-write,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,isolation-read,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,trivial,true,false,506.173,1,7981,
+playwright,bootstrap,true,false,282.072,2,53576,
+playwright,invoice,true,false,281.079,2,24098,
+playwright,html-string,true,false,285.244,2,24098,
+playwright,long-document,true,false,655.021,176,1246067,
+playwright,web-fonts,true,false,339.105,1,44662,
+playwright,grid-flex,true,false,213.962,1,70771,
+playwright,effects,true,false,147.388,1,126098,
+playwright,vector,true,false,144.053,1,13101,
+playwright,js-chart,true,false,1137.377,1,55475,
+playwright,lazy-images,true,false,175.447,7,1434372,
+playwright,large-images,true,false,213.992,5,3583991,
+playwright,wide-content,true,false,171.338,1,16970,
+playwright,rtl,true,false,168.816,2,27114,
+playwright,cjk,true,false,1033.933,3,139180,
+playwright,scripts,true,false,205.673,1,65747,
+playwright,accessible,true,false,229.919,2,54814,
+playwright,selectpdf-home,true,false,1646.72,6,794128,
+playwright,paged-media,true,false,200.37,4,24396,
+playwright,header-footer,true,false,206.862,4,44411,
+playwright,bookmarks,true,false,197.671,3,44930,
+playwright,forms,true,false,140.368,1,14355,
+playwright,html-header-footer,true,false,247.674,4,71330,
+playwright,encryption,false,true,,,,no encryption option in page.pdf
+playwright,isolation-write,true,false,112.937,1,8525,
+playwright,isolation-read,true,false,106.221,1,8120,
+puppeteer,trivial,true,false,1231.336,1,8939,
+puppeteer,bootstrap,true,false,483.52,2,78744,
+puppeteer,invoice,true,false,507.479,2,151835,
+puppeteer,html-string,true,false,478.009,2,151835,
+puppeteer,long-document,true,false,1176.953,176,2133313,
+puppeteer,web-fonts,true,false,516.508,1,48134,
+puppeteer,grid-flex,true,false,383.61,1,78923,
+puppeteer,effects,true,false,317.308,1,128033,
+puppeteer,vector,true,false,312.178,1,14414,
+puppeteer,js-chart,true,false,1312.113,1,57440,
+puppeteer,lazy-images,true,false,336.8,7,1441230,
+puppeteer,large-images,true,false,360.381,5,3588877,
+puppeteer,wide-content,true,false,354.776,1,117002,
+puppeteer,rtl,true,false,354.448,2,36936,
+puppeteer,cjk,true,false,1104.393,3,154618,
+puppeteer,scripts,true,false,379.835,1,67725,
+puppeteer,accessible,true,false,397.326,2,72054,
+puppeteer,selectpdf-home,true,false,1727.786,6,856721,
+puppeteer,paged-media,true,false,342.446,4,27736,
+puppeteer,header-footer,true,false,361.746,4,52986,
+puppeteer,bookmarks,true,false,350.986,3,45073,
+puppeteer,forms,true,false,317.108,1,18544,
+puppeteer,html-header-footer,true,false,419.24,4,79880,
+puppeteer,encryption,false,true,,,,no encryption option in page.pdf
+puppeteer,isolation-write,true,false,285.315,1,9443,
+puppeteer,isolation-read,true,false,269.77,1,9468,
+questpdf,trivial,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bootstrap,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,invoice,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-string,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,long-document,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,web-fonts,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,grid-flex,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,effects,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,vector,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,js-chart,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,lazy-images,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,large-images,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,wide-content,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,rtl,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,cjk,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,scripts,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,accessible,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,selectpdf-home,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,paged-media,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,header-footer,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bookmarks,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,forms,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-header-footer,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,encryption,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-write,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-read,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,trivial,true,false,7328.282,1,18259,
+selectpdf,bootstrap,true,false,245.292,2,72847,
+selectpdf,invoice,true,false,156.763,2,34559,
+selectpdf,html-string,true,false,159.648,2,34558,
+selectpdf,long-document,true,false,1624.962,177,1361500,
+selectpdf,web-fonts,true,false,177.325,1,51180,
+selectpdf,grid-flex,true,false,156.992,1,93208,
+selectpdf,effects,true,false,160.545,1,122190,
+selectpdf,vector,true,false,118.756,1,22892,
+selectpdf,js-chart,true,false,1378.678,1,64816,
+selectpdf,lazy-images,true,false,223.843,7,1450059,
+selectpdf,large-images,true,false,292.994,5,3597941,
+selectpdf,wide-content,true,false,131.262,1,26567,
+selectpdf,rtl,true,false,520.025,2,38871,
+selectpdf,cjk,true,false,308.305,3,148293,
+selectpdf,scripts,true,false,190.476,1,70057,
+selectpdf,accessible,true,false,127.873,2,64594,
+selectpdf,selectpdf-home,true,false,787.552,6,523941,
+selectpdf,paged-media,true,false,110.133,4,35131,
+selectpdf,header-footer,true,false,139.351,4,41709,
+selectpdf,bookmarks,true,false,125.5,3,35502,
+selectpdf,forms,true,false,197.24,1,30232,
+selectpdf,html-header-footer,true,false,156.135,4,93613,
+selectpdf,encryption,true,false,308.492,2,35667,
+selectpdf,isolation-write,true,false,99.693,1,18647,
+selectpdf,isolation-read,true,false,111.701,1,18383,
+wkhtmltopdf,trivial,true,false,538.547,1,14507,
+wkhtmltopdf,bootstrap,true,false,311.835,2,35754,
+wkhtmltopdf,invoice,true,false,268.829,3,32849,
+wkhtmltopdf,html-string,true,false,249.713,3,32849,
+wkhtmltopdf,long-document,true,false,816.293,164,621899,
+wkhtmltopdf,web-fonts,true,false,296.038,1,56799,
+wkhtmltopdf,grid-flex,true,false,266.073,2,34339,
+wkhtmltopdf,effects,true,false,270.637,2,20178,
+wkhtmltopdf,vector,true,false,263.966,1,23414,
+wkhtmltopdf,js-chart,true,false,1068.069,1,14191,
+wkhtmltopdf,lazy-images,true,false,1513.405,6,1440213,
+wkhtmltopdf,large-images,true,false,3410.66,4,3589663,
+wkhtmltopdf,wide-content,true,false,293.678,1,26971,
+wkhtmltopdf,rtl,true,false,294.523,1,32176,
+wkhtmltopdf,cjk,true,false,355.227,3,98519,
+wkhtmltopdf,scripts,true,false,319.381,1,28013,
+wkhtmltopdf,accessible,true,false,321.629,2,61913,
+wkhtmltopdf,selectpdf-home,true,false,448.302,7,88791,
+wkhtmltopdf,paged-media,true,false,285.538,2,26322,
+wkhtmltopdf,header-footer,true,false,271.39,4,27320,
+wkhtmltopdf,bookmarks,true,false,262.345,3,35709,
+wkhtmltopdf,forms,true,false,255.632,1,20673,
+wkhtmltopdf,html-header-footer,true,false,516.779,4,37165,
+wkhtmltopdf,encryption,false,true,,,,no PDF encryption
+wkhtmltopdf,isolation-write,true,false,256.268,1,13763,
+wkhtmltopdf,isolation-read,true,false,255.555,1,14567,

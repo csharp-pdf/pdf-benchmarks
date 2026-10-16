@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- QuestPDF: code-first document generation; it does not convert HTML (see NOTES.md). -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-questpdf</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="QuestPDF" Version="2026.9.1" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

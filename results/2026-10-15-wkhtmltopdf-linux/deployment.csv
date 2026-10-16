@@ -1,0 +1,8 @@
+library,variant,extra_os_packages,image_mb,root_ok,root_seconds,non_root_ok,non_root_seconds,error
+wkhtmltopdf,minimal,0,124,False,1.3,False,0.8,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,documented,8,,build failed,,,,"b/libwkhtmltox.so
+--------------------
+ERROR: failed to build: failed to solve: process ""/bin/sh -c gdebi --n wkhtmltox_0.12.5-1.stretch_amd64.deb"" did not complete successfully: exit code: 1
+
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/lkcdfhbdh6wjgerkqixz77e4r
+"

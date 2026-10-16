@@ -1,0 +1,1516 @@
+/* pages-extra.css — shared/core page components (loaded on every public page). Split from the original monolith; cluster-specific rules live in pages-extra-{api,pricing,downloads,homelib}.css */
+
+/* ============================================================
+   SelectPdf — pages-extra.css
+   Layouts for: Pricing, API docs, Save Link, Community, Blog.
+   Loaded after pages.css.
+   ============================================================ */
+
+/* ─── Inline in-body prose link (keyword-rich internal links) ── */
+.spdf-inlink {
+  color: var(--spdf-accent);
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.spdf-inlink:hover { text-decoration: underline; }
+
+/* Output figure — real generated-PDF screenshot */
+.spdf-fig { margin: 32px auto 0; max-width: 500px; }
+/* Wide variant for UI / dashboard screenshots — .spdf-fig.is-wide */
+.spdf-fig.is-wide { max-width: 780px; }
+
+/* Two figures side-by-side (wrap with .spdf-fig-row).
+   Used when two related screenshots read better paired than stacked
+   (e.g. forgot-password form + reset email in §LOST YOUR LOGIN).
+   Stacks to 1-col below 720 px. */
+.spdf-fig-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.spdf-fig-row > .spdf-fig { margin: 0; max-width: none; }
+@media (max-width: 720px) {
+  .spdf-fig-row { grid-template-columns: 1fr; gap: 32px; }
+}
+.spdf-fig img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--spdf-line); border-radius: 12px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.10);
+}
+.spdf-fig figcaption {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--spdf-text-mute); text-align: center; margin-top: 14px;
+}
+
+/* Endpoint pill → bullets gap. `.spdf-demo-bullets { margin: 0 }` wins
+   the cascade against `.spdf-mt-24` utility (see CLAUDE memory
+   project_css_cascade_gotcha) so utilities can't bridge the gap.
+   Sibling selector lives later in the cascade and at equal specificity
+   beats the resetting class. */
+.spdf-endpoint + .spdf-demo-bullets { margin-top: 24px; }
+
+/* ════════════════════════════════════════════════════════════════════
+   Faithful "doc" layout — ports the React DocSection / BulletList /
+   grouped-feature grid / compat rows / upgrade cards / CE hero stamp.
+   Reproduces design/react/assets/{community,api-shared}.jsx 1:1 in
+   semantic classes with the amber/editorial --spdf-* tokens.
+   ════════════════════════════════════════════════════════════════════ */
+
+/* DocSection: thin top divider, 56px rhythm, 1100px column */
+.spdf-doc { border-top: 1px solid var(--spdf-line); padding: 56px 0; }
+.spdf-doc:first-of-type { border-top: 0; }
+.spdf-doc.is-tinted,
+.spdf-block.is-tinted,
+.spdf-section.is-tinted { background: var(--spdf-surface); }
+.spdf-doc-inner { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+.spdf-doc-inner.is-wide { max-width: 1280px; }
+
+/* Stacked variant of .spdf-doc-body — flex column with a 32px gap.
+   Used by sections that lay out several vertically-spaced child blocks
+   (endpoints, demo cards, example presets). */
+.spdf-doc-body.is-stack    { display: flex; flex-direction: column; gap: 32px; margin-top: 32px; }
+.spdf-doc-body.is-stack-lg { display: flex; flex-direction: column; gap: 40px; margin-top: 32px; }
+
+/* Soft-wrap variant of .spdf-code-pre — wraps long URLs at character
+   boundaries instead of forcing horizontal scroll. Used on the
+   save-as-pdf-link example snippets where the href URL is long. */
+.spdf-code-pre.is-wrap { white-space: pre-wrap; overflow-wrap: anywhere; }
+.spdf-example .spdf-feat-title { margin: 6px 0; }
+.spdf-example .spdf-feat-desc  { margin: 0 0 16px; max-width: 760px; }
+.spdf-example .spdf-btn        { margin-top: 16px; }
+.spdf-doc-h2 {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter);
+  font-size: var(--spdf-h2); line-height: var(--spdf-h2-lh);
+  margin: 0; color: var(--spdf-text);
+}
+.spdf-doc-sub {
+  font-family: var(--spdf-font-body); font-size: 17px; line-height: 1.55;
+  color: var(--spdf-text-dim); margin: 16px 0 0; max-width: 720px;
+}
+.spdf-doc-body { margin-top: 32px; }
+
+/* 2-col (or N-col) checkmark bullet list — React BulletList */
+.spdf-doc-bullets {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 36px;
+}
+.spdf-doc-bullets.cols-1 { grid-template-columns: 1fr; }
+.spdf-doc-bullets li {
+  display: flex; gap: 10px; align-items: flex-start;
+  font-family: var(--spdf-font-body); font-size: 14.5px; line-height: 1.5;
+  color: var(--spdf-text);
+}
+.spdf-doc-bullets li::before {
+  content: ""; flex: 0 0 16px; width: 16px; height: 16px; margin-top: 3px;
+  background: no-repeat center/16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8.5 L6.5 12 L13 5' stroke='%23C2660C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+.spdf-doc-bullets.is-x li::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 4 L12 12 M12 4 L4 12' stroke='%23B2887A' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* 3-col bordered grouped feature checklist */
+.spdf-doc-fgrid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0;
+  border: 1px solid var(--spdf-line); border-radius: 14px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+/* 2-col variant: used when a page splits the bordered checklist into just two
+   columns (e.g. /free-downloads/ "In the free edition" vs "Needs the commercial
+   library"). Without this modifier the parent grid keeps three 1fr columns and
+   the third column stays empty, throwing off the visual balance. */
+.spdf-doc-fgrid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.spdf-doc-fcol {
+  padding: 26px 24px; display: flex; flex-direction: column; gap: 14px;
+  border-right: 1px solid var(--spdf-line);
+}
+.spdf-doc-fcol:last-child { border-right: 0; }
+
+/* Compat label/value rows */
+.spdf-doc-rows {
+  border: 1px solid var(--spdf-line); border-radius: 12px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+.spdf-doc-row {
+  display: grid; grid-template-columns: minmax(160px, 220px) 1fr; gap: 18px;
+  padding: 16px 22px; align-items: center;
+  border-bottom: 1px solid var(--spdf-line);
+}
+.spdf-doc-row:last-child { border-bottom: 0; }
+.spdf-doc-row-k {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em; text-transform: uppercase;
+}
+.spdf-doc-row-v {
+  font-family: var(--spdf-font-body); font-size: 14.5px;
+  color: var(--spdf-text); font-weight: 500;
+}
+
+/* 2-col upgrade cards */
+.spdf-doc-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.spdf-ce-hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 56px; align-items: center;
+}
+
+/* Code + resources 2-col (§02) */
+.spdf-ce-code-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px; }
+.spdf-ce-code-grid > div { min-width: 0; }
+/* Gap between the language tabs (full-width with underline) and the
+   2-column code + RESOURCES grid below — matches the same 24px gap
+   used between .spdf-qs-tabs and .spdf-qs-code on other API pages. */
+.spdf-qs-tabs ~ .spdf-ce-code-grid { margin-top: 24px; }
+
+.spdf-ce-hero-grid > div { min-width: 0; }
+
+@media (max-width: 860px) {
+  .spdf-ce-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .spdf-doc-fgrid, .spdf-doc-fgrid.cols-2 { grid-template-columns: 1fr; }
+  .spdf-doc-fcol { border-right: 0; border-bottom: 1px solid var(--spdf-line); }
+  .spdf-doc-fcol:last-child { border-bottom: 0; }
+  .spdf-doc-cards { grid-template-columns: 1fr; }
+  .spdf-ce-code-grid { grid-template-columns: 1fr; }
+  .spdf-doc-bullets { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .spdf-doc-row { grid-template-columns: 1fr; gap: 6px; }
+}
+
+/* ─── Generic page hero (kicker + huge headline + sub) ──── */
+.spdf-page-hero {
+  border-bottom: 1px solid var(--spdf-line);
+  background: radial-gradient(1200px 600px at 50% -300px, var(--spdf-chip), transparent);
+}
+.spdf-page-hero-inner { max-width: 1280px; margin: 0 auto; padding: 80px 32px 56px; }
+.spdf-page-hero-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
+.spdf-page-hero-row > .spdf-kicker { white-space: nowrap; }
+.spdf-page-hero-title {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.95;
+  margin-top: 18px;
+}
+.spdf-page-hero-sub {
+  font-size: 18px;
+  margin-top: 22px;
+  max-width: 760px;
+}
+.spdf-page-tabs-row { margin-top: 36px; }
+
+/* ─── Pricing tier cards ──────────────────────────────────── */
+.spdf-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.spdf-tiers.is-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1024px) { .spdf-tiers, .spdf-tiers.is-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 720px)  { .spdf-tiers, .spdf-tiers.is-4 { grid-template-columns: 1fr; } }
+
+.spdf-tier {
+  background: var(--spdf-panel);
+  border: 1px solid var(--spdf-line);
+  border-radius: 14px;
+  padding: 28px 26px 24px;
+  display: flex; flex-direction: column; gap: 16px;
+  position: relative;
+}
+.spdf-tier.is-feature {
+  background: var(--spdf-surface);
+  border-color: var(--spdf-line-strong);
+}
+.spdf-tier-name {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  color: var(--spdf-text);
+}
+.spdf-tier-tagline {
+  font-family: var(--spdf-font-body);
+  font-size: 13.5px;
+  color: var(--spdf-text-dim);
+  line-height: 1.5;
+}
+.spdf-tier-price {
+  display: flex; align-items: baseline; gap: 6px;
+  margin-top: 4px;
+}
+.spdf-tier-price-amt {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  font-size: 56px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--spdf-text);
+}
+.spdf-tier-price-suffix {
+  font-family: var(--spdf-font-mono);
+  font-size: 12px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.06em;
+}
+.spdf-tier-features {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+  border-top: 1px solid var(--spdf-line); padding-top: 16px;
+}
+.spdf-tier-features li {
+  display: flex; gap: 8px;
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text);
+  line-height: 1.5;
+}
+.spdf-tier-features li::before {
+  content: "✓";
+  color: var(--spdf-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.spdf-tier-cta { margin-top: auto; }
+
+/* Pricing toggle (USD/EUR/GBP + monthly/annual) */
+.spdf-pricing-controls {
+  display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+}
+.spdf-segmented {
+  display: inline-flex;
+  border: 1px solid var(--spdf-line);
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--spdf-panel);
+}
+.spdf-segmented button {
+  background: transparent;
+  border: 0;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-family: var(--spdf-font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--spdf-text-dim);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.spdf-segmented button.is-active,
+.spdf-segmented button[aria-pressed="true"] {
+  background: var(--spdf-text);
+  color: var(--spdf-bg);
+}
+.spdf-param-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.1fr) minmax(0, 2.4fr);
+  gap: 18px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--spdf-line);
+  align-items: start;
+}
+.spdf-param-row:last-child { border-bottom: 0; }
+.spdf-param-row-head {
+  background: var(--spdf-surface);
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  color: var(--spdf-text-mute);
+  text-transform: uppercase;
+  padding: 12px 18px;
+}
+@media (max-width: 720px) {
+  .spdf-param-row, .spdf-param-row-head { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* ─── Blog: index article list ────────────────────────────── */
+.spdf-blog-hero {
+  border-bottom: 1px solid var(--spdf-line);
+  padding: 64px 0;
+}
+.spdf-blog-hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+.spdf-blog-article {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: baseline;
+  padding: 24px 0;
+  border-top: 1px solid var(--spdf-line);
+  text-decoration: none;
+  color: inherit;
+}
+.spdf-blog-article:first-child { border-top: 0; }
+.spdf-blog-article-date {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+.spdf-blog-article-title {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: clamp(22px, 2.4vw, 28px);
+  color: var(--spdf-text);
+  margin: 0;
+  text-wrap: balance;
+}
+.spdf-blog-article-excerpt {
+  font-family: var(--spdf-font-body); font-size: 14.5px;
+  color: var(--spdf-text-dim); margin-top: 10px;
+  line-height: 1.55; max-width: 720px;
+}
+.spdf-blog-article-meta {
+  margin-top: 12px;
+  display: flex; gap: 14px; flex-wrap: wrap;
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.spdf-blog-article-mark {
+  font-family: var(--spdf-font-mono);
+  font-size: 18px;
+  color: var(--spdf-text-mute);
+  font-weight: 600;
+  opacity: 0.4;
+  align-self: center;
+}
+@media (max-width: 720px) {
+  .spdf-blog-article { grid-template-columns: 1fr; gap: 8px; }
+  .spdf-blog-article-mark { display: none; }
+}
+
+/* Blog category pills */
+.spdf-blog-cats { display: flex; gap: 10px; padding: 20px 0; flex-wrap: wrap; border-bottom: 1px solid var(--spdf-line); }
+
+/* Blog post layout */
+.spdf-post-grid {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 64px;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 32px 96px;
+  align-items: start;
+}
+@media (max-width: 900px) { .spdf-post-grid { grid-template-columns: 1fr; gap: 24px; padding: 40px 24px; } }
+
+.spdf-post-toc {
+  position: sticky; top: 88px;
+  font-family: var(--spdf-font-mono);
+  font-size: 12px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.06em;
+}
+.spdf-post-toc-label { font-size: 10.5px; letter-spacing: 0.14em; color: var(--spdf-accent); }
+.spdf-post-toc-list { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.spdf-post-toc-list a {
+  text-decoration: none;
+  color: var(--spdf-text-dim);
+  font-family: var(--spdf-font-body);
+  font-size: 13.5px;
+}
+.spdf-post-toc-list a[aria-current="true"] { color: var(--spdf-accent); }
+
+.spdf-post-body {
+  font-family: var(--spdf-font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--spdf-text);
+  max-width: 720px;
+}
+.spdf-post-body h1, .spdf-post-body h2, .spdf-post-body h3 {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--spdf-text);
+  scroll-margin-top: 96px;
+}
+.spdf-post-body h1 { font-size: clamp(44px, 6vw, 72px); line-height: 1; margin: 0 0 20px; }
+.spdf-post-body h2 { font-size: clamp(28px, 3.4vw, 40px); margin: 56px 0 14px; }
+.spdf-post-body h3 { font-size: 22px; margin: 32px 0 8px; }
+.spdf-post-body p  { margin: 0 0 20px; }
+.spdf-post-body ul, .spdf-post-body ol { margin: 0 0 20px 22px; }
+.spdf-post-body li { margin-bottom: 6px; }
+.spdf-post-body a { color: var(--spdf-accent); }
+.spdf-post-body code { font-family: var(--spdf-font-mono); font-size: 0.9em; padding: 1px 6px; background: var(--spdf-chip); color: var(--spdf-chip-text); border-radius: 4px; }
+.spdf-post-body pre { background: var(--spdf-code); color: var(--spdf-code-text); padding: 18px 22px; border-radius: 10px; overflow: auto; }
+.spdf-post-meta {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.spdf-reading-progress {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 2px; z-index: 60;
+  background: var(--spdf-line);
+}
+.spdf-reading-progress > span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--spdf-accent);
+  transition: width .1s linear;
+}
+
+/* ============================================================
+   Library page (/pdf-library-for-net/) — faithful to
+   design/react/assets/library.jsx, themed via --spdf-* tokens.
+   ============================================================ */
+
+/* Two-column section head (React sp-grid-2-end) */
+.spdf-sec-head {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: end;
+  margin-bottom: 44px;
+}
+.spdf-sec-head-sub {
+  font-family: var(--spdf-font-body);
+  font-size: 15px;
+  color: var(--spdf-text-dim);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 460px;
+  justify-self: end;
+}
+@media (max-width: 860px) {
+  .spdf-sec-head { grid-template-columns: 1fr; gap: 18px; }
+  .spdf-sec-head-sub { justify-self: start; max-width: 620px; }
+}
+.spdf-engine-grid {
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr 56px 1fr;
+  gap: 0;
+  align-items: stretch;
+  padding: 36px 8px 28px;
+}
+.spdf-engine-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--spdf-text-mute);
+}
+@media (max-width: 1024px) {
+  .spdf-engine-grid { grid-template-columns: 1fr; }
+  .spdf-engine-arrow { transform: rotate(90deg); padding: 10px 0; }
+}
+
+/* Compliance & security grid */
+.spdf-compliance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid var(--spdf-line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--spdf-bg);
+  margin-top: 32px;
+}
+@media (max-width: 1024px) { .spdf-compliance-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px)  { .spdf-compliance-grid { grid-template-columns: 1fr; } }
+
+/* FAQ — 2-column (heading aside / accordion), React library layout */
+.spdf-faq-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 56px;
+  align-items: start;
+}
+.spdf-faq-2col-sub {
+  font-family: var(--spdf-font-body);
+  font-size: 15px;
+  color: var(--spdf-text-dim);
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 380px;
+}
+@media (max-width: 860px) {
+  .spdf-faq-2col { grid-template-columns: 1fr; gap: 8px; }
+  .spdf-faq-2col-sub { max-width: 620px; }
+}
+
+/* ============================================================
+   HTML to PDF API — Overview + Parameters page components.
+   Layout authority: design/react/assets/api-overview.jsx +
+   api-parameters.jsx + api-shared.jsx. Amber/editorial theme.
+   ============================================================ */
+
+/* ─── Hero (split: H1+lede on top, request/response pair below) ─── */
+.spdf-apihero { border-bottom: 1px solid var(--spdf-line); position: relative; overflow: hidden; }
+.spdf-apihero-inner { max-width: 1280px; margin: 0 auto; padding: 72px 32px 24px; }
+.spdf-apihero-meta {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap;
+  font-family: var(--spdf-font-mono); font-size: 11px;
+}
+.spdf-apihero-meta .a { color: var(--spdf-accent); letter-spacing: 0.16em; }
+.spdf-apihero-meta .ln { width: 24px; height: 1px; background: var(--spdf-line); }
+.spdf-apihero-meta .b { color: var(--spdf-text-mute); letter-spacing: 0.10em; }
+.spdf-apihero-h1 {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter);
+  font-size: var(--spdf-h1-marketing); line-height: var(--spdf-h1-marketing-lh);
+  margin: 0; color: var(--spdf-text); text-wrap: balance;
+}
+.spdf-apihero-lede {
+  font-family: var(--spdf-font-body); font-size: 19px; line-height: 1.55;
+  color: var(--spdf-text-dim); margin: 28px 0 0; max-width: 720px; text-wrap: pretty;
+}
+.spdf-apihero-actions { display: flex; gap: 12px; margin-top: 36px; flex-wrap: wrap; }
+/* Utility pages (unsubscribe): the hero is the whole page — smaller heading,
+   room below, a quiet note under the action. */
+.spdf-apihero.is-utility { border-bottom: 0; }
+.spdf-apihero.is-utility .spdf-apihero-inner { padding-bottom: 96px; }
+.spdf-apihero-h1.is-compact { font-size: clamp(40px, 5.2vw, 72px); line-height: 1.05; }
+.spdf-apihero-note {
+  font-family: var(--spdf-font-body); font-size: 15px; line-height: 1.6;
+  color: var(--spdf-text-mute); margin: 20px 0 0; max-width: 720px;
+}
+.spdf-apihero-lede a, .spdf-apihero-note a { color: var(--spdf-accent); }
+.spdf-apihero-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 0;
+  border: 1px solid var(--spdf-line); border-radius: 14px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+.spdf-apihero-left  { padding: 28px 28px 32px; border-right: 1px solid var(--spdf-line); min-width: 0; }
+.spdf-apihero-right { padding: 28px 28px 32px; display: flex; flex-direction: column; min-width: 0; }
+/* Code block inside the hero pair: shrink to track width, hide the
+   horizontal scrollbar (sample is intentionally short and shouldn't overflow). */
+.spdf-apihero-left .spdf-qs-code,
+.spdf-apihero-left .spdf-qs-codebody,
+.spdf-apihero-left .spdf-code-pre { min-width: 0; max-width: 100%; }
+/* Touch-swipe works on mobile if the URL line is wider than the panel,
+   but the scrollbar is hidden so it never shows visually on desktop or mobile. */
+.spdf-apihero-left .spdf-code-pre { overflow-x: auto; scrollbar-width: none; }
+.spdf-apihero-left .spdf-code-pre::-webkit-scrollbar { display: none; }
+.spdf-apihero-rsplabel {
+  display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+}
+.spdf-apihero-rsplabel .k {
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em;
+}
+.spdf-apihero-200 {
+  font-family: var(--spdf-font-mono); font-size: 10.5px; font-weight: 700;
+  padding: 3px 8px; border-radius: 5px;
+  background: rgba(34,197,94,0.14); color: #16A34A;
+}
+.spdf-apihero-respcard {
+  flex: 1; border: 1px solid var(--spdf-line); border-radius: 10px;
+  background: var(--spdf-surface);
+  padding: 22px;
+  display: flex; flex-direction: column; gap: 10px; min-height: 240px;
+}
+.spdf-apihero-rcrow { display: flex; justify-content: space-between; align-items: baseline; }
+.spdf-apihero-rctitle {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter); font-size: 22px; color: var(--spdf-text);
+}
+.spdf-apihero-rcmeta { font-family: var(--spdf-font-mono); font-size: 11px; color: var(--spdf-text-mute); }
+.spdf-apihero-rcline { height: 1px; background: var(--spdf-line); margin: 4px 0; }
+.spdf-apihero-bars { display: flex; flex-direction: column; gap: 6px; }
+.spdf-apihero-bar { height: 6px; background: var(--spdf-line); border-radius: 2px; }
+.spdf-apihero-bar.is-accent { background: var(--spdf-accent); }
+.spdf-apihero-rcfoot {
+  display: flex; justify-content: space-between;
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-text-mute); letter-spacing: 0.06em; margin-top: auto;
+}
+@media (max-width: 980px) {
+  .spdf-apihero-pair { grid-template-columns: 1fr; }
+  .spdf-apihero-left { border-right: 0; border-bottom: 1px solid var(--spdf-line); }
+}
+@media (max-width: 560px) {
+  .spdf-apihero-left, .spdf-apihero-right { padding: 22px 18px 24px; }
+  .spdf-apihero-left .spdf-code-pre { font-size: 12px; }
+  /* Endpoint pills (METHOD + URL) on mobile: keep on one line and allow
+     touch-swipe to see the rest. Invisible scrollbar. Beats mid-word wrap
+     (`convert/` → `t/`). Applies to every .spdf-endpoint on the page. */
+  .spdf-endpoint {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+  }
+  .spdf-endpoint::-webkit-scrollbar { display: none; }
+  .spdf-endpoint code {
+    white-space: nowrap; word-break: normal; font-size: 12.5px;
+  }
+}
+/* GET / POST convert examples (`.spdf-doc-body.is-stack`): the GET box shows a
+   bare URL pill while the POST box shows a URL pill + JSON code editor. On mobile
+   the URL pills render at 13.5px but the JSON block drops to 11.5px, so the two
+   boxes look like they use different fonts. Pin both (and the line-number gutter)
+   to one size so the examples read as a matched pair. Higher specificity + later
+   source beats both the dead .spdf-endpoint-code override above and the global
+   .spdf-qs-codebody sizing. */
+@media (max-width: 720px) {
+  .spdf-doc-body.is-stack .spdf-endpoint code,
+  .spdf-doc-body.is-stack .spdf-qs-codebody .spdf-code-pre,
+  .spdf-doc-body.is-stack .spdf-qs-gutter { font-size: 12.5px; }
+}
+
+/* ─── Page tabs (Overview · Parameters) ─── */
+.spdf-apitabs-row { border-bottom: 1px solid var(--spdf-line); }
+/* When the tabs are the last child of .spdf-apihero (e.g. on the Parameters
+   page, which has no client-libraries pair-wrap below them), the section's
+   own border-bottom already draws the separator — drop the inner border to
+   avoid a doubled 2px line. */
+.spdf-apihero > .spdf-apitabs-row:last-child { border-bottom: 0; }
+.spdf-apitabs-inner { max-width: 1280px; margin: 0 auto; padding: 28px 32px; }
+.spdf-apitabs {
+  display: inline-flex; gap: 0; flex-wrap: wrap;
+  border: 1px solid var(--spdf-line); border-radius: 12px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+/* When the apitabs sit directly inside the apihero-inner (between the
+   kicker meta row and the H1, matching the pricing-page layout), add
+   breathing space above the H1 since there's no .spdf-apitabs-row
+   wrapper to provide it. */
+.spdf-apihero-inner > .spdf-apitabs { margin-bottom: 32px; }
+.spdf-apitab {
+  padding: 14px 22px;
+  background: transparent;
+  color: var(--spdf-text); text-decoration: none;
+  display: flex; flex-direction: column; gap: 4px; min-width: 200px;
+  border-right: 1px solid var(--spdf-line);
+  transition: background 0.15s ease;
+}
+.spdf-apitab:last-child { border-right: 0; }
+.spdf-apitab:hover:not(.is-active) { background: var(--spdf-chip); }
+.spdf-apitab.is-active { background: var(--spdf-surface); }
+.spdf-apitab .sub {
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em;
+}
+.spdf-apitab.is-active .sub { color: var(--spdf-accent); }
+.spdf-apitab .lab {
+  font-family: var(--spdf-font-body); font-size: 15px; font-weight: 600;
+  color: var(--spdf-text); letter-spacing: -0.01em;
+}
+/* Mobile: keep tabs side-by-side and tight so they don't bloat the layout. */
+@media (max-width: 720px) {
+  .spdf-apitabs { display: flex; width: 100%; }
+  .spdf-apitab { flex: 1 1 0; min-width: 0; padding: 10px 12px; }
+  .spdf-apitab .sub { font-size: 9.5px; letter-spacing: 0.12em; }
+  .spdf-apitab .lab { font-size: 14px; }
+}
+
+/* ─── Features grid (3×2 on desktop, 2-col tablet, 1-col mobile) ─── */
+.spdf-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  border: 1px solid var(--spdf-line); border-radius: 14px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+.spdf-feat-cell {
+  padding: 28px 26px;
+  border-right: 1px solid var(--spdf-line);
+  border-bottom: 1px solid var(--spdf-line);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.spdf-feat-grid > .spdf-feat-cell:nth-child(3n) { border-right: 0; }
+.spdf-feat-grid > .spdf-feat-cell:nth-last-child(-n+3) { border-bottom: 0; }
+
+/* 2-up variant (.spdf-feat-grid.cols-2) — used when the section has 4 cards
+   that would otherwise lay out 3+1 in the default 3-col grid. Borders mirror
+   the 3-col logic: strip border-right on the right column, border-bottom on
+   the last row. Mirrors the .spdf-doc-fgrid.cols-2 precedent. */
+.spdf-feat-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.spdf-feat-grid.cols-2 > .spdf-feat-cell { border-right: 1px solid var(--spdf-line); border-bottom: 1px solid var(--spdf-line); }
+.spdf-feat-grid.cols-2 > .spdf-feat-cell:nth-child(3n) { border-right: 1px solid var(--spdf-line); }
+.spdf-feat-grid.cols-2 > .spdf-feat-cell:nth-child(2n) { border-right: 0; }
+.spdf-feat-grid.cols-2 > .spdf-feat-cell:nth-last-child(-n+3) { border-bottom: 1px solid var(--spdf-line); }
+.spdf-feat-grid.cols-2 > .spdf-feat-cell:nth-last-child(-n+2) { border-bottom: 0; }
+.spdf-feat-kicker {
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-accent); letter-spacing: 0.14em;
+}
+.spdf-feat-title {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter);
+  font-size: 22px; line-height: 1.15;
+  margin: 2px 0 0; color: var(--spdf-text);
+}
+.spdf-feat-desc {
+  font-family: var(--spdf-font-body); font-size: 14px; line-height: 1.55;
+  color: var(--spdf-text-dim); margin: 4px 0 0;
+}
+@media (max-width: 1200px) and (min-width: 981px) {
+  .spdf-feat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spdf-feat-grid > .spdf-feat-cell:nth-child(3n) { border-right: 1px solid var(--spdf-line); }
+  .spdf-feat-grid > .spdf-feat-cell:nth-child(2n) { border-right: 0; }
+  .spdf-feat-grid > .spdf-feat-cell { border-bottom: 1px solid var(--spdf-line); }
+  .spdf-feat-grid > .spdf-feat-cell:nth-last-child(-n+2) { border-bottom: 0; }
+}
+@media (max-width: 980px) {
+  .spdf-feat-grid, .spdf-feat-grid.cols-2 { grid-template-columns: 1fr; }
+  .spdf-feat-grid > .spdf-feat-cell,
+  .spdf-feat-grid.cols-2 > .spdf-feat-cell { border-right: 0; border-bottom: 1px solid var(--spdf-line); }
+  .spdf-feat-grid > .spdf-feat-cell:last-child,
+  .spdf-feat-grid.cols-2 > .spdf-feat-cell:last-child { border-bottom: 0; }
+}
+.spdf-endpoint {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 12px 14px;
+  border: 1px solid var(--spdf-line); border-radius: 10px;
+  background: var(--spdf-surface);
+}
+.spdf-endpoint code {
+  font-family: var(--spdf-font-mono); font-size: 13.5px; color: var(--spdf-text);
+  word-break: break-all;
+}
+
+/* ─── Required-param cards (3-up) ─── */
+.spdf-required-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 980px) {
+  .spdf-required-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Reminder dashed box ─── */
+.spdf-api-reminder {
+  padding: 18px 22px;
+  border: 1px dashed var(--spdf-line-strong); border-radius: 10px;
+  background: var(--spdf-surface);
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text-dim); line-height: 1.6;
+}
+.spdf-api-reminder strong { color: var(--spdf-text); font-weight: 600; }
+.spdf-api-reminder code { font-family: var(--spdf-font-mono); color: var(--spdf-accent); }
+/* When the box holds more than one note, each goes in its own <p>; reset the
+   browser default margins and add a 14px gap between adjacent paragraphs. */
+.spdf-api-reminder p { margin: 0; }
+.spdf-api-reminder p + p { margin-top: 14px; }
+
+/* ─── Client libraries — 2-col code + meta panel ─── */
+.spdf-libsrc-grid {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 24px;
+  margin-top: 24px;
+}
+.spdf-libsrc-grid > div { min-width: 0; }
+@media (max-width: 980px) {
+  .spdf-libsrc-grid { grid-template-columns: 1fr; }
+}
+.spdf-rh-row {
+  display: grid; grid-template-columns: minmax(230px, 1.1fr) minmax(0, 2.4fr);
+  gap: 18px; padding: 12px 18px;
+  border-bottom: 1px solid var(--spdf-line); align-items: start;
+}
+.spdf-rh-row:last-child { border-bottom: 0; }
+.spdf-rh-row .k {
+  font-family: var(--spdf-font-mono); font-size: 13px; color: var(--spdf-text);
+  word-break: break-all;
+}
+.spdf-rh-row .v {
+  font-family: var(--spdf-font-body); font-size: 13.5px; color: var(--spdf-text-dim);
+  line-height: 1.55;
+}
+@media (max-width: 720px) {
+  .spdf-rh-row { grid-template-columns: 1fr; gap: 6px; }
+}
+.spdf-endpoints-row {
+  display: grid; grid-template-columns: 100px minmax(0, 1.8fr) minmax(0, 1.6fr);
+  gap: 14px; padding: 14px 18px; align-items: start;
+  border-bottom: 1px solid var(--spdf-line);
+}
+.spdf-endpoints-row:last-child { border-bottom: 0; }
+.spdf-endpoints-row code {
+  font-family: var(--spdf-font-mono); font-size: 13px; color: var(--spdf-text);
+  word-break: break-all;
+}
+.spdf-endpoints-row .d {
+  font-family: var(--spdf-font-body); font-size: 13.5px; color: var(--spdf-text-dim);
+  line-height: 1.5;
+}
+@media (max-width: 720px) {
+  .spdf-endpoints-row { grid-template-columns: 1fr; gap: 6px; }
+}
+.spdf-conc-tier {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) minmax(110px, 0.7fr) minmax(0, 1.6fr) 80px;
+  gap: 18px; align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--spdf-line);
+}
+.spdf-conc-tier:last-child { border-bottom: 0; }
+.spdf-conc-tier-bar { height: 6px; background: var(--spdf-surface); border-radius: 3px; overflow: hidden; }
+@media (max-width: 720px) {
+  .spdf-conc-tier { grid-template-columns: 1fr 1fr; gap: 6px 14px; }
+  .spdf-conc-tier-bar { grid-column: 1 / -1; order: 99; }
+}
+
+/* ─── Demo-endpoint bullets (▸ marker + inline code chips) ─── */
+/* When .spdf-demo-bullets directly follows the section H2, give it
+   the standard header→body breathing space (the list class itself
+   resets margins, so the .spdf-mt-* utilities don't reach it). */
+.spdf-doc-h2 + .spdf-demo-bullets { margin-top: 48px; }
+.spdf-demo-bullets {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 10px;
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text-dim); line-height: 1.55;
+}
+.spdf-demo-bullets li { position: relative; padding-left: 18px; }
+.spdf-demo-bullets li::before {
+  content: '▸';
+  position: absolute; left: 0; top: 0;
+  color: var(--spdf-accent); font-family: var(--spdf-font-mono);
+}
+.spdf-demo-bullets code {
+  font-family: var(--spdf-font-mono); font-size: 12px;
+  color: var(--spdf-text); background: var(--spdf-chip);
+  padding: 1px 5px; border-radius: 3px;
+}
+.spdf-paramref-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px; align-items: start;
+}
+.spdf-paramside {
+  position: sticky; top: 80px;
+  border: 1px solid var(--spdf-line); border-radius: 12px; padding: 18px;
+  background: var(--spdf-surface);
+}
+.spdf-paramside-lbl {
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em; margin-bottom: 12px;
+}
+.spdf-paramside-list { display: flex; flex-direction: column; gap: 2px; }
+.spdf-paramside-link {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8px 10px; border-radius: 6px;
+  color: var(--spdf-text-dim);
+  text-decoration: none;
+  font-family: var(--spdf-font-body); font-size: 13.5px; font-weight: 500;
+  gap: 12px;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.spdf-paramside-link:hover { background: var(--spdf-surface); }
+.spdf-paramside-link[aria-current="true"] {
+  color: var(--spdf-text); background: var(--spdf-chip); font-weight: 600;
+}
+.spdf-paramside-count {
+  font-family: var(--spdf-font-mono); font-size: 10.5px; color: var(--spdf-text-mute);
+}
+
+/* Row chip variants & enum value chips (extends existing .spdf-param-* family) */
+.spdf-param-row.is-hidden { display: none; }
+
+@media (max-width: 980px) {
+  .spdf-paramref-layout { grid-template-columns: 1fr; }
+  .spdf-paramside { position: static; }
+}
+
+/* ─── Pricing primitives ───────────────────────────────────────────
+   Shared across /pricing/, /api-pricing/, and the 5 derivative pages
+   (3yr / 5yr maintenance + 3 renewal variants). Per pricing-shared.jsx
+   and library-pricing.jsx / api-pricing.jsx — React mock is the visual
+   spec. */
+
+/* Pricing kicker meta row (used at the top of every pricing hero) —
+   just the kicker chip + the trailing rule line. The `Updated · …`
+   stamp was removed: it goes stale and adds visual noise. */
+.spdf-pricing-hero-meta {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 32px; flex-wrap: wrap;
+}
+.spdf-pricing-hero-meta .a {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.16em; text-transform: uppercase;
+}
+.spdf-pricing-hero-meta .ln {
+  flex: 1; height: 1px; background: var(--spdf-line); min-width: 40px;
+}
+
+/* Tier grid (6 cards) — explicit 3-up at desktop so the layout is
+   always 3 + 3, then 2-up at ~900px, 1-up on mobile. */
+.spdf-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px; align-items: stretch;
+}
+@media (max-width: 900px) {
+  .spdf-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .spdf-pricing-grid { grid-template-columns: 1fr; }
+}
+
+/* Tier card */
+.spdf-tier {
+  position: relative;
+  border: 1px solid var(--spdf-line);
+  border-radius: 14px; padding: 28px 26px 26px;
+  background: var(--spdf-bg);
+  display: flex; flex-direction: column; gap: 18px;
+}
+.spdf-tier.is-popular {
+  border: 1.5px solid var(--spdf-accent);
+  box-shadow: 0 30px 60px -30px color-mix(in oklab, var(--spdf-accent) 30%, transparent);
+}
+.spdf-tier-ribbon {
+  position: absolute; top: 0; right: 24px; transform: translateY(-50%);
+  background: var(--spdf-accent); color: var(--spdf-accent-ink);
+  padding: 5px 12px; border-radius: 999px;
+  font-family: var(--spdf-font-mono); font-size: 10px; font-weight: 600;
+  letter-spacing: 0.14em;
+}
+.spdf-tier-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.spdf-tier-num {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em;
+}
+.spdf-tier.is-popular .spdf-tier-num { color: var(--spdf-accent); }
+.spdf-tier-dot {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute);
+}
+.spdf-tier.is-popular .spdf-tier-dot { color: var(--spdf-accent); }
+.spdf-tier-name {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 32px; letter-spacing: -0.02em; line-height: 1.05;
+  color: var(--spdf-text); margin: 0;
+}
+.spdf-tier-tagline {
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text-dim); margin: 4px 0 0;
+}
+.spdf-tier-price-strip {
+  padding: 18px 0;
+  border-top: 1px dashed var(--spdf-line);
+  border-bottom: 1px dashed var(--spdf-line);
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+}
+.spdf-tier-price {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 56px; letter-spacing: -0.04em; line-height: 0.9;
+  color: var(--spdf-text);
+}
+.spdf-tier-price-suffix {
+  font-family: var(--spdf-font-mono); font-size: 13px;
+  color: var(--spdf-text-dim);
+}
+.spdf-tier-period {
+  width: 100%; font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); letter-spacing: 0.04em; margin-top: 2px;
+}
+.spdf-tier-bullets {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.spdf-tier-bullet {
+  display: grid; grid-template-columns: 16px 1fr; gap: 10px;
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text); line-height: 1.45;
+}
+.spdf-tier-bullet-icon {
+  color: var(--spdf-accent); font-family: var(--spdf-font-mono);
+  font-weight: 700; font-size: 14px; line-height: 1.4;
+}
+.spdf-tier-bullet-sub {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); margin-top: 2px; letter-spacing: 0.02em;
+}
+.spdf-tier-cta-stack {
+  margin-top: auto; display: flex; flex-direction: column; gap: 8px;
+  padding-top: 8px;
+}
+.spdf-tier-cta {
+  background: transparent; color: var(--spdf-text);
+  border: 1px solid var(--spdf-line-strong, var(--spdf-line));
+  padding: 12px 18px; border-radius: 9px;
+  font-size: 13.5px; font-weight: 600;
+  font-family: inherit; text-decoration: none; text-align: center;
+  cursor: pointer; width: 100%; display: block;
+}
+.spdf-tier.is-popular .spdf-tier-cta {
+  background: var(--spdf-accent); color: var(--spdf-accent-ink);
+  border-color: var(--spdf-accent);
+}
+.spdf-tier-cta-secondary {
+  background: transparent; color: var(--spdf-text-dim);
+  border: 0; padding: 8px;
+  font-size: 12.5px; font-weight: 500;
+  font-family: inherit; text-align: center;
+  text-decoration: underline; text-decoration-color: var(--spdf-line);
+  text-underline-offset: 4px;
+  cursor: pointer; display: block;
+}
+
+/* "All licenses include / Every plan" dashed bar below the tier grid */
+.spdf-pricing-include {
+  margin-top: 32px; padding: 20px 24px;
+  border: 1px dashed var(--spdf-line-strong, var(--spdf-line)); border-radius: 12px;
+  background: var(--spdf-surface);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 24px; flex-wrap: wrap;
+}
+.spdf-pricing-include-left {
+  display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
+}
+.spdf-pricing-include-tag {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.14em;
+}
+.spdf-pricing-include-body {
+  font-family: var(--spdf-font-body); font-size: 14px;
+  color: var(--spdf-text);
+}
+.spdf-pricing-include-right {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute);
+}
+
+/* License-model / Conversion-explainer 4-cell strip
+   (extends the .spdf-feat-grid pattern with a chip tag instead of
+   the orange kicker text). */
+.spdf-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 0;
+  border: 1px solid var(--spdf-line); border-radius: 14px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+.spdf-tag-cell {
+  padding: 28px 26px;
+  border-right: 1px solid var(--spdf-line);
+  border-bottom: 1px solid var(--spdf-line);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.spdf-tag-grid > .spdf-tag-cell:nth-child(2n)            { border-right: 0; }
+.spdf-tag-grid > .spdf-tag-cell:nth-last-child(-n+2)     { border-bottom: 0; }
+@media (min-width: 1100px) {
+  .spdf-tag-grid > .spdf-tag-cell:nth-child(2n)          { border-right: 1px solid var(--spdf-line); }
+  .spdf-tag-grid > .spdf-tag-cell:nth-child(4n)          { border-right: 0; }
+  .spdf-tag-grid > .spdf-tag-cell                        { border-bottom: 0; }
+}
+.spdf-tag-cell-chip {
+  align-self: flex-start;
+  font-family: var(--spdf-font-mono); font-size: 10px;
+  color: var(--spdf-chip-text); background: var(--spdf-chip);
+  padding: 4px 10px; border-radius: 4px; letter-spacing: 0.14em;
+}
+.spdf-tag-cell-title {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 26px; letter-spacing: -0.02em; line-height: 1.1;
+  color: var(--spdf-text); margin: 0;
+}
+.spdf-tag-cell-body {
+  font-family: var(--spdf-font-body); font-size: 14px;
+  color: var(--spdf-text-dim); line-height: 1.6; margin: 0;
+}
+
+/* Maintenance plans 4-strip (Library-page only) — same .spdf-tag-grid
+   shape but with a left-aligned mono mark + display title + body + cta */
+.spdf-maint-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--spdf-line); border-radius: 12px; overflow: hidden;
+  background: var(--spdf-bg);
+}
+.spdf-maint-cell {
+  padding: 26px 22px;
+  border-right: 1px solid var(--spdf-line);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.spdf-maint-cell:last-child { border-right: 0; }
+.spdf-maint-cell.is-muted { background: var(--spdf-surface); }
+.spdf-maint-cell.is-muted .spdf-maint-cta { color: var(--spdf-text-mute); cursor: default; }
+@media (max-width: 1024px) {
+  .spdf-maint-strip { grid-template-columns: repeat(2, 1fr); }
+  .spdf-maint-cell:nth-child(2n)             { border-right: 0; }
+  .spdf-maint-cell:nth-child(-n+2)           { border-bottom: 1px solid var(--spdf-line); }
+}
+@media (max-width: 720px) {
+  .spdf-maint-strip { grid-template-columns: 1fr; }
+  .spdf-maint-cell                            { border-right: 0; border-bottom: 1px solid var(--spdf-line); }
+  .spdf-maint-cell:last-child                 { border-bottom: 0; }
+}
+.spdf-pricing-addon-row {
+  display: grid; grid-template-columns: 140px 1fr 140px;
+  gap: 24px; align-items: center;
+  padding: 22px 26px;
+  border-bottom: 1px solid var(--spdf-line);
+}
+.spdf-pricing-addon-row:last-child { border-bottom: 0; }
+.spdf-pricing-addon-note {
+  justify-self: end;
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.12em; text-transform: uppercase;
+}
+@media (max-width: 720px) {
+  .spdf-pricing-addon-row { grid-template-columns: 1fr; gap: 12px; padding: 18px; }
+  .spdf-pricing-addon-note { justify-self: start; }
+}
+
+/* Cross-sell 2-up (Library ↔ API) */
+.spdf-pricing-cross {
+  border: 1px solid var(--spdf-line); border-radius: 14px; overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+.spdf-pricing-cross-half {
+  padding: 36px 32px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.spdf-pricing-cross-half.is-here { background: var(--spdf-bg); border-right: 1px solid var(--spdf-line); }
+.spdf-pricing-cross-half.is-other { background: var(--spdf-surface); }
+.spdf-pricing-cross-tag {
+  font-family: var(--spdf-font-mono); font-size: 11px; letter-spacing: 0.14em;
+}
+.spdf-pricing-cross-half.is-here  .spdf-pricing-cross-tag { color: var(--spdf-accent); }
+.spdf-pricing-cross-half.is-other .spdf-pricing-cross-tag { color: var(--spdf-text-mute); }
+.spdf-pricing-cross-title {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 32px; letter-spacing: -0.025em; line-height: 1.05;
+  color: var(--spdf-text); margin: 0;
+}
+.spdf-pricing-cross-body {
+  font-family: var(--spdf-font-body); font-size: 14px;
+  color: var(--spdf-text-dim); line-height: 1.6; margin: 0;
+}
+.spdf-pricing-cross-btn {
+  align-self: flex-start; margin-top: 4px;
+  font-family: inherit; font-size: 13.5px; font-weight: 600;
+  color: var(--spdf-text); text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  border: 1px solid var(--spdf-line-strong, var(--spdf-line));
+}
+.spdf-pricing-cross-btn:hover { background: var(--spdf-chip); }
+@media (max-width: 1024px) {
+  .spdf-pricing-cross { grid-template-columns: 1fr; }
+  .spdf-pricing-cross-half.is-here {
+    border-right: 0; border-bottom: 1px solid var(--spdf-line);
+  }
+}
+.spdf-calc-result {
+  margin-top: 28px;
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 0; border: 1px solid var(--spdf-line); border-radius: 12px;
+  background: var(--spdf-bg); overflow: hidden;
+}
+.spdf-calc-result > div {
+  padding: 22px;
+  border-right: 1px solid var(--spdf-line);
+}
+.spdf-calc-result > div:last-child { border-right: 0; }
+@media (max-width: 720px) {
+  .spdf-calc-result { grid-template-columns: 1fr; }
+  .spdf-calc-result > div { border-right: 0; border-bottom: 1px solid var(--spdf-line); }
+  .spdf-calc-result > div:last-child { border-bottom: 0; }
+}
+
+/* Pricing hero — share the .spdf-apihero shell but distinct lede column.
+   Column ratio 1.2/1 keeps the lede column narrow but pulls it left into
+   the page (vs 1.5/1 which dropped it to the far right). align-items:start
+   anchors the lede to the top of the row, with a top-padding nudge so it
+   sits just below the H1's first-line cap-height. */
+.spdf-pricing-hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  margin-top: 40px; align-items: end;
+}
+@media (max-width: 1024px) {
+  .spdf-pricing-hero-grid { grid-template-columns: 1fr; gap: 32px; align-items: start; }
+}
+.spdf-pricing-hero-lede {
+  font-family: var(--spdf-font-body); font-size: 17px; line-height: 1.55;
+  color: var(--spdf-text-dim); margin: 0; max-width: 460px;
+}
+/* Stack two ledes vertically in the same hero column with an empty
+   row of breathing space between them (used by /pricing/ where the
+   second lede is the "Already a customer?" cross-link). */
+.spdf-pricing-hero-lede + .spdf-pricing-hero-lede { margin-top: 32px; }
+
+/* 2-up section header (H2 left, intro paragraph right with bottom-align).
+   Used at the top of LICENSE MODEL / WHAT EVERY LICENSE INCLUDES /
+   METERING / FIND YOUR PLAN / COMPARE EVERY PLAN. Collapses to a single
+   column on mobile so the paragraph doesn't end up in a 200-px column. */
+.spdf-pricing-section-head {
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  gap: 48px; align-items: end;
+}
+.spdf-pricing-section-head > p { margin: 0; max-width: 460px; justify-self: end; }
+
+/* Calculator variant — right cell has paragraph + billing toggle stacked. */
+.spdf-pricing-section-head-aside {
+  justify-self: end;
+  display: flex; flex-direction: column; gap: 14px; align-items: flex-end;
+}
+.spdf-pricing-section-head-aside > p { margin: 0; max-width: 380px; text-align: right; }
+
+@media (max-width: 1024px) {
+  .spdf-pricing-section-head { grid-template-columns: 1fr; gap: 20px; align-items: start; }
+  .spdf-pricing-section-head > p { max-width: none; justify-self: start; }
+  .spdf-pricing-section-head-aside { justify-self: start; align-items: flex-start; }
+  .spdf-pricing-section-head-aside > p { text-align: left; }
+}
+
+/* ─── Download/install cards (/downloads/ + /free-downloads/) ───
+   Two flavours sit in the same .spdf-dl-grid:
+   - .spdf-dl-card  — NuGet package card (with copy-able install snippet)
+   - .spdf-dl-zip   — direct-download anchor card for the offline archives
+   2-up on desktop, 1-up below 860px. */
+.spdf-dl-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+/* The `dotnet add package …` line is one long token. Rather than wrap it
+   mid-word (which cut "Chromium"/"Windows" on phones), let the command scroll
+   horizontally on one line — the package name stays intact and readable. */
+.spdf-dl-card-code .spdf-code-pre.is-wrap {
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* The longest command we ship — `dotnet add package
+     Select.HtmlToPdf.NetCore.Chromium.Windows` — overran the card by only
+     ~10px at desktop, which was enough to raise a full scrollbar in one box
+     of an otherwise clean grid. Trimming the side padding inside these
+     narrow cards buys 16px and lets it sit on one line. The scroll stays as
+     the fallback for phones. */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 860px) {
+  .spdf-dl-grid { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* Anchor-flavoured .spdf-feat-cell — strip the default underline so the
+   whole cell can be a link without an underlined title. Hover swaps in
+   the surface tint, same as .spdf-doc-card. Used on /downloads/ NEXT STEPS. */
+.spdf-feat-cell.is-link { text-decoration: none; color: inherit; }
+.spdf-feat-cell.is-link:hover { background: var(--spdf-surface); }
+.spdf-feat-cell.is-link:hover .spdf-feat-title { color: var(--spdf-accent); }
+
+/* ─── Legal & about pages ────────────────────────────────────────────────
+   Used by /eula/, /privacy-policy/, /terms-and-conditions/ (long with
+   sticky side-nav) and /about/, /contact/, /refunds-policy/ (short single
+   column via .is-short). Mirrors .spdf-paramref geometry but tuned for
+   prose: bigger leading, h3/ul/ol/strong styling baked in so each page's
+   section body can render as @Html.Raw(legal-html) without per-page CSS. */
+.spdf-legal { }
+.spdf-legal-inner {
+  max-width: 1280px; margin: 0 auto; padding: 48px 32px 64px;
+}
+.spdf-legal-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 40px; align-items: start;
+}
+.spdf-legal-main { min-width: 0; }
+.spdf-legal-sections {
+  display: flex; flex-direction: column; gap: 48px; margin-top: 8px;
+}
+.spdf-legal-section { scroll-margin-top: 88px; }
+.spdf-legal-section-meta {
+  display: flex; align-items: baseline; gap: 14px;
+  margin-bottom: 10px; flex-wrap: wrap;
+}
+.spdf-legal-section-meta .k {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.14em;
+}
+.spdf-legal-section-h2 {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter); line-height: 1.08;
+  font-size: 30px; margin: 0; color: var(--spdf-text);
+}
+
+.spdf-legal-body {
+  font-family: var(--spdf-font-body); font-size: 15.5px; line-height: 1.72;
+  color: var(--spdf-text); margin-top: 16px;
+}
+.spdf-legal-body p { margin: 0 0 16px; }
+.spdf-legal-body p:last-child { margin-bottom: 0; }
+.spdf-legal-body h3 {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 19px; line-height: 1.25; color: var(--spdf-text);
+  margin: 26px 0 8px;
+}
+.spdf-legal-body h4 {
+  font-family: var(--spdf-font-body); font-weight: 600;
+  font-size: 15px; line-height: 1.3; color: var(--spdf-text);
+  margin: 22px 0 6px;
+}
+.spdf-legal-body ul, .spdf-legal-body ol { margin: 0 0 16px; padding-left: 22px; }
+.spdf-legal-body li { margin: 6px 0; }
+.spdf-legal-body strong { color: var(--spdf-text); font-weight: 600; }
+.spdf-legal-body code {
+  font-family: var(--spdf-font-mono); font-size: 13px;
+  background: var(--spdf-chip); padding: 1px 6px; border-radius: 4px;
+  color: var(--spdf-text);
+}
+.spdf-legal-body a {
+  color: var(--spdf-accent); text-decoration: none;
+  border-bottom: 1px solid var(--spdf-chip);
+  transition: border-color 0.12s ease;
+}
+.spdf-legal-body a:hover { border-bottom-color: var(--spdf-accent); }
+
+/* Short single-column variant for /about/, /contact/, /refunds-policy/.
+   Centres the clamped column horizontally since there is no sticky side-nav
+   to anchor the layout to the left. */
+.spdf-legal.is-short .spdf-legal-layout { display: block; }
+.spdf-legal.is-short .spdf-legal-main { max-width: 760px; margin: 0 auto; }
+
+/* Optional highlight callout at the top of a section
+   (used by Privacy Policy for the GDPR Summary box). */
+.spdf-legal-callout {
+  border: 1px solid var(--spdf-line); border-radius: 12px;
+  background: var(--spdf-surface); padding: 24px 28px; margin-bottom: 40px;
+}
+.spdf-legal-callout-k {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.14em; margin-bottom: 8px;
+}
+.spdf-legal-callout-h {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 22px; line-height: 1.15; color: var(--spdf-text); margin: 0 0 12px;
+}
+.spdf-legal-callout ul { margin: 8px 0 0; padding-left: 22px; }
+.spdf-legal-callout li {
+  margin: 4px 0; font-family: var(--spdf-font-body);
+  font-size: 14.5px; line-height: 1.55; color: var(--spdf-text);
+}
+
+/* Compact info card (used on /about/ for the company entity block
+   and on /contact/ for the support / sales cards). */
+.spdf-legal-card {
+  border: 1px solid var(--spdf-line); border-radius: 14px;
+  padding: 28px 30px; background: var(--spdf-bg);
+  margin-bottom: 20px;
+}
+.spdf-legal-card-k {
+  font-family: var(--spdf-font-mono); font-size: 10.5px;
+  color: var(--spdf-accent); letter-spacing: 0.14em; margin-bottom: 6px;
+}
+.spdf-legal-card-h {
+  font-family: var(--spdf-font-display); font-weight: var(--spdf-display-weight);
+  font-size: 22px; line-height: 1.15; color: var(--spdf-text); margin: 0 0 14px;
+}
+.spdf-legal-card dl {
+  margin: 0; display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr; gap: 8px 24px;
+}
+.spdf-legal-card dt {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-text-mute); letter-spacing: 0.14em; align-self: center;
+}
+.spdf-legal-card dd {
+  margin: 0; font-family: var(--spdf-font-body);
+  font-size: 14.5px; color: var(--spdf-text); line-height: 1.5;
+}
+.spdf-legal-card dd a { color: var(--spdf-accent); text-decoration: none; }
+.spdf-legal-card dd a:hover { text-decoration: underline; }
+.spdf-legal-card p {
+  margin: 0; font-family: var(--spdf-font-body);
+  font-size: 14.5px; color: var(--spdf-text); line-height: 1.6;
+}
+.spdf-legal-cards-2 {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 860px) {
+  .spdf-legal-layout { grid-template-columns: 1fr; }
+  .spdf-legal-layout .spdf-paramside { position: static; }
+  .spdf-legal-cards-2 { grid-template-columns: 1fr; }
+  .spdf-legal-card dl { grid-template-columns: 1fr; gap: 4px 0; }
+  .spdf-legal-card dt { margin-top: 10px; }
+}
+.spdf-form-banner {
+  padding: 14px 16px; border-radius: 12px;
+  background: #FFF1EC; border: 1.5px solid #F4B5A0;
+  color: #8A2A0E; font-family: var(--spdf-font-body); font-size: 14.5px;
+  line-height: 1.55;
+}
+.spdf-form-banner a { color: inherit; text-decoration: underline; }
+.spdf-form-banner code { font-family: var(--spdf-font-mono); font-size: 13px; }
+
+/* ─── Success panel: license key reveal ─────────────────────────────────── */
+.spdf-keybox {
+  margin-top: 18px; padding: 18px 20px; border-radius: 14px;
+  background: var(--spdf-bg); border: 2px solid var(--spdf-accent);
+}
+.spdf-keybox-k {
+  font-family: var(--spdf-font-mono); font-size: 11px;
+  color: var(--spdf-accent); letter-spacing: 0.14em;
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.spdf-keybox-row {
+  display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap;
+}
+.spdf-keybox-val {
+  flex: 1 1 auto; min-width: 0;
+  font-family: var(--spdf-font-mono); font-size: 15px;
+  color: var(--spdf-text); user-select: all;
+  word-break: break-all;
+}
+.spdf-keybox-note {
+  margin-top: 10px;
+  font-family: var(--spdf-font-mono); font-size: 11.5px;
+  color: var(--spdf-text-mute); letter-spacing: 0.04em; line-height: 1.55;
+}
+
+.spdf-next-steps {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;
+}
+.spdf-next-step {
+  padding: 18px; border-radius: 12px;
+  background: var(--spdf-panel); border: 1.5px solid var(--spdf-line);
+}
+.spdf-next-step-n {
+  display: inline-block; width: 26px; height: 26px;
+  border-radius: 7px; background: var(--spdf-chip);
+  font-family: var(--spdf-font-mono); font-size: 12.5px; font-weight: 600;
+  color: var(--spdf-text); text-align: center; line-height: 26px;
+  margin-bottom: 10px;
+}
+.spdf-next-step-h {
+  font-family: var(--spdf-font-display); font-size: 17px; font-weight: 600;
+  color: var(--spdf-text); margin: 0 0 6px 0;
+}
+.spdf-next-step-b {
+  font-family: var(--spdf-font-body); font-size: 13.5px;
+  color: var(--spdf-text-dim); line-height: 1.55; margin: 0 0 10px 0;
+}
+.spdf-next-step a { color: var(--spdf-accent); text-decoration: none; font-weight: 600; }
+.spdf-next-step a:hover { text-decoration: underline; }
+.spdf-next-step code {
+  display: block; padding: 8px 10px; border-radius: 8px;
+  background: var(--spdf-bg); border: 1px solid var(--spdf-line);
+  font-family: var(--spdf-font-mono); font-size: 12.5px;
+  color: var(--spdf-text); overflow-x: auto;
+}
+
+/* ─── Trial feature tiles (6-card what-you-can-do, /get-api-key/) ─────────
+ * Distinct from .spdf-feat-grid in this file (which is the bordered
+ * internal-cells pattern on /html-to-pdf-api/). These tiles are spaced
+ * cards, each bordered, no outer frame. */
+.spdf-trial-feat-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+}
+
+@media (max-width: 860px) {
+  .spdf-next-steps, .spdf-trial-feat-grid { grid-template-columns: 1fr; }
+}

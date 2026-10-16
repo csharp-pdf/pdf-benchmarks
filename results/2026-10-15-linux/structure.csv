@@ -1,0 +1,365 @@
+library,standard,check,expected,found,pass
+abcpdf,pdfa-1a,lang,en,en,True
+abcpdf,pdfa-1a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+abcpdf,pdfa-1a,displayDocTitle,True,True,True
+abcpdf,pdfa-1a,H1,1,1,True
+abcpdf,pdfa-1a,H2,5,5,True
+abcpdf,pdfa-1a,H3,1,1,True
+abcpdf,pdfa-1a,L,4,4,True
+abcpdf,pdfa-1a,LI,10,10,True
+abcpdf,pdfa-1a,Table,1,1,True
+abcpdf,pdfa-1a,TH,8,8,True
+abcpdf,pdfa-1a,TD,12,12,True
+abcpdf,pdfa-1a,Figure,1,1,True
+abcpdf,pdfa-1a,Link,6,6,True
+abcpdf,pdfa-1a,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+abcpdf,pdfa-2a,lang,en,en,True
+abcpdf,pdfa-2a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+abcpdf,pdfa-2a,displayDocTitle,True,True,True
+abcpdf,pdfa-2a,H1,1,1,True
+abcpdf,pdfa-2a,H2,5,5,True
+abcpdf,pdfa-2a,H3,1,1,True
+abcpdf,pdfa-2a,L,4,4,True
+abcpdf,pdfa-2a,LI,10,10,True
+abcpdf,pdfa-2a,Table,1,1,True
+abcpdf,pdfa-2a,TH,8,8,True
+abcpdf,pdfa-2a,TD,12,12,True
+abcpdf,pdfa-2a,Figure,1,1,True
+abcpdf,pdfa-2a,Link,6,6,True
+abcpdf,pdfa-2a,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+abcpdf,pdfua-1,lang,en,en,True
+abcpdf,pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+abcpdf,pdfua-1,displayDocTitle,True,True,True
+abcpdf,pdfua-1,H1,1,1,True
+abcpdf,pdfua-1,H2,5,5,True
+abcpdf,pdfua-1,H3,1,1,True
+abcpdf,pdfua-1,L,4,4,True
+abcpdf,pdfua-1,LI,10,10,True
+abcpdf,pdfua-1,Table,1,1,True
+abcpdf,pdfua-1,TH,8,8,True
+abcpdf,pdfua-1,TD,12,12,True
+abcpdf,pdfua-1,Figure,1,1,True
+abcpdf,pdfua-1,Link,6,6,True
+abcpdf,pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+abcpdf,pdfa-2a+pdfua-1,lang,en,en,True
+abcpdf,pdfa-2a+pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+abcpdf,pdfa-2a+pdfua-1,displayDocTitle,True,True,True
+abcpdf,pdfa-2a+pdfua-1,H1,1,1,True
+abcpdf,pdfa-2a+pdfua-1,H2,5,5,True
+abcpdf,pdfa-2a+pdfua-1,H3,1,1,True
+abcpdf,pdfa-2a+pdfua-1,L,4,4,True
+abcpdf,pdfa-2a+pdfua-1,LI,10,10,True
+abcpdf,pdfa-2a+pdfua-1,Table,1,1,True
+abcpdf,pdfa-2a+pdfua-1,TH,8,8,True
+abcpdf,pdfa-2a+pdfua-1,TD,12,12,True
+abcpdf,pdfa-2a+pdfua-1,Figure,1,1,True
+abcpdf,pdfa-2a+pdfua-1,Link,6,6,True
+abcpdf,pdfa-2a+pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+docotic,pdfa-1a,lang,en,,False
+docotic,pdfa-1a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+docotic,pdfa-1a,displayDocTitle,True,False,False
+docotic,pdfa-1a,H1,1,1,True
+docotic,pdfa-1a,H2,5,5,True
+docotic,pdfa-1a,H3,1,1,True
+docotic,pdfa-1a,L,4,4,True
+docotic,pdfa-1a,LI,10,10,True
+docotic,pdfa-1a,Table,1,1,True
+docotic,pdfa-1a,TH,8,8,True
+docotic,pdfa-1a,TD,12,12,True
+docotic,pdfa-1a,Figure,1,2,False
+docotic,pdfa-1a,Link,6,6,True
+docotic,pdfa-1a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+docotic,pdfa-2a,lang,en,,False
+docotic,pdfa-2a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+docotic,pdfa-2a,displayDocTitle,True,False,False
+docotic,pdfa-2a,H1,1,1,True
+docotic,pdfa-2a,H2,5,5,True
+docotic,pdfa-2a,H3,1,1,True
+docotic,pdfa-2a,L,4,4,True
+docotic,pdfa-2a,LI,10,10,True
+docotic,pdfa-2a,Table,1,1,True
+docotic,pdfa-2a,TH,8,8,True
+docotic,pdfa-2a,TD,12,12,True
+docotic,pdfa-2a,Figure,1,2,False
+docotic,pdfa-2a,Link,6,6,True
+docotic,pdfa-2a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+docotic,pdfa-3a,lang,en,,False
+docotic,pdfa-3a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+docotic,pdfa-3a,displayDocTitle,True,False,False
+docotic,pdfa-3a,H1,1,1,True
+docotic,pdfa-3a,H2,5,5,True
+docotic,pdfa-3a,H3,1,1,True
+docotic,pdfa-3a,L,4,4,True
+docotic,pdfa-3a,LI,10,10,True
+docotic,pdfa-3a,Table,1,1,True
+docotic,pdfa-3a,TH,8,8,True
+docotic,pdfa-3a,TD,12,12,True
+docotic,pdfa-3a,Figure,1,2,False
+docotic,pdfa-3a,Link,6,6,True
+docotic,pdfa-3a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+ironpdf,pdfa-1a,lang,en,en,True
+ironpdf,pdfa-1a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-1a,displayDocTitle,True,True,True
+ironpdf,pdfa-1a,H1,1,0,False
+ironpdf,pdfa-1a,H2,5,0,False
+ironpdf,pdfa-1a,H3,1,0,False
+ironpdf,pdfa-1a,L,4,0,False
+ironpdf,pdfa-1a,LI,10,0,False
+ironpdf,pdfa-1a,Table,1,0,False
+ironpdf,pdfa-1a,TH,8,0,False
+ironpdf,pdfa-1a,TD,12,0,False
+ironpdf,pdfa-1a,Figure,1,0,False
+ironpdf,pdfa-1a,Link,6,0,False
+ironpdf,pdfa-1a,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfa-2a,lang,en,en,True
+ironpdf,pdfa-2a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-2a,displayDocTitle,True,True,True
+ironpdf,pdfa-2a,H1,1,0,False
+ironpdf,pdfa-2a,H2,5,0,False
+ironpdf,pdfa-2a,H3,1,0,False
+ironpdf,pdfa-2a,L,4,0,False
+ironpdf,pdfa-2a,LI,10,0,False
+ironpdf,pdfa-2a,Table,1,0,False
+ironpdf,pdfa-2a,TH,8,0,False
+ironpdf,pdfa-2a,TD,12,0,False
+ironpdf,pdfa-2a,Figure,1,0,False
+ironpdf,pdfa-2a,Link,6,0,False
+ironpdf,pdfa-2a,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfa-3a,lang,en,en,True
+ironpdf,pdfa-3a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-3a,displayDocTitle,True,True,True
+ironpdf,pdfa-3a,H1,1,0,False
+ironpdf,pdfa-3a,H2,5,0,False
+ironpdf,pdfa-3a,H3,1,0,False
+ironpdf,pdfa-3a,L,4,0,False
+ironpdf,pdfa-3a,LI,10,0,False
+ironpdf,pdfa-3a,Table,1,0,False
+ironpdf,pdfa-3a,TH,8,0,False
+ironpdf,pdfa-3a,TD,12,0,False
+ironpdf,pdfa-3a,Figure,1,0,False
+ironpdf,pdfa-3a,Link,6,0,False
+ironpdf,pdfa-3a,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfua-1,lang,en,en,True
+ironpdf,pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfua-1,displayDocTitle,True,True,True
+ironpdf,pdfua-1,H1,1,1,True
+ironpdf,pdfua-1,H2,5,5,True
+ironpdf,pdfua-1,H3,1,1,True
+ironpdf,pdfua-1,L,4,4,True
+ironpdf,pdfua-1,LI,10,10,True
+ironpdf,pdfua-1,Table,1,1,True
+ironpdf,pdfua-1,TH,8,8,True
+ironpdf,pdfua-1,TD,12,12,True
+ironpdf,pdfua-1,Figure,1,0,False
+ironpdf,pdfua-1,Link,6,6,True
+ironpdf,pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfua-2,lang,en,en,True
+ironpdf,pdfua-2,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfua-2,displayDocTitle,True,True,True
+ironpdf,pdfua-2,H1,1,1,True
+ironpdf,pdfua-2,H2,5,5,True
+ironpdf,pdfua-2,H3,1,1,True
+ironpdf,pdfua-2,L,4,4,True
+ironpdf,pdfua-2,LI,10,10,True
+ironpdf,pdfua-2,Table,1,1,True
+ironpdf,pdfua-2,TH,8,8,True
+ironpdf,pdfua-2,TD,12,12,True
+ironpdf,pdfua-2,Figure,1,0,False
+ironpdf,pdfua-2,Link,6,6,True
+ironpdf,pdfua-2,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfa-2a+pdfua-1,lang,en,en,True
+ironpdf,pdfa-2a+pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-2a+pdfua-1,displayDocTitle,True,True,True
+ironpdf,pdfa-2a+pdfua-1,H1,1,0,False
+ironpdf,pdfa-2a+pdfua-1,H2,5,0,False
+ironpdf,pdfa-2a+pdfua-1,H3,1,0,False
+ironpdf,pdfa-2a+pdfua-1,L,4,0,False
+ironpdf,pdfa-2a+pdfua-1,LI,10,0,False
+ironpdf,pdfa-2a+pdfua-1,Table,1,0,False
+ironpdf,pdfa-2a+pdfua-1,TH,8,0,False
+ironpdf,pdfa-2a+pdfua-1,TD,12,0,False
+ironpdf,pdfa-2a+pdfua-1,Figure,1,0,False
+ironpdf,pdfa-2a+pdfua-1,Link,6,0,False
+ironpdf,pdfa-2a+pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfa-3a+pdfua-1,lang,en,en,True
+ironpdf,pdfa-3a+pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-3a+pdfua-1,displayDocTitle,True,True,True
+ironpdf,pdfa-3a+pdfua-1,H1,1,0,False
+ironpdf,pdfa-3a+pdfua-1,H2,5,0,False
+ironpdf,pdfa-3a+pdfua-1,H3,1,0,False
+ironpdf,pdfa-3a+pdfua-1,L,4,0,False
+ironpdf,pdfa-3a+pdfua-1,LI,10,0,False
+ironpdf,pdfa-3a+pdfua-1,Table,1,0,False
+ironpdf,pdfa-3a+pdfua-1,TH,8,0,False
+ironpdf,pdfa-3a+pdfua-1,TD,12,0,False
+ironpdf,pdfa-3a+pdfua-1,Figure,1,0,False
+ironpdf,pdfa-3a+pdfua-1,Link,6,0,False
+ironpdf,pdfa-3a+pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+ironpdf,pdfa-4+pdfua-2,lang,en,en,True
+ironpdf,pdfa-4+pdfua-2,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+ironpdf,pdfa-4+pdfua-2,displayDocTitle,True,True,True
+ironpdf,pdfa-4+pdfua-2,H1,1,0,False
+ironpdf,pdfa-4+pdfua-2,H2,5,0,False
+ironpdf,pdfa-4+pdfua-2,H3,1,0,False
+ironpdf,pdfa-4+pdfua-2,L,4,0,False
+ironpdf,pdfa-4+pdfua-2,LI,10,0,False
+ironpdf,pdfa-4+pdfua-2,Table,1,0,False
+ironpdf,pdfa-4+pdfua-2,TH,8,0,False
+ironpdf,pdfa-4+pdfua-2,TD,12,0,False
+ironpdf,pdfa-4+pdfua-2,Figure,1,0,False
+ironpdf,pdfa-4+pdfua-2,Link,6,0,False
+ironpdf,pdfa-4+pdfua-2,Figure /Alt,Landscape photograph used as the cover image of the report,,False
+itext,pdfa-1a,lang,en,en,True
+itext,pdfa-1a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+itext,pdfa-1a,displayDocTitle,True,False,False
+itext,pdfa-1a,H1,1,1,True
+itext,pdfa-1a,H2,5,5,True
+itext,pdfa-1a,H3,1,1,True
+itext,pdfa-1a,L,4,4,True
+itext,pdfa-1a,LI,10,10,True
+itext,pdfa-1a,Table,1,1,True
+itext,pdfa-1a,TH,8,8,True
+itext,pdfa-1a,TD,12,12,True
+itext,pdfa-1a,Figure,1,2,False
+itext,pdfa-1a,Link,6,2,False
+itext,pdfa-1a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+itext,pdfa-2a,lang,en,en,True
+itext,pdfa-2a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+itext,pdfa-2a,displayDocTitle,True,False,False
+itext,pdfa-2a,H1,1,1,True
+itext,pdfa-2a,H2,5,5,True
+itext,pdfa-2a,H3,1,1,True
+itext,pdfa-2a,L,4,4,True
+itext,pdfa-2a,LI,10,10,True
+itext,pdfa-2a,Table,1,1,True
+itext,pdfa-2a,TH,8,8,True
+itext,pdfa-2a,TD,12,12,True
+itext,pdfa-2a,Figure,1,2,False
+itext,pdfa-2a,Link,6,2,False
+itext,pdfa-2a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+itext,pdfa-3a,lang,en,en,True
+itext,pdfa-3a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+itext,pdfa-3a,displayDocTitle,True,False,False
+itext,pdfa-3a,H1,1,1,True
+itext,pdfa-3a,H2,5,5,True
+itext,pdfa-3a,H3,1,1,True
+itext,pdfa-3a,L,4,4,True
+itext,pdfa-3a,LI,10,10,True
+itext,pdfa-3a,Table,1,1,True
+itext,pdfa-3a,TH,8,8,True
+itext,pdfa-3a,TD,12,12,True
+itext,pdfa-3a,Figure,1,2,False
+itext,pdfa-3a,Link,6,2,False
+itext,pdfa-3a,Figure /Alt,Landscape photograph used as the cover image of the report, | Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-1a,lang,en,en,True
+selectpdf,pdfa-1a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-1a,displayDocTitle,True,True,True
+selectpdf,pdfa-1a,H1,1,1,True
+selectpdf,pdfa-1a,H2,5,5,True
+selectpdf,pdfa-1a,H3,1,1,True
+selectpdf,pdfa-1a,L,4,4,True
+selectpdf,pdfa-1a,LI,10,10,True
+selectpdf,pdfa-1a,Table,1,1,True
+selectpdf,pdfa-1a,TH,8,8,True
+selectpdf,pdfa-1a,TD,12,12,True
+selectpdf,pdfa-1a,Figure,1,1,True
+selectpdf,pdfa-1a,Link,6,6,True
+selectpdf,pdfa-1a,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-2a,lang,en,en,True
+selectpdf,pdfa-2a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-2a,displayDocTitle,True,True,True
+selectpdf,pdfa-2a,H1,1,1,True
+selectpdf,pdfa-2a,H2,5,5,True
+selectpdf,pdfa-2a,H3,1,1,True
+selectpdf,pdfa-2a,L,4,4,True
+selectpdf,pdfa-2a,LI,10,10,True
+selectpdf,pdfa-2a,Table,1,1,True
+selectpdf,pdfa-2a,TH,8,8,True
+selectpdf,pdfa-2a,TD,12,12,True
+selectpdf,pdfa-2a,Figure,1,1,True
+selectpdf,pdfa-2a,Link,6,6,True
+selectpdf,pdfa-2a,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-3a,lang,en,en,True
+selectpdf,pdfa-3a,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-3a,displayDocTitle,True,True,True
+selectpdf,pdfa-3a,H1,1,1,True
+selectpdf,pdfa-3a,H2,5,5,True
+selectpdf,pdfa-3a,H3,1,1,True
+selectpdf,pdfa-3a,L,4,4,True
+selectpdf,pdfa-3a,LI,10,10,True
+selectpdf,pdfa-3a,Table,1,1,True
+selectpdf,pdfa-3a,TH,8,8,True
+selectpdf,pdfa-3a,TD,12,12,True
+selectpdf,pdfa-3a,Figure,1,1,True
+selectpdf,pdfa-3a,Link,6,6,True
+selectpdf,pdfa-3a,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfua-1,lang,en,en,True
+selectpdf,pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfua-1,displayDocTitle,True,True,True
+selectpdf,pdfua-1,H1,1,1,True
+selectpdf,pdfua-1,H2,5,5,True
+selectpdf,pdfua-1,H3,1,1,True
+selectpdf,pdfua-1,L,4,4,True
+selectpdf,pdfua-1,LI,10,10,True
+selectpdf,pdfua-1,Table,1,1,True
+selectpdf,pdfua-1,TH,8,8,True
+selectpdf,pdfua-1,TD,12,12,True
+selectpdf,pdfua-1,Figure,1,1,True
+selectpdf,pdfua-1,Link,6,6,True
+selectpdf,pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfua-2,lang,en,en,True
+selectpdf,pdfua-2,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfua-2,displayDocTitle,True,True,True
+selectpdf,pdfua-2,H1,1,1,True
+selectpdf,pdfua-2,H2,5,5,True
+selectpdf,pdfua-2,H3,1,1,True
+selectpdf,pdfua-2,L,4,4,True
+selectpdf,pdfua-2,LI,10,10,True
+selectpdf,pdfua-2,Table,1,1,True
+selectpdf,pdfua-2,TH,8,8,True
+selectpdf,pdfua-2,TD,12,12,True
+selectpdf,pdfua-2,Figure,1,1,True
+selectpdf,pdfua-2,Link,6,6,True
+selectpdf,pdfua-2,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-2a+pdfua-1,lang,en,en,True
+selectpdf,pdfa-2a+pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-2a+pdfua-1,displayDocTitle,True,True,True
+selectpdf,pdfa-2a+pdfua-1,H1,1,1,True
+selectpdf,pdfa-2a+pdfua-1,H2,5,5,True
+selectpdf,pdfa-2a+pdfua-1,H3,1,1,True
+selectpdf,pdfa-2a+pdfua-1,L,4,4,True
+selectpdf,pdfa-2a+pdfua-1,LI,10,10,True
+selectpdf,pdfa-2a+pdfua-1,Table,1,1,True
+selectpdf,pdfa-2a+pdfua-1,TH,8,8,True
+selectpdf,pdfa-2a+pdfua-1,TD,12,12,True
+selectpdf,pdfa-2a+pdfua-1,Figure,1,1,True
+selectpdf,pdfa-2a+pdfua-1,Link,6,6,True
+selectpdf,pdfa-2a+pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-3a+pdfua-1,lang,en,en,True
+selectpdf,pdfa-3a+pdfua-1,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-3a+pdfua-1,displayDocTitle,True,True,True
+selectpdf,pdfa-3a+pdfua-1,H1,1,1,True
+selectpdf,pdfa-3a+pdfua-1,H2,5,5,True
+selectpdf,pdfa-3a+pdfua-1,H3,1,1,True
+selectpdf,pdfa-3a+pdfua-1,L,4,4,True
+selectpdf,pdfa-3a+pdfua-1,LI,10,10,True
+selectpdf,pdfa-3a+pdfua-1,Table,1,1,True
+selectpdf,pdfa-3a+pdfua-1,TH,8,8,True
+selectpdf,pdfa-3a+pdfua-1,TD,12,12,True
+selectpdf,pdfa-3a+pdfua-1,Figure,1,1,True
+selectpdf,pdfa-3a+pdfua-1,Link,6,6,True
+selectpdf,pdfa-3a+pdfua-1,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True
+selectpdf,pdfa-4+pdfua-2,lang,en,en,True
+selectpdf,pdfa-4+pdfua-2,title,Annual Accessibility Report 2026,Annual Accessibility Report 2026,True
+selectpdf,pdfa-4+pdfua-2,displayDocTitle,True,True,True
+selectpdf,pdfa-4+pdfua-2,H1,1,1,True
+selectpdf,pdfa-4+pdfua-2,H2,5,5,True
+selectpdf,pdfa-4+pdfua-2,H3,1,1,True
+selectpdf,pdfa-4+pdfua-2,L,4,4,True
+selectpdf,pdfa-4+pdfua-2,LI,10,10,True
+selectpdf,pdfa-4+pdfua-2,Table,1,1,True
+selectpdf,pdfa-4+pdfua-2,TH,8,8,True
+selectpdf,pdfa-4+pdfua-2,TD,12,12,True
+selectpdf,pdfa-4+pdfua-2,Figure,1,1,True
+selectpdf,pdfa-4+pdfua-2,Link,6,6,True
+selectpdf,pdfa-4+pdfua-2,Figure /Alt,Landscape photograph used as the cover image of the report,Landscape photograph used as the cover image of the report,True

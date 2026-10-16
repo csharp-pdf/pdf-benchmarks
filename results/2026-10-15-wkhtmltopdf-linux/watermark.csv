@@ -1,0 +1,2 @@
+library,check,pass,detail
+wkhtmltopdf,output,n/a,not supported: no PDF tools

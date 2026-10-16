@@ -1,0 +1,82 @@
+/* Self-hosted fonts (latin subset from Google Fonts, variable woff2).
+   Replaces the render-blocking fonts.googleapis.com stylesheet + the
+   googleapis->gstatic chain. Hero Fraunces files are <link rel=preload>ed
+   in _Layout. font-display:swap keeps text visible during load. */
+
+/* Metric-matched fallback for Fraunces (display headlines). Renders the local
+   Times New Roman at Fraunces's EXACT width/line metrics, so when the real
+   Fraunces swaps in there is no resize — LCP is recorded at the fast fallback
+   paint instead of waiting for the woff2, and the swap adds ~0 layout shift.
+   The override values are computed by Capsize from the real Fraunces woff2;
+   do NOT hand-edit — regenerate via temp/capsize/gen.mjs if the font changes.
+   Stack: --spdf-font-display-editorial in base.css. */
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local('Times New Roman'), local('TimesNewRomanPSMT');
+  ascent-override: 76.7013%;
+  descent-override: 19.9988%;
+  line-gap-override: 0%;
+  size-adjust: 127.5077%;
+}
+@font-face {
+  font-family: "Fraunces Fallback";
+  src: local('Times New Roman'), local('TimesNewRomanPSMT');
+  font-style: italic;
+  ascent-override: 77.676%;
+  descent-override: 20.2529%;
+  line-gap-override: 0%;
+  size-adjust: 125.9077%;
+}
+/* Body (Inter, vs Arial) + mono (JetBrains Mono, vs Courier New) matched
+   fallbacks — same purpose as the Fraunces pair: zero reflow on swap.
+   Capsize-generated; regenerate via temp/capsize/gen2.mjs. (JBM size-adjust is
+   ~100% — monospace metrics are near-identical, so its effect is tiny but it
+   keeps the system uniform.) */
+@font-face {
+  font-family: "Inter Fallback";
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 90.4365%;
+  descent-override: 22.518%;
+  line-gap-override: 0%;
+  size-adjust: 107.1194%;
+}
+@font-face {
+  font-family: "JetBrains Mono Fallback";
+  src: local('Courier New'), local('CourierNewPSMT');
+  ascent-override: 102.0166%;
+  descent-override: 30.0049%;
+  size-adjust: 99.9837%;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("f611562fb855.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("36820c1f1c24.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fb057a2f07ca.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("7d16e076df64.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

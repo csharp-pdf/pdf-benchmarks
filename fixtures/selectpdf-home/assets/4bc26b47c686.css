@@ -1,0 +1,367 @@
+/* ============================================================
+   SelectPdf — base.css
+   Design tokens (colors, type, spacing), reset, dark mode.
+   Loaded first by spdf.css.
+   ============================================================ */
+
+/* ─── Reset / normalize ────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+/* Reserve scrollbar gutter on every page so short pages (no scrollbar) and
+   long pages (scrollbar) render at the same content width — otherwise the
+   centered nav/logo jumps ~15px between them. */
+html { scrollbar-gutter: stable; color-scheme: light; }
+/* Tell the browser the active scheme so NATIVE form controls (inputs, selects,
+   the select dropdown popup), scrollbars, the caret and autofill render dark in
+   dark mode — without this they stay light even though our token-based CSS sets
+   a dark background. */
+html[data-theme="dark"] { color-scheme: dark; }
+body {
+  background: var(--spdf-bg);
+  color: var(--spdf-text);
+  font-family: var(--spdf-font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* `clip` (not `hidden`): prevents horizontal overflow without turning
+     body into a scroll container — keeps the viewport's vertical scrollbar
+     in its normal place. */
+  overflow-x: clip;
+  line-height: 1.5;
+}
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+img, svg { max-width: 100%; display: block; }
+ul, ol { padding: 0; margin: 0; }
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+/* ─── Type stacks ──────────────────────────────────────────── */
+:root {
+  /* Editorial (Homepage, Blog index/category/author/search/404) */
+  --spdf-font-display-editorial: "Fraunces", "Fraunces Fallback", "Times New Roman", serif;
+  --spdf-font-body-editorial:    "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
+  --spdf-font-mono-editorial:    "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, monospace;
+
+  /* Industrial (Library, API, Pricing, Save Link, Community, Blog Post) */
+  --spdf-font-display-industrial: "Archivo", "Inter Tight", system-ui, sans-serif;
+  --spdf-font-body-industrial:    "IBM Plex Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --spdf-font-mono-industrial:    "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+
+  /* Active type stack — page sets [data-type="editorial"|"industrial"] on <html>. */
+  --spdf-font-display: var(--spdf-font-display-industrial);
+  --spdf-font-body:    var(--spdf-font-body-industrial);
+  --spdf-font-mono:    var(--spdf-font-mono-industrial);
+  --spdf-display-weight: 700;
+  --spdf-display-letter: -0.04em;
+  --spdf-display-italic-style: normal;
+}
+
+html[data-type="editorial"] {
+  --spdf-font-display: var(--spdf-font-display-editorial);
+  --spdf-font-body:    var(--spdf-font-body-editorial);
+  --spdf-font-mono:    var(--spdf-font-mono-editorial);
+  --spdf-display-weight: 500;
+  --spdf-display-letter: -0.04em;
+  /* Fraunces supports italic — accent words use it. Industrial doesn't. */
+  --spdf-display-italic-style: italic;
+}
+
+html[data-type="industrial"] {
+  --spdf-font-display: var(--spdf-font-display-industrial);
+  --spdf-font-body:    var(--spdf-font-body-industrial);
+  --spdf-font-mono:    var(--spdf-font-mono-industrial);
+  --spdf-display-weight: 700;
+  --spdf-display-letter: -0.04em;
+  --spdf-display-italic-style: normal;
+}
+
+/* ─── Color palette — Amber (default) ──────────────────────── */
+:root,
+html[data-palette="amber"] {
+  --spdf-bg:          #FFF8EC;
+  --spdf-surface:     #FFF1D6;
+  --spdf-panel:       #FFFFFF;
+  --spdf-line:        rgba(40, 24, 8, 0.14);
+  --spdf-line-strong: rgba(40, 24, 8, 0.26);
+  --spdf-text:        #1F140A;
+  --spdf-text-dim:    rgba(31, 20, 10, 0.66);
+  --spdf-text-mute:   rgba(31, 20, 10, 0.42);
+  --spdf-accent:      #D97706;
+  --spdf-accent-ink:  #1F140A;
+  --spdf-chip:        rgba(217, 119, 6, 0.14);
+  --spdf-chip-text:   #7A4308;
+  /* Code block — light theme (cream on warm-dark text) */
+  --spdf-code:            #FAF3E2;
+  --spdf-code-text:       #2C1F12;
+  --spdf-code-line:       rgba(40, 24, 8, 0.10);
+  --spdf-code-head:       #F2E7CC;
+  --spdf-code-file:       rgba(40, 24, 8, 0.55);
+  --spdf-code-gutter:     rgba(40, 24, 8, 0.30);
+  --spdf-code-copy:        rgba(40, 24, 8, 0.78);
+  --spdf-code-copy-border: rgba(40, 24, 8, 0.22);
+  --spdf-code-copy-hover:  rgba(40, 24, 8, 0.06);
+  --spdf-code-dim:         rgba(40, 24, 8, 0.55);
+  /* Syntax-highlight tokens — light theme (saturated-but-dark) */
+  --spdf-tok-kw:    #B95C00;
+  --spdf-tok-str:   #0E5A26;
+  --spdf-tok-num:   #3F2DB5;
+  --spdf-tok-com:   rgba(40, 24, 8, 0.40);
+  --spdf-tok-fn:    #0B4A8E;
+  --spdf-tok-type:  #7A4308;
+  --spdf-grid:        rgba(40, 24, 8, 0.05);
+  --spdf-ok:          #22C55E;
+}
+
+/* Amber dark */
+html[data-theme="dark"],
+html[data-palette="amber"][data-theme="dark"] {
+  --spdf-bg:          #161009;
+  --spdf-surface:     #1F1810;
+  --spdf-panel:       #241B11;
+  --spdf-line:        rgba(255, 220, 160, 0.10);
+  --spdf-line-strong: rgba(255, 220, 160, 0.20);
+  --spdf-text:        #FBE9C8;
+  --spdf-text-dim:    rgba(251, 233, 200, 0.66);
+  --spdf-text-mute:   rgba(251, 233, 200, 0.42);
+  --spdf-accent:      #F59E0B;
+  --spdf-accent-ink:  #161009;
+  --spdf-chip:        rgba(245, 158, 11, 0.16);
+  --spdf-chip-text:   #FCD34D;
+  /* Code block — dark theme (warm cream on near-black) */
+  --spdf-code:            #0F0A06;
+  --spdf-code-text:       rgba(244, 241, 234, 0.92);
+  --spdf-code-line:       rgba(255, 255, 255, 0.06);
+  --spdf-code-head:       #1F1810;
+  --spdf-code-file:       rgba(255, 255, 255, 0.50);
+  --spdf-code-gutter:     rgba(255, 255, 255, 0.25);
+  --spdf-code-copy:        rgba(255, 255, 255, 0.70);
+  --spdf-code-copy-border: rgba(255, 255, 255, 0.18);
+  --spdf-code-copy-hover:  rgba(255, 255, 255, 0.08);
+  --spdf-code-dim:         rgba(244, 241, 234, 0.45);
+  /* Syntax-highlight tokens — dark theme (bright pastels, kept per design) */
+  --spdf-tok-kw:    #FBA94F;
+  --spdf-tok-str:   #92DDA5;
+  --spdf-tok-num:   #C8B6FF;
+  --spdf-tok-com:   rgba(255, 255, 255, 0.42);
+  --spdf-tok-fn:    #6EC6FF;
+  --spdf-tok-type:  #FFD68C;
+  --spdf-grid:        rgba(255, 255, 255, 0.04);
+}
+
+/* ─── Color palette — Forest (.NET Library, Online API pricing, Blog Post) */
+html[data-palette="forest"] {
+  --spdf-bg:          #F4F8F2;
+  --spdf-surface:     #E7EFE3;
+  --spdf-panel:       #FFFFFF;
+  --spdf-line:        rgba(12, 28, 16, 0.13);
+  --spdf-line-strong: rgba(12, 28, 16, 0.24);
+  --spdf-text:        #0C1C10;
+  --spdf-text-dim:    rgba(12, 28, 16, 0.66);
+  --spdf-text-mute:   rgba(12, 28, 16, 0.42);
+  --spdf-accent:      #1F7A3A;
+  --spdf-accent-ink:  #FFFFFF;
+  --spdf-chip:        rgba(31, 122, 58, 0.13);
+  --spdf-chip-text:   #155827;
+  /* Code block — light theme (green-tinted cream) */
+  --spdf-code:            #E7EFE3;
+  --spdf-code-text:       #0C1C10;
+  --spdf-code-line:       rgba(12, 28, 16, 0.10);
+  --spdf-code-head:       #D7E2D1;
+  --spdf-code-file:       rgba(12, 28, 16, 0.55);
+  --spdf-code-gutter:     rgba(12, 28, 16, 0.30);
+  --spdf-code-copy:        rgba(12, 28, 16, 0.78);
+  --spdf-code-copy-border: rgba(12, 28, 16, 0.22);
+  --spdf-code-copy-hover:  rgba(12, 28, 16, 0.06);
+  --spdf-code-dim:         rgba(12, 28, 16, 0.55);
+  /* Syntax-highlight tokens — light theme */
+  --spdf-tok-kw:    #155827;
+  --spdf-tok-str:   #B95C00;
+  --spdf-tok-num:   #3F2DB5;
+  --spdf-tok-com:   rgba(12, 28, 16, 0.40);
+  --spdf-tok-fn:    #0B4A8E;
+  --spdf-tok-type:  #7A4308;
+  --spdf-grid:        rgba(12, 28, 16, 0.05);
+}
+html[data-palette="forest"][data-theme="dark"] {
+  --spdf-bg:          #091109;
+  --spdf-surface:     #0F180F;
+  --spdf-panel:       #152015;
+  --spdf-line:        rgba(200, 255, 210, 0.10);
+  --spdf-line-strong: rgba(200, 255, 210, 0.20);
+  --spdf-text:        #E6F4E5;
+  --spdf-text-dim:    rgba(230, 244, 229, 0.66);
+  --spdf-text-mute:   rgba(230, 244, 229, 0.42);
+  --spdf-accent:      #3FCB6A;
+  --spdf-accent-ink:  #091109;
+  --spdf-chip:        rgba(63, 203, 106, 0.16);
+  --spdf-chip-text:   #9DE6B5;
+  /* Code block — dark theme */
+  --spdf-code:            #06090A;
+  --spdf-code-text:       rgba(230, 244, 229, 0.92);
+  --spdf-code-line:       rgba(255, 255, 255, 0.06);
+  --spdf-code-head:       #0F180F;
+  --spdf-code-file:       rgba(255, 255, 255, 0.50);
+  --spdf-code-gutter:     rgba(255, 255, 255, 0.25);
+  --spdf-code-copy:        rgba(255, 255, 255, 0.70);
+  --spdf-code-copy-border: rgba(255, 255, 255, 0.18);
+  --spdf-code-copy-hover:  rgba(255, 255, 255, 0.08);
+  --spdf-code-dim:         rgba(230, 244, 229, 0.45);
+  /* Syntax-highlight tokens — dark theme */
+  --spdf-tok-kw:    #FBA94F;
+  --spdf-tok-str:   #92DDA5;
+  --spdf-tok-num:   #C8B6FF;
+  --spdf-tok-com:   rgba(255, 255, 255, 0.42);
+  --spdf-tok-fn:    #6EC6FF;
+  --spdf-tok-type:  #FFD68C;
+  --spdf-grid:        rgba(255, 255, 255, 0.04);
+}
+
+/* ─── Layout primitives ────────────────────────────────────── */
+.spdf-shell { max-width: 1280px; margin: 0 auto; }
+.spdf-pad   { padding-left: 32px; padding-right: 32px; }
+.spdf-shell-narrow { max-width: 1100px; margin: 0 auto; }
+
+/* Section spacing */
+.spdf-section    { padding: 72px 0; }
+.spdf-section-lg { padding: 96px 0 64px; }
+.spdf-section-sm { padding: 48px 0; }
+.spdf-section-bordered { border-top: 1px solid var(--spdf-line); }
+
+/* ─── Display headings ────────────────────────────────────── */
+.spdf-display {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter);
+  color: var(--spdf-text);
+  margin: 0;
+  text-wrap: balance;
+}
+.spdf-h1 { font-size: clamp(56px, 8vw, 116px); line-height: 0.95; }
+.spdf-h2 { font-size: var(--spdf-h2); line-height: var(--spdf-h2-lh); }
+.spdf-h3 { font-size: clamp(28px, 3.2vw, 44px); line-height: 1.05; }
+.spdf-h4 { font-size: 24px; line-height: 1.2; }
+
+/* ─── H1 type scale — three locked tiers ──────────────────────
+   Every page hero picks one. No bespoke clamps. See
+   docs/Web-Conventions.md §1.5 for tier-to-page assignment.
+   - marketing: flagship product / landing heroes
+   - reference: dense reference pages (Parameters, sub-pricing, utility)
+   - editorial: narrow editorial / legal / About */
+:root {
+  --spdf-h1-marketing:    clamp(44px, 6.4vw, 96px);
+  --spdf-h1-marketing-lh: 0.95;
+  --spdf-h1-reference:    clamp(44px, 6.4vw, 84px);
+  --spdf-h1-reference-lh: 0.95;
+  --spdf-h1-editorial:    clamp(36px, 5vw, 68px);
+  --spdf-h1-editorial-lh: 1.02;
+
+  /* Hero-class CTA — used by .spdf-footer-cta-title (rendered as <h2>
+     in _Layout but visually a closing hero). Matches the marketing H1
+     ramp so the closing block lands at the same weight as a page hero. */
+  --spdf-h1-cta:    clamp(44px, 6.4vw, 96px);
+  --spdf-h1-cta-lh: 0.95;
+
+  /* H2 — one canonical scale, consumed by .spdf-h2, .spdf-doc-h2 and
+     .spdf-qs-title. Sits at least 12px below the smallest H1 max (68px
+     editorial) so the hierarchy holds on every page. */
+  --spdf-h2:    clamp(32px, 4.4vw, 56px);
+  --spdf-h2-lh: 1.05;
+}
+
+/* Accent words inside display headings ("italic" treatment) */
+.spdf-display-accent {
+  color: var(--spdf-accent);
+  font-style: var(--spdf-display-italic-style);
+}
+.spdf-display-dim {
+  color: var(--spdf-text-dim);
+  font-style: var(--spdf-display-italic-style);
+}
+
+/* Body copy */
+.spdf-lede {
+  font-family: var(--spdf-font-body);
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--spdf-text-dim);
+  max-width: 640px;
+}
+.spdf-lede.is-wide { max-width: 880px; }
+.spdf-body {
+  font-family: var(--spdf-font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--spdf-text-dim);
+}
+.spdf-strong { color: var(--spdf-text); font-weight: 600; }
+
+/* Mono labels — kickers, eyebrows, captions */
+/* Kicker — two-tone composite: accent icon + muted label.
+   Use as: <span class="spdf-kicker"><span class="i">§</span><span class="t">LABEL</span></span>
+   Replaces the old single-span all-accent kicker + .spdf-doc-eyebrow pattern. */
+.spdf-kicker {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--spdf-text-mute);
+}
+.spdf-kicker .i { color: var(--spdf-accent); flex: 0 0 auto; }
+.spdf-kicker .t { color: var(--spdf-text-mute); }
+/* Eyebrow — quieter sibling of .spdf-kicker. Same two-tone composite,
+   tighter letter-spacing. Use as:
+   <span class="spdf-eyebrow"><span class="i">◆</span><span class="t">LABEL</span></span>
+   Single-text usage (no children) still works for icon-less eyebrows
+   like stat lines or product summaries — they render all-muted. */
+.spdf-eyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--spdf-text-mute);
+}
+.spdf-eyebrow .i { color: var(--spdf-accent); flex: 0 0 auto; }
+.spdf-eyebrow .t { color: var(--spdf-text-mute); }
+.spdf-caption {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--spdf-text-mute);
+}
+
+/* Utility helpers */
+.spdf-hr { border: 0; height: 1px; background: var(--spdf-line); margin: 0; }
+.spdf-divider-top    { border-top: 1px solid var(--spdf-line); }
+.spdf-divider-bottom { border-bottom: 1px solid var(--spdf-line); }
+.spdf-center { text-align: center; }
+.spdf-flex { display: flex; }
+.spdf-flex-wrap { flex-wrap: wrap; }
+.spdf-flex-center { display: flex; align-items: center; }
+.spdf-gap-8  { gap: 8px;  }
+.spdf-gap-12 { gap: 12px; }
+.spdf-gap-16 { gap: 16px; }
+.spdf-gap-24 { gap: 24px; }
+.spdf-mt-8  { margin-top: 8px;  }
+.spdf-mt-14 { margin-top: 14px; }
+.spdf-mt-16 { margin-top: 16px; }
+.spdf-mt-24 { margin-top: 24px; }
+.spdf-mt-32 { margin-top: 32px; }
+.spdf-mt-48 { margin-top: 48px; }
+.spdf-mb-12 { margin-bottom: 12px; }
+.spdf-mb-16 { margin-bottom: 16px; }
+.spdf-mb-24 { margin-bottom: 24px; }
+.spdf-mb-36 { margin-bottom: 36px; }
+.spdf-mb-48 { margin-bottom: 48px; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

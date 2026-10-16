@@ -1,0 +1,44 @@
+library,fixture,check,expected,pass,detail
+wkhtmltopdf,trivial,text,"Hello, PDF",True,
+wkhtmltopdf,bootstrap,text,Documents your customers can trust,True,
+wkhtmltopdf,bootstrap,text,Adventure Works,True,
+wkhtmltopdf,invoice,text,"£140,904.83",True,
+wkhtmltopdf,invoice,text,Total due,True,
+wkhtmltopdf,html-string,text,"£140,904.83",True,
+wkhtmltopdf,html-string,text,Northwind Supplies,True,
+wkhtmltopdf,long-document,text,Chapter 40,True,
+wkhtmltopdf,long-document,text,4000.,True,
+wkhtmltopdf,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,False,"missing Inter, Lora, JetBrainsMono"
+wkhtmltopdf,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+wkhtmltopdf,effects,text,clip-path polygon,True,
+wkhtmltopdf,vector,text,Sharp at 800%,True,
+wkhtmltopdf,vector,text,SVG text 2026,True,
+wkhtmltopdf,vector,noImages,0 images,True,0 images
+wkhtmltopdf,js-chart,text,Charts drawn by JavaScript: 4 of 4.,False,
+wkhtmltopdf,lazy-images,images,12,True,12 images
+wkhtmltopdf,large-images,images,8,True,8 images
+wkhtmltopdf,wide-content,text,R15C24,False,
+wkhtmltopdf,wide-content,text,END-OF-WIDE-LINE,False,
+wkhtmltopdf,rtl,text,حقوق,True,
+wkhtmltopdf,cjk,text,人人生而自由,False,
+wkhtmltopdf,cjk,text,すべての人間は,False,
+wkhtmltopdf,cjk,text,모든 인간은,False,
+wkhtmltopdf,scripts,text,समानता,False,
+wkhtmltopdf,scripts,text,มนุษย์,False,
+wkhtmltopdf,accessible,text,Annual Accessibility Report 2026,True,
+wkhtmltopdf,selectpdf-home,links,20,True,66 links
+wkhtmltopdf,paged-media,text,PRINT MEDIA ACTIVE,True,
+wkhtmltopdf,paged-media,pages,4,False,2 pages
+wkhtmltopdf,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+wkhtmltopdf,header-footer,text,pdf-benchmarks,True,
+wkhtmltopdf,bookmarks,outline,24,True,25 bookmarks
+wkhtmltopdf,bookmarks,internalLinks,16,True,16 internal links
+wkhtmltopdf,forms,formFields,6,False,3 form field widgets
+wkhtmltopdf,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+wkhtmltopdf,html-header-footer,everyPage,ACME Corp,True,4 pages
+wkhtmltopdf,html-header-footer,imageEveryPage,logo on every page,True,
+wkhtmltopdf,encryption,converted,,n/a,not supported: no PDF encryption
+wkhtmltopdf,isolation-write,text,Stored: TOKEN-,False,
+wkhtmltopdf,isolation-read,text,localStorage: NONE,False,
+wkhtmltopdf,isolation-read,text,sessionStorage: NONE,False,
+wkhtmltopdf,isolation-read,text,cookie: NONE,False,

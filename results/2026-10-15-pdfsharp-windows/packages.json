@@ -1,0 +1,10 @@
+{
+  "pdfsharp": {
+    "ok": true,
+    "library": "PDFsharp",
+    "packages": {
+      "PDFsharp": "6.5.0"
+    },
+    "runtime": ".NET 8.0.32"
+  }
+}

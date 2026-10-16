@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-itext</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="itext" Version="9.8.0" />
+    <PackageReference Include="itext.pdfhtml" Version="6.3.4" />
+    <PackageReference Include="itext.bouncy-castle-adapter" Version="9.8.0" />
+    <PackageReference Include="itext.pdfsweep" Version="5.0.8" />
+    <Compile Include="../Common/*.cs" />
+    <!-- the sRGB profile PDF/A output intents need (iText ships none) -->
+    <None Include="../../fixtures/_shared/icc/sRGB.icc" Link="sRGB.icc" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

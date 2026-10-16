@@ -1,0 +1,35 @@
+library,check,pass,detail
+abcpdf,one signature,True,1 signatures
+abcpdf,intact (digest matches),True,
+abcpdf,valid with the test certificate,True,
+abcpdf,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+abcpdf,signature type,True,/adbe.pkcs7.detached; digest sha256
+abcpdf,signing time recorded,True,2026-10-15 14:01:22+00:00
+docotic,one signature,True,1 signatures
+docotic,intact (digest matches),True,
+docotic,valid with the test certificate,True,
+docotic,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+docotic,signature type,True,/adbe.pkcs7.detached; digest sha256
+docotic,signing time recorded,True,2026-10-15 14:01:27+00:00
+ironpdf,one signature,True,1 signatures
+ironpdf,intact (digest matches),True,
+ironpdf,valid with the test certificate,True,
+ironpdf,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+ironpdf,signature type,True,/adbe.pkcs7.detached; digest sha256
+ironpdf,signing time recorded,True,2026-10-15 14:01:57+00:00
+itext,one signature,True,1 signatures
+itext,intact (digest matches),True,
+itext,valid with the test certificate,True,
+itext,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+itext,signature type,True,/adbe.pkcs7.detached; digest sha256
+itext,signing time recorded,True,2026-10-15 17:02:09+03:00
+playwright,output,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,output,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+questpdf,output,n/a,not supported: no digital signatures
+selectpdf,one signature,True,1 signatures
+selectpdf,intact (digest matches),True,
+selectpdf,valid with the test certificate,True,
+selectpdf,covers the whole file,True,SignatureCoverageLevel.ENTIRE_FILE
+selectpdf,signature type,True,/adbe.pkcs7.detached; digest sha256
+selectpdf,signing time recorded,True,2026-10-15 17:02:23+03:00
+wkhtmltopdf,output,n/a,not supported: no PDF tools

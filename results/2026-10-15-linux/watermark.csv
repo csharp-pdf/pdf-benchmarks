@@ -1,0 +1,27 @@
+library,check,pass,detail
+abcpdf,pages,True,3 pages
+abcpdf,text on every page,True,
+abcpdf,visible on every page,True,min 2.3% of pixels changed
+abcpdf,original text kept,True,lowest page F1 1.000
+docotic,pages,True,3 pages
+docotic,text on every page,True,
+docotic,visible on every page,True,min 2.3% of pixels changed
+docotic,original text kept,True,lowest page F1 1.000
+ironpdf,pages,True,3 pages
+ironpdf,text on every page,True,
+ironpdf,visible on every page,True,min 1.2% of pixels changed
+ironpdf,original text kept,True,lowest page F1 1.000
+itext,pages,True,3 pages
+itext,text on every page,True,
+itext,visible on every page,True,min 2.3% of pixels changed
+itext,original text kept,True,lowest page F1 1.000
+playwright,output,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,output,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+questpdf,pages,True,3 pages
+questpdf,text on every page,True,
+questpdf,visible on every page,True,min 2.2% of pixels changed
+questpdf,original text kept,True,lowest page F1 1.000
+selectpdf,pages,True,3 pages
+selectpdf,text on every page,True,
+selectpdf,visible on every page,True,min 2.4% of pixels changed
+selectpdf,original text kept,True,lowest page F1 0.993

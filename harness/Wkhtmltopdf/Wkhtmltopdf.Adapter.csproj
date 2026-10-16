@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- wkhtmltopdf through Haukcode.WkHtmlToPdfDotNet, the maintained DinkToPdf fork that ships the native
+       wkhtmltox library for Windows, Linux and macOS inside the NuGet package (see NOTES.md for the choice). -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-wkhtmltopdf</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Haukcode.WkHtmlToPdfDotNet" Version="1.5.95" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

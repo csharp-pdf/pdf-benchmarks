@@ -1,0 +1,124 @@
+library,standard,profile,compliant,failed_rules,rules
+abcpdf,pdfa-1a,1a,False,3,ISO 19005-1:2005 6.8.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st | ISO 19005-1:2005 6.4-3: A Group object with an S key with a value of Transparency shall not be included in a form  | ISO 19005-1:2005 6.2.3.2-1: All ICCBased colour spaces shall be embedded as ICC profile streams as described in PDF Re
+abcpdf,pdfa-1a,auto: PDF/A-1a,False,3,ISO 19005-1:2005 6.2.3.2-1: All ICCBased colour spaces shall be embedded as ICC profile streams as described in PDF Re | ISO 19005-1:2005 6.4-3: A Group object with an S key with a value of Transparency shall not be included in a form  | ISO 19005-1:2005 6.8.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+abcpdf,pdfa-1b,1b,False,2,ISO 19005-1:2005 6.2.3.2-1: All ICCBased colour spaces shall be embedded as ICC profile streams as described in PDF Re | ISO 19005-1:2005 6.4-3: A Group object with an S key with a value of Transparency shall not be included in a form 
+abcpdf,pdfa-1b,auto: PDF/A-1b,False,2,ISO 19005-1:2005 6.2.3.2-1: All ICCBased colour spaces shall be embedded as ICC profile streams as described in PDF Re | ISO 19005-1:2005 6.4-3: A Group object with an S key with a value of Transparency shall not be included in a form 
+abcpdf,pdfa-2a,2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+abcpdf,pdfa-2a,auto: PDF/A-2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+abcpdf,pdfa-2b,2b,True,0,
+abcpdf,pdfa-2b,auto: PDF/A-2b,True,0,
+abcpdf,pdfa-2u,2u,True,0,
+abcpdf,pdfa-2u,auto: PDF/A-2u,True,0,
+abcpdf,pdfua-1,ua1,False,6,"ISO 14289-1:2014 7.1-5: All non-standard structure types shall be mapped to the nearest functionally equivalent st | ISO 14289-1:2014 7.2-20: LI element may contain only Lbl and LBody elements | ISO 14289-1:2014 7.18.5-2: Links shall contain an alternate description via their Contents key as described in ISO 32 | ISO 14289-1:2014 7.18.1-2: An annotation (except Widget annotations or hidden annotations, or those having rectangle  | ISO 14289-1:2014 7.1-3: Content shall be marked as Artifact or tagged as real content | ISO 14289-1:2014 5-1: The PDF/UA version and conformance level of a file shall be specified using the PDF/UA Ide"
+abcpdf,pdfua-1,auto: PDF/A-1b,False,9,"ISO 19005-1:2005 6.7.3-6: The value of Creator entry from the document information dictionary, if present, and its a | ISO 19005-1:2005 6.2.3.2-1: All ICCBased colour spaces shall be embedded as ICC profile streams as described in PDF Re | ISO 19005-1:2005 6.3.5-3: For all CIDFont subsets referenced within a conforming file, the font descriptor dictionar | ISO 19005-1:2005 6.7.3-1: The value of CreationDate entry from the document information dictionary, if present, and  | ISO 19005-1:2005 6.7.3-8: The value of ModDate entry from the document information dictionary, if present, and its a | ISO 19005-1:2005 6.4-3: A Group object with an S key with a value of Transparency shall not be included in a form "
+abcpdf,pdfa-2a+pdfua-1,2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+abcpdf,pdfa-2a+pdfua-1,ua1,False,6,"ISO 14289-1:2014 7.18.5-2: Links shall contain an alternate description via their Contents key as described in ISO 32 | ISO 14289-1:2014 5-1: The PDF/UA version and conformance level of a file shall be specified using the PDF/UA Ide | ISO 14289-1:2014 7.1-5: All non-standard structure types shall be mapped to the nearest functionally equivalent st | ISO 14289-1:2014 7.18.1-2: An annotation (except Widget annotations or hidden annotations, or those having rectangle  | ISO 14289-1:2014 7.1-3: Content shall be marked as Artifact or tagged as real content | ISO 14289-1:2014 7.2-20: LI element may contain only Lbl and LBody elements"
+abcpdf,pdfa-2a+pdfua-1,auto: PDF/A-2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-1a,1a,False,1,ISO 19005-1:2005 6.8.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-1a,auto: PDF/A-1a,False,1,ISO 19005-1:2005 6.8.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-1b,1b,True,0,
+docotic,pdfa-1b,auto: PDF/A-1b,True,0,
+docotic,pdfa-2a,2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-2a,auto: PDF/A-2a,False,1,ISO 19005-2:2011 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-2b,2b,True,0,
+docotic,pdfa-2b,auto: PDF/A-2b,True,0,
+docotic,pdfa-2u,2u,True,0,
+docotic,pdfa-2u,auto: PDF/A-2u,True,0,
+docotic,pdfa-3a,3a,False,1,ISO 19005-3:2012 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-3a,auto: PDF/A-3a,False,1,ISO 19005-3:2012 6.7.3.4-1: All non-standard structure types shall be mapped to the nearest functionally equivalent st
+docotic,pdfa-3b,3b,True,0,
+docotic,pdfa-3b,auto: PDF/A-3b,True,0,
+docotic,pdfa-3u,3u,True,0,
+docotic,pdfa-3u,auto: PDF/A-3u,True,0,
+docotic,pdfa-4,4,True,0,
+docotic,pdfa-4,auto: PDF/A-4,True,0,
+docotic,pdfa-4e,4e,True,0,
+docotic,pdfa-4e,auto: PDF/A-4e,True,0,
+docotic,pdfa-4f,4f,True,0,
+docotic,pdfa-4f,auto: PDF/A-4f,True,0,
+ironpdf,pdfa-1a,1a,False,3,"ISO 19005-1:2005 6.7.3-8: The value of ModDate entry from the document information dictionary, if present, and its a | ISO 19005-1:2005 6.7.3-1: The value of CreationDate entry from the document information dictionary, if present, and  | ISO 19005-1:2005 6.7.3-7: The value of Producer entry from the document information dictionary, if present, and its "
+ironpdf,pdfa-1a,auto: PDF/A-1a,False,3,"ISO 19005-1:2005 6.7.3-7: The value of Producer entry from the document information dictionary, if present, and its  | ISO 19005-1:2005 6.7.3-8: The value of ModDate entry from the document information dictionary, if present, and its a | ISO 19005-1:2005 6.7.3-1: The value of CreationDate entry from the document information dictionary, if present, and "
+ironpdf,pdfa-1b,1b,False,2,"ISO 19005-1:2005 6.7.3-1: The value of CreationDate entry from the document information dictionary, if present, and  | ISO 19005-1:2005 6.7.3-8: The value of ModDate entry from the document information dictionary, if present, and its a"
+ironpdf,pdfa-1b,auto: PDF/A-1b,False,2,"ISO 19005-1:2005 6.7.3-8: The value of ModDate entry from the document information dictionary, if present, and its a | ISO 19005-1:2005 6.7.3-1: The value of CreationDate entry from the document information dictionary, if present, and "
+ironpdf,pdfa-2a,2a,True,0,
+ironpdf,pdfa-2a,auto: PDF/A-2a,True,0,
+ironpdf,pdfa-2b,2b,True,0,
+ironpdf,pdfa-2b,auto: PDF/A-2b,True,0,
+ironpdf,pdfa-3a,3a,True,0,
+ironpdf,pdfa-3a,auto: PDF/A-3a,True,0,
+ironpdf,pdfa-3b,3b,True,0,
+ironpdf,pdfa-3b,auto: PDF/A-3b,True,0,
+ironpdf,pdfa-4,4,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4,auto: PDF/A-4,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4e,4e,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4e,auto: PDF/A-4e,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4f,4f,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4f,auto: PDF/A-4f,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfua-1,ua1,True,0,
+ironpdf,pdfua-1,auto: PDF/UA-1,True,0,
+ironpdf,pdfua-2,ua2,False,2,"ISO 14289-2:2024 5-5: The value of ""pdfuaid:rev"" shall be ""2024"" | ISO 14289-2:2024 8.2.5.27-1: When present, the Caption element shall be the first or the last child of the structure el"
+ironpdf,pdfua-2,auto: PDF/UA-2 + Tagged PDF,False,2,"ISO 14289-2:2024 5-5: The value of ""pdfuaid:rev"" shall be ""2024"" | ISO 14289-2:2024 8.2.5.27-1: When present, the Caption element shall be the first or the last child of the structure el"
+ironpdf,pdfa-2a+pdfua-1,2a,True,0,
+ironpdf,pdfa-2a+pdfua-1,ua1,False,3,"ISO 14289-1:2014 5-1: The PDF/UA version and conformance level of a file shall be specified using the PDF/UA Ide | ISO 14289-1:2014 7.1-3: Content shall be marked as Artifact or tagged as real content | ISO 14289-1:2014 7.18.5-1: Links shall be tagged according to ISO 32000-1:2008, 14.8.4.4.2, Link Element"
+ironpdf,pdfa-2a+pdfua-1,auto: PDF/A-2a,True,0,
+ironpdf,pdfa-3a+pdfua-1,3a,True,0,
+ironpdf,pdfa-3a+pdfua-1,ua1,False,3,"ISO 14289-1:2014 5-1: The PDF/UA version and conformance level of a file shall be specified using the PDF/UA Ide | ISO 14289-1:2014 7.1-3: Content shall be marked as Artifact or tagged as real content | ISO 14289-1:2014 7.18.5-1: Links shall be tagged according to ISO 32000-1:2008, 14.8.4.4.2, Link Element"
+ironpdf,pdfa-3a+pdfua-1,auto: PDF/A-3a,True,0,
+ironpdf,pdfa-4+pdfua-2,4,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+ironpdf,pdfa-4+pdfua-2,ua2,False,4,ISO 14289-2:2024 8.2.5.2-1: The structure tree root shall contain a single Document structure element as its only chil | ISO 14289-2:2024 5-1: The PDF/UA version of a file shall be specified in the value of the Metadata entry in the  | ISO 14289-2:2024 8.2.2-1: Content that is not considered real shall be an artifact | ISO 32005:2023 Table 5. StructTreeRoot-Document-1: StructTreeRoot shall contain exactly one &lt;Document&gt;
+ironpdf,pdfa-4+pdfua-2,auto: PDF/A-4,False,1,"ISO 19005-4:2020 6.1.2-1: The file header shall begin at byte zero and shall consist of ""%PDF-2.n"" followed by a sin"
+itext,pdfa-1a,1a,False,1,"ISO 19005-1:2005 6.2.2-1: A PDF/A-1 OutputIntent is an OutputIntent dictionary, as defined by PDF Reference 9.10.4, "
+itext,pdfa-1a,auto: PDF/A-1a,False,1,"ISO 19005-1:2005 6.2.2-1: A PDF/A-1 OutputIntent is an OutputIntent dictionary, as defined by PDF Reference 9.10.4, "
+itext,pdfa-1b,1b,False,1,"ISO 19005-1:2005 6.2.2-1: A PDF/A-1 OutputIntent is an OutputIntent dictionary, as defined by PDF Reference 9.10.4, "
+itext,pdfa-1b,auto: PDF/A-1b,False,1,"ISO 19005-1:2005 6.2.2-1: A PDF/A-1 OutputIntent is an OutputIntent dictionary, as defined by PDF Reference 9.10.4, "
+itext,pdfa-2a,2a,True,0,
+itext,pdfa-2a,auto: PDF/A-2a,True,0,
+itext,pdfa-2b,2b,True,0,
+itext,pdfa-2b,auto: PDF/A-2b,True,0,
+itext,pdfa-2u,2u,True,0,
+itext,pdfa-2u,auto: PDF/A-2u,True,0,
+itext,pdfa-3a,3a,True,0,
+itext,pdfa-3a,auto: PDF/A-3a,True,0,
+itext,pdfa-3b,3b,True,0,
+itext,pdfa-3b,auto: PDF/A-3b,True,0,
+itext,pdfa-3u,3u,True,0,
+itext,pdfa-3u,auto: PDF/A-3u,True,0,
+itext,pdfa-4,4,True,0,
+itext,pdfa-4,auto: PDF/A-4,True,0,
+itext,pdfa-4e,4e,True,0,
+itext,pdfa-4e,auto: PDF/A-4e,True,0,
+selectpdf,pdfa-1a,1a,True,0,
+selectpdf,pdfa-1a,auto: PDF/A-1a,True,0,
+selectpdf,pdfa-1b,1b,True,0,
+selectpdf,pdfa-1b,auto: PDF/A-1b,True,0,
+selectpdf,pdfa-2a,2a,True,0,
+selectpdf,pdfa-2a,auto: PDF/A-2a,True,0,
+selectpdf,pdfa-2b,2b,True,0,
+selectpdf,pdfa-2b,auto: PDF/A-2b,True,0,
+selectpdf,pdfa-2u,2u,True,0,
+selectpdf,pdfa-2u,auto: PDF/A-2u,True,0,
+selectpdf,pdfa-3a,3a,True,0,
+selectpdf,pdfa-3a,auto: PDF/A-3a,True,0,
+selectpdf,pdfa-3b,3b,True,0,
+selectpdf,pdfa-3b,auto: PDF/A-3b,True,0,
+selectpdf,pdfa-3u,3u,True,0,
+selectpdf,pdfa-3u,auto: PDF/A-3u,True,0,
+selectpdf,pdfa-4,4,True,0,
+selectpdf,pdfa-4,auto: PDF/A-4,True,0,
+selectpdf,pdfa-4e,4e,True,0,
+selectpdf,pdfa-4e,auto: PDF/A-4e,True,0,
+selectpdf,pdfa-4f,4f,True,0,
+selectpdf,pdfa-4f,auto: PDF/A-4f,True,0,
+selectpdf,pdfua-1,ua1,True,0,
+selectpdf,pdfua-1,auto: PDF/UA-1,True,0,
+selectpdf,pdfua-2,ua2,True,0,
+selectpdf,pdfua-2,auto: PDF/UA-2 + Tagged PDF,True,0,
+selectpdf,pdfa-2a+pdfua-1,2a,True,0,
+selectpdf,pdfa-2a+pdfua-1,ua1,True,0,
+selectpdf,pdfa-2a+pdfua-1,auto: PDF/A-2a,True,0,
+selectpdf,pdfa-3a+pdfua-1,3a,True,0,
+selectpdf,pdfa-3a+pdfua-1,ua1,True,0,
+selectpdf,pdfa-3a+pdfua-1,auto: PDF/A-3a,True,0,
+selectpdf,pdfa-4+pdfua-2,4,True,0,
+selectpdf,pdfa-4+pdfua-2,ua2,True,0,
+selectpdf,pdfa-4+pdfua-2,auto: PDF/A-4,True,0,

@@ -1,0 +1,51 @@
+library,run,process_start_to_pdf_ms,conversion_ms,ok,error
+abcpdf,1,2188,2111.424,true,
+docotic,1,928,830.591,true,
+ironpdf,1,672,501.011,true,
+itext,1,617,501.001,true,
+pdfsharp,1,60,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,1,810,489.754,true,
+puppeteer,1,1022,762.441,true,
+questpdf,1,64,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,1,703,618.79,true,
+wkhtmltopdf,1,343,270.438,true,
+abcpdf,2,2011,1937.903,true,
+docotic,2,960,835.61,true,
+ironpdf,2,652,476.037,true,
+itext,2,600,480.294,true,
+pdfsharp,2,61,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,2,817,493.48,true,
+puppeteer,2,1003,752.402,true,
+questpdf,2,63,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,2,714,631.47,true,
+wkhtmltopdf,2,356,281.793,true,
+abcpdf,3,2033,1956.645,true,
+docotic,3,973,851.622,true,
+ironpdf,3,656,480.324,true,
+itext,3,610,497.004,true,
+pdfsharp,3,61,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,3,823,496.306,true,
+puppeteer,3,1025,761.923,true,
+questpdf,3,67,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,3,729,641.594,true,
+wkhtmltopdf,3,384,307.536,true,
+abcpdf,4,2083,2009.01,true,
+docotic,4,923,817.987,true,
+ironpdf,4,695,500.926,true,
+itext,4,625,501.512,true,
+pdfsharp,4,62,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,4,839,500.386,true,
+puppeteer,4,919,664.23,true,
+questpdf,4,65,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,4,701,628.141,true,
+wkhtmltopdf,4,354,275.524,true,
+abcpdf,5,2044,1967.607,true,
+docotic,5,947,818.179,true,
+ironpdf,5,657,480.247,true,
+itext,5,632,507.243,true,
+pdfsharp,5,60,,false,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,5,832,507.458,true,
+puppeteer,5,998,729.814,true,
+questpdf,5,66,,false,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,5,762,688.272,true,
+wkhtmltopdf,5,402,317.833,true,

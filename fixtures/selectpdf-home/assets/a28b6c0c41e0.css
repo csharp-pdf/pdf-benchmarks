@@ -1,0 +1,260 @@
+/* pages-extra-homelib.css — homepage + library/converter pages only (/, /pdf-library-for-net/, /html-to-pdf-converter*, /html-to-pdf-online/). */
+
+/* Hero install card — multi-line dark code box + TFM chip row */
+.spdf-lib-install {
+  background: var(--spdf-code);
+  color: var(--spdf-code-text);
+  font-family: var(--spdf-font-mono);
+  font-size: 12.5px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  line-height: 1.6;
+  /* Package ids are single unbreakable tokens wider than this box on a
+     phone. The markup carries <wbr> after each dot so a break prefers a
+     dot boundary; this is the fallback, and it keeps the command inside
+     the box instead of spilling past the card. */
+  overflow-wrap: anywhere;
+}
+.spdf-lib-install-dim { color: var(--spdf-code-dim); }
+.spdf-lib-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.spdf-lib-chip {
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-chip-text);
+  background: var(--spdf-chip);
+  padding: 5px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+.spdf-lib-card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+/* Capabilities — single bordered grid of rich cards */
+.spdf-capgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 0;
+  border: 1px solid var(--spdf-line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--spdf-bg);
+  margin-top: 32px;
+}
+.spdf-capcard {
+  padding: 28px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-right: 1px solid var(--spdf-line);
+  border-bottom: 1px solid var(--spdf-line);
+  min-width: 0;
+}
+.spdf-capcard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.spdf-capcard-tag {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-accent);
+  letter-spacing: 0.12em;
+}
+.spdf-capcard-plus {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-text-mute);
+}
+.spdf-capcard-title {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--spdf-text);
+}
+.spdf-capcard-desc {
+  font-family: var(--spdf-font-body);
+  font-size: 13.5px;
+  color: var(--spdf-text-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+.spdf-capcard-list {
+  list-style: none;
+  padding: 14px 0 0;
+  margin: auto 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px dashed var(--spdf-line);
+}
+.spdf-capcard-list li {
+  display: flex;
+  gap: 8px;
+  font-family: var(--spdf-font-body);
+  font-size: 12.5px;
+  color: var(--spdf-text-dim);
+  line-height: 1.5;
+}
+.spdf-capcard-list li::before {
+  content: "+";
+  color: var(--spdf-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Architecture / engine diagram */
+.spdf-engine {
+  border: 1px solid var(--spdf-line);
+  border-radius: 14px;
+  padding: 24px;
+  background: var(--spdf-surface);
+  position: relative;
+  overflow: hidden;
+  margin-top: 32px;
+}
+.spdf-engine-bound {
+  position: absolute;
+  left: 24px;
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+.spdf-engine-bound-top { top: 12px; }
+.spdf-engine-bound-bot {
+  bottom: 12px; right: 24px;
+  border-top: 1px dashed var(--spdf-line);
+  height: 0;
+}
+.spdf-engine-col { display: flex; flex-direction: column; gap: 12px; }
+.spdf-engine-cell {
+  border: 1px solid var(--spdf-line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  background: var(--spdf-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.spdf-engine-cell.is-accent { border-color: var(--spdf-accent); }
+.spdf-engine-cell-k {
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.spdf-engine-cell-k.is-accent { color: var(--spdf-accent); }
+.spdf-engine-cell-v {
+  font-family: var(--spdf-font-body);
+  font-size: 14px;
+  color: var(--spdf-text);
+  font-weight: 500;
+}
+.spdf-engine-cell-m {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-text-dim);
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+}
+.spdf-engine-box {
+  border: 1.5px solid var(--spdf-accent);
+  border-radius: 12px;
+  padding: 20px 18px;
+  background: var(--spdf-panel);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.spdf-engine-box-k {
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-accent);
+  letter-spacing: 0.14em;
+}
+.spdf-engine-box-title {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--spdf-text);
+}
+.spdf-engine-box-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--spdf-font-body);
+  font-size: 12.5px;
+  color: var(--spdf-text-dim);
+}
+.spdf-engine-tag {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border: 1px dashed var(--spdf-line);
+  border-radius: 6px;
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-text-dim);
+}
+.spdf-compliance-cell {
+  padding: 24px 22px;
+  border-right: 1px solid var(--spdf-line);
+  border-bottom: 1px solid var(--spdf-line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+.spdf-compliance-cell-k {
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.spdf-compliance-cell-v {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--spdf-text);
+}
+.spdf-compliance-cell-d {
+  font-family: var(--spdf-font-body);
+  font-size: 13px;
+  color: var(--spdf-text-dim);
+  line-height: 1.55;
+}
+
+/* Inline command chip inside a display heading (e.g. "dotnet add") */
+.spdf-qs-cmd {
+  font-family: var(--spdf-font-mono);
+  font-size: 0.6em;
+  font-weight: 500;
+  letter-spacing: 0;
+  background: var(--spdf-chip);
+  color: var(--spdf-chip-text);
+  padding: 0.14em 0.45em;
+  border-radius: 8px;
+  vertical-align: 0.14em;
+  white-space: nowrap;
+}

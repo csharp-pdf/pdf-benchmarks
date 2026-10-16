@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bootstrap</title>
+<link rel="stylesheet" href="../_shared/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="../_shared/vendor/bootstrap-icons/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  :root { --bs-body-font-family: 'Inter', sans-serif; }
+  .hero { background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%); }
+  .feature-icon { width: 3rem; height: 3rem; border-radius: .75rem; }
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-file-earmark-pdf"></i> Acme Docs</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero text-white py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge bg-warning text-dark mb-3">New in 2026</span>
+          <h1 class="display-5 fw-bold">Documents your customers can trust</h1>
+          <p class="lead">Generate invoices, statements and reports from the templates your team already writes in HTML.</p>
+          <a href="#pricing" class="btn btn-light btn-lg me-2">Start free</a>
+          <a href="#features" class="btn btn-outline-light btn-lg">See features</a>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-lg text-dark">
+            <div class="card-body">
+              <h5 class="card-title"><i class="bi bi-graph-up-arrow text-success"></i> This month</h5>
+              <div class="d-flex justify-content-between"><span>Documents</span><strong>12,480</strong></div>
+              <div class="progress my-2" role="progressbar"><div class="progress-bar bg-success" style="width: 72%">72%</div></div>
+              <div class="d-flex justify-content-between"><span>Storage</span><strong>3.4 GB</strong></div>
+              <div class="progress my-2" role="progressbar"><div class="progress-bar bg-info" style="width: 34%">34%</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="container py-5">
+    <h2 class="mb-4">Features</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-icon bg-primary text-white d-inline-flex align-items-center justify-content-center fs-4 mb-3"><i class="bi bi-lightning-charge"></i></div>
+        <h3 class="h5">Fast templates</h3>
+        <p>Reuse your existing HTML and CSS. Headers, footers and page numbers are configured, not coded.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon bg-success text-white d-inline-flex align-items-center justify-content-center fs-4 mb-3"><i class="bi bi-shield-check"></i></div>
+        <h3 class="h5">Secure by default</h3>
+        <p>Encrypt and sign documents, restrict printing and copying, and keep an audit trail.</p>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-icon bg-danger text-white d-inline-flex align-items-center justify-content-center fs-4 mb-3"><i class="bi bi-translate"></i></div>
+        <h3 class="h5">Any language</h3>
+        <p>Right-to-left scripts, East Asian text and web fonts render the same way they do in the browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="bg-light py-5">
+    <div class="container">
+      <h2 class="mb-4">Pricing</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+        <div class="col"><div class="card h-100">
+          <div class="card-header py-3"><h4 class="my-0">Free</h4></div>
+          <div class="card-body"><h1 class="card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4"><li>100 documents</li><li>Community support</li><li>1 user</li></ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up</button></div>
+        </div></div>
+        <div class="col"><div class="card h-100 border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary"><h4 class="my-0">Pro</h4></div>
+          <div class="card-body"><h1 class="card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4"><li>10,000 documents</li><li>Email support</li><li>5 users</li></ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button></div>
+        </div></div>
+        <div class="col"><div class="card h-100">
+          <div class="card-header py-3"><h4 class="my-0">Enterprise</h4></div>
+          <div class="card-body"><h1 class="card-title">$99<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4"><li>Unlimited documents</li><li>Phone support</li><li>Unlimited users</li></ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Contact us</button></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <h2 class="mb-4">Recent documents</h2>
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark"><tr><th>#</th><th>Document</th><th>Customer</th><th>Status</th><th class="text-end">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>1042</td><td><i class="bi bi-file-earmark-text"></i> Invoice INV-1042</td><td>Northwind Traders</td><td><span class="badge text-bg-success">Paid</span></td><td class="text-end">$1,280.00</td></tr>
+        <tr><td>1043</td><td><i class="bi bi-file-earmark-text"></i> Invoice INV-1043</td><td>Contoso Ltd</td><td><span class="badge text-bg-warning">Pending</span></td><td class="text-end">$640.50</td></tr>
+        <tr><td>1044</td><td><i class="bi bi-file-earmark-bar-graph"></i> Q3 report</td><td>Fabrikam Inc</td><td><span class="badge text-bg-info">Draft</span></td><td class="text-end">—</td></tr>
+        <tr><td>1045</td><td><i class="bi bi-file-earmark-text"></i> Invoice INV-1045</td><td>Adventure Works</td><td><span class="badge text-bg-danger">Overdue</span></td><td class="text-end">$2,915.75</td></tr>
+      </tbody>
+    </table>
+    <div class="alert alert-primary d-flex align-items-center" role="alert"><i class="bi bi-info-circle-fill me-2"></i>Documents older than 90 days are archived automatically.</div>
+  </section>
+
+  <section id="contact" class="container pb-5">
+    <h2 class="mb-4">Contact</h2>
+    <form class="row g-3">
+      <div class="col-md-6"><label class="form-label" for="name">Name</label><input class="form-control" id="name" value="Jane Doe"></div>
+      <div class="col-md-6"><label class="form-label" for="email">Email</label><input class="form-control" id="email" type="email" value="jane@example.com"></div>
+      <div class="col-12"><label class="form-label" for="msg">Message</label><textarea class="form-control" id="msg" rows="3">Please send a quote for 50,000 documents a month.</textarea></div>
+      <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="terms" checked><label class="form-check-label" for="terms">I agree to the terms</label></div></div>
+      <div class="col-12"><button class="btn btn-primary" type="button">Send</button></div>
+    </form>
+  </section>
+
+  <footer class="bg-dark text-white-50 py-4">
+    <div class="container d-flex justify-content-between"><span>© 2026 Acme Docs</span><span><i class="bi bi-github"></i> <i class="bi bi-linkedin"></i> <i class="bi bi-envelope"></i></span></div>
+  </footer>
+</body>
+</html>

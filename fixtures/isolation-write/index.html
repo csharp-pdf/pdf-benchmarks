@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>isolation-write</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>body { margin: 40px; font-family: 'Inter', sans-serif; }</style>
+</head>
+<body>
+  <h1>Isolation: write</h1>
+  <p id="out">Script did not run.</p>
+<script>
+  // Stores a value that a later, unrelated conversion of isolation-read must NOT be able to see.
+  const token = 'TOKEN-' + Date.now();
+  localStorage.setItem('benchmark-secret', token);
+  sessionStorage.setItem('benchmark-secret', token);
+  document.cookie = 'benchmark-secret=' + token + '; path=/; max-age=3600';
+  document.getElementById('out').textContent = 'Stored: ' + token;
+</script>
+</body>
+</html>

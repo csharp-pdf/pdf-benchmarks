@@ -1,0 +1,59 @@
+library,case,outcome,ms,pages,error,recovered
+abcpdf,hanging-page,error,120633,,Exception: Unable to render HTML. ABCChrome page load timed out.,True
+abcpdf,not-found,pdf,132,1,,True
+abcpdf,unreachable-host,error,3375,,Exception: Chrome reported an error for http://127.0.0.1:9/: ERR_UNSAFE_PORT (-312),True
+abcpdf,broken-image,pdf,111,1,,True
+abcpdf,js-error,pdf,114,1,,True
+abcpdf,slow-resource,pdf,5063,1,,True
+abcpdf,hanging-resource,error,120580,,Exception: Unable to render HTML. ABCChrome page load timed out.,True
+docotic,hanging-page,error,30022,,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded,True
+docotic,not-found,pdf,49,1,,True
+docotic,unreachable-host,error,20,,HtmlConverterException: Failed to convert. net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/,True
+docotic,broken-image,pdf,52,1,,True
+docotic,js-error,pdf,59,1,,True
+docotic,slow-resource,pdf,5055,1,,True
+docotic,hanging-resource,error,30028,,HtmlConverterException: Failed to convert. Navigation timeout of 30000 ms exceeded,True
+ironpdf,hanging-page,error,66010,,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/_hang': 'Error while rendering pdf from url for job group 1: 'Timeout after 65s while rendering pdf from url for job group 1''.,True
+ironpdf,not-found,pdf,190,1,,True
+ironpdf,unreachable-host,error,12,,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:9/': 'Error while rendering pdf from url for job group 5: 'Aborted job 5 for browser 2: Error 'ERR_UNSAFE_PORT' while loading browser 2''.,True
+ironpdf,broken-image,pdf,193,1,,True
+ironpdf,js-error,pdf,93,1,,True
+ironpdf,slow-resource,pdf,5098,1,,True
+ironpdf,hanging-resource,error,66003,,IronPdfNativeException: Error while generating PDF from 'http://127.0.0.1:8777/errors/hanging-resource/index.html': 'Error while rendering pdf from url for job group 13: 'Aborted job 13 for browser 3: Timeout after 65s while rendering pdf from url for job group 13''.,True
+pdfsharp,,unsupported,,,no HTML conversion,
+playwright,hanging-page,error,30034,,TimeoutException: Timeout 30000ms exceeded.,True
+playwright,not-found,pdf,36,1,,True
+playwright,unreachable-host,error,22,,PlaywrightException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/,True
+playwright,broken-image,pdf,47,1,,True
+playwright,js-error,pdf,45,1,,True
+playwright,slow-resource,pdf,5045,1,,True
+playwright,hanging-resource,error,30025,,TimeoutException: Timeout 30000ms exceeded.,True
+puppeteer,hanging-page,error,30042,,NavigationException: Navigation timeout of 30000 ms exceeded,True
+puppeteer,not-found,pdf,66,1,,True
+puppeteer,unreachable-host,error,44,,NavigationException: net::ERR_UNSAFE_PORT at http://127.0.0.1:9/ at http://127.0.0.1:9/,True
+puppeteer,broken-image,pdf,76,1,,True
+puppeteer,js-error,pdf,73,1,,True
+puppeteer,slow-resource,pdf,5099,1,,True
+puppeteer,hanging-resource,error,30042,,NavigationException: Navigation timeout of 30000 ms exceeded,True
+questpdf,,unsupported,,,no HTML conversion,
+selectpdf,hanging-page,error,60012,,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.,True
+selectpdf,not-found,error,27,,HtmlToPdfException: Conversion error: HTTP error 404 Not Found for URL: http://127.0.0.1:8777/does-not-exist/.,True
+selectpdf,unreachable-host,error,27,,HtmlToPdfException: Load error -312 (ERR_UNSAFE_PORT) for URL: http://127.0.0.1:9/,True
+selectpdf,broken-image,pdf,209,1,,True
+selectpdf,js-error,pdf,59,1,,True
+selectpdf,slow-resource,pdf,5060,1,,True
+selectpdf,hanging-resource,error,60009,,HtmlToPdfException: Conversion error: Navigation timeout 60 seconds.,True
+wkhtmltopdf,hanging-page,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,not-found,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,unreachable-host,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,broken-image,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,js-error,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,slow-resource,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+wkhtmltopdf,hanging-resource,error,1,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported.",False
+itext,hanging-page,error,100010,,TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.,True
+itext,not-found,error,3,,HttpRequestException: Response status code does not indicate success: 404 (File not found).,True
+itext,unreachable-host,error,1,,HttpRequestException: Connection refused (127.0.0.1:9),True
+itext,broken-image,pdf,159,1,,True
+itext,js-error,pdf,150,1,,True
+itext,slow-resource,pdf,5159,1,,True
+itext,hanging-resource,hung,315015,,,True

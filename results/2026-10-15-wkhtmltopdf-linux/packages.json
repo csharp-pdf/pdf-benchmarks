@@ -1,0 +1,10 @@
+{
+  "wkhtmltopdf": {
+    "ok": true,
+    "library": "wkhtmltopdf",
+    "packages": {
+      "Haukcode.WkHtmlToPdfDotNet": "1.5.95"
+    },
+    "runtime": ".NET 8.0.31"
+  }
+}

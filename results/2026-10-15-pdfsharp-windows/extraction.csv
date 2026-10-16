@@ -1,0 +1,8 @@
+library,input,pages_expected,pages,text_f1
+pymupdf (reference),invoice,3,3,0.9909
+pymupdf (reference),rtl,2,2,0.9489
+pymupdf (reference),cjk,5,5,1.0000
+pymupdf (reference),scripts,1,1,1.0000
+pymupdf (reference),accessible,2,2,0.9727
+pymupdf (reference),long-document,344,344,1.0000
+pymupdf (reference),selectpdf-home,10,10,0.9781

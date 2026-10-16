@@ -1,0 +1,405 @@
+/* ============================================================
+   SelectPdf — chrome.css
+   Site chrome: navigation bar + footer CTA + footer meta.
+   ============================================================ */
+
+/* ─── Top nav ──────────────────────────────────────────────── */
+.spdf-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--spdf-line);
+  background: color-mix(in oklab, var(--spdf-bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.spdf-nav-row {
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.spdf-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.spdf-nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 16px;
+}
+.spdf-nav-logo-accent { color: var(--spdf-accent); }
+
+.spdf-nav-links {
+  display: flex;
+  gap: 28px;
+}
+.spdf-nav-link {
+  color: var(--spdf-text-dim);
+  font-size: 13.5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .15s;
+}
+.spdf-nav-link:hover,
+.spdf-nav-link[aria-current="page"] {
+  color: var(--spdf-text);
+}
+
+.spdf-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.spdf-nav-signin {
+  color: var(--spdf-text);
+  font-size: 13.5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.spdf-nav-cta {
+  background: var(--spdf-accent);
+  color: var(--spdf-accent-ink);
+  border: 0;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Theme toggle button */
+.spdf-theme-toggle {
+  background: transparent;
+  border: 1px solid var(--spdf-line);
+  color: var(--spdf-text);
+  width: 36px; height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background .15s, border-color .15s;
+}
+.spdf-theme-toggle:hover { background: var(--spdf-chip); }
+.spdf-theme-toggle .icon-sun  { display: none; }
+.spdf-theme-toggle .icon-moon { display: block; }
+html[data-theme="dark"] .spdf-theme-toggle .icon-sun  { display: block; }
+html[data-theme="dark"] .spdf-theme-toggle .icon-moon { display: none; }
+
+/* Mobile burger */
+.spdf-nav-burger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--spdf-line);
+  padding: 7px 9px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--spdf-text);
+  align-items: center;
+  justify-content: center;
+}
+.spdf-nav-burger .icon-close { display: none; }
+.spdf-nav-burger[aria-expanded="true"] .icon-open  { display: none; }
+.spdf-nav-burger[aria-expanded="true"] .icon-close { display: block; }
+
+/* Mobile drawer */
+.spdf-nav-drawer {
+  display: none;
+  border-top: 1px solid var(--spdf-line);
+  background: var(--spdf-bg);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+}
+.spdf-nav-drawer[data-open="true"] { max-height: min(85vh, 640px); overflow-y: auto; }
+.spdf-nav-drawer-inner {
+  padding: 8px 32px 18px;
+  display: flex;
+  flex-direction: column;
+}
+.spdf-nav-drawer-link {
+  color: var(--spdf-text);
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--spdf-line);
+}
+.spdf-nav-drawer-link:last-child { border-bottom: 0; }
+
+@media (max-width: 1024px) {
+  .spdf-nav-links { gap: 18px; }
+}
+/* The full desktop row (logo, five menus, theme toggle, Sign in, Download
+   trial) needs ~841px; below 900px it switches to the burger menu, so the
+   row never squeezes or pushes the CTA off-screen. */
+@media (max-width: 900px) {
+  .spdf-nav-row { padding: 12px 18px; }
+  .spdf-nav-links { display: none; }
+  .spdf-nav-cta { padding: 8px 12px; font-size: 12.5px; }
+  .spdf-nav-signin { display: none; }
+  .spdf-nav-burger { display: inline-flex; }
+  .spdf-nav-drawer { display: block; }
+}
+/* Small phones: keep logo, theme toggle, CTA and burger on one row. */
+@media (max-width: 400px) {
+  .spdf-nav-row { padding: 12px 14px; }
+  .spdf-nav-actions { gap: 8px; }
+  .spdf-nav-cta { padding: 8px 10px; }
+}
+
+/* ─── Footer CTA + meta row ────────────────────────────────── */
+.spdf-footer-cta {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 32px 48px;
+  text-align: center;
+}
+.spdf-footer-cta-title {
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  letter-spacing: var(--spdf-display-letter);
+  font-size: var(--spdf-h1-cta);
+  line-height: var(--spdf-h1-cta-lh);
+  margin: 0;
+  color: var(--spdf-text);
+}
+.spdf-footer-cta-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.spdf-footer-meta {
+  border-top: 1px solid var(--spdf-line);
+  padding: 28px 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-text-mute);
+  letter-spacing: 0.06em;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .spdf-footer-cta { padding: 56px 18px 32px; }
+  .spdf-footer-meta {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 20px 18px;
+  }
+}
+
+/* ─── Nav dropdown menus ───────────────────────────────────── */
+.spdf-nav-item { position: relative; display: inline-flex; align-items: center; }
+.spdf-nav-trigger {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--spdf-text-dim);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color .15s;
+}
+.spdf-nav-item:hover .spdf-nav-trigger,
+.spdf-nav-trigger[aria-expanded="true"] { color: var(--spdf-text); }
+.spdf-nav-caret { font-size: 9px; color: var(--spdf-text-mute); }
+.spdf-nav-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 0;
+  min-width: 300px;
+  white-space: nowrap;
+  background: var(--spdf-panel);
+  border: 1px solid var(--spdf-line);
+  border-radius: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.32);
+  z-index: 60;
+}
+/* invisible hover bridge so the menu doesn't close in the gap */
+.spdf-nav-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px; left: 0; right: 0;
+  height: 16px;
+}
+.spdf-nav-menu-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: var(--spdf-text);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background .12s;
+}
+.spdf-nav-menu-link:hover { background: var(--spdf-chip); }
+.spdf-nav-menu-link small {
+  color: var(--spdf-text-mute);
+  font-size: 11.5px;
+  font-weight: 400;
+}
+/* Featured (primary) dropdown items — e.g. the two main pricing pages */
+.spdf-nav-menu-link.is-featured {
+  background: var(--spdf-chip);
+  color: var(--spdf-accent);
+  font-weight: 600;
+}
+.spdf-nav-menu-link.is-featured:hover { background: var(--spdf-chip-strong, var(--spdf-chip)); }
+.spdf-nav-acc-body .spdf-nav-drawer-link.is-featured { color: var(--spdf-accent); font-weight: 600; }
+
+/* ─── Mobile drawer accordion ──────────────────────────────── */
+.spdf-nav-acc { border-bottom: 1px solid var(--spdf-line); }
+.spdf-nav-acc-head {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--spdf-text);
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.spdf-nav-acc-head[aria-expanded="true"] .spdf-nav-caret { transform: rotate(180deg); }
+.spdf-nav-acc-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0 12px 14px;
+}
+.spdf-nav-acc-body .spdf-nav-drawer-link {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--spdf-text-dim);
+  padding: 9px 0;
+  border-bottom: 0;
+}
+.spdf-nav-drawer-signin { font-weight: 600; }
+
+/* ─── Footer link columns ──────────────────────────────────── */
+.spdf-footer-cols {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 8px 32px 56px;
+  display: grid;
+  /* Each column at least as wide as its widest link (max-content), then
+     splits the remaining row width evenly via 1fr. Guarantees every link
+     stays on one line at desktop widths. The mobile @media below switches
+     to a 2-column layout where wrapping is fine. */
+  grid-template-columns: repeat(5, minmax(max-content, 1fr));
+  gap: 32px 24px;
+  border-top: 1px solid var(--spdf-line);
+}
+.spdf-footer-col { display: flex; flex-direction: column; min-width: 0; }
+.spdf-footer-col-head {
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--spdf-text-mute);
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+.spdf-footer-link {
+  color: var(--spdf-text-dim);
+  font-size: 13.5px;
+  text-decoration: none;
+  padding: 6px 0;
+  white-space: nowrap;
+  transition: color .15s;
+}
+.spdf-footer-link:hover { color: var(--spdf-accent); }
+
+/* Between mobile and desktop the five max-content columns can total more than
+   the viewport — the longest labels run to ~217px, so five columns plus gaps
+   and padding need ~1150px. Below that the grid overflowed and the whole page
+   scrolled sideways. Drop to three columns and let the labels wrap, exactly as
+   the mobile rule below does. */
+@media (min-width: 721px) and (max-width: 1180px) {
+  .spdf-footer-cols { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .spdf-footer-link { white-space: normal; }
+}
+
+@media (max-width: 720px) {
+  .spdf-footer-cols {
+    padding: 8px 18px 40px;
+    gap: 28px 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* On mobile the columns are narrow — allow link text to wrap so the
+     longer labels don't overflow the column or force a horizontal scroll. */
+  .spdf-footer-link { white-space: normal; }
+}
+
+/* Grouped dropdown sub-headings + right-aligned menu (Company) */
+.spdf-nav-menu.is-right { left: auto; right: 0; }
+.spdf-nav-menu-group {
+  display: block;
+  font-family: var(--spdf-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--spdf-text-mute);
+  padding: 9px 12px 5px;
+}
+.spdf-nav-menu-link + .spdf-nav-menu-group {
+  margin-top: 5px;
+  padding-top: 11px;
+  border-top: 1px solid var(--spdf-line);
+}
+
+/* Mobile drawer: group sub-labels + inline tags */
+.spdf-nav-acc-sub {
+  display: block;
+  font-family: var(--spdf-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--spdf-text-mute);
+  padding: 12px 0 4px;
+}
+.spdf-nav-acc-body .spdf-nav-drawer-link small {
+  color: var(--spdf-text-mute);
+  font-size: 11px;
+  font-weight: 400;
+  margin-left: 6px;
+}

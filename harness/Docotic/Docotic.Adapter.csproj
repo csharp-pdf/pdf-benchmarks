@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Docotic.Pdf needs a licence key (a free time-limited key works) in the DOCOTIC_LICENSE_KEY environment variable. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>adapter-docotic</AssemblyName>
+    <RuntimeIdentifier>$(NativeRid)</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BitMiracle.Docotic.Pdf" Version="9.9.19928" />
+    <!-- the free add-ons: HTML to PDF (Chromium) and PDF/A output -->
+    <PackageReference Include="BitMiracle.Docotic.Pdf.HtmlToPdf" Version="9.9.19928" />
+    <PackageReference Include="BitMiracle.Docotic.Pdf.Conformance" Version="9.9.19928" />
+    <Compile Include="../Common/*.cs" />
+  </ItemGroup>
+</Project>

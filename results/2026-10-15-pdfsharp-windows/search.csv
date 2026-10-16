@@ -1,0 +1,11 @@
+library,input,term,expected_pages,found_pages,hits,pass
+pdfsharp,invoice,Total due,[3],,,not supported
+pdfsharp,invoice,Northwind Supplies,"[1, 3]",,,not supported
+pdfsharp,invoice,Contoso Ltd,[1],,,not supported
+pdfsharp,rtl,حقوق,"[1, 2]",,,not supported
+pdfsharp,cjk,人人生而自由,[1],,,not supported
+pdfsharp,cjk,すべての人間は,[3],,,not supported
+pdfsharp,cjk,모든 인간은,[5],,,not supported
+pdfsharp,scripts,समानता,[1],,,not supported
+pdfsharp,scripts,มนุษย์,[1],,,not supported
+pdfsharp,long-document,Chapter 40,[335],,,not supported

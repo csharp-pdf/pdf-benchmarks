@@ -1,0 +1,2 @@
+library,variant,extra_os_packages,image_mb,root_ok,root_seconds,non_root_ok,non_root_seconds,error
+pdfsharp,minimal,0,77,True,0.5,True,0.5,

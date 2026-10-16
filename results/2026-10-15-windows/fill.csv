@@ -1,0 +1,45 @@
+library,field,value,pass,detail
+abcpdf,name,Jane Doe,True,pypdf reads 'Jane Doe'
+abcpdf,name drawn,Jane Doe,True,
+abcpdf,email,jane@example.com,True,pypdf reads 'jane@example.com'
+abcpdf,email drawn,jane@example.com,True,
+abcpdf,plan,Pro,True,pypdf reads 'Pro'
+abcpdf,plan drawn,Pro,True,
+abcpdf,news,true,True,pypdf reads 'Yes'
+abcpdf,contact,phone,True,pypdf reads 'phone'
+docotic,name,Jane Doe,True,pypdf reads 'Jane Doe'
+docotic,name drawn,Jane Doe,True,
+docotic,email,jane@example.com,True,pypdf reads 'jane@example.com'
+docotic,email drawn,jane@example.com,True,
+docotic,plan,Pro,True,pypdf reads 'Pro'
+docotic,plan drawn,Pro,True,
+docotic,news,true,True,pypdf reads 'Yes'
+docotic,contact,phone,True,pypdf reads 'phone'
+ironpdf,name,Jane Doe,True,pypdf reads 'Jane Doe'
+ironpdf,name drawn,Jane Doe,True,
+ironpdf,email,jane@example.com,True,pypdf reads 'jane@example.com'
+ironpdf,email drawn,jane@example.com,True,
+ironpdf,plan,Pro,True,pypdf reads 'Pro'
+ironpdf,plan drawn,Pro,True,
+ironpdf,news,true,True,pypdf reads 'Yes'
+ironpdf,contact,phone,True,pypdf reads 'phone'
+itext,name,Jane Doe,True,pypdf reads 'Jane Doe'
+itext,name drawn,Jane Doe,True,
+itext,email,jane@example.com,True,pypdf reads 'jane@example.com'
+itext,email drawn,jane@example.com,True,
+itext,plan,Pro,True,pypdf reads 'Pro'
+itext,plan drawn,Pro,True,
+itext,news,true,True,pypdf reads 'Yes'
+itext,contact,phone,True,pypdf reads 'phone'
+playwright,output,,n/a,not supported: Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,output,,n/a,not supported: PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+questpdf,output,,n/a,not supported: no AcroForm filling
+selectpdf,name,Jane Doe,True,pypdf reads 'Jane Doe'
+selectpdf,name drawn,Jane Doe,True,
+selectpdf,email,jane@example.com,True,pypdf reads 'jane@example.com'
+selectpdf,email drawn,jane@example.com,True,
+selectpdf,plan,Pro,True,pypdf reads 'Pro'
+selectpdf,plan drawn,Pro,True,
+selectpdf,news,true,True,pypdf reads 'Yes'
+selectpdf,contact,phone,True,pypdf reads 'phone'
+wkhtmltopdf,output,,n/a,not supported: no PDF tools

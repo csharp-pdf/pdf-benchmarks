@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>web-fonts</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<link rel="stylesheet" href="../_shared/vendor/bootstrap-icons/bootstrap-icons.min.css">
+<style>
+  body { margin: 48px; color: #1d1d1f; font-family: 'Inter', sans-serif; }
+  .sans { font-family: 'Inter', sans-serif; }
+  .serif { font-family: 'Lora', serif; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .sample { margin-bottom: 28px; }
+  .sample .name { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #888; font-family: 'Inter', sans-serif; }
+  .xl { font-size: 48px; line-height: 1.15; }
+  .l { font-size: 24px; line-height: 1.35; }
+  .m { font-size: 16px; line-height: 1.6; }
+  .icons { font-size: 32px; display: flex; gap: 20px; color: #2f5d8a; }
+  pre { background: #f4f4f6; padding: 16px; border-radius: 6px; font-size: 13px; line-height: 1.5; }
+  .kern { font-size: 64px; font-weight: 700; letter-spacing: -0.02em; }
+</style>
+</head>
+<body>
+  <div class="sample sans"><div class="name">Inter 700 / 400</div>
+    <div class="xl" style="font-weight:700">The quick brown fox jumps over the lazy dog</div>
+    <div class="l">Sphinx of black quartz, judge my vow. 0123456789 — “quotes” &amp; ligatures ﬁ ﬂ</div>
+    <p class="m">Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump! Àçcéntèd lettërs: Ærøskøbing, Dvořák, São Paulo, Kraków, Ølstykke.</p>
+  </div>
+  <div class="sample serif"><div class="name">Lora 400 / 700 / italic synthesis</div>
+    <div class="xl">Typography is what language looks like</div>
+    <div class="l" style="font-weight:700">Bold serif headline at twenty-four pixels</div>
+    <p class="m"><em>Emphasis without an italic face is synthesised by the engine.</em> Regular serif body text: a paragraph long enough to wrap onto several lines, so line height, word spacing and the shapes of the letters can be compared across engines.</p>
+  </div>
+  <div class="sample"><div class="name">JetBrains Mono</div>
+<pre class="mono">using var converter = new HtmlToPdf();
+var pdf = converter.ConvertUrl("https://example.com/report");
+pdf.Save("report.pdf");   // -&gt; 3 pages, 184 KB</pre>
+  </div>
+  <div class="sample"><div class="name">Icon font (Bootstrap Icons)</div>
+    <div class="icons"><i class="bi bi-file-earmark-pdf"></i><i class="bi bi-printer"></i><i class="bi bi-cloud-arrow-down"></i><i class="bi bi-lock"></i><i class="bi bi-pen"></i><i class="bi bi-translate"></i><i class="bi bi-bar-chart-line"></i><i class="bi bi-star-fill"></i></div>
+  </div>
+  <div class="sample sans"><div class="name">Kerning and tight tracking</div>
+    <div class="kern">AVATAR Type Wave 7.4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+library,fixture,mode,concurrency,seconds,completed,failed,per_minute
+pdfsharp,bootstrap,sync,,,,,unsupported
+pdfsharp,bootstrap,async,,,,,unsupported

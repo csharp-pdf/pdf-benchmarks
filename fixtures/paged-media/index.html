@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>paged-media</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  @page { size: A4; margin: 20mm 18mm; }
+  @page :first { margin-top: 40mm; }
+  body { font-family: 'Inter', sans-serif; font-size: 12pt; line-height: 1.5; color: #1d1d1f; }
+  h1 { font-size: 26pt; margin: 0 0 12pt; }
+  h2 { break-before: page; font-size: 18pt; }
+  h2, h3 { break-after: avoid; }
+  .keep { break-inside: avoid; border: 2px solid #2563eb; padding: 12pt; margin: 12pt 0; height: 160mm; }
+  .print-only { display: none; }
+  @media print {
+    .screen-only { display: none; }
+    .print-only { display: block; color: #16a34a; font-weight: 700; }
+  }
+  p { orphans: 3; widows: 3; }
+</style>
+</head>
+<body>
+  <h1>Paged media</h1>
+  <p class="print-only">PRINT MEDIA ACTIVE</p>
+  <p class="screen-only">Screen media active.</p>
+  <p>This fixture checks <code>@page</code> size and margins, a larger first-page top margin, forced page breaks before every second-level heading, headings kept with the following text, and a block that must not be split across pages.</p>
+  <h2>Section 1 — starts on page 2</h2>
+  <p>Text after a forced break.</p>
+  <div class="keep">This 160 mm tall block uses <code>break-inside: avoid</code>. It must start on a new page rather than be split.</div>
+  <div class="keep">A second unbreakable block; there is not room for both on one page.</div>
+  <h2>Section 2 — starts on a new page</h2>
+  <p>Last section.</p>
+</body>
+</html>

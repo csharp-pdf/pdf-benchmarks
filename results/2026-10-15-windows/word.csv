@@ -1,0 +1,5 @@
+library,input,pages_word,pages,text_f1_vs_word,ssim_mean,ssim_worst,fonts_embedded,images
+ironpdf,report,8,6,0.9958,0.4675,0.3939,True,1
+selectpdf,report,8,8,0.9996,0.9803,0.9727,True,1
+ironpdf,international,1,1,0.9716,0.8722,0.8722,True,0
+selectpdf,international,1,1,0.9794,0.9424,0.9424,True,0

@@ -1,0 +1,3 @@
+library,rid,publish_mb
+wkhtmltopdf,win-x64,122.2
+wkhtmltopdf,linux-x64,126.3

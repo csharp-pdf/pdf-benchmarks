@@ -1,0 +1,5 @@
+library,check,pass,detail
+pdfsharp,pages,True,3 pages
+pdfsharp,text on every page,True,
+pdfsharp,visible on every page,True,min 2.3% of pixels changed
+pdfsharp,original text kept,True,lowest page F1 1.000

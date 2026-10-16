@@ -1,0 +1,9 @@
+library,field,value,pass,detail
+pdfsharp,name,Jane Doe,True,pypdf reads 'Jane Doe'
+pdfsharp,name drawn,Jane Doe,True,
+pdfsharp,email,jane@example.com,True,pypdf reads 'jane@example.com'
+pdfsharp,email drawn,jane@example.com,True,
+pdfsharp,plan,Pro,True,pypdf reads 'Pro'
+pdfsharp,plan drawn,Pro,False,value not in the appearance stream
+pdfsharp,news,true,True,pypdf reads 'Yes'
+pdfsharp,contact,phone,True,pypdf reads 'phone'

@@ -1,0 +1,332 @@
+/* ============================================================
+   SelectPdf — components.css
+   Reusable UI primitives: nav, footer, buttons, cards, code blocks,
+   chips, badges, dividers, form controls, FAQ.
+   ============================================================ */
+
+/* ─── Buttons ──────────────────────────────────────────────── */
+.spdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-family: var(--spdf-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s;
+  background: transparent;
+  color: var(--spdf-text);
+}
+.spdf-btn-primary {
+  background: var(--spdf-accent);
+  color: var(--spdf-accent-ink);
+  border: 0;
+}
+.spdf-btn-primary:hover { filter: brightness(0.96); }
+.spdf-btn-dark {
+  background: var(--spdf-text);
+  color: var(--spdf-bg);
+  border: 0;
+}
+.spdf-btn-ghost {
+  background: transparent;
+  color: var(--spdf-text);
+  border: 1px solid var(--spdf-line-strong);
+}
+.spdf-btn-ghost:hover { background: var(--spdf-chip); }
+.spdf-btn-lg { padding: 16px 26px; font-size: 14.5px; border-radius: 10px; }
+.spdf-btn-sm { padding: 8px 14px;  font-size: 12.5px; border-radius: 8px; }
+
+/* ─── Chips / badges ───────────────────────────────────────── */
+.spdf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--spdf-chip);
+  color: var(--spdf-chip-text);
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+.spdf-chip-dot {
+  width: 6px; height: 6px; border-radius: 3px;
+  background: var(--spdf-accent);
+}
+.spdf-badge {
+  display: inline-block;
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: var(--spdf-accent);
+  color: var(--spdf-accent-ink);
+  text-transform: uppercase;
+}
+.spdf-badge-soft {
+  background: var(--spdf-chip);
+  color: var(--spdf-chip-text);
+}
+
+/* ─── Cards ────────────────────────────────────────────────── */
+.spdf-card {
+  background: var(--spdf-panel);
+  border: 1px solid var(--spdf-line);
+  border-radius: 14px;
+  padding: 28px;
+  transition: border-color .2s, background .2s;
+}
+.spdf-card-surface { background: var(--spdf-surface); }
+.spdf-card-bordered-strong { border-color: var(--spdf-line-strong); }
+.spdf-card-hoverable:hover { border-color: var(--spdf-accent); }
+
+/* ─── Code block ───────────────────────────────────────────── */
+.spdf-code {
+  background: var(--spdf-code);
+  border: 1px solid var(--spdf-line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.spdf-code-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--spdf-code-line);
+  background: var(--spdf-code-head);
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  color: var(--spdf-code-file);
+  letter-spacing: 0.06em;
+}
+.spdf-code-dots { display: flex; gap: 6px; }
+.spdf-code-dots span {
+  width: 11px; height: 11px; border-radius: 6px; display: block;
+}
+.spdf-code-dot-red    { background: #FF5F57; }
+.spdf-code-dot-yellow { background: #FEBC2E; }
+.spdf-code-dot-green  { background: #28C840; }
+.spdf-code-pre {
+  margin: 0;
+  padding: 18px 22px;
+  color: var(--spdf-code-text);
+  font-family: var(--spdf-font-mono);
+  font-size: 13.5px;
+  line-height: 1.65;
+  white-space: pre;
+  overflow: auto;
+}
+.spdf-code-pre.is-wrap { white-space: pre-wrap; }
+.spdf-code-inline {
+  font-family: var(--spdf-font-mono);
+  font-size: 0.9em;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--spdf-chip);
+  color: var(--spdf-chip-text);
+}
+/* Code syntax tokens */
+.spdf-tok-kw      { color: var(--spdf-tok-kw); }
+.spdf-tok-str     { color: var(--spdf-tok-str); }
+.spdf-tok-num     { color: var(--spdf-tok-num); }
+.spdf-tok-com     { color: var(--spdf-tok-com); }
+.spdf-tok-fn      { color: var(--spdf-tok-fn); }
+.spdf-tok-type    { color: var(--spdf-tok-type); }
+
+/* Copy button (inside code-head) */
+.spdf-code-copy {
+  background: transparent;
+  color: var(--spdf-code-copy);
+  border: 1px solid var(--spdf-code-copy-border);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-family: var(--spdf-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.spdf-code-copy:hover { background: var(--spdf-code-copy-hover); }
+
+/* ─── Tabs row (for code blocks, etc.) ─────────────────────── */
+.spdf-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--spdf-line);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.spdf-tabs::-webkit-scrollbar { display: none; }
+.spdf-tab {
+  padding: 12px 18px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font-family: var(--spdf-font-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--spdf-text-dim);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.spdf-tab[aria-selected="true"],
+.spdf-tab.is-active {
+  color: var(--spdf-text);
+  border-bottom-color: var(--spdf-accent);
+}
+
+/* Pill tabs (rounded) */
+.spdf-tabs-pill {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.spdf-tab-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--spdf-text-dim);
+  border: 1px solid var(--spdf-line);
+  font-family: var(--spdf-font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+.spdf-tab-pill.is-active,
+.spdf-tab-pill[aria-selected="true"] {
+  background: var(--spdf-text);
+  color: var(--spdf-bg);
+  border-color: var(--spdf-text);
+}
+
+/* ─── Form controls ───────────────────────────────────────── */
+.spdf-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--spdf-panel);
+  border: 1.5px solid var(--spdf-line-strong);
+  border-radius: 12px;
+  font-family: var(--spdf-font-body);
+  font-size: 16px;
+  color: var(--spdf-text);
+  outline: none;
+  transition: border-color .15s;
+}
+.spdf-input:focus { border-color: var(--spdf-accent); }
+.spdf-select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--spdf-panel);
+  border: 1px solid var(--spdf-line);
+  border-radius: 8px;
+  font-family: var(--spdf-font-body);
+  font-size: 14px;
+  color: var(--spdf-text);
+}
+.spdf-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--spdf-font-body);
+  font-size: 13.5px;
+  color: var(--spdf-text-dim);
+}
+
+.spdf-label-mini {
+  display: block;
+  font-family: var(--spdf-font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: var(--spdf-text-mute);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ─── Grids ──────────────────────────────────────────────── */
+.spdf-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+/* Request-pair modifier — for 2-up grids where the left column wraps
+   multiple request shapes (e.g. API USAGE TRACKING: GET endpoint pill +
+   POST sample) and the right column is a single tall response.json.
+   The left wrapper becomes a flex column that distributes its children
+   across the row height set by the taller right cell — request shapes
+   land at top and bottom, the empty middle becomes deliberate breathing
+   room rather than dead space below the last item. */
+.spdf-grid-2.is-top > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.spdf-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.spdf-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.spdf-grid-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.spdf-grid-split.is-center { align-items: center; }
+.spdf-grid-split > * { min-width: 0; }
+.spdf-grid-2 > *, .spdf-grid-3 > *, .spdf-grid-4 > * { min-width: 0; }
+
+@media (max-width: 1024px) {
+  .spdf-grid-split { gap: 40px; }
+  .spdf-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .spdf-grid-3 { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .spdf-grid-2, .spdf-grid-split { grid-template-columns: 1fr; gap: 24px; }
+  .spdf-grid-4 { grid-template-columns: 1fr; }
+  .spdf-pad { padding-left: 18px; padding-right: 18px; }
+  .spdf-section    { padding: 48px 0; }
+  .spdf-section-lg { padding: 56px 0 40px; }
+}
+
+/* ─── FAQ (Alpine-powered accordion) ──────────────────────── */
+.spdf-faq { display: flex; flex-direction: column; }
+.spdf-faq-item {
+  border-top: 1px solid var(--spdf-line);
+  padding: 4px 0;
+}
+.spdf-faq-item:last-child { border-bottom: 1px solid var(--spdf-line); }
+.spdf-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 22px 0;
+  font-family: var(--spdf-font-display);
+  font-weight: var(--spdf-display-weight);
+  letter-spacing: -0.02em;
+  font-size: 20px;
+  color: var(--spdf-text);
+  cursor: pointer;
+}
+.spdf-faq-icon {
+  font-family: var(--spdf-font-mono);
+  font-size: 18px;
+  color: var(--spdf-accent);
+  flex-shrink: 0;
+  transition: transform .2s;
+}
+.spdf-faq-item[data-open="true"] .spdf-faq-icon { transform: rotate(45deg); }
+.spdf-faq-a {
+  font-family: var(--spdf-font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--spdf-text-dim);
+  padding: 0 0 22px;
+  max-width: 720px;
+}
+[x-cloak] { display: none !important; }

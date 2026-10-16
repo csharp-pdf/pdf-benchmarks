@@ -1,0 +1,261 @@
+library,fixture,ok,unsupported,ms,pages,bytes,error
+abcpdf,trivial,true,false,1200.994,1,2450,
+abcpdf,bootstrap,true,false,310.154,2,62963,
+abcpdf,invoice,true,false,115.047,2,26292,
+abcpdf,html-string,true,false,255.758,2,35581,
+abcpdf,long-document,true,false,1069.991,176,1311321,
+abcpdf,web-fonts,true,false,113.641,1,41772,
+abcpdf,grid-flex,true,false,114.887,1,84366,
+abcpdf,effects,true,false,110.702,1,104578,
+abcpdf,vector,true,false,107.702,1,14903,
+abcpdf,js-chart,true,false,2192.487,1,55292,
+abcpdf,lazy-images,true,false,126.415,7,16967,
+abcpdf,large-images,true,false,192,5,3588152,
+abcpdf,wide-content,true,false,106.797,1,20476,
+abcpdf,rtl,true,false,108.038,2,29787,
+abcpdf,cjk,true,false,269.477,3,142617,
+abcpdf,scripts,true,false,128.693,1,68452,
+abcpdf,accessible,true,false,116.298,2,56846,
+abcpdf,selectpdf-home,true,false,266.028,6,147366,
+abcpdf,paged-media,true,false,119.018,4,22510,
+abcpdf,header-footer,true,false,109.601,4,28828,
+abcpdf,bookmarks,true,false,146.547,5,33674,
+abcpdf,forms,true,false,111.826,1,19317,
+abcpdf,html-header-footer,true,false,269.43,7,56872,
+abcpdf,encryption,true,false,117.918,2,27673,
+abcpdf,isolation-write,true,false,105.758,1,10292,
+abcpdf,isolation-read,true,false,105.251,1,11096,
+docotic,trivial,true,false,687.999,1,6725,
+docotic,bootstrap,true,false,129.173,2,48861,
+docotic,invoice,true,false,75.78,2,22130,
+docotic,html-string,true,false,89.276,2,22130,
+docotic,long-document,true,false,860.628,176,1223771,
+docotic,web-fonts,true,false,73.647,1,34511,
+docotic,grid-flex,true,false,80.03,1,67436,
+docotic,effects,true,false,87.931,1,136702,
+docotic,vector,true,false,54.268,1,11260,
+docotic,js-chart,true,false,1090.086,1,48729,
+docotic,lazy-images,true,false,53.287,7,10624,
+docotic,large-images,true,false,200.228,5,3581446,
+docotic,wide-content,true,false,71.85,1,15093,
+docotic,rtl,true,false,74.47,2,25487,
+docotic,cjk,true,false,154.23,3,136290,
+docotic,scripts,true,false,76.978,1,57629,
+docotic,accessible,true,false,59.303,2,51893,
+docotic,selectpdf-home,true,false,244.02,6,572180,
+docotic,paged-media,true,false,55.724,4,16883,
+docotic,header-footer,true,false,82.087,4,30867,
+docotic,bookmarks,false,true,,,,"bookmarks: HtmlConversionOptions has no outline option, and the core library has no bookmarks-from-headings API"
+docotic,forms,false,true,,,,HTML forms to PDF fields: no option in HtmlConversionOptions
+docotic,html-header-footer,true,false,92.465,4,45122,
+docotic,encryption,true,false,73.042,2,22617,
+docotic,isolation-write,true,false,47.945,1,7172,
+docotic,isolation-read,true,false,53.268,1,7931,
+ironpdf,trivial,true,false,1084.331,1,10878,
+ironpdf,bootstrap,true,false,253.917,3,63624,
+ironpdf,invoice,true,false,226.086,2,28074,
+ironpdf,html-string,true,false,306.438,2,28074,
+ironpdf,long-document,true,false,1736.407,177,1040016,
+ironpdf,web-fonts,true,false,248.361,1,41946,
+ironpdf,grid-flex,true,false,133.253,1,78434,
+ironpdf,effects,true,false,112.077,1,70975,
+ironpdf,vector,true,false,105.002,1,16035,
+ironpdf,js-chart,true,false,1215.417,1,56328,
+ironpdf,lazy-images,true,false,195.751,7,16395,
+ironpdf,large-images,true,false,263.546,5,3586550,
+ironpdf,wide-content,true,false,124.151,1,19899,
+ironpdf,rtl,true,false,257.156,2,32220,
+ironpdf,cjk,true,false,391.522,3,142309,
+ironpdf,scripts,true,false,105.086,1,49340,
+ironpdf,accessible,true,false,115.214,2,57493,
+ironpdf,selectpdf-home,true,false,379.765,7,856372,
+ironpdf,paged-media,true,false,101.455,4,22469,
+ironpdf,header-footer,true,false,119.055,4,31823,
+ironpdf,bookmarks,true,false,3154.082,3,31277,
+ironpdf,forms,true,false,97.684,1,24036,
+ironpdf,html-header-footer,true,false,610.416,4,85878,
+ironpdf,encryption,true,false,144.713,2,28151,
+ironpdf,isolation-write,true,false,87.019,1,11238,
+ironpdf,isolation-read,true,false,85.08,1,12021,
+pdfsharp,trivial,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,bootstrap,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,invoice,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,html-string,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,long-document,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,web-fonts,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,grid-flex,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,effects,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,vector,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,js-chart,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,lazy-images,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,large-images,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,wide-content,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,rtl,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,cjk,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,scripts,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,accessible,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,selectpdf-home,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,paged-media,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,header-footer,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,bookmarks,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,forms,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,html-header-footer,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,encryption,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,isolation-write,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+pdfsharp,isolation-read,false,true,,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML)
+playwright,trivial,true,false,419.265,1,8007,
+playwright,bootstrap,true,false,107.989,2,53259,
+playwright,invoice,true,false,72.829,2,24220,
+playwright,html-string,true,false,82.635,2,24220,
+playwright,long-document,true,false,596.092,177,583468,
+playwright,web-fonts,true,false,74.886,1,38524,
+playwright,grid-flex,true,false,67.963,1,70581,
+playwright,effects,true,false,71.402,1,126092,
+playwright,vector,true,false,51.513,1,13155,
+playwright,js-chart,true,false,1103.038,1,53403,
+playwright,lazy-images,true,false,105.22,7,1434461,
+playwright,large-images,true,false,157.45,5,3584046,
+playwright,wide-content,true,false,62.091,1,17078,
+playwright,rtl,true,false,61.724,2,21606,
+playwright,cjk,true,false,186.436,3,137900,
+playwright,scripts,true,false,72.288,1,65239,
+playwright,accessible,true,false,62.673,2,54468,
+playwright,selectpdf-home,true,false,181.02,6,644495,
+playwright,paged-media,true,false,63.327,4,19754,
+playwright,header-footer,true,false,93.243,4,27295,
+playwright,bookmarks,true,false,69.108,3,41037,
+playwright,forms,true,false,57.467,1,14398,
+playwright,html-header-footer,true,false,95.894,4,43039,
+playwright,encryption,false,true,,,,no encryption option in page.pdf
+playwright,isolation-write,true,false,63.994,1,8396,
+playwright,isolation-read,true,false,67.516,1,8156,
+puppeteer,trivial,true,false,405.596,1,8933,
+puppeteer,bootstrap,true,false,145.639,2,78736,
+puppeteer,invoice,true,false,115.273,2,151499,
+puppeteer,html-string,true,false,126.338,2,151499,
+puppeteer,long-document,true,false,1048.338,176,2157846,
+puppeteer,web-fonts,true,false,122.936,1,42812,
+puppeteer,grid-flex,true,false,111.556,1,78909,
+puppeteer,effects,true,false,118.241,1,128025,
+puppeteer,vector,true,false,126.588,1,14408,
+puppeteer,js-chart,true,false,1156.502,1,55141,
+puppeteer,lazy-images,true,false,144.904,7,1441224,
+puppeteer,large-images,true,false,204.081,5,3588871,
+puppeteer,wide-content,true,false,137.557,1,117102,
+puppeteer,rtl,true,false,125.271,2,36856,
+puppeteer,cjk,true,false,178.123,3,155811,
+puppeteer,scripts,true,false,119.523,1,67751,
+puppeteer,accessible,true,false,120.652,2,72048,
+puppeteer,selectpdf-home,true,false,285.477,6,714636,
+puppeteer,paged-media,true,false,102.043,4,23086,
+puppeteer,header-footer,true,false,138.115,4,42222,
+puppeteer,bookmarks,true,false,114.377,3,45090,
+puppeteer,forms,true,false,96.687,1,18548,
+puppeteer,html-header-footer,true,false,150.125,4,57976,
+puppeteer,encryption,false,true,,,,no encryption option in page.pdf
+puppeteer,isolation-write,true,false,100.282,1,9399,
+puppeteer,isolation-read,true,false,103.398,1,9462,
+questpdf,trivial,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bootstrap,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,invoice,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-string,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,long-document,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,web-fonts,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,grid-flex,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,effects,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,vector,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,js-chart,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,lazy-images,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,large-images,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,wide-content,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,rtl,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,cjk,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,scripts,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,accessible,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,selectpdf-home,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,paged-media,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,header-footer,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bookmarks,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,forms,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-header-footer,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,encryption,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-write,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-read,false,true,,,,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,trivial,true,false,993.572,1,18146,
+selectpdf,bootstrap,true,false,166.062,2,72235,
+selectpdf,invoice,true,false,103.103,2,34373,
+selectpdf,html-string,true,false,94.741,2,34374,
+selectpdf,long-document,true,false,1375.227,177,1394100,
+selectpdf,web-fonts,true,false,95.719,1,46149,
+selectpdf,grid-flex,true,false,109.843,1,90866,
+selectpdf,effects,true,false,117.85,1,121910,
+selectpdf,vector,true,false,60.999,1,22741,
+selectpdf,js-chart,true,false,1346.231,1,63953,
+selectpdf,lazy-images,true,false,195.377,7,1449824,
+selectpdf,large-images,true,false,195.978,5,3597757,
+selectpdf,wide-content,true,false,81.905,1,26514,
+selectpdf,rtl,true,false,118.655,2,38556,
+selectpdf,cjk,true,false,156.677,3,148915,
+selectpdf,scripts,true,false,99.722,1,69900,
+selectpdf,accessible,true,false,77.852,2,64376,
+selectpdf,selectpdf-home,true,false,423.833,6,575304,
+selectpdf,paged-media,true,false,64.053,4,30852,
+selectpdf,header-footer,true,false,125.774,4,41715,
+selectpdf,bookmarks,true,false,92.195,3,35351,
+selectpdf,forms,true,false,165.265,1,29992,
+selectpdf,html-header-footer,true,false,131.448,4,65948,
+selectpdf,encryption,true,false,345.145,2,35477,
+selectpdf,isolation-write,true,false,87.183,1,18767,
+selectpdf,isolation-read,true,false,72.205,1,18269,
+wkhtmltopdf,trivial,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,bootstrap,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,invoice,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,html-string,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,long-document,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,web-fonts,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,grid-flex,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,effects,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,vector,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,js-chart,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,lazy-images,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,large-images,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,wide-content,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,rtl,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,cjk,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,scripts,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,accessible,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,selectpdf-home,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,paged-media,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,header-footer,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,bookmarks,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,forms,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,html-header-footer,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,encryption,false,true,,,,no PDF encryption
+wkhtmltopdf,isolation-write,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,isolation-read,false,false,,,,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,trivial,true,false,856.958,1,6371,
+itext,bootstrap,true,false,1839.567,3,42438,
+itext,invoice,true,false,806.159,3,19885,
+itext,html-string,true,false,834.283,3,19885,
+itext,long-document,true,false,3003.254,304,548829,
+itext,web-fonts,true,false,378.666,1,45361,
+itext,grid-flex,true,false,309.65,2,15540,
+itext,effects,true,false,154.026,2,10237,
+itext,vector,true,false,257.621,1,9538,
+itext,js-chart,true,false,246.304,1,5741,
+itext,lazy-images,true,false,183.054,9,1429555,
+itext,large-images,true,false,177.976,6,3580177,
+itext,wide-content,true,false,296.915,1,27590,
+itext,rtl,true,false,141.267,2,11167,
+itext,cjk,true,false,163.76,5,136840,
+itext,scripts,true,false,126.872,1,18632,
+itext,accessible,true,false,217.04,2,62820,
+itext,selectpdf-home,true,false,870.338,9,138819,
+itext,paged-media,true,false,143.217,2,24372,
+itext,header-footer,true,false,184.027,7,17809,
+itext,bookmarks,true,false,156.741,5,23503,
+itext,forms,true,false,176.275,1,50762,
+itext,html-header-footer,true,false,300.335,7,20391,
+itext,encryption,true,false,325.914,3,20812,
+itext,isolation-write,true,false,129.242,1,5679,
+itext,isolation-read,true,false,131.656,1,5795,

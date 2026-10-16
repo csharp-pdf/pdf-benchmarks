@@ -1,0 +1,3 @@
+library,operation,check,pass,detail
+wkhtmltopdf,merge,output,n/a,not supported: no PDF tools
+wkhtmltopdf,split,output,n/a,not supported: no PDF tools

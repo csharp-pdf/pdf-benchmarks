@@ -1,0 +1,352 @@
+library,fixture,check,expected,pass,detail
+abcpdf,trivial,text,"Hello, PDF",False,
+abcpdf,bootstrap,text,Documents your customers can trust,True,
+abcpdf,bootstrap,text,Adventure Works,True,
+abcpdf,invoice,text,"£140,904.83",True,
+abcpdf,invoice,text,Total due,True,
+abcpdf,html-string,text,"£140,904.83",True,
+abcpdf,html-string,text,Northwind Supplies,True,
+abcpdf,long-document,text,Chapter 40,True,
+abcpdf,long-document,text,4000.,True,
+abcpdf,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+abcpdf,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+abcpdf,effects,text,clip-path polygon,True,
+abcpdf,vector,text,Sharp at 800%,True,
+abcpdf,vector,text,SVG text 2026,True,
+abcpdf,vector,noImages,0 images,True,0 images
+abcpdf,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+abcpdf,lazy-images,images,12,False,0 images
+abcpdf,large-images,images,8,True,8 images
+abcpdf,wide-content,text,R15C24,True,
+abcpdf,wide-content,text,END-OF-WIDE-LINE,True,
+abcpdf,rtl,text,حقوق,True,
+abcpdf,cjk,text,人人生而自由,True,
+abcpdf,cjk,text,すべての人間は,True,
+abcpdf,cjk,text,모든 인간은,True,
+abcpdf,scripts,text,समानता,True,
+abcpdf,scripts,text,มนุษย์,True,
+abcpdf,accessible,text,Annual Accessibility Report 2026,True,
+abcpdf,selectpdf-home,links,20,True,72 links
+abcpdf,paged-media,text,PRINT MEDIA ACTIVE,True,
+abcpdf,paged-media,pages,4,True,4 pages
+abcpdf,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+abcpdf,header-footer,text,pdf-benchmarks,True,
+abcpdf,bookmarks,outline,24,True,25 bookmarks
+abcpdf,bookmarks,internalLinks,16,True,16 internal links
+abcpdf,forms,formFields,6,True,7 form field widgets
+abcpdf,html-header-footer,pageNumbers,Page N of 7 on every page,True,7 pages
+abcpdf,html-header-footer,everyPage,ACME Corp,True,7 pages
+abcpdf,html-header-footer,imageEveryPage,logo on every page,False,"missing on pages [1, 2, 3, 4, 5, 6, 7]"
+abcpdf,encryption,needsPassword,True,True,
+abcpdf,encryption,wrongPasswordRejected,True,True,
+abcpdf,encryption,userPasswordOpens,True,True,
+abcpdf,encryption,printDenied,True,True,permissions -0x18
+abcpdf,encryption,copyDenied,True,True,
+abcpdf,encryption,algorithm,AES 256,True,Standard V5 R6 256-bit AES
+abcpdf,isolation-write,text,Stored: TOKEN-,True,
+abcpdf,isolation-read,text,localStorage: NONE,False,
+abcpdf,isolation-read,text,sessionStorage: NONE,True,
+abcpdf,isolation-read,text,cookie: NONE,False,
+docotic,trivial,text,"Hello, PDF",True,
+docotic,bootstrap,text,Documents your customers can trust,True,
+docotic,bootstrap,text,Adventure Works,True,
+docotic,invoice,text,"£140,904.83",True,
+docotic,invoice,text,Total due,True,
+docotic,html-string,text,"£140,904.83",True,
+docotic,html-string,text,Northwind Supplies,True,
+docotic,long-document,text,Chapter 40,True,
+docotic,long-document,text,4000.,True,
+docotic,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+docotic,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+docotic,effects,text,clip-path polygon,True,
+docotic,vector,text,Sharp at 800%,True,
+docotic,vector,text,SVG text 2026,True,
+docotic,vector,noImages,0 images,True,0 images
+docotic,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+docotic,lazy-images,images,12,False,0 images
+docotic,large-images,images,8,True,8 images
+docotic,wide-content,text,R15C24,False,
+docotic,wide-content,text,END-OF-WIDE-LINE,False,
+docotic,rtl,text,حقوق,True,
+docotic,cjk,text,人人生而自由,True,
+docotic,cjk,text,すべての人間は,True,
+docotic,cjk,text,모든 인간은,True,
+docotic,scripts,text,समानता,True,
+docotic,scripts,text,มนุษย์,True,
+docotic,accessible,text,Annual Accessibility Report 2026,True,
+docotic,selectpdf-home,links,20,True,73 links
+docotic,paged-media,text,PRINT MEDIA ACTIVE,True,
+docotic,paged-media,pages,4,True,4 pages
+docotic,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+docotic,header-footer,text,pdf-benchmarks,True,
+docotic,bookmarks,converted,,n/a,"not supported: bookmarks: HtmlConversionOptions has no outline option, and the core library has no bookmarks-from-headings API"
+docotic,forms,converted,,n/a,not supported: HTML forms to PDF fields: no option in HtmlConversionOptions
+docotic,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+docotic,html-header-footer,everyPage,ACME Corp,True,4 pages
+docotic,html-header-footer,imageEveryPage,logo on every page,True,
+docotic,encryption,needsPassword,True,True,
+docotic,encryption,wrongPasswordRejected,True,True,
+docotic,encryption,userPasswordOpens,True,True,
+docotic,encryption,printDenied,True,True,permissions -0xf40
+docotic,encryption,copyDenied,True,True,
+docotic,encryption,algorithm,AES 256,False,Standard V4 R4 128-bit AES
+docotic,isolation-write,text,Stored: TOKEN-,True,
+docotic,isolation-read,text,localStorage: NONE,False,
+docotic,isolation-read,text,sessionStorage: NONE,True,
+docotic,isolation-read,text,cookie: NONE,False,
+ironpdf,trivial,text,"Hello, PDF",True,
+ironpdf,bootstrap,text,Documents your customers can trust,True,
+ironpdf,bootstrap,text,Adventure Works,True,
+ironpdf,invoice,text,"£140,904.83",True,
+ironpdf,invoice,text,Total due,True,
+ironpdf,html-string,text,"£140,904.83",True,
+ironpdf,html-string,text,Northwind Supplies,True,
+ironpdf,long-document,text,Chapter 40,True,
+ironpdf,long-document,text,4000.,True,
+ironpdf,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+ironpdf,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+ironpdf,effects,text,clip-path polygon,True,
+ironpdf,vector,text,Sharp at 800%,True,
+ironpdf,vector,text,SVG text 2026,True,
+ironpdf,vector,noImages,0 images,True,0 images
+ironpdf,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+ironpdf,lazy-images,images,12,False,0 images
+ironpdf,large-images,images,8,True,8 images
+ironpdf,wide-content,text,R15C24,False,
+ironpdf,wide-content,text,END-OF-WIDE-LINE,False,
+ironpdf,rtl,text,حقوق,True,
+ironpdf,cjk,text,人人生而自由,True,
+ironpdf,cjk,text,すべての人間は,True,
+ironpdf,cjk,text,모든 인간은,True,
+ironpdf,scripts,text,समानता,True,
+ironpdf,scripts,text,มนุษย์,True,
+ironpdf,accessible,text,Annual Accessibility Report 2026,True,
+ironpdf,selectpdf-home,links,20,True,72 links
+ironpdf,paged-media,text,PRINT MEDIA ACTIVE,True,
+ironpdf,paged-media,pages,4,True,4 pages
+ironpdf,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+ironpdf,header-footer,text,pdf-benchmarks,True,
+ironpdf,bookmarks,outline,24,False,0 bookmarks
+ironpdf,bookmarks,internalLinks,16,True,24 internal links
+ironpdf,forms,formFields,6,True,7 form field widgets
+ironpdf,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+ironpdf,html-header-footer,everyPage,ACME Corp,True,4 pages
+ironpdf,html-header-footer,imageEveryPage,logo on every page,True,
+ironpdf,encryption,needsPassword,True,True,
+ironpdf,encryption,wrongPasswordRejected,True,True,
+ironpdf,encryption,userPasswordOpens,True,True,
+ironpdf,encryption,printDenied,True,True,permissions -0x818
+ironpdf,encryption,copyDenied,True,True,
+ironpdf,encryption,algorithm,AES 256,False,Standard V2 R3 128-bit RC4
+ironpdf,isolation-write,text,Stored: TOKEN-,True,
+ironpdf,isolation-read,text,localStorage: NONE,False,
+ironpdf,isolation-read,text,sessionStorage: NONE,False,
+ironpdf,isolation-read,text,cookie: NONE,True,
+itext,trivial,text,"Hello, PDF",True,
+itext,bootstrap,text,Documents your customers can trust,True,
+itext,bootstrap,text,Adventure Works,True,
+itext,invoice,text,"£140,904.83",True,
+itext,invoice,text,Total due,True,
+itext,html-string,text,"£140,904.83",True,
+itext,html-string,text,Northwind Supplies,True,
+itext,long-document,text,Chapter 40,True,
+itext,long-document,text,4000.,True,
+itext,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,False,missing JetBrainsMono
+itext,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+itext,effects,text,clip-path polygon,True,
+itext,vector,text,Sharp at 800%,True,
+itext,vector,text,SVG text 2026,True,
+itext,vector,noImages,0 images,True,0 images
+itext,js-chart,text,Charts drawn by JavaScript: 4 of 4.,False,
+itext,lazy-images,images,12,True,12 images
+itext,large-images,images,8,True,8 images
+itext,wide-content,text,R15C24,False,
+itext,wide-content,text,END-OF-WIDE-LINE,False,
+itext,rtl,text,حقوق,True,
+itext,cjk,text,人人生而自由,True,
+itext,cjk,text,すべての人間は,True,
+itext,cjk,text,모든 인간은,True,
+itext,scripts,text,समानता,True,
+itext,scripts,text,มนุษย์,True,
+itext,accessible,text,Annual Accessibility Report 2026,True,
+itext,selectpdf-home,links,20,True,73 links
+itext,paged-media,text,PRINT MEDIA ACTIVE,True,
+itext,paged-media,pages,4,False,2 pages
+itext,header-footer,pageNumbers,Page N of 7 on every page,True,7 pages
+itext,header-footer,text,pdf-benchmarks,True,
+itext,bookmarks,outline,24,True,24 bookmarks
+itext,bookmarks,internalLinks,16,True,16 internal links
+itext,forms,formFields,6,True,7 form field widgets
+itext,html-header-footer,pageNumbers,Page N of 7 on every page,True,7 pages
+itext,html-header-footer,everyPage,ACME Corp,True,7 pages
+itext,html-header-footer,imageEveryPage,logo on every page,True,
+itext,encryption,needsPassword,True,True,
+itext,encryption,wrongPasswordRejected,True,True,
+itext,encryption,userPasswordOpens,True,True,
+itext,encryption,printDenied,True,True,permissions -0xf40
+itext,encryption,copyDenied,True,True,
+itext,encryption,algorithm,AES 256,True,Standard V5 R5 256-bit AES
+itext,isolation-write,text,Stored: TOKEN-,False,
+itext,isolation-read,text,localStorage: NONE,False,
+itext,isolation-read,text,sessionStorage: NONE,False,
+itext,isolation-read,text,cookie: NONE,False,
+playwright,trivial,text,"Hello, PDF",True,
+playwright,bootstrap,text,Documents your customers can trust,True,
+playwright,bootstrap,text,Adventure Works,True,
+playwright,invoice,text,"£140,904.83",True,
+playwright,invoice,text,Total due,True,
+playwright,html-string,text,"£140,904.83",True,
+playwright,html-string,text,Northwind Supplies,True,
+playwright,long-document,text,Chapter 40,True,
+playwright,long-document,text,4000.,True,
+playwright,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+playwright,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+playwright,effects,text,clip-path polygon,True,
+playwright,vector,text,Sharp at 800%,True,
+playwright,vector,text,SVG text 2026,True,
+playwright,vector,noImages,0 images,True,0 images
+playwright,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+playwright,lazy-images,images,12,True,12 images
+playwright,large-images,images,8,True,8 images
+playwright,wide-content,text,R15C24,False,
+playwright,wide-content,text,END-OF-WIDE-LINE,False,
+playwright,rtl,text,حقوق,True,
+playwright,cjk,text,人人生而自由,True,
+playwright,cjk,text,すべての人間は,True,
+playwright,cjk,text,모든 인간은,True,
+playwright,scripts,text,समानता,True,
+playwright,scripts,text,มนุษย์,True,
+playwright,accessible,text,Annual Accessibility Report 2026,True,
+playwright,selectpdf-home,links,20,True,73 links
+playwright,paged-media,text,PRINT MEDIA ACTIVE,True,
+playwright,paged-media,pages,4,True,4 pages
+playwright,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+playwright,header-footer,text,pdf-benchmarks,True,
+playwright,bookmarks,outline,24,True,25 bookmarks
+playwright,bookmarks,internalLinks,16,True,16 internal links
+playwright,forms,formFields,6,False,0 form field widgets
+playwright,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+playwright,html-header-footer,everyPage,ACME Corp,True,4 pages
+playwright,html-header-footer,imageEveryPage,logo on every page,False,"missing on pages [1, 2, 3, 4]"
+playwright,encryption,converted,,n/a,not supported: no encryption option in page.pdf
+playwright,isolation-write,text,Stored: TOKEN-,True,
+playwright,isolation-read,text,localStorage: NONE,True,
+playwright,isolation-read,text,sessionStorage: NONE,True,
+playwright,isolation-read,text,cookie: NONE,True,
+puppeteer,trivial,text,"Hello, PDF",True,
+puppeteer,bootstrap,text,Documents your customers can trust,True,
+puppeteer,bootstrap,text,Adventure Works,True,
+puppeteer,invoice,text,"£140,904.83",True,
+puppeteer,invoice,text,Total due,True,
+puppeteer,html-string,text,"£140,904.83",True,
+puppeteer,html-string,text,Northwind Supplies,True,
+puppeteer,long-document,text,Chapter 40,True,
+puppeteer,long-document,text,4000.,True,
+puppeteer,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+puppeteer,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+puppeteer,effects,text,clip-path polygon,True,
+puppeteer,vector,text,Sharp at 800%,True,
+puppeteer,vector,text,SVG text 2026,True,
+puppeteer,vector,noImages,0 images,True,0 images
+puppeteer,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+puppeteer,lazy-images,images,12,True,12 images
+puppeteer,large-images,images,8,True,8 images
+puppeteer,wide-content,text,R15C24,False,
+puppeteer,wide-content,text,END-OF-WIDE-LINE,False,
+puppeteer,rtl,text,حقوق,True,
+puppeteer,cjk,text,人人生而自由,True,
+puppeteer,cjk,text,すべての人間は,True,
+puppeteer,cjk,text,모든 인간은,True,
+puppeteer,scripts,text,समानता,True,
+puppeteer,scripts,text,มนุษย์,True,
+puppeteer,accessible,text,Annual Accessibility Report 2026,True,
+puppeteer,selectpdf-home,links,20,True,73 links
+puppeteer,paged-media,text,PRINT MEDIA ACTIVE,True,
+puppeteer,paged-media,pages,4,True,4 pages
+puppeteer,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+puppeteer,header-footer,text,pdf-benchmarks,True,
+puppeteer,bookmarks,outline,24,True,25 bookmarks
+puppeteer,bookmarks,internalLinks,16,True,16 internal links
+puppeteer,forms,formFields,6,False,0 form field widgets
+puppeteer,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+puppeteer,html-header-footer,everyPage,ACME Corp,True,4 pages
+puppeteer,html-header-footer,imageEveryPage,logo on every page,False,"missing on pages [1, 2, 3, 4]"
+puppeteer,encryption,converted,,n/a,not supported: no encryption option in page.pdf
+puppeteer,isolation-write,text,Stored: TOKEN-,True,
+puppeteer,isolation-read,text,localStorage: NONE,True,
+puppeteer,isolation-read,text,sessionStorage: NONE,True,
+puppeteer,isolation-read,text,cookie: NONE,True,
+questpdf,trivial,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bootstrap,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,invoice,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-string,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,long-document,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,web-fonts,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,grid-flex,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,effects,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,vector,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,js-chart,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,lazy-images,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,large-images,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,wide-content,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,rtl,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,cjk,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,scripts,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,accessible,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,selectpdf-home,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,paged-media,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,header-footer,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,bookmarks,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,forms,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,html-header-footer,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,encryption,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-write,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+questpdf,isolation-read,converted,,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,trivial,text,"Hello, PDF",True,
+selectpdf,bootstrap,text,Documents your customers can trust,True,
+selectpdf,bootstrap,text,Adventure Works,True,
+selectpdf,invoice,text,"£140,904.83",True,
+selectpdf,invoice,text,Total due,True,
+selectpdf,html-string,text,"£140,904.83",True,
+selectpdf,html-string,text,Northwind Supplies,True,
+selectpdf,long-document,text,Chapter 40,True,
+selectpdf,long-document,text,4000.,True,
+selectpdf,web-fonts,fontsEmbedded,Inter+Lora+JetBrainsMono,True,
+selectpdf,grid-flex,text,Grid area spanning 4 columns and 2 rows,True,
+selectpdf,effects,text,clip-path polygon,True,
+selectpdf,vector,text,Sharp at 800%,True,
+selectpdf,vector,text,SVG text 2026,True,
+selectpdf,vector,noImages,0 images,True,0 images
+selectpdf,js-chart,text,Charts drawn by JavaScript: 4 of 4.,True,
+selectpdf,lazy-images,images,12,True,12 images
+selectpdf,large-images,images,8,True,8 images
+selectpdf,wide-content,text,R15C24,False,
+selectpdf,wide-content,text,END-OF-WIDE-LINE,False,
+selectpdf,rtl,text,حقوق,True,
+selectpdf,cjk,text,人人生而自由,True,
+selectpdf,cjk,text,すべての人間は,True,
+selectpdf,cjk,text,모든 인간은,True,
+selectpdf,scripts,text,समानता,True,
+selectpdf,scripts,text,มนุษย์,True,
+selectpdf,accessible,text,Annual Accessibility Report 2026,True,
+selectpdf,selectpdf-home,links,20,True,73 links
+selectpdf,paged-media,text,PRINT MEDIA ACTIVE,True,
+selectpdf,paged-media,pages,4,True,4 pages
+selectpdf,header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+selectpdf,header-footer,text,pdf-benchmarks,True,
+selectpdf,bookmarks,outline,24,True,24 bookmarks
+selectpdf,bookmarks,internalLinks,16,True,16 internal links
+selectpdf,forms,formFields,6,True,7 form field widgets
+selectpdf,html-header-footer,pageNumbers,Page N of 4 on every page,True,4 pages
+selectpdf,html-header-footer,everyPage,ACME Corp,True,4 pages
+selectpdf,html-header-footer,imageEveryPage,logo on every page,True,
+selectpdf,encryption,needsPassword,True,True,
+selectpdf,encryption,wrongPasswordRejected,True,True,
+selectpdf,encryption,userPasswordOpens,True,True,
+selectpdf,encryption,printDenied,True,True,permissions -0x818
+selectpdf,encryption,copyDenied,True,True,
+selectpdf,encryption,algorithm,AES 256,True,Standard V5 R6 256-bit AES
+selectpdf,isolation-write,text,Stored: TOKEN-,True,
+selectpdf,isolation-read,text,localStorage: NONE,True,
+selectpdf,isolation-read,text,sessionStorage: NONE,True,
+selectpdf,isolation-read,text,cookie: NONE,True,

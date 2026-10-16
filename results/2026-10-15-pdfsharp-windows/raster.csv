@@ -1,0 +1,5 @@
+library,input,page,width,height,expected_width,expected_height,size_ok,ssim_vs_pdfium,ssim_vs_mupdf
+pdfsharp,invoice,pages,0,,3,,False,
+pdfsharp,cjk,pages,0,,5,,False,
+pdfsharp,accessible,pages,0,,2,,False,
+pdfsharp,selectpdf-home,pages,0,,10,,False,

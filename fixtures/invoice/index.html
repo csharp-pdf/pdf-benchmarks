@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>invoice</title>
+<link rel="stylesheet" href="../_shared/fonts/fonts.css">
+<style>
+  body { margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; color: #222; }
+  .page { padding: 48px 56px; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 4px solid #2f5d8a; padding-bottom: 24px; }
+  .logo { font-size: 28px; font-weight: 700; color: #2f5d8a; }
+  .meta { text-align: right; line-height: 1.6; }
+  .meta strong { font-size: 22px; display: block; }
+  .parties { display: flex; gap: 48px; margin: 32px 0; }
+  .parties div { flex: 1; line-height: 1.6; }
+  .label { text-transform: uppercase; font-size: 11px; letter-spacing: .08em; color: #777; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th { background: #2f5d8a; color: #fff; text-align: left; padding: 10px; font-weight: 700; }
+  thead { display: table-header-group; }
+  td { padding: 9px 10px; border-bottom: 1px solid #e3e3e3; }
+  tbody tr:nth-child(even) td { background: #f5f8fb; }
+  tr { break-inside: avoid; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .totals { width: 320px; margin: 24px 0 0 auto; }
+  .totals td { border: none; padding: 6px 10px; }
+  .totals .grand td { font-size: 18px; font-weight: 700; border-top: 2px solid #2f5d8a; }
+  .notes { margin-top: 40px; font-size: 12px; color: #555; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top">
+    <div><div class="logo">Northwind Supplies</div><div>12 Harbour Road, Bristol BS1 4RW</div><div>VAT GB 123 4567 89</div></div>
+    <div class="meta"><strong>INVOICE</strong>No. INV-2026-0187<br>Issued 7 October 2026<br>Due 6 November 2026</div>
+  </div>
+  <div class="parties">
+    <div><div class="label">Bill to</div><b>Contoso Ltd</b><br>Accounts Payable<br>48 King Street, Manchester M2 4LQ</div>
+    <div><div class="label">Ship to</div><b>Contoso Ltd — Warehouse 3</b><br>Unit 7, Trafford Park<br>Manchester M17 1SN</div>
+    <div><div class="label">Payment</div>Bank transfer<br>Sort code 20-00-00<br>Account 12345678</div>
+  </div>
+  <table>
+    <thead><tr><th>#</th><th>Item</th><th>SKU</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Amount</th></tr></thead>
+    <tbody id="lines">
+      <tr><td>1</td><td>Archive box</td><td>NW-77085</td><td class="num">21</td><td class="num">£166.65</td><td class="num">£3,499.65</td></tr>
+      <tr><td>2</td><td>Archive box</td><td>NW-65130</td><td class="num">15</td><td class="num">£184.36</td><td class="num">£2,765.40</td></tr>
+      <tr><td>3</td><td>Monitor stand</td><td>NW-41448</td><td class="num">38</td><td class="num">£146.52</td><td class="num">£5,567.76</td></tr>
+      <tr><td>4</td><td>Copy paper A4 80gsm (box)</td><td>NW-24514</td><td class="num">40</td><td class="num">£28.44</td><td class="num">£1,137.60</td></tr>
+      <tr><td>5</td><td>Envelopes C4 (250)</td><td>NW-11505</td><td class="num">7</td><td class="num">£149.33</td><td class="num">£1,045.31</td></tr>
+      <tr><td>6</td><td>Monitor stand</td><td>NW-62064</td><td class="num">21</td><td class="num">£70.87</td><td class="num">£1,488.27</td></tr>
+      <tr><td>7</td><td>Label printer tape</td><td>NW-59328</td><td class="num">23</td><td class="num">£118.85</td><td class="num">£2,733.55</td></tr>
+      <tr><td>8</td><td>Toner cartridge, colour set</td><td>NW-83066</td><td class="num">22</td><td class="num">£31.37</td><td class="num">£690.14</td></tr>
+      <tr><td>9</td><td>Envelopes C4 (250)</td><td>NW-28466</td><td class="num">19</td><td class="num">£151.88</td><td class="num">£2,885.72</td></tr>
+      <tr><td>10</td><td>Envelopes C4 (250)</td><td>NW-57650</td><td class="num">2</td><td class="num">£122.85</td><td class="num">£245.70</td></tr>
+      <tr><td>11</td><td>USB-C cable 2 m</td><td>NW-62268</td><td class="num">28</td><td class="num">£31.70</td><td class="num">£887.60</td></tr>
+      <tr><td>12</td><td>Monitor stand</td><td>NW-76369</td><td class="num">8</td><td class="num">£141.39</td><td class="num">£1,131.12</td></tr>
+      <tr><td>13</td><td>Monitor stand</td><td>NW-43900</td><td class="num">26</td><td class="num">£173.90</td><td class="num">£4,521.40</td></tr>
+      <tr><td>14</td><td>Shredder bags (50)</td><td>NW-77233</td><td class="num">37</td><td class="num">£159.01</td><td class="num">£5,883.37</td></tr>
+      <tr><td>15</td><td>Copy paper A4 80gsm (box)</td><td>NW-26908</td><td class="num">37</td><td class="num">£75.56</td><td class="num">£2,795.72</td></tr>
+      <tr><td>16</td><td>Toner cartridge, black</td><td>NW-91567</td><td class="num">34</td><td class="num">£35.60</td><td class="num">£1,210.40</td></tr>
+      <tr><td>17</td><td>Shredder bags (50)</td><td>NW-73191</td><td class="num">31</td><td class="num">£48.65</td><td class="num">£1,508.15</td></tr>
+      <tr><td>18</td><td>Sticky notes (12 pads)</td><td>NW-98382</td><td class="num">8</td><td class="num">£151.67</td><td class="num">£1,213.36</td></tr>
+      <tr><td>19</td><td>Monitor stand</td><td>NW-83373</td><td class="num">35</td><td class="num">£84.23</td><td class="num">£2,948.05</td></tr>
+      <tr><td>20</td><td>Laminating pouches (100)</td><td>NW-94785</td><td class="num">20</td><td class="num">£181.60</td><td class="num">£3,632.00</td></tr>
+      <tr><td>21</td><td>Monitor stand</td><td>NW-36546</td><td class="num">26</td><td class="num">£143.89</td><td class="num">£3,741.14</td></tr>
+      <tr><td>22</td><td>Envelopes C4 (250)</td><td>NW-14339</td><td class="num">18</td><td class="num">£5.02</td><td class="num">£90.36</td></tr>
+      <tr><td>23</td><td>Ring binder 2-ring</td><td>NW-78536</td><td class="num">39</td><td class="num">£152.14</td><td class="num">£5,933.46</td></tr>
+      <tr><td>24</td><td>Monitor stand</td><td>NW-44093</td><td class="num">24</td><td class="num">£67.47</td><td class="num">£1,619.28</td></tr>
+      <tr><td>25</td><td>Monitor stand</td><td>NW-75163</td><td class="num">30</td><td class="num">£169.52</td><td class="num">£5,085.60</td></tr>
+      <tr><td>26</td><td>Shredder bags (50)</td><td>NW-48019</td><td class="num">36</td><td class="num">£13.00</td><td class="num">£468.00</td></tr>
+      <tr><td>27</td><td>Whiteboard markers (8)</td><td>NW-67468</td><td class="num">30</td><td class="num">£34.22</td><td class="num">£1,026.60</td></tr>
+      <tr><td>28</td><td>Label printer tape</td><td>NW-65807</td><td class="num">29</td><td class="num">£61.97</td><td class="num">£1,797.13</td></tr>
+      <tr><td>29</td><td>Monitor stand</td><td>NW-75329</td><td class="num">5</td><td class="num">£89.30</td><td class="num">£446.50</td></tr>
+      <tr><td>30</td><td>Stapler, heavy duty</td><td>NW-63911</td><td class="num">7</td><td class="num">£65.75</td><td class="num">£460.25</td></tr>
+      <tr><td>31</td><td>Ring binder 2-ring</td><td>NW-22080</td><td class="num">29</td><td class="num">£6.58</td><td class="num">£190.82</td></tr>
+      <tr><td>32</td><td>Copy paper A4 80gsm (box)</td><td>NW-20887</td><td class="num">29</td><td class="num">£181.09</td><td class="num">£5,251.61</td></tr>
+      <tr><td>33</td><td>Ballpoint pens (50)</td><td>NW-91405</td><td class="num">16</td><td class="num">£41.57</td><td class="num">£665.12</td></tr>
+      <tr><td>34</td><td>Toner cartridge, black</td><td>NW-97618</td><td class="num">35</td><td class="num">£89.98</td><td class="num">£3,149.30</td></tr>
+      <tr><td>35</td><td>Stapler, heavy duty</td><td>NW-51083</td><td class="num">10</td><td class="num">£3.67</td><td class="num">£36.70</td></tr>
+      <tr><td>36</td><td>Monitor stand</td><td>NW-39219</td><td class="num">9</td><td class="num">£180.83</td><td class="num">£1,627.47</td></tr>
+      <tr><td>37</td><td>Monitor stand</td><td>NW-88398</td><td class="num">38</td><td class="num">£44.98</td><td class="num">£1,709.24</td></tr>
+      <tr><td>38</td><td>Envelopes C4 (250)</td><td>NW-97628</td><td class="num">6</td><td class="num">£138.88</td><td class="num">£833.28</td></tr>
+      <tr><td>39</td><td>Desk organiser</td><td>NW-76545</td><td class="num">9</td><td class="num">£102.26</td><td class="num">£920.34</td></tr>
+      <tr><td>40</td><td>Shredder bags (50)</td><td>NW-78161</td><td class="num">25</td><td class="num">£50.66</td><td class="num">£1,266.50</td></tr>
+      <tr><td>41</td><td>Ballpoint pens (50)</td><td>NW-23911</td><td class="num">25</td><td class="num">£6.62</td><td class="num">£165.50</td></tr>
+      <tr><td>42</td><td>Laminating pouches (100)</td><td>NW-55484</td><td class="num">5</td><td class="num">£18.82</td><td class="num">£94.10</td></tr>
+      <tr><td>43</td><td>Stapler, heavy duty</td><td>NW-76897</td><td class="num">2</td><td class="num">£10.37</td><td class="num">£20.74</td></tr>
+      <tr><td>44</td><td>Monitor stand</td><td>NW-69000</td><td class="num">21</td><td class="num">£101.49</td><td class="num">£2,131.29</td></tr>
+      <tr><td>45</td><td>Whiteboard markers (8)</td><td>NW-71155</td><td class="num">8</td><td class="num">£165.03</td><td class="num">£1,320.24</td></tr>
+      <tr><td>46</td><td>Desk organiser</td><td>NW-37130</td><td class="num">10</td><td class="num">£172.25</td><td class="num">£1,722.50</td></tr>
+      <tr><td>47</td><td>Shredder bags (50)</td><td>NW-70138</td><td class="num">40</td><td class="num">£112.22</td><td class="num">£4,488.80</td></tr>
+      <tr><td>48</td><td>Sticky notes (12 pads)</td><td>NW-62318</td><td class="num">5</td><td class="num">£181.34</td><td class="num">£906.70</td></tr>
+      <tr><td>49</td><td>Toner cartridge, black</td><td>NW-15929</td><td class="num">13</td><td class="num">£58.79</td><td class="num">£764.27</td></tr>
+      <tr><td>50</td><td>Toner cartridge, black</td><td>NW-73417</td><td class="num">29</td><td class="num">£63.76</td><td class="num">£1,849.04</td></tr>
+      <tr><td>51</td><td>Copy paper A4 80gsm (box)</td><td>NW-38668</td><td class="num">9</td><td class="num">£175.63</td><td class="num">£1,580.67</td></tr>
+      <tr><td>52</td><td>Ring binder 2-ring</td><td>NW-61114</td><td class="num">11</td><td class="num">£62.94</td><td class="num">£692.34</td></tr>
+      <tr><td>53</td><td>Label printer tape</td><td>NW-64275</td><td class="num">28</td><td class="num">£176.64</td><td class="num">£4,945.92</td></tr>
+      <tr><td>54</td><td>Toner cartridge, colour set</td><td>NW-34536</td><td class="num">25</td><td class="num">£101.90</td><td class="num">£2,547.50</td></tr>
+      <tr><td>55</td><td>Stapler, heavy duty</td><td>NW-70806</td><td class="num">12</td><td class="num">£88.31</td><td class="num">£1,059.72</td></tr>
+      <tr><td>56</td><td>Monitor stand</td><td>NW-71302</td><td class="num">27</td><td class="num">£96.25</td><td class="num">£2,598.75</td></tr>
+      <tr><td>57</td><td>Desk organiser</td><td>NW-73183</td><td class="num">21</td><td class="num">£172.16</td><td class="num">£3,615.36</td></tr>
+      <tr><td>58</td><td>USB-C cable 2 m</td><td>NW-78773</td><td class="num">8</td><td class="num">£174.75</td><td class="num">£1,398.00</td></tr>
+      <tr><td>59</td><td>Label printer tape</td><td>NW-40321</td><td class="num">7</td><td class="num">£72.22</td><td class="num">£505.54</td></tr>
+      <tr><td>60</td><td>Copy paper A4 80gsm (box)</td><td>NW-94630</td><td class="num">6</td><td class="num">£150.79</td><td class="num">£904.74</td></tr>
+    </tbody>
+  </table>
+  <table class="totals">
+    <tr><td>Subtotal</td><td class="num" id="subtotal">£117,420.69</td></tr>
+    <tr><td>VAT 20%</td><td class="num" id="vat">£23,484.14</td></tr>
+    <tr class="grand"><td>Total due</td><td class="num" id="total">£140,904.83</td></tr>
+  </table>
+  <div class="notes"><b>Notes.</b> Payment is due within 30 days. Please quote the invoice number with your payment. Goods remain the property of Northwind Supplies until paid in full.</div>
+</div>
+</body>
+</html>

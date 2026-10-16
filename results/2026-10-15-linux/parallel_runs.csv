@@ -1,0 +1,21 @@
+library,mode,jobs,ms,failed,errors
+abcpdf,sync,16,4556.09,0,
+abcpdf,async,16,5076.746,0,
+docotic,sync,16,2356.021,0,
+docotic,async,16,2387.673,0,
+ironpdf,sync,16,2838.521,0,
+ironpdf,async,16,2818.371,0,
+pdfsharp,sync,,,,unsupported
+pdfsharp,async,,,,unsupported
+playwright,sync,16,2258.776,0,
+playwright,async,16,2248.754,0,
+puppeteer,sync,16,2842.864,0,
+puppeteer,async,16,2830.341,0,
+questpdf,sync,,,,unsupported
+questpdf,async,,,,unsupported
+selectpdf,sync,16,2542.457,0,
+selectpdf,async,16,2554.529,0,
+wkhtmltopdf,sync,16,5.261,16,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+wkhtmltopdf,async,16,5.04,16,"NotSupportedException: Unable to load native library. The platform may be missing native dependencies (libjpeg62, etc). Or the current platform is not supported."
+itext,sync,16,2327.28,1,HttpRequestException: An error occurred while sending the request.
+itext,async,,,,unsupported

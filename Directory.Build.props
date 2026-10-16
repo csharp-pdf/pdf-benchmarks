@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- Windows and Linux (WSL) build from the same folder: keep their outputs apart. -->
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <ArtifactsPath>$(MSBuildThisFileDirectory).artifacts/$(OS)</ArtifactsPath>
+    <!-- The platform the adapters are built for: the build machine's, unless set (-p:NativeRid=linux-x64 for a Docker image). -->
+    <NativeRid Condition="'$(NativeRid)' == '' And $([MSBuild]::IsOSPlatform('Windows'))">win-x64</NativeRid>
+    <NativeRid Condition="'$(NativeRid)' == '' And $([MSBuild]::IsOSPlatform('Linux'))">linux-x64</NativeRid>
+  </PropertyGroup>
+</Project>

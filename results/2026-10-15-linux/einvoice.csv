@@ -1,0 +1,33 @@
+library,check,pass,detail
+abcpdf,output,n/a,"not supported: no ZUGFeRD / Factur-X API (PDF/A-3 conformance and embedded files exist, the Factur-X metadata does not)"
+docotic,PDF/A-3b (veraPDF),True,
+docotic,factur-x.xml embedded,True,factur-x.xml
+docotic,XML byte for byte,True,
+docotic,AFRelationship Alternative,True,/Alternative
+docotic,Factur-X XMP namespace,True,
+docotic,XMP DocumentType,True,INVOICE
+docotic,XMP DocumentFileName,True,factur-x.xml
+docotic,XMP ConformanceLevel,True,EN 16931
+docotic,XMP Version,True,1.0
+ironpdf,PDF/A-3b (veraPDF),True,
+ironpdf,factur-x.xml embedded,True,factur-x.xml
+ironpdf,XML byte for byte,True,
+ironpdf,AFRelationship Alternative,True,/Alternative
+ironpdf,Factur-X XMP namespace,True,
+ironpdf,XMP DocumentType,True,INVOICE
+ironpdf,XMP DocumentFileName,True,factur-x.xml
+ironpdf,XMP ConformanceLevel,True,EN 16931
+ironpdf,XMP Version,True,1.0
+itext,output,n/a,not supported: no ZUGFeRD / Factur-X API (the Factur-X XMP would have to be hand-written)
+playwright,output,n/a,not supported: no PDF/A-3 or file attachments in page.pdf
+puppeteer,output,n/a,not supported: no PDF/A-3 or file attachments in page.pdf
+questpdf,output,n/a,not supported: no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,PDF/A-3b (veraPDF),True,
+selectpdf,factur-x.xml embedded,True,factur-x.xml
+selectpdf,XML byte for byte,True,
+selectpdf,AFRelationship Alternative,True,/Alternative
+selectpdf,Factur-X XMP namespace,True,
+selectpdf,XMP DocumentType,True,INVOICE
+selectpdf,XMP DocumentFileName,True,factur-x.xml
+selectpdf,XMP ConformanceLevel,True,EN 16931
+selectpdf,XMP Version,True,1.0

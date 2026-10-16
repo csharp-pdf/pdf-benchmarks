@@ -1,0 +1,301 @@
+library,tool,input,ok,unsupported,ms,result,error
+abcpdf,extract,invoice,True,false,29.598,3 pages,
+abcpdf,extract,rtl,True,false,74.464,2 pages,
+abcpdf,extract,cjk,True,false,39.602,5 pages,
+abcpdf,extract,scripts,True,false,14.317,1 pages,
+abcpdf,extract,accessible,True,false,19.867,2 pages,
+abcpdf,extract,long-document,True,false,7425.168,344 pages,
+abcpdf,extract,selectpdf-home,True,false,330.909,10 pages,
+abcpdf,search,invoice: Total due,True,false,25.852,[3],
+abcpdf,search,invoice: Northwind Supplies,True,false,22.11,"[1,3]",
+abcpdf,search,invoice: Contoso Ltd,True,false,25.433,"[1,1]",
+abcpdf,search,rtl: حقوق,True,false,46.392,[],
+abcpdf,search,cjk: 人人生而自由,True,false,35.132,[1],
+abcpdf,search,cjk: すべての人間は,True,false,35.339,[3],
+abcpdf,search,cjk: 모든 인간은,True,false,39.037,[5],
+abcpdf,search,scripts: समानता,True,false,14.561,[1],
+abcpdf,search,scripts: มนุษย์,True,false,13.452,[1],
+abcpdf,search,long-document: Chapter 40,True,false,9657.955,[335],
+abcpdf,rasterize,invoice,True,false,184.139,3 pages,
+abcpdf,rasterize,cjk,True,false,298.884,5 pages,
+abcpdf,rasterize,accessible,True,false,237.745,2 pages,
+abcpdf,rasterize,selectpdf-home,True,false,1851.741,10 pages,
+abcpdf,word,report,False,true,,,"no built-in DOCX import (Doc.Read needs WordGlue .NET, MS Office or OpenOffice installed)"
+abcpdf,word,international,False,true,,,"no built-in DOCX import (Doc.Read needs WordGlue .NET, MS Office or OpenOffice installed)"
+abcpdf,redact,invoice,False,true,,,no redaction API (TextOperation finds text; removing it would mean editing content streams by hand)
+abcpdf,merge,invoice+accessible+cjk,True,false,26.437,222591 bytes,
+abcpdf,split,long-document 10-12,True,false,91.322,21811 bytes,
+abcpdf,watermark,invoice,True,false,26.779,27222 bytes,
+abcpdf,sign,invoice,True,false,155.349,34613 bytes,
+abcpdf,fill,order-form,True,false,10.272,6395 bytes,
+abcpdf,einvoice,factur-x,False,true,,,"no ZUGFeRD / Factur-X API (PDF/A-3 conformance and embedded files exist, the Factur-X metadata does not)"
+docotic,extract,invoice,True,false,25.546,3 pages,
+docotic,extract,rtl,True,false,54.788,2 pages,
+docotic,extract,cjk,True,false,73.725,5 pages,
+docotic,extract,scripts,True,false,59.619,1 pages,
+docotic,extract,accessible,True,false,14.451,2 pages,
+docotic,extract,long-document,True,false,2718.993,344 pages,
+docotic,extract,selectpdf-home,True,false,639.331,10 pages,
+docotic,search,invoice: Total due,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,invoice: Northwind Supplies,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,invoice: Contoso Ltd,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,rtl: حقوق,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,cjk: 人人生而自由,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,cjk: すべての人間は,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,cjk: 모든 인간은,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,scripts: समानता,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,scripts: มนุษย์,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,search,long-document: Chapter 40,False,true,,,no text search API (the 'Find and highlight text' sample builds one on PdfPage.GetWords)
+docotic,rasterize,invoice,True,false,178.376,3 pages,
+docotic,rasterize,cjk,True,false,229.079,5 pages,
+docotic,rasterize,accessible,True,false,170.825,2 pages,
+docotic,rasterize,selectpdf-home,True,false,1310.066,10 pages,
+docotic,word,report,False,true,,,no Word (DOCX) input in Docotic.Pdf or its add-ons
+docotic,word,international,False,true,,,no Word (DOCX) input in Docotic.Pdf or its add-ons
+docotic,redact,invoice,False,true,,,no redaction API (redaction annotations are not applied; the guide combines two sample programs)
+docotic,merge,invoice+accessible+cjk,True,false,52.027,209188 bytes,
+docotic,split,long-document 10-12,True,false,38.323,19435 bytes,
+docotic,watermark,invoice,True,false,50.719,25352 bytes,
+docotic,sign,invoice,True,false,115.586,26065 bytes,
+docotic,fill,order-form,True,false,172.171,4751 bytes,
+docotic,einvoice,factur-x,True,false,366.011,29193 bytes,
+ironpdf,extract,invoice,True,false,186.554,3 pages,
+ironpdf,extract,rtl,True,false,126.853,2 pages,
+ironpdf,extract,cjk,True,false,304.102,5 pages,
+ironpdf,extract,scripts,True,false,64.264,1 pages,
+ironpdf,extract,accessible,True,false,122.691,2 pages,
+ironpdf,extract,long-document,True,false,17054.725,344 pages,
+ironpdf,extract,selectpdf-home,True,false,507.182,10 pages,
+ironpdf,search,invoice: Total due,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,invoice: Northwind Supplies,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,invoice: Contoso Ltd,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,rtl: حقوق,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,cjk: 人人生而自由,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,cjk: すべての人間は,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,cjk: 모든 인간은,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,scripts: समानता,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,scripts: มนุษย์,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,search,long-document: Chapter 40,False,true,,,no text search API (ExtractText then search the string yourself)
+ironpdf,rasterize,invoice,True,false,383.575,3 pages,
+ironpdf,rasterize,cjk,True,false,664.94,5 pages,
+ironpdf,rasterize,accessible,True,false,394.627,2 pages,
+ironpdf,rasterize,selectpdf-home,True,false,957.493,10 pages,
+ironpdf,word,report,True,false,965.869,7 pages,
+ironpdf,word,international,True,false,188.654,1 pages,
+ironpdf,redact,invoice,True,false,82.031,29403 bytes,
+ironpdf,merge,invoice+accessible+cjk,True,false,59.077,219760 bytes,
+ironpdf,split,long-document 10-12,True,false,66.754,1337313 bytes,
+ironpdf,watermark,invoice,True,false,90.373,33743 bytes,
+ironpdf,sign,invoice,True,false,162.15,36987 bytes,
+ironpdf,fill,order-form,True,false,56.918,6789 bytes,
+ironpdf,einvoice,factur-x,True,false,109.797,30085 bytes,
+pdfsharp,extract,invoice,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,rtl,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,cjk,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,scripts,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,accessible,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,long-document,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,extract,selectpdf-home,False,true,,,no text extraction API (ContentReader only parses content-stream operators)
+pdfsharp,search,invoice: Total due,False,true,,,no text search API
+pdfsharp,search,invoice: Northwind Supplies,False,true,,,no text search API
+pdfsharp,search,invoice: Contoso Ltd,False,true,,,no text search API
+pdfsharp,search,rtl: حقوق,False,true,,,no text search API
+pdfsharp,search,cjk: 人人生而自由,False,true,,,no text search API
+pdfsharp,search,cjk: すべての人間は,False,true,,,no text search API
+pdfsharp,search,cjk: 모든 인간은,False,true,,,no text search API
+pdfsharp,search,scripts: समानता,False,true,,,no text search API
+pdfsharp,search,scripts: มนุษย์,False,true,,,no text search API
+pdfsharp,search,long-document: Chapter 40,False,true,,,no text search API
+pdfsharp,rasterize,invoice,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,cjk,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,accessible,False,true,,,no PDF rendering to images
+pdfsharp,rasterize,selectpdf-home,False,true,,,no PDF rendering to images
+pdfsharp,word,report,False,true,,,no Word (.docx) import
+pdfsharp,word,international,False,true,,,no Word (.docx) import
+pdfsharp,redact,invoice,False,true,,,no redaction API
+pdfsharp,merge,invoice+accessible+cjk,False,false,,,PdfSharpLicenseException: The loaded license is not valid.
+pdfsharp,split,long-document 10-12,False,false,,,PdfSharpLicenseException: The loaded license is not valid.
+pdfsharp,watermark,invoice,False,false,,,PdfSharpLicenseException: The loaded license is not valid.
+pdfsharp,sign,invoice,False,false,,,PdfSharpLicenseException: The loaded license is not valid.
+pdfsharp,fill,order-form,False,false,,,PdfSharpLicenseException: The loaded license is not valid.
+pdfsharp,einvoice,factur-x,False,true,,,no HTML to PDF conversion (PDFsharp/MigraDoc do not read HTML): the invoice page cannot be rendered
+playwright,extract,invoice,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,rtl,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,cjk,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,scripts,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,accessible,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,long-document,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,extract,selectpdf-home,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,invoice: Total due,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,invoice: Northwind Supplies,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,invoice: Contoso Ltd,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,rtl: حقوق,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,cjk: 人人生而自由,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,cjk: すべての人間は,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,cjk: 모든 인간은,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,scripts: समानता,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,scripts: มนุษย์,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,search,long-document: Chapter 40,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,rasterize,invoice,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,rasterize,cjk,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,rasterize,accessible,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,rasterize,selectpdf-home,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,word,report,False,true,,,no Word (DOCX) input
+playwright,word,international,False,true,,,no Word (DOCX) input
+playwright,redact,invoice,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,merge,invoice+accessible+cjk,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,split,long-document 10-12,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,watermark,invoice,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,sign,invoice,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,fill,order-form,False,true,,,Playwright only creates PDFs from pages (page.pdf); no API for existing PDFs
+playwright,einvoice,factur-x,False,true,,,no PDF/A-3 or file attachments in page.pdf
+puppeteer,extract,invoice,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,rtl,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,cjk,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,scripts,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,accessible,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,long-document,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,extract,selectpdf-home,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,invoice: Total due,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,invoice: Northwind Supplies,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,invoice: Contoso Ltd,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,rtl: حقوق,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,cjk: 人人生而自由,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,cjk: すべての人間は,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,cjk: 모든 인간은,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,scripts: समानता,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,scripts: มนุษย์,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,search,long-document: Chapter 40,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,rasterize,invoice,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,rasterize,cjk,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,rasterize,accessible,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,rasterize,selectpdf-home,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,word,report,False,true,,,no Word (DOCX) input
+puppeteer,word,international,False,true,,,no Word (DOCX) input
+puppeteer,redact,invoice,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,merge,invoice+accessible+cjk,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,split,long-document 10-12,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,watermark,invoice,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,sign,invoice,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,fill,order-form,False,true,,,PuppeteerSharp only creates PDFs from pages (page.pdf); no API for existing PDFs
+puppeteer,einvoice,factur-x,False,true,,,no PDF/A-3 or file attachments in page.pdf
+questpdf,extract,invoice,False,true,,,no text extraction from existing PDFs
+questpdf,extract,rtl,False,true,,,no text extraction from existing PDFs
+questpdf,extract,cjk,False,true,,,no text extraction from existing PDFs
+questpdf,extract,scripts,False,true,,,no text extraction from existing PDFs
+questpdf,extract,accessible,False,true,,,no text extraction from existing PDFs
+questpdf,extract,long-document,False,true,,,no text extraction from existing PDFs
+questpdf,extract,selectpdf-home,False,true,,,no text extraction from existing PDFs
+questpdf,search,invoice: Total due,False,true,,,no text search in existing PDFs
+questpdf,search,invoice: Northwind Supplies,False,true,,,no text search in existing PDFs
+questpdf,search,invoice: Contoso Ltd,False,true,,,no text search in existing PDFs
+questpdf,search,rtl: حقوق,False,true,,,no text search in existing PDFs
+questpdf,search,cjk: 人人生而自由,False,true,,,no text search in existing PDFs
+questpdf,search,cjk: すべての人間は,False,true,,,no text search in existing PDFs
+questpdf,search,cjk: 모든 인간은,False,true,,,no text search in existing PDFs
+questpdf,search,scripts: समानता,False,true,,,no text search in existing PDFs
+questpdf,search,scripts: มนุษย์,False,true,,,no text search in existing PDFs
+questpdf,search,long-document: Chapter 40,False,true,,,no text search in existing PDFs
+questpdf,rasterize,invoice,False,true,,,"GenerateImages renders QuestPDF documents only, not existing PDFs"
+questpdf,rasterize,cjk,False,true,,,"GenerateImages renders QuestPDF documents only, not existing PDFs"
+questpdf,rasterize,accessible,False,true,,,"GenerateImages renders QuestPDF documents only, not existing PDFs"
+questpdf,rasterize,selectpdf-home,False,true,,,"GenerateImages renders QuestPDF documents only, not existing PDFs"
+questpdf,word,report,False,true,,,no Word (DOCX) import
+questpdf,word,international,False,true,,,no Word (DOCX) import
+questpdf,redact,invoice,False,true,,,no redaction
+questpdf,merge,invoice+accessible+cjk,True,false,80.688,220705 bytes,
+questpdf,split,long-document 10-12,True,false,99.771,20716 bytes,
+questpdf,watermark,invoice,True,false,107.632,32170 bytes,
+questpdf,sign,invoice,False,true,,,no digital signatures
+questpdf,fill,order-form,False,true,,,no AcroForm filling
+questpdf,einvoice,factur-x,False,true,,,no HTML rendering (QuestPDF builds documents from C# code)
+selectpdf,extract,invoice,True,false,11.341,3 pages,
+selectpdf,extract,rtl,True,false,8.538,2 pages,
+selectpdf,extract,cjk,True,false,9.26,5 pages,
+selectpdf,extract,scripts,True,false,5.423,1 pages,
+selectpdf,extract,accessible,True,false,5.911,2 pages,
+selectpdf,extract,long-document,True,false,686.67,344 pages,
+selectpdf,extract,selectpdf-home,True,false,27.036,10 pages,
+selectpdf,search,invoice: Total due,True,false,19.703,[3],
+selectpdf,search,invoice: Northwind Supplies,True,false,11.09,"[1,3]",
+selectpdf,search,invoice: Contoso Ltd,True,false,9.578,"[1,1]",
+selectpdf,search,rtl: حقوق,True,false,9.1,"[1,1,1,1,1,1,1,1,1,1,2,2]",
+selectpdf,search,cjk: 人人生而自由,True,false,9.555,[1],
+selectpdf,search,cjk: すべての人間は,True,false,9.467,[3],
+selectpdf,search,cjk: 모든 인간은,True,false,10.623,[5],
+selectpdf,search,scripts: समानता,True,false,7.356,[1],
+selectpdf,search,scripts: มนุษย์,True,false,6.24,[1],
+selectpdf,search,long-document: Chapter 40,True,false,901.856,[335],
+selectpdf,rasterize,invoice,True,false,268.002,3 pages,
+selectpdf,rasterize,cjk,True,false,477.633,5 pages,
+selectpdf,rasterize,accessible,True,false,288.331,2 pages,
+selectpdf,rasterize,selectpdf-home,True,false,922.384,10 pages,
+selectpdf,word,report,True,false,529.491,6 pages,
+selectpdf,word,international,True,false,180.548,1 pages,
+selectpdf,redact,invoice,True,false,691.439,35743 bytes,
+selectpdf,merge,invoice+accessible+cjk,True,false,74.492,226000 bytes,
+selectpdf,split,long-document 10-12,True,false,53.395,31719 bytes,
+selectpdf,watermark,invoice,True,false,32.124,35936 bytes,
+selectpdf,sign,invoice,True,false,325.907,43375 bytes,
+selectpdf,fill,order-form,True,false,59.468,9573 bytes,
+selectpdf,einvoice,factur-x,True,false,264.249,40619 bytes,
+wkhtmltopdf,extract,invoice,False,true,,,no PDF tools
+wkhtmltopdf,extract,rtl,False,true,,,no PDF tools
+wkhtmltopdf,extract,cjk,False,true,,,no PDF tools
+wkhtmltopdf,extract,scripts,False,true,,,no PDF tools
+wkhtmltopdf,extract,accessible,False,true,,,no PDF tools
+wkhtmltopdf,extract,long-document,False,true,,,no PDF tools
+wkhtmltopdf,extract,selectpdf-home,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Total due,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Northwind Supplies,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Contoso Ltd,False,true,,,no PDF tools
+wkhtmltopdf,search,rtl: حقوق,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: 人人生而自由,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: すべての人間は,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: 모든 인간은,False,true,,,no PDF tools
+wkhtmltopdf,search,scripts: समानता,False,true,,,no PDF tools
+wkhtmltopdf,search,scripts: มนุษย์,False,true,,,no PDF tools
+wkhtmltopdf,search,long-document: Chapter 40,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,invoice,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,cjk,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,accessible,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,selectpdf-home,False,true,,,no PDF tools
+wkhtmltopdf,word,report,False,true,,,no PDF tools
+wkhtmltopdf,word,international,False,true,,,no PDF tools
+wkhtmltopdf,redact,invoice,False,true,,,no PDF tools
+wkhtmltopdf,merge,invoice+accessible+cjk,False,true,,,no PDF tools
+wkhtmltopdf,split,long-document 10-12,False,true,,,no PDF tools
+wkhtmltopdf,watermark,invoice,False,true,,,no PDF tools
+wkhtmltopdf,sign,invoice,False,true,,,no PDF tools
+wkhtmltopdf,fill,order-form,False,true,,,no PDF tools
+wkhtmltopdf,einvoice,factur-x,False,true,,,no PDF tools
+itext,extract,invoice,True,false,36.673,3 pages,
+itext,extract,rtl,True,false,67.552,2 pages,
+itext,extract,cjk,True,false,38.458,5 pages,
+itext,extract,scripts,True,false,45.379,1 pages,
+itext,extract,accessible,True,false,12.074,2 pages,
+itext,extract,long-document,True,false,2346.178,344 pages,
+itext,extract,selectpdf-home,True,false,307.946,10 pages,
+itext,search,invoice: Total due,True,false,43.099,[3],
+itext,search,invoice: Northwind Supplies,True,false,27.902,"[1,3]",
+itext,search,invoice: Contoso Ltd,True,false,26.945,"[1,1]",
+itext,search,rtl: حقوق,True,false,29.373,[],
+itext,search,cjk: 人人生而自由,True,false,26.809,[1],
+itext,search,cjk: すべての人間は,True,false,28.499,[3],
+itext,search,cjk: 모든 인간은,True,false,26.354,[5],
+itext,search,scripts: समानता,True,false,7.283,[1],
+itext,search,scripts: มนุษย์,True,false,6.71,[],
+itext,search,long-document: Chapter 40,True,false,5276.193,[335],
+itext,rasterize,invoice,False,true,,,no PDF-to-image API in iText for .NET
+itext,rasterize,cjk,False,true,,,no PDF-to-image API in iText for .NET
+itext,rasterize,accessible,False,true,,,no PDF-to-image API in iText for .NET
+itext,rasterize,selectpdf-home,False,true,,,no PDF-to-image API in iText for .NET
+itext,word,report,False,true,,,no Word-to-PDF API in iText for .NET
+itext,word,international,False,true,,,no Word-to-PDF API in iText for .NET
+itext,redact,invoice,True,false,104.226,28204 bytes,
+itext,merge,invoice+accessible+cjk,True,false,29.233,219699 bytes,
+itext,split,long-document 10-12,True,false,5.329,20591 bytes,
+itext,watermark,invoice,True,false,69.895,26823 bytes,
+itext,sign,invoice,True,false,196.557,42824 bytes,
+itext,fill,order-form,True,false,47.409,5876 bytes,
+itext,einvoice,factur-x,False,true,,,no ZUGFeRD / Factur-X API (the Factur-X XMP would have to be hand-written)

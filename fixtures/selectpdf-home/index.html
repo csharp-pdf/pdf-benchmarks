@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html data-palette="amber" data-type="editorial" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#FFF8EC" name="theme-color"/>
+
+
+
+
+
+<title>Free HTML to PDF Converter Online, .NET &amp; API | SelectPdf</title>
+<meta content="Free online HTML to PDF converter: paste a URL, get a PDF. Or build it in with a perpetual .NET library or a REST API. 23M+ NuGet downloads. Free trial." name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1" name="robots"/>
+
+<meta content="website" property="og:type"/>
+<meta content="SelectPdf" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Free HTML to PDF Converter Online, .NET &amp; API | SelectPdf" property="og:title"/>
+<meta content="Free online HTML to PDF converter: paste a URL, get a PDF. Or build it in with a perpetual .NET library or a REST API. 23M+ NuGet downloads. Free trial." property="og:description"/>
+<meta content="https://selectpdf.com/" property="og:url"/>
+<meta content="https://selectpdf.com/og/home.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@selectpdf" name="twitter:site"/>
+<meta content="Free HTML to PDF Converter Online, .NET &amp; API | SelectPdf" name="twitter:title"/>
+<meta content="Free online HTML to PDF converter: paste a URL, get a PDF. Or build it in with a perpetual .NET library or a REST API. 23M+ NuGet downloads. Free trial." name="twitter:description"/>
+<meta content="https://selectpdf.com/og/home.png" name="twitter:image"/>
+
+
+
+
+
+
+<link href="assets/5829c68d4d1b.css" rel="stylesheet"/>
+<link href="assets/d0c9ebbbc754.ico" rel="icon" sizes="any"/>
+<link href="assets/31d541a876e8.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/085db06fb504.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="assets/702cd9051cee.png" rel="apple-touch-icon"/>
+
+<link href="assets/4bc26b47c686.css" rel="stylesheet"/>
+<link href="assets/c916e27211db.css" rel="stylesheet"/>
+<link href="assets/2555263b2f90.css" rel="stylesheet"/>
+<link href="assets/54faeb091828.css" rel="stylesheet"/>
+<link href="assets/8ded2914d184.css" rel="stylesheet"/>
+<link href="assets/a28b6c0c41e0.css" rel="stylesheet"/>
+
+
+</head>
+<body>
+<nav @keydown.escape="menu = null" class="spdf-nav" x-data="{ drawer: false, menu: null, acc: null }">
+<div class="spdf-nav-row">
+<div class="spdf-nav-left">
+<a class="spdf-nav-logo" href="https://selectpdf.com/">
+<svg aria-hidden="true" fill="none" height="22" viewbox="0 0 22 22" width="22">
+<rect height="20" rx="5" stroke="currentColor" stroke-width="1.2" width="20" x="1" y="1"></rect>
+<path d="M6 7 L11 11 L6 15" fill="none" stroke="var(--spdf-accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="12.5" x2="16" y1="15" y2="15"></line>
+</svg>
+<span>select<span class="spdf-nav-logo-accent">pdf</span></span>
+</a>
+<div class="spdf-nav-links">
+<div @mouseenter="menu='products'" @mouseleave="menu=null" class="spdf-nav-item">
+<button :aria-expanded="(menu==='products').toString()" @click="menu = menu==='products' ? null : 'products'" aria-expanded="false" class="spdf-nav-trigger" type="button">Products <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-menu" style="display: none;" x-show="menu==='products'">
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf-online/">Create PDF Online<small>Free online HTML / URL → PDF</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-library-cross-platform/">Cross-Platform Library<small>Our new flagship</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-library-for-net/">Classic .NET Library<small>Windows · .NET Framework 2.0+</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/word-to-pdf-for-net/">Word to PDF<small>DOCX, DOC, RTF</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf-converter-for-net/">HTML→PDF Converter for .NET<small>Commercial</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/community-edition/">Community Edition<small>Free .NET converter</small></a>
+</div>
+</div>
+<div @mouseenter="menu='api'" @mouseleave="menu=null" class="spdf-nav-item">
+<button :aria-expanded="(menu==='api').toString()" @click="menu = menu==='api' ? null : 'api'" aria-expanded="false" class="spdf-nav-trigger" type="button">API <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-menu" style="display: none;" x-show="menu==='api'">
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf-api/">HTML→PDF API<small>REST · any language</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf-api-parameters/">HTML→PDF API Parameters<small>Full reference · 98 params</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-to-text-api/">PDF→Text API<small>Extract text or search PDFs · 14 params</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-merge-api/">PDF Merge API<small>Combine local + remote PDFs · 25 params</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/save-as-pdf-link/">Save as PDF Link<small>Browser button</small></a>
+</div>
+</div>
+<div @mouseenter="menu='pricing'" @mouseleave="menu=null" class="spdf-nav-item">
+<button :aria-expanded="(menu==='pricing').toString()" @click="menu = menu==='pricing' ? null : 'pricing'" aria-expanded="false" class="spdf-nav-trigger" type="button">Pricing <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-menu" style="display: none;" x-show="menu==='pricing'">
+<span class="spdf-nav-menu-group">.NET Library</span>
+<a class="spdf-nav-menu-link is-featured" href="https://selectpdf.com/pricing/">.NET Library Pricing<small>New perpetual licenses</small></a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pricing-3-years-maintenance-plan/">3-Year Maintenance Plan</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pricing-5-years-maintenance-plan/">5-Year Maintenance Plan</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pricing-renewal/">Renewal — Valid Maintenance</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pricing-renewal-late/">Renewal — Expired Maintenance</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pricing-renewal-3-years/">3-Year Renewal</a>
+<span class="spdf-nav-menu-group">Online API</span>
+<a class="spdf-nav-menu-link is-featured" href="https://selectpdf.com/api-pricing/">Online API Pricing<small>Metered monthly plans</small></a>
+</div>
+</div>
+<div @mouseenter="menu='resources'" @mouseleave="menu=null" class="spdf-nav-item">
+<button :aria-expanded="(menu==='resources').toString()" @click="menu = menu==='resources' ? null : 'resources'" aria-expanded="false" class="spdf-nav-trigger" type="button">Resources <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-menu" style="display: none;" x-show="menu==='resources'">
+<span class="spdf-nav-menu-group">Downloads</span>
+<a class="spdf-nav-menu-link is-featured" href="https://selectpdf.com/downloads/">Download — Commercial Library Trial<small>Full library · watermarked PDFs</small></a>
+<a class="spdf-nav-menu-link is-featured" href="https://selectpdf.com/free-downloads/">Download — Community Edition<small>Free · up to 5 pages per PDF</small></a>
+<span class="spdf-nav-menu-group">SelectPdf.Universal · cross-platform</span>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-library/">Online Documentation</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/demo-universal/">Live Demo — ASP.NET Core (C#)</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf/demo-universal/">Live Demo — Community Edition</a>
+<span class="spdf-nav-menu-group">Classic library · Windows</span>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/pdf-library-classic/">Online Documentation</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/demo/">Live Demo — ASP.NET (C#)</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/demo-mvc/">Live Demo — ASP.NET MVC (C#)</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf/docs-classic/">Community Edition — Documentation</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/html-to-pdf/demo/">Community Edition — Live Demo</a>
+<span class="spdf-nav-menu-group">General</span>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/blog/">Blog</a>
+</div>
+</div>
+<div @mouseenter="menu='company'" @mouseleave="menu=null" class="spdf-nav-item">
+<button :aria-expanded="(menu==='company').toString()" @click="menu = menu==='company' ? null : 'company'" aria-expanded="false" class="spdf-nav-trigger" type="button">Company <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-menu is-right" style="display: none;" x-show="menu==='company'">
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/about/">About</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/contact/">Contact</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/privacy-policy/">Privacy Policy</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/data-processing-agreement/">Data Processing Agreement</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/terms-and-conditions/">Terms &amp; Conditions</a>
+<a class="spdf-nav-menu-link" href="https://selectpdf.com/refunds-policy/">Refunds Policy</a>
+</div>
+</div>
+</div>
+</div>
+<div class="spdf-nav-actions">
+<button :aria-label="$store.spdf.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'" @click="$store.spdf.toggleTheme()" aria-label="Switch to dark mode" class="spdf-theme-toggle" title="Toggle dark mode" type="button">
+<svg aria-hidden="true" class="icon-moon" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="16">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<svg aria-hidden="true" class="icon-sun" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="16">
+<circle cx="12" cy="12" r="4"></circle>
+<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+</svg>
+</button>
+<a class="spdf-nav-signin" href="https://selectpdf.com/account/">Sign in</a>
+<a class="spdf-nav-cta" href="https://selectpdf.com/downloads/" title="Free trial of the SelectPdf .NET library — full feature set, no API key needed">Download trial →</a>
+<button :aria-expanded="drawer.toString()" @click="drawer = !drawer" aria-expanded="false" aria-label="Toggle menu" class="spdf-nav-burger" type="button">
+<svg aria-hidden="true" class="icon-open" fill="none" height="14" viewbox="0 0 18 14" width="18">
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="1.5" x2="16.5" y1="2" y2="2"></line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="1.5" x2="16.5" y1="7" y2="7"></line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="1.5" x2="16.5" y1="12" y2="12"></line>
+</svg>
+<svg aria-hidden="true" class="icon-close" fill="none" height="14" viewbox="0 0 18 14" width="18">
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="2" x2="16" y1="2" y2="12"></line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1.6" x1="16" x2="2" y1="2" y2="12"></line>
+</svg>
+</button>
+</div>
+</div>
+<div :data-open="drawer.toString()" class="spdf-nav-drawer" data-open="false">
+<div class="spdf-nav-drawer-inner">
+<div class="spdf-nav-acc">
+<button :aria-expanded="(acc==='products').toString()" @click="acc = acc==='products' ? null : 'products'" aria-expanded="false" class="spdf-nav-acc-head" type="button">Products <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-acc-body" style="display: none;" x-show="acc==='products'">
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf-online/">Create PDF Online</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-library-cross-platform/">Cross-Platform Library <small>flagship</small></a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-library-for-net/">Classic .NET Library <small>Windows</small></a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/word-to-pdf-for-net/">Word to PDF <small>new</small></a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf-converter-for-net/">HTML→PDF Converter for .NET <small>commercial</small></a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/community-edition/">Community Edition <small>free</small></a>
+</div>
+</div>
+<div class="spdf-nav-acc">
+<button :aria-expanded="(acc==='api').toString()" @click="acc = acc==='api' ? null : 'api'" aria-expanded="false" class="spdf-nav-acc-head" type="button">API <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-acc-body" style="display: none;" x-show="acc==='api'">
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf-api/">HTML→PDF API</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf-api-parameters/">HTML→PDF API Parameters</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-to-text-api/">PDF→Text API</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-merge-api/">PDF Merge API</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/save-as-pdf-link/">Save as PDF Link</a>
+</div>
+</div>
+<div class="spdf-nav-acc">
+<button :aria-expanded="(acc==='pricing').toString()" @click="acc = acc==='pricing' ? null : 'pricing'" aria-expanded="false" class="spdf-nav-acc-head" type="button">Pricing <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-acc-body" style="display: none;" x-show="acc==='pricing'">
+<span class="spdf-nav-acc-sub">.NET Library</span>
+<a class="spdf-nav-drawer-link is-featured" href="https://selectpdf.com/pricing/">.NET Library Pricing</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pricing-3-years-maintenance-plan/">3-Year Maintenance Plan</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pricing-5-years-maintenance-plan/">5-Year Maintenance Plan</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pricing-renewal/">Renewal — Valid Maintenance</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pricing-renewal-late/">Renewal — Expired Maintenance</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pricing-renewal-3-years/">3-Year Renewal</a>
+<span class="spdf-nav-acc-sub">Online API</span>
+<a class="spdf-nav-drawer-link is-featured" href="https://selectpdf.com/api-pricing/">Online API Pricing</a>
+</div>
+</div>
+<div class="spdf-nav-acc">
+<button :aria-expanded="(acc==='resources').toString()" @click="acc = acc==='resources' ? null : 'resources'" aria-expanded="false" class="spdf-nav-acc-head" type="button">Resources <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-acc-body" style="display: none;" x-show="acc==='resources'">
+<span class="spdf-nav-acc-sub">Downloads</span>
+<a class="spdf-nav-drawer-link is-featured" href="https://selectpdf.com/downloads/">Download — Commercial Library Trial</a>
+<a class="spdf-nav-drawer-link is-featured" href="https://selectpdf.com/free-downloads/">Download — Community Edition</a>
+<span class="spdf-nav-acc-sub">SelectPdf.Universal · cross-platform</span>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-library/">Online Documentation</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/demo-universal/">Live Demo — ASP.NET Core (C#)</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf/demo-universal/">Live Demo — Community Edition</a>
+<span class="spdf-nav-acc-sub">Classic library · Windows</span>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/pdf-library-classic/">Online Documentation</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/demo/">Live Demo — ASP.NET (C#)</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/demo-mvc/">Live Demo — ASP.NET MVC (C#)</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf/docs-classic/">Community Edition — Documentation</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/html-to-pdf/demo/">Community Edition — Live Demo</a>
+<span class="spdf-nav-acc-sub">General</span>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/blog/">Blog</a>
+</div>
+</div>
+<div class="spdf-nav-acc">
+<button :aria-expanded="(acc==='company').toString()" @click="acc = acc==='company' ? null : 'company'" aria-expanded="false" class="spdf-nav-acc-head" type="button">Company <span aria-hidden="true" class="spdf-nav-caret">▾</span></button>
+<div class="spdf-nav-acc-body" style="display: none;" x-show="acc==='company'">
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/about/">About</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/contact/">Contact</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/privacy-policy/">Privacy Policy</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/data-processing-agreement/">Data Processing Agreement</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/terms-and-conditions/">Terms &amp; Conditions</a>
+<a class="spdf-nav-drawer-link" href="https://selectpdf.com/refunds-policy/">Refunds Policy</a>
+</div>
+</div>
+<a class="spdf-nav-drawer-link spdf-nav-drawer-signin" href="https://selectpdf.com/account/">Sign in</a>
+</div>
+</div>
+</nav>
+<main>
+<!-- ───────── Hero: split (two product cards) ───────── -->
+<section class="spdf-hero-split">
+<div class="spdf-hero-split-inner">
+<div class="spdf-hero-meta-row">
+<span class="spdf-eyebrow">HTML to PDF · .NET Library &amp; REST API</span>
+<span aria-hidden="true" class="line"></span>
+<span class="spdf-eyebrow">23M+ NuGet downloads · since 2014</span>
+</div>
+<h1 class="spdf-display spdf-hero-title">
+      Convert HTML to PDF.<br/>
+<span class="spdf-display-accent">Online, in .NET or by API.</span>
+</h1>
+<!-- Compact converter, first thing under the H1 (it was below the fold on phones) -->
+<form action="#demo" class="spdf-hero-convert" x-data="{ mode: 'url' }" x-on:submit.prevent="$dispatch('spdf-demo-convert', mode === 'url'
+         ? { mode: 'url', url: $refs.heroUrl.value }
+         : { mode: 'html', html: $refs.heroHtml.value, baseUrl: $refs.heroBase.value })">
+<div aria-label="What to convert" class="spdf-tabs-pill spdf-hero-convert-tabs" role="tablist">
+<button :aria-selected="(mode === 'url').toString()" aria-selected="true" class="spdf-tab-pill" role="tab" type="button" x-on:click="mode = 'url'">Web page URL</button>
+<button :aria-selected="(mode === 'html').toString()" aria-selected="false" class="spdf-tab-pill" role="tab" type="button" x-on:click="mode = 'html'">HTML code</button>
+</div>
+<div class="spdf-demo-inputrow" x-show="mode === 'url'">
+<input :required="mode === 'url'" aria-label="Web page URL to convert to PDF" class="spdf-input" placeholder="https://example.com" required="required" type="url" value="https://selectpdf.com" x-ref="heroUrl"/>
+<button class="spdf-btn spdf-btn-primary spdf-btn-lg" type="submit">Convert to PDF →</button>
+</div>
+<div class="spdf-hero-convert-html" style="display: none;" x-show="mode === 'html'">
+<textarea aria-label="HTML code to convert to PDF" class="spdf-input spdf-demo-html" rows="5" spellcheck="false" x-ref="heroHtml">&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;p&gt;Paste your own HTML here and click Convert to PDF.&lt;/p&gt;</textarea>
+<div class="spdf-demo-inputrow">
+<input aria-label="Base URL for relative images, styles and scripts (optional)" class="spdf-input" placeholder="Base URL (optional)" type="url" x-ref="heroBase"/>
+<button class="spdf-btn spdf-btn-primary spdf-btn-lg" type="submit">Convert to PDF →</button>
+</div>
+</div>
+<p class="spdf-caption spdf-hero-convert-note">Free, no signup · watermarked demo, up to 5 pages · <a class="spdf-inlink" href="https://selectpdf.com/#demo">more options ↓</a></p>
+</form>
+<p class="spdf-lede spdf-hero-lede">
+      Use the <a class="spdf-inlink spdf-strong" href="https://selectpdf.com/#demo">free online HTML to PDF converter</a> above, or build
+      it into your app. SelectPdf is a battle-tested <a class="spdf-inlink" href="https://selectpdf.com/html-to-pdf-converter/">HTML to PDF</a>
+      toolkit in two shapes. Embed the <span class="spdf-strong">.NET library</span>:
+      <a class="spdf-inlink" href="https://selectpdf.com/pdf-library-cross-platform/">SelectPdf.Universal</a>, our new flagship, runs on
+      Windows, Linux and macOS on Apple Silicon, and the
+      <a class="spdf-inlink" href="https://selectpdf.com/pdf-library-for-net/">classic library</a> still covers .NET Framework
+      2.0 and later. Or call the
+      <a class="spdf-inlink" href="https://selectpdf.com/html-to-pdf-api/"><span class="spdf-strong">HTML to PDF API</span></a> from any language.
+      Every option renders with the latest Chromium engine, giving pixel-perfect PDFs with full HTML5, CSS3 and
+      JavaScript support. One perpetual license covers both libraries, with a free trial and a Community Edition.
+    </p>
+<div class="spdf-grid-2 spdf-hero-products">
+<div class="spdf-product-card is-primary">
+<div class="spdf-product-card-head">
+<span class="spdf-product-card-kicker">01 / EMBED</span>
+<span class="spdf-product-card-dot">●</span>
+</div>
+<div>
+<h3 class="spdf-product-card-title">.NET Library</h3>
+<p class="spdf-product-card-tagline">Our new flagship, SelectPdf.Universal. Self-hosted, no per-page fees.</p>
+</div>
+<ul class="spdf-product-card-bullets">
+<li><span><a class="spdf-inlink" href="https://selectpdf.com/pdf-library-cross-platform/">SelectPdf.Universal</a> — Windows, Linux &amp; macOS on Apple Silicon, .NET 8 / 10 and .NET Standard 2.0</span></li>
+<li><span><a class="spdf-inlink" href="https://selectpdf.com/pdf-library-for-net/">Classic library</a> for Windows — .NET Framework 2.0 through .NET 10</span></li>
+<li><span>HTML &amp; Word → PDF, PDF→Text, merge, sign, redact</span></li>
+<li><span>One perpetual license covers both libraries</span></li>
+</ul>
+<div class="spdf-product-card-install is-multi">
+<span class="spdf-product-card-install-prompt"># flagship · cross-platform · .NET 8 / 10 · .NET Standard 2.0</span><br/>
+<span class="spdf-product-card-install-prompt">$ </span>dotnet add package SelectPdf.Universal<br/>
+<span class="spdf-product-card-install-prompt">$ </span>dotnet add package SelectPdf.<wbr/>Universal.<wbr/>Native.<wbr/>linux-x64<br/>
+<br/>
+<span class="spdf-product-card-install-prompt"># classic · Windows · .NET Framework 2.0+</span><br/>
+<span class="spdf-product-card-install-prompt">$ </span>dotnet add package Select.Pdf
+        </div>
+<div class="spdf-product-card-foot">
+<a class="spdf-product-card-cta" href="https://selectpdf.com/pdf-library/">Read the .NET docs →</a>
+<span class="spdf-product-card-ver">v26.4</span>
+</div>
+</div>
+<div class="spdf-product-card">
+<div class="spdf-product-card-head">
+<span class="spdf-product-card-kicker">02 / CALL</span>
+<span class="spdf-product-card-dot">●</span>
+</div>
+<div>
+<h3 class="spdf-product-card-title">Online API</h3>
+<p class="spdf-product-card-tagline">One endpoint. Any language. Free trial, no credit card.</p>
+</div>
+<ul class="spdf-product-card-bullets">
+<li><span>REST · cURL, JS, Python, PHP, Go, Ruby</span></li>
+<li><span>Headless Chromium under the hood</span></li>
+<li><span>Free trial, no credit card · plans $19–$449/mo</span></li>
+<li><span>Nothing to deploy — no servers, no engine to ship</span></li>
+</ul>
+<div class="spdf-product-card-install is-multi">
+<span class="spdf-product-card-install-prompt">$ </span>curl https://selectpdf.com/<wbr/>api2/convert/ \<br/>
+            -d "key=YOUR_KEY" \<br/>
+            -d "url=https://example.com" \<br/>
+            -o out.pdf
+        </div>
+<div class="spdf-product-card-foot">
+<a class="spdf-product-card-cta" href="https://selectpdf.com/html-to-pdf-api/">Try the API live →</a>
+<span class="spdf-product-card-ver">REST</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ───────── Live demo widget (Alpine) ───────── -->
+<section @spdf-demo-convert.window="convertFrom($event.detail)" class="spdf-block is-tinted" id="demo" x-data="demoWidget">
+<div class="spdf-block-inner">
+<div class="spdf-block-head">
+<span class="spdf-kicker"><span class="i">⌘</span><span class="t">LIVE DEMO · NO KEY REQUIRED</span></span>
+<h2 class="spdf-display spdf-h2">Free HTML to PDF converter demo.<br/><span class="spdf-display-accent">Paste a URL or HTML, watch it convert.</span></h2>
+</div>
+<p class="spdf-lede spdf-demo-lede">
+      Real conversion through our watermarked demo — no signup, no key. We render the page, return a real PDF, and tell you exactly how long it took.
+    </p>
+<div class="spdf-grid-split spdf-demo-grid">
+<div>
+<div aria-label="What to convert" class="spdf-tabs-pill spdf-demo-modetabs" role="tablist">
+<button :aria-selected="(mode === 'url').toString()" @click="mode = 'url'" aria-selected="true" class="spdf-tab-pill" role="tab" type="button">Web page URL</button>
+<button :aria-selected="(mode === 'html').toString()" @click="mode = 'html'" aria-selected="false" class="spdf-tab-pill" role="tab" type="button">HTML code</button>
+</div>
+<div class="spdf-demo-inputrow" x-show="mode === 'url'">
+<input aria-label="Web page URL to convert to PDF" class="spdf-input" placeholder="https://selectpdf.com" type="url" x-model="url"/>
+<button :disabled="loading" @click="convert()" class="spdf-btn spdf-btn-primary spdf-btn-lg" type="button">
+<span x-show="!loading">Convert →</span>
+<span style="display: none;" x-show="loading">Working…</span>
+</button>
+</div>
+<div style="display: none;" x-show="mode === 'html'">
+<textarea aria-label="HTML code to convert to PDF" class="spdf-input spdf-demo-html" rows="6" spellcheck="false" x-model="html"></textarea>
+<div class="spdf-demo-inputrow">
+<input aria-label="Base URL for relative images, styles and scripts (optional)" class="spdf-input" placeholder="Base URL (optional)" type="url" x-model="baseUrl"/>
+<button :disabled="loading" @click="convert()" class="spdf-btn spdf-btn-primary spdf-btn-lg" type="button">
+<span x-show="!loading">Convert →</span>
+<span style="display: none;" x-show="loading">Working…</span>
+</button>
+</div>
+</div>
+<button :aria-expanded="optionsOpen.toString()" @click="optionsOpen = !optionsOpen" aria-expanded="false" class="spdf-btn spdf-btn-ghost spdf-btn-sm spdf-demo-optbtn" type="button">
+<span x-text="optionsOpen ? '▾' : '▸'">▸</span> Options
+          <span class="spdf-caption">· page size, margins, load time</span>
+</button>
+<div class="spdf-demo-opts" style="display: none;" x-show="optionsOpen">
+<div>
+<label class="lbl">Page size</label>
+<select class="fld" x-model="opts.pageSize"><option>A4</option><option>A3</option><option>A5</option><option>Letter</option><option>Legal</option><option>Tabloid</option></select>
+<div class="spdf-sp-14"></div>
+<label class="lbl">Orientation</label>
+<select class="fld" x-model="opts.orientation"><option>Portrait</option><option>Landscape</option></select>
+<div class="spdf-sp-14"></div>
+<label class="lbl">File name</label>
+<input class="fld" x-model="opts.fileName"/>
+<div class="spdf-sp-14"></div>
+<span class="lbl">Web page options</span>
+<div class="nrow"><span class="nm">Width</span><input class="fld num" min="0" type="number" x-model.number="opts.width"/><span class="sx">px</span></div>
+<div class="nrow"><span class="nm">Height</span><input class="fld num" min="0" type="number" x-model="opts.height"/><span class="sx">px</span></div>
+<div class="spdf-sp-6"></div>
+<div class="nrow"><span class="nm">Min load</span><input class="fld num" min="0" type="number" x-model.number="opts.minLoad"/><span class="sx">sec</span></div>
+<div class="nrow"><span class="nm">Max load</span><input class="fld num" min="0" type="number" x-model.number="opts.maxLoad"/><span class="sx">sec</span></div>
+</div>
+<div>
+<span class="lbl">Page margins</span>
+<div class="nrow"><span class="nm">Top</span><input class="fld num" min="0" type="number" x-model.number="opts.marginTop"/><span class="sx">pt</span></div>
+<div class="nrow"><span class="nm">Right</span><input class="fld num" min="0" type="number" x-model.number="opts.marginRight"/><span class="sx">pt</span></div>
+<div class="nrow"><span class="nm">Bottom</span><input class="fld num" min="0" type="number" x-model.number="opts.marginBottom"/><span class="sx">pt</span></div>
+<div class="nrow"><span class="nm">Left</span><input class="fld num" min="0" type="number" x-model.number="opts.marginLeft"/><span class="sx">pt</span></div>
+<div class="spdf-sp-8"></div>
+<label class="chk"><input type="checkbox" x-model="opts.pageNumbers"/><span>Add page numbers to footer</span></label>
+<label class="chk"><input type="checkbox" x-model="opts.cssPrint"/><span>Use CSS media type Print</span></label>
+<div class="spdf-sp-10"></div>
+<label class="lbl">Rendering engine</label>
+<select class="fld" disabled="" title="The free demo always renders with Chromium"><option>Chromium (demo)</option></select>
+</div>
+<div class="spdf-demo-opts-foot">
+<span class="note">Demo limits: rendered with Chromium, output capped at 5 pages, watermarked, load time clamped. The result panel shows what was clamped — remove every limit with a free API key.</span>
+</div>
+</div>
+</div>
+<div>
+<div :class="{ 'is-open': previewOpen }" class="spdf-demo-preview">
+<button :aria-expanded="previewOpen.toString()" @click="previewOpen = !previewOpen" aria-expanded="false" class="spdf-demo-preview-bar" type="button">
+<span class="spdf-demo-preview-label"><span class="ch" x-text="previewOpen ? '▾' : '▸'">▸</span> Preview</span>
+<span style="display: none;" x-show="done"><span x-text="ms"></span>ms · <span x-text="pages || '–'">–</span>p</span>
+<span x-show="!done">Hidden until you convert</span>
+</button>
+<div class="spdf-demo-preview-body" style="display: none;" x-show="previewOpen">
+<div class="spdf-card spdf-card-surface spdf-demo-stage">
+<template x-if="!loading &amp;&amp; !done &amp;&amp; !error">
+<div>
+<div class="spdf-caption">PREVIEW</div>
+<div class="spdf-display spdf-demo-glyph">PDF</div>
+<div class="spdf-caption spdf-mt-16">PRESS CONVERT TO RENDER</div>
+</div>
+</template><div>
+<div class="spdf-caption">PREVIEW</div>
+<div class="spdf-display spdf-demo-glyph">PDF</div>
+<div class="spdf-caption spdf-mt-16">PRESS CONVERT TO RENDER</div>
+</div>
+<template x-if="loading">
+<div>
+<div class="spdf-demo-spinner"></div>
+<div class="spdf-caption spdf-mt-16">RENDERING…</div>
+</div>
+</template>
+<div class="spdf-demo-viewer" style="display: none;" x-ref="pdfview" x-show="done"></div>
+<template x-if="error">
+<div>
+<svg class="spdf-demo-err-icon" fill="none" height="44" stroke="var(--spdf-accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="44"><circle cx="12" cy="12" r="9"></circle><line x1="12" x2="12" y1="8" y2="13"></line><line x1="12" x2="12" y1="16" y2="16"></line></svg>
+<div class="spdf-caption spdf-mt-16" x-text="error"></div>
+<button @click="error=null" class="spdf-btn spdf-btn-ghost spdf-btn-sm spdf-mt-16" type="button">Try again</button>
+</div>
+</template>
+</div>
+<div class="spdf-demo-meta" style="display: none;" x-show="done">
+<span class="spdf-demo-meta-txt"><span x-text="fileName">demo.pdf</span> · <span x-text="ms"></span>ms<span style="display: none;" x-show="pages"> · <span x-text="pages"></span>p</span> · WATERMARKED DEMO</span>
+<button @click="download()" class="spdf-btn spdf-btn-primary spdf-btn-sm" type="button">Download →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ───────── Quickstart / Code section ───────── -->
+<section class="spdf-section spdf-divider-bottom" x-data="codeTabs('csharp')">
+<div class="spdf-shell spdf-pad">
+<div class="spdf-qs-head">
+<div>
+<span class="spdf-eyebrow"><span class="i">§</span><span class="t">Quickstart</span></span>
+<h2 class="spdf-display spdf-qs-title">HTML to PDF in three lines. <span class="spdf-display-accent">One PDF.</span></h2>
+</div>
+<p class="spdf-body spdf-qs-sub">Same engine. Same output. Same options. The .NET Library and the Online API are bit-for-bit equivalent — pick whichever matches your runtime.</p>
+</div>
+<div class="spdf-qs-tabs" role="tablist">
+<button :aria-selected="isActive('csharp') ? 'true' : 'false'" :class="{ 'is-active': isActive('csharp') }" @click="select('csharp')" aria-controls="qs-panel-csharp" aria-selected="true" class="spdf-qs-tab is-active" id="qs-tab-csharp" role="tab" type="button"><span>C# · .NET LIBRARY</span></button>
+<button :aria-selected="isActive('curl') ? 'true' : 'false'" :class="{ 'is-active': isActive('curl') }" @click="select('curl')" aria-controls="qs-panel-curl" aria-selected="false" class="spdf-qs-tab" id="qs-tab-curl" role="tab" type="button"><span>cURL · ONLINE API</span></button>
+<button :aria-selected="isActive('js') ? 'true' : 'false'" :class="{ 'is-active': isActive('js') }" @click="select('js')" aria-controls="qs-panel-js" aria-selected="false" class="spdf-qs-tab" id="qs-tab-js" role="tab" type="button"><span>JavaScript · ONLINE API</span></button>
+<button :aria-selected="isActive('python') ? 'true' : 'false'" :class="{ 'is-active': isActive('python') }" @click="select('python')" aria-controls="qs-panel-python" aria-selected="false" class="spdf-qs-tab" id="qs-tab-python" role="tab" type="button"><span>Python · ONLINE API</span></button>
+<button :aria-selected="isActive('php') ? 'true' : 'false'" :class="{ 'is-active': isActive('php') }" @click="select('php')" aria-controls="qs-panel-php" aria-selected="false" class="spdf-qs-tab" id="qs-tab-php" role="tab" type="button"><span>PHP · ONLINE API</span></button>
+<button :aria-selected="isActive('ruby') ? 'true' : 'false'" :class="{ 'is-active': isActive('ruby') }" @click="select('ruby')" aria-controls="qs-panel-ruby" aria-selected="false" class="spdf-qs-tab" id="qs-tab-ruby" role="tab" type="button"><span>Ruby · ONLINE API</span></button>
+</div>
+<div aria-labelledby="qs-tab-csharp" class="spdf-qs-code" id="qs-panel-csharp" role="tabpanel" x-show="isActive('csharp')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">Invoice.cs</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-cs" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+<pre class="spdf-code-pre" data-hl="csharp" data-hl-done="1" id="qs-cs"><span class="spdf-tok-kw">using</span> SelectPdf.Universal; <span class="spdf-tok-com">// classic Windows library: using SelectPdf;</span>
+
+<span class="spdf-tok-kw">var</span> converter = <span class="spdf-tok-kw">new</span> HtmlToPdf();
+converter.Options.PdfPageSize = PdfPageSize.A4;
+converter.Options.MarginLeft = <span class="spdf-tok-num">20</span>;
+
+PdfDocument doc = converter.ConvertUrl(
+    <span class="spdf-tok-str">"https://yourapp.com/invoice/4821"</span>
+);
+
+doc.Save(<span class="spdf-tok-str">"invoice-4821.pdf"</span>);
+doc.Close();</pre>
+</div>
+</div>
+<div aria-labelledby="qs-tab-curl" class="spdf-qs-code" id="qs-panel-curl" role="tabpanel" style="display: none;" x-show="isActive('curl')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">convert.sh</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-curl" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+<pre class="spdf-code-pre" data-hl="bash" data-hl-done="1" id="qs-curl"><span class="spdf-tok-kw">curl</span> -X <span class="spdf-tok-kw">POST</span> https://selectpdf.com/api2/convert/ \
+  -d <span class="spdf-tok-str">"key=$SELECTPDF_KEY"</span> \
+  -d <span class="spdf-tok-str">"url=https://yourapp.com/invoice/4821"</span> \
+  -d <span class="spdf-tok-str">"page_size=A4"</span> \
+  --output invoice-<span class="spdf-tok-num">4821.</span>pdf</pre>
+</div>
+</div>
+<div aria-labelledby="qs-tab-js" class="spdf-qs-code" id="qs-panel-js" role="tabpanel" style="display: none;" x-show="isActive('js')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">convert.js</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-js" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span></div>
+<pre class="spdf-code-pre" data-hl="js" data-hl-done="1" id="qs-js"><span class="spdf-tok-kw">const</span> selectpdf = require(<span class="spdf-tok-str">"selectpdf"</span>);
+
+<span class="spdf-tok-kw">const</span> client = <span class="spdf-tok-kw">new</span> selectpdf.HtmlToPdfClient(
+  process.env.SELECTPDF_KEY
+);
+client.setPageSize(<span class="spdf-tok-str">"A4"</span>);
+
+client.convertUrlToFile(
+  <span class="spdf-tok-str">"https://yourapp.com/invoice/4821"</span>,
+  <span class="spdf-tok-str">"invoice-4821.pdf"</span>,
+  <span class="spdf-tok-kw">function</span> (err, fileName) {
+    if (err) <span class="spdf-tok-kw">return</span> console.error(err);
+    console.log(<span class="spdf-tok-str">"Saved"</span>, fileName);
+  }
+);</pre>
+</div>
+</div>
+<div aria-labelledby="qs-tab-python" class="spdf-qs-code" id="qs-panel-python" role="tabpanel" style="display: none;" x-show="isActive('python')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">convert.py</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-py" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span></div>
+<pre class="spdf-code-pre" data-hl="python" data-hl-done="1" id="qs-py"><span class="spdf-tok-kw">import</span> selectpdf
+
+client = selectpdf.HtmlToPdfClient(<span class="spdf-tok-str">"YOUR_API_KEY"</span>)
+client.setPageSize(selectpdf.PageSize.A4)
+
+client.convertUrlToFile(
+    <span class="spdf-tok-str">"https://yourapp.com/invoice/4821"</span>,
+    <span class="spdf-tok-str">"invoice-4821.pdf"</span>,
+)
+
+print(<span class="spdf-tok-str">"Pages:"</span>, client.getNumberOfPages())</pre>
+</div>
+</div>
+<div aria-labelledby="qs-tab-php" class="spdf-qs-code" id="qs-panel-php" role="tabpanel" style="display: none;" x-show="isActive('php')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">convert.php</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-php" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span></div>
+<pre class="spdf-code-pre" data-hl="php" data-hl-done="1" id="qs-php">&lt;?php
+<span class="spdf-tok-kw">require</span>(<span class="spdf-tok-str">"SelectPdf.Api.php"</span>);
+
+$client = <span class="spdf-tok-kw">new</span> SelectPdf\Api\HtmlToPdfClient(<span class="spdf-tok-str">"YOUR_API_KEY"</span>);
+$client-&gt;setPageSize(SelectPdf\Api\PageSize::A4);
+
+$client-&gt;convertUrlToFile(
+    <span class="spdf-tok-str">"https://yourapp.com/invoice/4821"</span>,
+    <span class="spdf-tok-str">"invoice-4821.pdf"</span>
+);</pre>
+</div>
+</div>
+<div aria-labelledby="qs-tab-ruby" class="spdf-qs-code" id="qs-panel-ruby" role="tabpanel" style="display: none;" x-show="isActive('ruby')">
+<div class="spdf-qs-bar">
+<span class="spdf-code-dots"><span class="spdf-code-dot-red"></span><span class="spdf-code-dot-yellow"></span><span class="spdf-code-dot-green"></span></span>
+<span class="spdf-qs-file">convert.rb</span>
+<button class="spdf-code-copy" data-spdf-copy="#qs-rb" type="button">COPY</button>
+</div>
+<div class="spdf-qs-codebody">
+<div aria-hidden="true" class="spdf-qs-gutter"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></div>
+<pre class="spdf-code-pre" data-hl="ruby" data-hl-done="1" id="qs-rb"><span class="spdf-tok-kw">require</span> <span class="spdf-tok-str">"selectpdf"</span>
+
+client = SelectPdf::HtmlToPdfClient.<span class="spdf-tok-kw">new</span>(<span class="spdf-tok-str">"YOUR_API_KEY"</span>)
+client.page_size = SelectPdf::PageSize::A4
+
+client.convert_url_to_file(
+  <span class="spdf-tok-str">"https://yourapp.com/invoice/4821"</span>,
+  <span class="spdf-tok-str">"invoice-4821.pdf"</span>
+)</pre>
+</div>
+</div>
+</div>
+</section>
+<!-- ───────── Intro / overview ───────── -->
+<section class="spdf-block is-tinted">
+<div class="spdf-block-inner">
+<div class="spdf-block-head">
+<span class="spdf-kicker"><span class="i">↳</span><span class="t">WHAT IT DOES</span></span>
+<h2 class="spdf-display spdf-h2">The HTML to PDF converter <span class="spdf-display-accent">developers ship with.</span></h2>
+</div>
+<p class="spdf-lede is-wide spdf-mt-8">
+      SelectPdf converts HTML to PDF from .NET and from any language over REST. Point the HTML to PDF
+      converter at a URL or pass a raw HTML string and it returns a pixel-accurate PDF, rendered by a real
+      Chromium browser engine with full HTML5, CSS3 and JavaScript and control over page size, margins,
+      headers, footers and page numbering. The same Chromium engine powers both the self-hosted .NET
+      library and the online
+      <a class="spdf-inlink" href="https://selectpdf.com/html-to-pdf-api/">HTML to PDF API</a>, so a layout you convert today
+      renders identically whichever you pick. Start free — the
+      <a class="spdf-inlink" href="https://selectpdf.com/downloads/">.NET trial</a> and the
+      <a class="spdf-inlink" href="https://selectpdf.com/community-edition/">Community Edition</a> need no card, and a free
+      <a class="spdf-inlink" href="https://selectpdf.com/get-api-key/">Online API key</a> includes 200 conversions to convert
+      HTML to PDF online before you choose a plan.
+    </p>
+</div>
+</section>
+<!-- ───────── Use cases ───────── -->
+<section class="spdf-section spdf-divider-bottom">
+<div class="spdf-shell spdf-pad">
+<div class="spdf-cases-head">
+<h2 class="spdf-display spdf-h2">What people ship <br/><span class="spdf-display-accent">with HTML to PDF.</span></h2>
+<p class="spdf-body spdf-cases-sub">A short list of the things developers reach for SelectPdf to build. Same engine handles all of them — pick the runtime, write the template, ship.</p>
+</div>
+<div class="spdf-cases-grid">
+<article class="spdf-cases-cell">
+<div class="spdf-cases-num">01</div>
+<div>
+<h3 class="spdf-cases-h3">Invoicing</h3>
+<p class="spdf-cases-desc">Generate every invoice your billing system emits — from a templated HTML page to a PDF attached to the customer's receipt.</p>
+<div class="spdf-cases-used">Common in → <span>billing systems, ERPs, accounting tools</span></div>
+</div>
+</article>
+<article class="spdf-cases-cell">
+<div class="spdf-cases-num">02</div>
+<div>
+<h3 class="spdf-cases-h3">Reports</h3>
+<p class="spdf-cases-desc">Convert dashboards, charts and tables into archive-ready PDFs. Keep page breaks where they belong, headers on every page.</p>
+<div class="spdf-cases-used">Common in → <span>BI dashboards, analytics exports, internal tools</span></div>
+</div>
+</article>
+<article class="spdf-cases-cell">
+<div class="spdf-cases-num">03</div>
+<div>
+<h3 class="spdf-cases-h3">Contracts</h3>
+<p class="spdf-cases-desc">Render legal documents from form data, then sign them. The .NET Library handles PDF/A, accessible (tagged) PDF and digital signatures on your own server.</p>
+<div class="spdf-cases-used">Common in → <span>e-signature flows, HR onboarding</span></div>
+</div>
+</article>
+<article class="spdf-cases-cell">
+<div class="spdf-cases-num">04</div>
+<div>
+<h3 class="spdf-cases-h3">Tickets &amp; passes</h3>
+<p class="spdf-cases-desc">Boarding passes, event tickets, gift cards. Embed barcodes and QR codes natively. Render at 300dpi for print, smaller for mobile.</p>
+<div class="spdf-cases-used">Common in → <span>event ticketing, travel &amp; boarding passes</span></div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ───────── Compare strip ───────── -->
+<section class="spdf-section spdf-divider-bottom spdf-cmp-section">
+<div class="spdf-shell spdf-pad">
+<div class="spdf-cmp-head">
+<h2 class="spdf-display spdf-cmp-title">.NET PDF Library or HTML to PDF API?</h2>
+<span class="spdf-cmp-label">Side-by-side</span>
+</div>
+<div class="spdf-cmp-grid">
+<div class="spdf-cmp-spacer"></div>
+<div class="spdf-cmp-col-head is-primary">
+<div class="spdf-cmp-col-kicker is-primary">01 / EMBED</div>
+<div class="spdf-cmp-col-title">.NET Library</div>
+</div>
+<div class="spdf-cmp-col-head">
+<div class="spdf-cmp-col-kicker">02 / CALL</div>
+<div class="spdf-cmp-col-title">Online API</div>
+</div>
+<div class="spdf-cmp-row-label">Where it runs</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>Inside your .NET process</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Our infrastructure</div>
+<div class="spdf-cmp-row-label">Languages</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>C#, F#, VB.NET</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Any (REST)</div>
+<div class="spdf-cmp-row-label">Network required</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>No</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Yes</div>
+<div class="spdf-cmp-row-label">Pricing model</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>Per-developer, perpetual (from $499)</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Per-conversion, metered ($19–$449/mo)</div>
+<div class="spdf-cmp-row-label">Free tier</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>Free trial (watermarked)</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Free trial, no credit card</div>
+<div class="spdf-cmp-row-label">Best for</div>
+<div class="spdf-cmp-cell is-primary"><span class="spdf-cmp-cell-label">.NET Library</span>Compliance, on-prem, high volume</div>
+<div class="spdf-cmp-cell"><span class="spdf-cmp-cell-label">Online API</span>Polyglot stacks, quick start, spiky load</div>
+</div>
+</div>
+</section>
+<!-- ───────── Trust bar ───────── -->
+<section class="spdf-block">
+<div class="spdf-block-inner">
+<div class="spdf-block-head">
+<span class="spdf-kicker"><span class="i">★</span><span class="t">TRUSTED BY</span></span>
+<h2 class="spdf-display spdf-h2">Trusted for HTML to PDF since 2014 <span class="spdf-display-accent">— teams that ship a lot of PDFs.</span></h2>
+</div>
+<div class="spdf-trust-grid">
+<div class="spdf-trust-cell"><div class="spdf-display spdf-trust-num">23M+</div><div class="spdf-caption spdf-trust-cap">NUGET DOWNLOADS</div></div>
+<div class="spdf-trust-cell"><div class="spdf-display spdf-trust-num">2014</div><div class="spdf-caption spdf-trust-cap">SHIPPING SINCE</div></div>
+<div class="spdf-trust-cell"><div class="spdf-display spdf-trust-num">v26.4</div><div class="spdf-caption spdf-trust-cap">CURRENT RELEASE</div></div>
+<div class="spdf-trust-cell"><div class="spdf-display spdf-trust-num">4</div><div class="spdf-caption spdf-trust-cap">RENDER ENGINES</div></div>
+</div>
+</div>
+</section>
+<!-- ───────── From the blog ───────── -->
+<section class="spdf-block is-tinted">
+<div class="spdf-block-inner">
+<div class="spdf-blog-head">
+<div>
+<span class="spdf-kicker"><span class="i">✎</span><span class="t">FROM THE BLOG</span></span>
+<h2 class="spdf-display spdf-h2">Latest from the SelectPdf blog <span class="spdf-display-accent">— HTML to PDF guides.</span></h2>
+</div>
+<a class="spdf-blog-all" href="https://selectpdf.com/blog/">All posts →</a>
+</div>
+<div class="spdf-blog-grid">
+<article class="spdf-blog-card">
+<div class="spdf-blog-date">OCT 5, 2026</div>
+<h3 class="spdf-blog-title"><a href="https://selectpdf.com/selectpdf-universal-our-new-flagship-net-pdf-library-on-linux-macos-and-docker/">SelectPdf.Universal: our new flagship .NET PDF library, on Linux, macOS and Docker</a></h3>
+<p class="spdf-blog-excerpt">For twelve years the answer to “can I run the SelectPdf library on Linux?” was no — use the Online API instead. That answer changes today. SelectPdf 26.4 introduces Selec…</p>
+<a aria-label="Read: SelectPdf.Universal: our new flagship .NET PDF library, on Linux, macOS and Docker" class="spdf-blog-more" href="https://selectpdf.com/selectpdf-universal-our-new-flagship-net-pdf-library-on-linux-macos-and-docker/">Read →</a>
+</article>
+<article class="spdf-blog-card">
+<div class="spdf-blog-date">JUL 7, 2026</div>
+<h3 class="spdf-blog-title"><a href="https://selectpdf.com/html-to-pdf-csharp-tutorial/">HTML to PDF in C#: The Complete Guide</a></h3>
+<p class="spdf-blog-excerpt">This is a complete, hands-on guide to converting HTML to PDF in C# with the SelectPdf library for .NET. It works up from a three-line conversion to a production-ready wor…</p>
+<a aria-label="Read: HTML to PDF in C#: The Complete Guide" class="spdf-blog-more" href="https://selectpdf.com/html-to-pdf-csharp-tutorial/">Read →</a>
+</article>
+<article class="spdf-blog-card">
+<div class="spdf-blog-date">JUL 5, 2026</div>
+<h3 class="spdf-blog-title"><a href="https://selectpdf.com/wkhtmltopdf-is-archived-a-straight-net-migration-guide-azure-windows-and-the-linux-caveat/">wkhtmltopdf is archived. A straight .NET migration guide (Windows, Linux, Docker and Azure)</a></h3>
+<p class="spdf-blog-excerpt">Updated October 2026 for SelectPdf 26.4: the library now runs on Linux, in Docker and on macOS on Apple Silicon as well, through the new SelectPdf.Universal packages. The…</p>
+<a aria-label="Read: wkhtmltopdf is archived. A straight .NET migration guide (Windows, Linux, Docker and Azure)" class="spdf-blog-more" href="https://selectpdf.com/wkhtmltopdf-is-archived-a-straight-net-migration-guide-azure-windows-and-the-linux-caveat/">Read →</a>
+</article>
+</div>
+</div>
+</section>
+<!-- ───────── FAQ ───────── -->
+<section class="spdf-block" x-data="faqGroup">
+<div class="spdf-block-inner">
+<div class="spdf-block-head">
+<span class="spdf-kicker"><span class="i">?</span><span class="t">FAQ</span></span>
+<h2 class="spdf-display spdf-h2">HTML to PDF, <span class="spdf-display-accent">answered.</span></h2>
+</div>
+<div class="spdf-faq">
+<div :data-open="isOpen(0).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(0).toString()" @click="toggle(0)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>What is SelectPdf?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(0)">SelectPdf is an HTML-to-PDF toolkit for developers, available as a perpetual self-hosted .NET library and as a cloud REST API you call from any language. It has shipped since 2014 with 23M+ NuGet downloads.</div>
+</div>
+<div :data-open="isOpen(1).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(1).toString()" @click="toggle(1)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Is SelectPdf free?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(1)">Yes. The .NET library has a free, no-limit trial (every page watermarked) and a separate free Community Edition capped at five pages; the Online API has a free trial plus a keyless watermarked demo. Paid options are a perpetual library license from $499 or metered API plans from $19–$449/month.</div>
+</div>
+<div :data-open="isOpen(2).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(2).toString()" @click="toggle(2)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Which .NET versions does the library support?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(2)">The SelectPdf .NET library supports .NET Framework 2.0+/4.0+, .NET Core and .NET 5–10, including ASP.NET and ASP.NET MVC.</div>
+</div>
+<div :data-open="isOpen(3).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(3).toString()" @click="toggle(3)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Does SelectPdf work on Linux or non-.NET stacks?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(3)">Yes — on Windows and, with SelectPdf.Universal, on Linux (x64 and ARM64) and macOS on Apple Silicon, including Docker; the same library API on all three. Working in another language, or want nothing to deploy? The SelectPdf Online API is the same engine over REST, callable from cURL, JavaScript, Python, PHP and Ruby.</div>
+</div>
+<div :data-open="isOpen(4).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(4).toString()" @click="toggle(4)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Should I use the .NET Library or the Online API?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(4)">Use the .NET library for local conversion with no network call, perpetual per-developer licensing, or on-prem and compliance control. Use the Online API for polyglot stacks, a quick start with no install, or spiky load. Both use the same engine and produce identical output.</div>
+</div>
+<div :data-open="isOpen(5).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(5).toString()" @click="toggle(5)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>What rendering engine does SelectPdf use?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(5)">SelectPdf supports the latest headless Chromium engine, along with the Blink, WebKit and WebKit Restricted engines. Current HTML, CSS and JavaScript convert the same way they display in a browser. In the .NET library the Chromium engine ships as a NuGet package — no separate browser to install.</div>
+</div>
+<div :data-open="isOpen(6).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(6).toString()" @click="toggle(6)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>How do I convert HTML to PDF in C#?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(6)">Install the Select.HtmlToPdf NuGet package, create an HtmlToPdf converter, call ConvertUrl or ConvertHtmlString, then save the PdfDocument — about three lines of C#. The same conversion is one REST call with the Online API.</div>
+</div>
+<div :data-open="isOpen(7).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(7).toString()" @click="toggle(7)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Which rendering engines run on which .NET frameworks?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(7)">SelectPdf ships four rendering engines — WebKit, WebKit Restricted, Blink and Chromium. WebKit, WebKit Restricted and Chromium run on every supported framework from .NET Framework 2.0 onward, while the Blink engine requires .NET Framework 4.6.1 or later (.NET Core and .NET 5–10).</div>
+</div>
+<div :data-open="isOpen(8).toString()" class="spdf-faq-item" data-open="false">
+<button :aria-expanded="isOpen(8).toString()" @click="toggle(8)" aria-expanded="false" class="spdf-faq-q" type="button">
+<span>Can I convert HTML to PDF online for free?</span><span aria-hidden="true" class="spdf-faq-icon">+</span>
+</button>
+<div class="spdf-faq-a" style="display: none;" x-show="isOpen(8)">Yes. The homepage demo converts a public URL to PDF in your browser with no signup, and a free Online API key includes 200 conversions to convert HTML to PDF online with no credit card. For unlimited local use, the .NET Community Edition is free for documents up to five pages.</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="spdf-footer-cta">
+<h2 class="spdf-footer-cta-title">
+      Ship a PDF<br/>
+<span class="spdf-display-accent">this afternoon.</span>
+</h2>
+<div class="spdf-footer-cta-actions">
+<a class="spdf-btn spdf-btn-primary spdf-btn-lg" href="https://selectpdf.com/get-api-key/">Get an API key — free →</a>
+<a class="spdf-btn spdf-btn-ghost spdf-btn-lg" href="https://selectpdf.com/downloads/">Download the .NET trial</a>
+</div>
+</div>
+<div class="spdf-footer-cols">
+<div class="spdf-footer-col">
+<div class="spdf-footer-col-head">Product</div>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf-online/">Create PDF Online</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-library-cross-platform/">Cross-Platform Library</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-library-for-net/">Classic .NET Library</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/word-to-pdf-for-net/">Word to PDF</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf-converter-for-net/">HTML→PDF Converter for .NET</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/community-edition/">Community Edition (free)</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/downloads/">Download — Commercial Library Trial</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/free-downloads/">Download — Community (free)</a>
+</div>
+<div class="spdf-footer-col">
+<div class="spdf-footer-col-head">API</div>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf-api/">HTML→PDF API</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf-api-parameters/">HTML→PDF API Parameters</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-to-text-api/">PDF→Text API</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-merge-api/">PDF Merge API</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/save-as-pdf-link/">Save as PDF Link</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/api-pricing/">API Pricing</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/get-api-key/">Get an API Key</a>
+</div>
+<div class="spdf-footer-col">
+<div class="spdf-footer-col-head">.NET Library Pricing</div>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing/">Library Pricing</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing-3-years-maintenance-plan/">3-Year Maintenance Plan</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing-5-years-maintenance-plan/">5-Year Maintenance Plan</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing-renewal/">Renewal — Valid Maintenance</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing-renewal-late/">Renewal — Expired Maintenance</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pricing-renewal-3-years/">3-Year Renewal</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/eula/">EULA</a>
+</div>
+<div class="spdf-footer-col">
+<div class="spdf-footer-col-head">Resources</div>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-library/">Universal Docs</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/demo-universal/">Universal Demo</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf/demo-universal/">Universal Demo — Community</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/pdf-library-classic/">Classic Library Docs</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/demo/">Classic Demo — ASP.NET C#</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/demo-vb/">Classic Demo — ASP.NET VB.NET</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/demo-mvc/">Classic Demo — MVC C#</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/demo-mvc-vb/">Classic Demo — MVC VB.NET</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf/docs-classic/">Classic Community Docs</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf/demo/">Classic Community Demo — C#</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/html-to-pdf/demo-vb/">Classic Community Demo — VB.NET</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/blog/">Blog</a>
+</div>
+<div class="spdf-footer-col">
+<div class="spdf-footer-col-head">Company</div>
+<a class="spdf-footer-link" href="https://selectpdf.com/about/">About</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/contact/">Contact</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/privacy-policy/">Privacy Policy</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/data-processing-agreement/">Data Processing Agreement</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/terms-and-conditions/">Terms &amp; Conditions</a>
+<a class="spdf-footer-link" href="https://selectpdf.com/refunds-policy/">Refunds Policy</a>
+</div>
+</div>
+<div class="spdf-footer-meta">
+<span>© SELECTPDF 2014–<span data-spdf-year="">2026</span></span>
+</div>
+</footer>
+
+
+<div id="batBeacon909953335888" style="width: 0px; height: 0px; display: none; visibility: hidden;"></div></body></html>

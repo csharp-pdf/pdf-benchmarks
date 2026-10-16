@@ -1,0 +1,31 @@
+library,tool,input,ok,unsupported,ms,result,error
+wkhtmltopdf,extract,invoice,False,true,,,no PDF tools
+wkhtmltopdf,extract,rtl,False,true,,,no PDF tools
+wkhtmltopdf,extract,cjk,False,true,,,no PDF tools
+wkhtmltopdf,extract,scripts,False,true,,,no PDF tools
+wkhtmltopdf,extract,accessible,False,true,,,no PDF tools
+wkhtmltopdf,extract,long-document,False,true,,,no PDF tools
+wkhtmltopdf,extract,selectpdf-home,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Total due,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Northwind Supplies,False,true,,,no PDF tools
+wkhtmltopdf,search,invoice: Contoso Ltd,False,true,,,no PDF tools
+wkhtmltopdf,search,rtl: حقوق,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: 人人生而自由,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: すべての人間は,False,true,,,no PDF tools
+wkhtmltopdf,search,cjk: 모든 인간은,False,true,,,no PDF tools
+wkhtmltopdf,search,scripts: समानता,False,true,,,no PDF tools
+wkhtmltopdf,search,scripts: มนุษย์,False,true,,,no PDF tools
+wkhtmltopdf,search,long-document: Chapter 40,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,invoice,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,cjk,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,accessible,False,true,,,no PDF tools
+wkhtmltopdf,rasterize,selectpdf-home,False,true,,,no PDF tools
+wkhtmltopdf,word,report,False,true,,,no PDF tools
+wkhtmltopdf,word,international,False,true,,,no PDF tools
+wkhtmltopdf,redact,invoice,False,true,,,no PDF tools
+wkhtmltopdf,merge,invoice+accessible+cjk,False,true,,,no PDF tools
+wkhtmltopdf,split,long-document 10-12,False,true,,,no PDF tools
+wkhtmltopdf,watermark,invoice,False,true,,,no PDF tools
+wkhtmltopdf,sign,invoice,False,true,,,no PDF tools
+wkhtmltopdf,fill,order-form,False,true,,,no PDF tools
+wkhtmltopdf,einvoice,factur-x,False,true,,,no PDF tools
