@@ -13,7 +13,8 @@ if (string.IsNullOrWhiteSpace(key))
 License.LicenseKey = key;
 if (Environment.GetEnvironmentVariable("IRONPDF_DOCKER_DOCUMENTED") == "1")
 {
-    // The settings IronPDF's Docker guide prescribes next to its apt package list (deployment/ironpdf/documented.Dockerfile).
+    // IronPDF's Docker guide turns the automatic dependency configuration off when the image installs the apt packages
+    // (deployment/ironpdf/documented.Dockerfile); GPU acceleration is disabled by default, and the second line keeps it so.
     Installation.LinuxAndDockerDependenciesAutoConfig = false;
     Installation.ChromeGpuMode = IronPdf.Engines.Chrome.ChromeGpuModes.Disabled;
 }
