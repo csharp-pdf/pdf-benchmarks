@@ -15,7 +15,28 @@ The library pages that use these numbers live in
 
 ## Latest results
 
-Run of 2026-10-15: all ten libraries at their latest versions, on one machine under Windows and Linux. Every number comes from the raw data in [`results/`](https://github.com/csharp-pdf/pdf-benchmarks/tree/main/results); the [full results page](https://github.com/csharp-pdf/pdf-libraries-compared/blob/main/benchmarks/2026-10-15.md) has every page, every measure and the failed checks. There is no overall score.
+Run of 2026-10-15: all ten libraries at their latest versions, on one machine: Windows, and Ubuntu 24.04.4 LTS under WSL2 on the same hardware. The benchmark is maintained by SelectPdf, one of the libraries measured. Every number comes from the raw data in [`results/`](https://github.com/csharp-pdf/pdf-benchmarks/tree/main/results); the [full results page](https://github.com/csharp-pdf/pdf-libraries-compared/blob/main/benchmarks/2026-10-15.md) has every page, every measure and the failed checks. There is no overall score.
+
+### Leader of each measure
+
+The best value of each measure, whoever holds it; the tables below have every library's numbers.
+
+- **Fastest HTML to PDF, Windows:** iText (183 ms).
+- **Most conversions a minute with 8 at once, Windows:** IronPDF (1,735).
+- **Lowest memory with 8 at once, Windows:** wkhtmltopdf (122 MB).
+- **Least memory growth over 1,000 conversions, Windows:** iText (-11 MB).
+- **Most content checks passed, Windows:** SelectPdf (96%).
+- **Fastest HTML to PDF, Linux:** Docotic.Pdf (107 ms).
+- **Most conversions a minute with 8 at once, Linux:** SelectPdf (2,597).
+- **Lowest memory with 8 at once, Linux:** wkhtmltopdf (194 MB).
+- **Least memory growth over 1,000 conversions, Linux:** iText (+6 MB).
+- **Most content checks passed, Linux:** SelectPdf (96%).
+- **Closest to Chrome (fidelity, Windows):** SelectPdf (0.984).
+- **Most PDF/A, PDF/UA and PDF/X levels valid:** SelectPdf (17 of 17).
+- **All tag-structure checks passed:** ABCpdf, SelectPdf (100%).
+- **Best text extraction:** SelectPdf (lowest F1 0.97).
+- **Most PDF tasks offered:** SelectPdf (11 of 11).
+- **Smallest publish size, linux-x64:** PDFsharp (2.1 MB).
 
 ### HTML to PDF
 
@@ -34,7 +55,7 @@ Speed: geometric mean of the median times for the 18 pages every HTML library co
 
 ### Standards, PDF tasks and deployment
 
-Standards: PDF/A, PDF/UA and PDF/X levels produced that pass veraPDF (out of 17 requested). Tags: checks that tagged files really contain headings, tables, lists and figures. Tasks: of the 11 PDF tasks measured (text extraction, search, PDF to image, Word to PDF, redaction, merge, split, watermark, signature, form filling, ZUGFeRD), how many the library offers. Docker: the published app on `mcr.microsoft.com/dotnet/runtime:8.0`, as root and as a non-root user.
+Standards: PDF/A, PDF/UA and PDF/X levels produced that pass validation (out of 17 requested; veraPDF, and a structural check for PDF/X-1a, which veraPDF does not cover). Tags: checks that tagged files really contain headings, tables, lists and figures. Tasks: of the 11 PDF tasks measured (text extraction, search, PDF to image, Word to PDF, redaction, merge, split, watermark, signature, form filling, ZUGFeRD), how many the library offers. Docker: the published app on `mcr.microsoft.com/dotnet/runtime:8.0`, as root and as a non-root user.
 
 | Library | Standards valid | Tags | Text extraction (lowest F1) | PDF tasks | Docker | Publish linux-x64, MB |
 |---|---|---|---|---|---|---|
@@ -48,25 +69,6 @@ Standards: PDF/A, PDF/UA and PDF/X levels produced that pass veraPDF (out of 17 
 | QuestPDF 2026.9.1 | – | – | – | 3 | runs on the plain .NET image | 14.5 |
 | SelectPdf 26.5.0 | 17 | 112/112 | 0.97 | 11 | runs on the plain .NET image | 449.6 |
 | wkhtmltopdf 1.5.95 | – | – | – | 0 | does not run; the documented image does not build | 126.3 |
-
-### Leader of each measure
-
-- **Fastest HTML to PDF, Windows:** iText (183 ms).
-- **Most conversions a minute with 8 at once, Windows:** IronPDF (1,735).
-- **Lowest memory with 8 at once, Windows:** wkhtmltopdf (122 MB).
-- **Least memory growth over 1,000 conversions, Windows:** iText (-11 MB).
-- **Most content checks passed, Windows:** SelectPdf (96%).
-- **Fastest HTML to PDF, Linux:** Docotic.Pdf (107 ms).
-- **Most conversions a minute with 8 at once, Linux:** SelectPdf (2,597).
-- **Lowest memory with 8 at once, Linux:** wkhtmltopdf (194 MB).
-- **Least memory growth over 1,000 conversions, Linux:** iText (+6 MB).
-- **Most content checks passed, Linux:** SelectPdf (96%).
-- **Closest to Chrome (fidelity, Windows):** SelectPdf (0.984).
-- **Most PDF/A, PDF/UA and PDF/X levels valid:** SelectPdf (17 of 17).
-- **All tag-structure checks passed:** ABCpdf, SelectPdf (100%).
-- **Best text extraction:** SelectPdf (lowest F1 0.97).
-- **Most PDF tasks offered:** SelectPdf (11 of 11).
-- **Smallest publish size, linux-x64:** PDFsharp (2.1 MB).
 
 <!-- /latest-results -->
 

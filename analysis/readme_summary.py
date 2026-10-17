@@ -77,11 +77,14 @@ def build(run: report.Run, run_name: str):
 
     out = [START, "",
            "## Latest results", "",
-           f"Run of {run_name}: all ten libraries at their latest versions, on one machine under Windows and Linux. Every number comes from "
+           f"Run of {run_name}: all ten libraries at their latest versions, on one machine: Windows, "
+           f"and {run.env('linux')['os']} under WSL2 on the same hardware. The benchmark is maintained by SelectPdf, one "
+           f"of the libraries measured. Every number comes from "
            f"the raw data in [`results/`](https://github.com/csharp-pdf/pdf-benchmarks/tree/main/results); the "
            f"[full results page]({RESULTS_PAGE.format(run=run_name)}) has every page, every measure and the failed "
            f"checks. There is no overall score.", ""]
 
+    intro_end = len(out)
     out += ["### HTML to PDF", "",
             f"Speed: geometric mean of the median times for the {len(common['windows'])} pages every HTML library converted "
             f"(Linux: {len(common['linux'])}), milliseconds, lower is better. Throughput: conversions a minute with 8 at "
@@ -105,7 +108,8 @@ def build(run: report.Run, run_name: str):
     out += [report.table(*data["html"]), ""]
 
     out += ["### Standards, PDF tasks and deployment", "",
-            "Standards: PDF/A, PDF/UA and PDF/X levels produced that pass veraPDF (out of 17 requested). Tags: checks that "
+            "Standards: PDF/A, PDF/UA and PDF/X levels produced that pass validation (out of 17 requested; veraPDF, and a "
+            "structural check for PDF/X-1a, which veraPDF does not cover). Tags: checks that "
             f"tagged files really contain headings, tables, lists and figures. Tasks: of the {len(TOOLS)} PDF tasks "
             "measured (text extraction, search, PDF to image, Word to PDF, redaction, merge, split, watermark, signature, "
             "form filling, ZUGFeRD), how many the library offers. Docker: the published app on "
@@ -134,10 +138,12 @@ def build(run: report.Run, run_name: str):
             return
         best = (max if higher else min)(vals.values())
         who = [l for l, x in vals.items() if x == best]
-        out.append(f"- **{label}:** {', '.join(name[l] for l in who)} ({show(best)}).")
+        leaders.append(f"- **{label}:** {', '.join(name[l] for l in who)} ({show(best)}).")
         data["leaders"].append((label, [name[l] for l in who], show(best)))
 
-    out += ["### Leader of each measure", ""]
+    # The leaders come first, right under the introduction; the tables they summarise follow.
+    leaders = ["### Leader of each measure", "",
+               "The best value of each measure, whoever holds it; the tables below have every library's numbers.", ""]
     for o in report.OSES:
         osn = report.OS_NAME[o]
         lead(f"Fastest HTML to PDF, {osn}", lambda l: speed(l, o), html, False, lambda x: f"{fmt(x)} ms")
@@ -157,7 +163,7 @@ def build(run: report.Run, run_name: str):
          lambda x: f"{x} of {len(TOOLS)}")
     lead("Smallest publish size, linux-x64", lambda l: v[l]["publish"].get("linux-x64"), libs, False,
          lambda x: f"{fmt(x, 1)} MB")
-    out += ["", END]
+    out = out[:intro_end] + leaders + [""] + out[intro_end:] + [END]
     return "\n".join(out), data
 
 
