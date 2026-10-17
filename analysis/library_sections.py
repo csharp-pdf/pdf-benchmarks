@@ -50,7 +50,7 @@ def section(run: report.Run, lib: str, run_name: str) -> str:
         if st:
             rows.append([f"Memory over 1,000 conversions ({osn})",
                          f"{fmt(num(st[0]['pss_mb']))} → {fmt(num(st[-1]['pss_mb']))} MB, "
-                         f"{fmt(num(st[-1]['failures'], 0))} failures"])
+                         f"{fmt(num(st[-1]['failures'], 0))} failure" + ("" if num(st[-1]['failures'], 0) == 1 else "s")])
     o = "windows"
     ch = [r for r in run.rows(o, "checks") if r["library"] == lib and r["pass"] != "n/a"]
     if ch:

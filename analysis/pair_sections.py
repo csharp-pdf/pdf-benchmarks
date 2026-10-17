@@ -70,6 +70,10 @@ def values(run: report.Run, lib: str) -> dict:
     return v
 
 
+def failures(n) -> str:
+    return f"{report.fmt(n)} failure" + ("" if n == 1 else "s")
+
+
 def section(run: report.Run, lib: str, run_name: str, rows_only: bool = False):
     fmt = report.fmt
     name = run.packages("windows")[lib]["library"]
@@ -97,7 +101,7 @@ def section(run: report.Run, lib: str, run_name: str, rows_only: bool = False):
         row(f"Memory, one page / 8 at once, MB ({osn})", lambda v: f"{fmt(v[('mem1', o)])} / {fmt(v[('mem8', o)])}")
         row(f"Memory over 1,000 conversions, MB ({osn})",
             lambda v: f"{fmt(report.num(v[('stab', o)][0]['pss_mb']))} → {fmt(report.num(v[('stab', o)][-1]['pss_mb']))}, "
-                      f"{fmt(report.num(v[('stab', o)][-1]['failures'], 0))} failures" if v[("stab", o)] else "–")
+                      + failures(report.num(v[('stab', o)][-1]['failures'], 0)) if v[("stab", o)] else "–")
         row(f"Page that never loads: gives up after, s ({osn})",
             lambda v: (f"{report.num(v[('hang', o)]['ms'], 0) / 1000:,.0f}" + (" (never returned)" if v[("hang", o)]["outcome"] == "hung" else ""))
             if v[("hang", o)] else "–")
