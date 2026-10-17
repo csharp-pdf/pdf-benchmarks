@@ -3,6 +3,8 @@ repository's front page instead of only in results/.
 
     python analysis/readme_summary.py --run 2026-10-15 --readme README.md [--readme ../pdf-libraries-compared/README.md]
         [--override windows:pdfsharp=2026-10-15-pdfsharp-windows ...]   (as for report.py)
+        [--html <SelectPdf.Web>/Pages/Comparisons]   (the same tables and leaders as Razor partials for the site)
+        [--llms <SelectPdf.Web>/BenchmarkFacts/llms.md]   (the leaders as sentences for the site's llms.txt)
 
 Everything between the two marker lines below is replaced. The tables summarise the results page of the run (same
 data, same overrides); the list names the leader of each measure, whoever it is. Nothing is scored or ranked overall.
@@ -20,8 +22,10 @@ RESULTS_PAGE = "https://github.com/csharp-pdf/pdf-libraries-compared/blob/main/b
 TOOLS = ("extract", "search", "rasterize", "word", "redact", "merge", "split", "watermark", "sign", "fill", "einvoice")
 
 
-def build(run: report.Run, run_name: str) -> str:
+def build(run: report.Run, run_name: str):
+    """Returns the README section (Markdown) and the same tables and leaders as data, for --html."""
     fmt = report.fmt
+    data = {"run": run_name, "leaders": []}
     pk = run.packages("windows")
     libs = sorted(pk, key=lambda l: pk[l]["library"].lower())
     name = {l: pk[l]["library"] for l in libs}
@@ -96,8 +100,9 @@ def build(run: report.Run, run_name: str) -> str:
                      (f"{cw[0]} / {cl[0]} of {cw[1]}" if cw and cl and cw[1] == cl[1]
                       else pair(cw, cl, lambda c: f"{c[0]} of {c[1]}")),
                      pair(fw, fl, lambda x: f"{x:.3f}")])
-    out += [report.table(["Library", "Speed, ms", "Throughput, ×8 /min", "Memory ×8, MB", "Memory over 1,000, MB",
-                          "Checks", "Fidelity"], rows), ""]
+    data["html"] = (["Library", "Speed, ms", "Throughput, ×8 /min", "Memory ×8, MB", "Memory over 1,000, MB",
+                     "Checks", "Fidelity"], rows)
+    out += [report.table(*data["html"]), ""]
 
     out += ["### Standards, PDF tasks and deployment", "",
             "Standards: PDF/A, PDF/UA and PDF/X levels produced that pass veraPDF (out of 17 requested). Tags: checks that "
@@ -117,8 +122,9 @@ def build(run: report.Run, run_name: str) -> str:
                      f"{tools}",
                      docker(l),
                      fmt(v[l]["publish"].get("linux-x64"), 1)])
-    out += [report.table(["Library", "Standards valid", "Tags", "Text extraction (lowest F1)", "PDF tasks",
-                          "Docker", "Publish linux-x64, MB"], rows), ""]
+    data["std"] = (["Library", "Standards valid", "Tags", "Text extraction (lowest F1)", "PDF tasks",
+                    "Docker", "Publish linux-x64, MB"], rows)
+    out += [report.table(*data["std"]), ""]
 
     # Leaders: the best value of each measure, ties included; nothing is added up.
     def lead(label, f, pool, higher, show):
@@ -129,6 +135,7 @@ def build(run: report.Run, run_name: str) -> str:
         best = (max if higher else min)(vals.values())
         who = [l for l, x in vals.items() if x == best]
         out.append(f"- **{label}:** {', '.join(name[l] for l in who)} ({show(best)}).")
+        data["leaders"].append((label, [name[l] for l in who], show(best)))
 
     out += ["### Leader of each measure", ""]
     for o in report.OSES:
@@ -151,13 +158,56 @@ def build(run: report.Run, run_name: str) -> str:
     lead("Smallest publish size, linux-x64", lambda l: v[l]["publish"].get("linux-x64"), libs, False,
          lambda x: f"{fmt(x, 1)} MB")
     out += ["", END]
-    return "\n".join(out)
+    return "\n".join(out), data
+
+
+def write_llms(data: dict, path: pathlib.Path, library: str = "SelectPdf"):
+    """A Markdown block for a site's llms.txt: the leaders and one library's own row, as quotable sentences."""
+    page = RESULTS_PAGE.format(run=data["run"])
+    lines = ["## Benchmark results", "",
+             f"Open benchmark of ten .NET PDF libraries on one machine, Windows and Linux, run {data['run']}; "
+             f"maintained by SelectPdf, one of the libraries measured. Full results: {page}", ""]
+    lines += [f"- {label}: {', '.join(who)} ({value})." for label, who, value in data["leaders"]]
+    say = {"Speed, ms": "average time per page {} ms", "Throughput, ×8 /min": "{} conversions a minute with 8 at once",
+           "Memory ×8, MB": "peak memory with 8 at once {} MB", "Memory over 1,000, MB": "memory growth over 1,000 conversions {} MB",
+           "Checks": "content checks passed {}", "Fidelity": "fidelity to Chrome {}",
+           "Standards valid": "{} of 17 PDF/A, PDF/UA and PDF/X levels valid", "Tags": "tag-structure checks passed {}",
+           "Text extraction (lowest F1)": "text extraction lowest F1 {}", "PDF tasks": "{} of 11 PDF tasks offered",
+           "Docker": "Docker: {}", "Publish linux-x64, MB": "publish size linux-x64 {} MB"}
+    for (header, rows), what in ((data["html"], "HTML to PDF, Windows / Linux"), (data["std"], "standards, PDF tasks and deployment")):
+        row = next((r for r in rows if r[0].startswith(library + " ")), None)
+        if row:
+            cells = "; ".join(say[h].format(c) for h, c in zip(header[1:], row[1:]) if c not in ("–", ""))
+            lines.append(f"- {row[0]}, {what}: {cells}.")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    print("wrote", path)
+
+
+def write_html(data: dict, folder: pathlib.Path):
+    """Three Razor partials for the site's library comparison page: the two tables and the leaders list."""
+    import html as h
+    note = f"@* Generated by csharp-pdf/pdf-benchmarks analysis/readme_summary.py --run {data['run']} --html; do not edit. *@"
+
+    def table(header, rows):
+        lines = [note, '<table class="spdf-howto-table">',
+                 "  <thead><tr>" + "".join(f"<th>{h.escape(c)}</th>" for c in header) + "</tr></thead>", "  <tbody>"]
+        lines += ["    <tr>" + "".join(f"<td>{h.escape(str(c))}</td>" for c in r) + "</tr>" for r in rows]
+        return "\n".join(lines + ["  </tbody>", "</table>", ""])
+    files = {"_LibrariesHtmlTable.cshtml": table(*data["html"]), "_LibrariesStandardsTable.cshtml": table(*data["std"])}
+    items = [f"  <li><strong>{h.escape(label)}:</strong> {h.escape(', '.join(who))} ({h.escape(value)}).</li>"
+             for label, who, value in data["leaders"]]
+    files["_LibrariesLeaders.cshtml"] = "\n".join([note, '<ul class="spdf-howto-facts">'] + items + ["</ul>", ""])
+    for fname, text in files.items():
+        (folder / fname).write_text(text, encoding="utf-8", newline="\n")
+        print("wrote", folder / fname)
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", required=True)
-    ap.add_argument("--readme", action="append", required=True)
+    ap.add_argument("--readme", action="append", default=[])
+    ap.add_argument("--html", metavar="FOLDER", help="also write the site partials (_Libraries*.cshtml) into FOLDER")
+    ap.add_argument("--llms", metavar="FILE", help="also write the benchmark block a site's llms.txt includes")
     ap.add_argument("--override", action="append", default=[])
     a = ap.parse_args()
     overrides = {}
@@ -165,7 +215,11 @@ def main():
         left, folder = o.split("=")
         os_, lib = left.split(":")
         overrides[(os_, lib)] = folder
-    section = build(report.Run(a.run, overrides), a.run)
+    section, data = build(report.Run(a.run, overrides), a.run)
+    if a.html:
+        write_html(data, pathlib.Path(a.html))
+    if a.llms:
+        write_llms(data, pathlib.Path(a.llms))
     for path in map(pathlib.Path, a.readme):
         text = path.read_text(encoding="utf-8")
         if START in text:
