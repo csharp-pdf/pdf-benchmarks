@@ -11,7 +11,7 @@ licence agreement before buying; where a term is ambiguous it is noted.
 | Situation | SelectPdf | IronPDF |
 |---|---|---|
 | 1 developer, an internal application on 1 server | Single Developer — **$499** | Lite — **$999** |
-| 1 developer, a SaaS product or software sold to customers | Single Developer OEM — **$799** | Lite + royalty-free OEM redistribution add-on — **$2,998** |
+| 1 developer, a SaaS product or software sold to customers | Single Developer OEM — **$799** | Plus (3 developers) + royalty-free OEM redistribution add-on — **$3,498** (the add-on is not offered with Lite) |
 | 5 developers, up to 10 servers, internal | 5-Developers — **$799** | Professional (Plus covers 3 developers) — **$2,399** |
 | Unlimited developers, SaaS or redistributed | Enterprise OEM — **$1,599** | Unlimited + OEM add-on — **$6,798** |
 
@@ -23,7 +23,7 @@ Notes, from the pricing pages (SelectPdf and IronPDF re-read on 2026-10-16):
   allow shipping inside your product. One licence covers SelectPdf.Universal and the classic Windows library.
 - **IronPDF** licences count developers, "locations" (described as developer locations by city) and projects.
   The OEM Redistribution add-on, USD 1,999 "to cover OEM, SaaS, and software royalty-free redistribution", is
-  offered with every license, Unlimited included. The Professional and Unlimited prices are shown as discounts
+  offered with the Plus, Professional and Unlimited licenses, not with Lite (re-read on 2026-10-22). The Professional and Unlimited prices are shown as discounts
   from $2,999 and $5,999; Iron Software announces that those prices return on 2026-11-01. After the first year, support and updates renew yearly at USD 599 (Lite), 899 (Plus), 1,799 (Professional) or 3,599 (Unlimited). IronPDF prices
   re-read on 2026-10-16.
 - **Free options:** SelectPdf's trial is the full library with a watermark on every page, and the Community
